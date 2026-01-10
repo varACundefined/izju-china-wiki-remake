@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Implementation</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <link rel="stylesheet" href="/static/safety-typography.css">
+</head>
+<body>
+  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <aside class="sidebar">
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<!--SIDEBAR-START-->
+<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<nav class="site-nav">
+  <ul>
+    <li><a href="/" class="home-link">Home</a></li>
+    <li><span>Project</span>
+  <ul>
+<li><a href="/pages/1Project/1background.html">Background</a></li>
+<li><a href="/pages/1Project/2description.html">Description</a></li>
+<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+</li>
+<li><span>Dry Lab</span>
+  <ul>
+<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+</li>
+<li><span>Wet Lab</span>
+  <ul>
+<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+</li>
+<li><span>Human Practice</span>
+  <ul>
+<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+</li>
+<li><span>Team</span>
+  <ul>
+<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+</li>
+
+  </ul>
+</nav>
+<!--SIDEBAR-END-->
+<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+</aside>
+
+  <main class="content">
+<div class="pagecontainer"><div class="title2"><span>Implementation</span></div></div>
+
+    <div class="pagecontent" id="auto-page-content"><div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="implementation-content">
+  <h1 style="color: #ffffff !important;
+ text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96,
+ 165, 250, 0.7);">Overview</h1>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Antimicrobial resistance (AMR) represents a severe global health threat, among which methicillin-resistant <em>Staphylococcus aureus</em> (MRSA) poses a substantial and communicable risk of infection (1,2). The resistance of MRSA is primarily attributed to the <em>mecA</em> gene located on its SCCmec mobile genetic element (3). Current combination antibiotic therapies for MRSA are not only associated with considerable side effects but also often fail to achieve complete eradication (4).</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Our team has developed an innovative antibacterial platform FoCas, combining DNA origami and CRISPR-Cas9 technology, to treat drug resistance and inhibit risk of transmission. This platform uses a DNA origami nanostructure as a delivery system, incorporating multiple functional components: aptamer-mediated targeting for specific recognition of MRSA, G4-heme incorporation to facilitate membrane disruption, loading of sgRNA/Cas9 ribonucleoprotein complexes to constitute a CRISPR-Cas9 gene editing system, and disulfide bond crosslinking into a tubular structure to effectively protect the biomolecular payload during delivery.</p>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This therapeutic system can be topically applied to wounds, allowing it to enter the body and selectively target MRSA. It enables the precise intracellular delivery of the sgRNA/Cas9 complex, where the CRISPR-Cas9 system specifically cleaves the <em>mecA</em> resistance gene. This process resensitizes MRSA to β-lactam antibiotics, providing a novel gene editing-based strategy to overcome antibiotic resistance.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='description') }}">link to description</a></p>
+
+  <h1 style="color: #ffffff !important;
+ text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96,
+ 165, 250, 0.7);">Design</h1>
+  
+  <h3 style="color: #ffffff !important;
+ text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96 
+, 165, 250, 0.4);">The identification of drug target</h3>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Elimination of the drug resistance gene of MRSA through CRISPR-Cas9 system is the goal of our project. So the target gene of CRISPR-Cas9 system is quite important. Analyses of drug resistance gene of MRSA were carried out initially, and <em>mecA</em> gene was identified as the target drug resistance gene.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='human-practices') }}">link to iHP</a></p>
+
+  <h3 style="color: #ffffff !important;
+ text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96 
+, 165, 250, 0.4);">The design of sgRNA and sgRNA<sub>L</sub></h3>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The CRISPR-Cas9 system is loaded on DNA origami delivery system, with a linker site of sgRNA (sgRNA<sub>L</sub>). Aiming at achieving targeted removal of the target gene and loading of sgRNA<sub>L</sub>/Cas9 complex to DNA origami, sequences of sgRNA and sgRNA<sub>L</sub> targeting to selected target genes were designed by our team, including sgRNA-Δ<em>mecA</em> and sgRNA<sub>L</sub>-Δ<em>lacZ</em>.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='gene-cleavage') }}">link to gene-cleavage</a></p>
+
+  <h3 style="color: #ffffff !important; 
+ text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96 
+, 165, 250, 0.4);">The design of aptamer</h3>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA aptamers are short, structured oligonucleotide sequences that can bind to specific target molecules with high affinity and specificity (5). Our team has integrated and proposed new strategies for aptamer screening and optimization.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='design') }}#aptamer-screening-and-optimization">link to aptamer-screening</a></p>
+
+  <h3 style="color: #ffffff !important;
+ text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96 
+, 165, 250, 0.4);">The design of DNA origami</h3>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami is a nanotechnology based on the self-assembly of DNA molecules (6), which acts as the delivery system of our project. Basic structure and multiple functional components of DNA origami were selected and designed by our team, including rectangular plane, loading component, G4/hemin membrane permeabilization component, aptamer targeting component, and locking release and protection component.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='design') }}">link to design</a></p>
+
+  <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Assembly</h1>
+  
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The construction of basic rectangular DNA origami</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami was assembled according to Rothemund's method (7) to form a basic rectangular plane. The stability of the DNA nanostructures was verified by modeling simulation. The successful folding of DNA origami and formation of rectangular shape was examined by atomic force microscope (AFM).</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='model') }}">link to model</a>, <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='assembly') }}">link to assembly</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The loading of sgRNA<sub>L</sub>/Cas9 complex</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The sgRNA<sub>L</sub>/Cas9 complex was designed to be loaded on the center of rectangular DNA origami. Our team has proved the successful loading of sgRNA<sub>L</sub>/Cas9 complex by labeling of sgRNA<sub>L</sub> with FITC and combined load test focusing on changes of absorbance.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='assembly') }}">link to assembly</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The loading of G4/hemin</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The G4 array, recruiting hemin and forming G4/hemin DNAzyme, was designed to be loaded on the area surrounding the center of rectangular DNA origami. Our team has proved that ROS molecules will not affect DNA origami through modeling simulation, and the successful loading of G4/hemin was examined by combined load test focusing on changes of absorbance.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='model') }}">link to model</a>, <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='assembly') }}">link to assembly</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The loading of aptamer</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The DNA aptamers were designed to be captured and loaded along the width of DNA origami rectangle. However, our team did not conduct a directly verification of its installation at the structural level.</p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Roll-up folding</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The DNA origami rectangle was deigned to be rolled up into a tube shape to protect the sgRNA/Cas9 cargo by designed disulfide bonds and complementary pairing combination formed by S-lock strands along the length. Given the complexity of the computation, modeling and experimental verification, our team only relied on previous literature to support the feasibility of this step.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='design') }}">link to design</a></p>
+
+  <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Validation</h1>
+  
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The gene cleavage function of sgRNA/Cas9 complex</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To verify the gene cleavage function of sgRNA designed by our team and CRISPR-Cas9 system, extracellular incubation of sgRNA/Cas9 and target gene fragment and gel electrophoresis were conducted. The successful elimination of both sgRNA-Δ<em>mecA</em> and sgRNA<sub>L</sub>-Δ<em>lacZ</em> were examined.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='gene-cleavage') }}">link to gene-cleavage</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The protective function of roll</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The formation of roll structure can protect the sgRNA/Cas9 cargo from complex wound environment with multiple proteinases. The protection ability of roll was verified through enzymatic digestion model, simulated by our team.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='model') }}">link to model</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The targeting function of aptamer</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The loading of aptamers on DNA origami can guide the targeting and gather around MRSA. These effects were verified through bacterial binding tests under laser scanning confocal microscope (LSM).</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='validation') }}">link to validation</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The internalization function of unrolled FoCas</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">G4/hemin DNAzyme can decompose hydrogen peroxide (H<sub>2</sub>O<sub>2</sub>), producing reactive oxygen species (ROS) to break the cell membrane (8). Loading G4/hemin on the DNA origami can result in higher catalytic efficiency. These effects were simulated through membrane permeabilization models including the processes of anchoring, ROS diffusion and drug diffusion, and verified through ABTS assay, NPN assay, and internalization assay.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='model') }}">link to model</a>, <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='validation') }}">link to validation</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The gene cleavage function of unrolled FoCas</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">FoCas was designed to bind to and enter the target cell, release sgRNA/Cas9 and conduct gene cleavage of target gene. The intracellular delivery and gene cleavage function of unrolled function were verified by blue/white selection assay.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='validation') }}">link to validation</a></p>
+
+  <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Unresolved Issues and Future Plan</h1>
+  
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The folding, protection and release function of roll</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the current project, our team mainly demonstrated the feasibility of the folding, protection and release by referring to previous literature. To improve the project, subsequent experimental plans for verifying those effects were proposed.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='wetlab-future') }}">link to wetlab-future</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Safety experiments and In vivo experiments of FoCas</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the current project, the experiments have halted at the stage of in vitro bacterial experiments. If applied to the human body, subsequent experiments in mice and clinical trials in humans are necessary. To improve the project, our team has also proposed a feasible experimental plan for future safety experiments by co-incubation tests and in vivo experiments in animal models.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='wetlab-future') }}">link to wetlab-future</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Optimization of production costs</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the current project, all the DNA strands were directly produced through chemical synthesis at a relatively expensive price. To improve the project, our team has proposed a potential bacteriophage particle production strategy to lower the production costs and improve the cost-effectiveness of drug.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='project-future') }}">link to project-future</a></p>
+
+  <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Expansion of application scenarios</h2>
+  
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the current project, we used MRSA and wound infection as the treatment scenario and proposed our drug customization plan. In fact, the project was intended to serve as a universal platform to expand for the treatments of various drug-resistant bacteria in different clinical settings. To improve the project, our team has proposed a potential optimization of delivery system by addition of hydrogel, and that of membrane permeabilization system by considering other advanced membrane-breaking elements with inadequate researches, to expand the administration and application scenarios.</p>
+
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='project-future') }}">link to project-future</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </main>
+
+  <aside id="toc" class="toc"></aside>
+  <script src="/assets/js/main.js"></script>
+  <footer class="site-footer">
+    <img src="/assets/images/logo6.webp" alt="页脚图片">
+  </footer>
+</body>
+</html>

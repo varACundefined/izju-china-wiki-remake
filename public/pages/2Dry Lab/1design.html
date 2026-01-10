@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Design</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <link rel="stylesheet" href="/static/safety-typography.css">
+</head>
+<body>
+  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <aside class="sidebar">
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<!--SIDEBAR-START-->
+<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<nav class="site-nav">
+  <ul>
+    <li><a href="/" class="home-link">Home</a></li>
+    <li><span>Project</span>
+  <ul>
+<li><a href="/pages/1Project/1background.html">Background</a></li>
+<li><a href="/pages/1Project/2description.html">Description</a></li>
+<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+</li>
+<li><span>Dry Lab</span>
+  <ul>
+<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+</li>
+<li><span>Wet Lab</span>
+  <ul>
+<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+</li>
+<li><span>Human Practice</span>
+  <ul>
+<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+</li>
+<li><span>Team</span>
+  <ul>
+<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+</li>
+
+  </ul>
+</nav>
+<!--SIDEBAR-END-->
+<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+</aside>
+
+  <main class="content">
+<div class="pagecontainer"><div class="title2"><span>Design</span></div></div>
+
+    <div class="pagecontent" id="auto-page-content"><!-- Design Page Content -->
+
+<!-- Section 1: Design of DNA Origami -->
+<h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Design of DNA Origami</h1>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1. Choice of basic structure</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Originally proposed by Rothemund in 2006, the rectangular structure of DNA origami has been utilized in numerous studies and proven to be stable (1-3). It's highly programmable (4), allowing for modifications such as adding functional elements as extensions of staples, attachments or cargos (Figure 1).
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-1.webp" alt="Figure 1. Illustration of basic structure of DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Figure 1.</strong> Illustration of basic structure of DNA origami (DO). The original structure is integrated by M13mp18 ssDNA scaffold strand and 192 short ssDNA staples. The arrows indicate 192 different staples.
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">2. Addition of S-PAM-cap and PAM-rich DNA strands</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+To knockout the drug-resistant pathogenic gene, sgRNA/Cas9 needs to be loaded. To better recruit sgRNA/Cas9, we introduced capturing strands (S-PAM-cap) for PAM-rich strands and sgRNA<sub>L</sub>. Cas9 protospacer adjacent motif (PAM) is sequence that recruit Cas9 (5). To enhance the chance of loading sgRNA/Cas9, the PAM-rich strands were introduced containing multiple copies of PAM sequences, made up of simple staple sequence and a direct addition of PAM sequence.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+For the design of S-PAM-cap sequences, literature searches and preparations were conducted. To release the sgRNA/Cas9 complex, which was loaded on the DNA origami as above, an intracellular mechanism was required to separate the sgRNA/Cas9 complex from the delivery complex, resulting in an "activated" sgRNA/Cas9 and downstream targeting gene cleavage. Then, RNase H enzyme was found out, functioned as essential enzymes for survival in <em>Staphylococcus aureus</em>, which will cut out the DNA-RNA hybrid region, satisfying our desire for disconnecting the linking site of sgRNA<sub>L</sub> and DNA origami (6). Thus, active sites and catalytic mechanisms of RNase H were investigated. The grooves of the DNA-RNA hybrid interacted with highly conserved residues of the enzyme (7), so both DNA and RNA will be recognized. Besides, the cleavage effect of the enzyme does not require existence of specific sequence of substrates, unlike the effect of Cas9 protein, which requires a unique PAM sequence. Thus, the composition and arrangement sequence of bases on the cleavage site are not important. Regardless of the sequence, all kind of substrate possess the possibility to be cut, and the only difference is the catalytic speed and efficiency. For the speed, what should be highly considered is the overall shape formation of the substrate DNA, given that the more the area matches the enzyme's depression, the easier it is to be catalyzed. In our designed FoCas, the S-PAM-cap sequences, derived from former articles, were designed to display a suitable structure for RNase H enzyme to recognize.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Meanwhile, except for the design of specific staple sequences, the location of those S-PAM-cap and PAM-rich DNA strands were considered. Based on preliminary estimates, the diameter of the Cas9 protein is about one fourth of the width of the rectangular DNA origami. To reserve space for protecting sgRNA/Cas9 from complex environment of the wound, we excluded choices of staples near the edges. Additionally, to balance the space and the loading efficiency, arranging 6 staples in the center of each DNA origami were finally considered 6 staples to be reasonable (Figure 2).
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-2.webp" alt="Figure 2. Illustration of loading structure of DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Figure 2.</strong> Illustration of loading structure of DNA origami (DO<sub>PAM</sub>). The arrows indicate 192 different staples. The red arrows indicate the S-PAM-cap strands, which are located in the middle of rectangular DNA origami plane.
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">3. Addition of S-G4</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Reactive oxygen species (ROS) could harm bacteria membrane (8) and create "pores", while the G4/hemin complex facilitates the controlled release of ROS, perforating the bacterial membrane without harming other cells and tissues. The detailed reason why we chose G4/hemin as the membrane permeabilization component can be found in the <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='description') }}">description</a>.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+To integrate G4 into the DNA origami, we selected specific staple strands and appended the G4 array sequence GGGTAGGGCGGGTTGGG to the 3' end of these staples, and these modified staples are called S-G4 (Figure 3). For G4/hemin, though the density, quantity, location of loading site and order of assembly lack normalized standards corresponding to different forms of DNA-origami, general principles guiding the locations for functional staple strands on DNA origami advise against locations that are near the edge of the origami structure to avoid structural errors (9). To affirm whether the G4 sequence is connected to the 3' end or the 5' end, so that the connector will extend in the desired direction, we referred to statistics provided in DNA-nanotube models (10). Crowding of G4/hemin is proved to result in a lowering of its catalytic efficiency (11), so compromise between the density and quantity of G4/hemin should be highly considered. Finally, to refine the synthesis protocol, we decided to first allow the assembly of G4 and the DNA-origami and then add hemin, instead of assembling G4/hemin beforehand. This is due to relative instability of G4/hemin DNAzyme compared to native enzymes, when exposed to the solvent (12). Also, the stability of the G4 structure was proved to be affected by the addition of hemin, while G4 itself could remain stable until the hemin was added (13). After analyzing the characteristics and interaction between G4/hemin and DNA origami, we comprehensively designed a new DNA-origami with 136 copies of G4 (Figure 3).
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-3.webp" alt="Figure 3. Illustration of loading and G4 sites on the DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Figure 3.</strong> Illustration of loading and G4 sites on the DNA origami (DO<sub>PAM</sub>G). The arrows indicate 192 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The blue dots are G4 sequences added at 3' ends of staples (a total of 136 sites).
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">4. Addition of aptamers</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+To enhance the membrane disruption efficiency of DNA origami while minimizing damage to human cells, we added aptamers to the sides of DNA origami. The membrane protein, PBP2a, was selected as target for aptamers.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+After screening and optimization of the aptamer sequence targeting MRSA (<a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="#aptamer-screening-and-optimization">link to aptamer screening</a>), a suitable aptamer was found (sequence: CCATCCACACTCCGCAAGGGTGCCCCGGGGGGCTGTTCAGCGTGGTGGTGGGATGCCGTGTTGGTCCTTAGTCTCCGTCGTCGGCTGCCTCTAC AT). Given that the model used for experimental validation is <em>Escherichia coli</em> MG1655, which was utilized as an alternative organism due to biosafety concerns, we employed an aptamer sequence that has been validated in the literature to specifically target <em>Escherichia coli</em> (sequence: CATATCCGCGTCGCTGCGCTCAGACCCACCACCACGCACC) (14). To enable the aptamer and the DNA origami to be connected through base pairing, we added a linker to the 3' end of the aptamer (C-APT), designed to be complementary to the origami structure (linker sequence: TTTTTCGCTTATTATTATTATTATTA). Subsequently, we incorporated 12 staple strands on the DNA origami that contain complementary sequences to the aptamer linker sequence at its 5' end (Apt-cap), allowing it to pair with the aptamer (sequence: TAATAATAATAATAAGCGTTTTT) (Figure 4). This ensures that the aptamer can bind to the DNA origami through base pairing facilitated by the complementary sequences. Considering that aptamers have a more complex structure than linear DNAs, they are more likely to interfere with each other if placed in the middle of the DNA origami rectangle. Additionally, aptamers would bind to the target more effectively if they were not obstructed by other functional staples. Therefore, we positioned the aptamers along the short sides of the DNA origami. For the placement pattern, we referenced the work of Li et al. and added two additional adjacent aptamers in the middle of the short side to ensure efficient targeting (15).
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/design/design-4.webp" target="_blank">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-4.webp" alt="Figure 4. Illustration of loading and aptamer sites on the DNA origami" style="max-width: 100%; height: auto;">
+</a>
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Figure 4.</strong> Illustration of loading and aptamer sites on the DNA origami (DO<sup>A</sup><sub>PAM</sub>). The arrows indicate 204 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The purple arrows indicate the S-Apt-cap (a total of 12 sites), which capture C-APT.
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">5. Addition of disulfide bonds</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+To enhance the stability of the sgRNA/Cas9 complex during application, we decided to introduce a new staple to roll the rectangular DNA origami structure into a cylindrical shape, referred to as S-Lock. The evidence for the process of folding from a rectangle to a cylinder was given by previous study. Approaches like thrombin-loaded origami cylinder (16) and tissue plasminogen activator-loaded origami cylinder (17) were achieved. Our cargo, the Cas9 protein, is similar with the thrombin and tissue plasminogen activator, as they all contain regions of typical high-density positive charge. Also, Yin et al. mentioned that DNA backbones contain negative charge that repulse negatively charged molecules (19). So, we incorporated a DNA strand that is complementary to the frame at both ends of the origami, aiming to fold the rectangular structure into a cylindrical form (Figure 5). Additionally, we introduced thiol groups to each strand so that adjacent S-Lock structures could form disulfide bonds, further stabilizing the overall structure. To optimize the unutilized staples on the long sides, we placed disulfide bonds in the middle of 8 staples on each side. This arrangement strengthens the bond between the two sides, facilitating the transformation of the origami rectangle into a tubule. Yin et al. used a similar number of staples for side-to-side binding, which demonstrated an appropriate density of functional staples (18). Furthermore, the length of their staples that do not pair with the scaffold is similar to ours. Based on this, we assume that the adjacent staples will not interfere with each other, and the likelihood of incorrect pairing is minimal.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-5.webp" alt="Figure 5. Illustration of loading, G4, aptamer and lock sites on the DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Figure 5.</strong> Illustration of loading, G4, aptamer and lock sites on the DNA origami (S-DO<sup>A</sup><sub>PAM</sub>G). The arrows indicate 204 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The purple arrows indicate the S-Apt-cap (a total of 12 sites), which cap C-APT. The green arrows with orange dots at the middle are staples with disulfide bonds (a total of 16 sites), the orange dots indicate the disulfide bond formation sites. They are complementary to the scaffold on the other side so that the two sides will meet and bind.
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Supporting tables: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/design/sequence.pdf" target="_blank">Lists of DNA sequences for DNA origami</a>.</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<em>Note: Supporting tables will be provided in PDF format.</em>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">1. Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297–302.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">2. Li Z, Wang L, Yan H, Liu Y. Effect of DNA Hairpin Loops on the Twist of Planar DNA Origami Tiles. Langmuir. 2012 Jan 31;28(4):1959–65.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">3. Yu L, Xu Y, Al-Amin M, Jiang S, Sample M, Prasad A, et al. CytoDirect: A Nucleic Acid Nanodevice for Specific and Efficient Delivery of Functional Payloads to the Cytoplasm. J Am Chem Soc. 2023 Dec 20;145(50):27336–47.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">4. Fu J, Li T. Spatial Organization of Enzyme Cascade on a DNA Origami Nanostructure. Methods Mol Biol. 2017;1500:153–64.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">5. Karvelis T, Gasiunas G, Siksnys V. Methods for decoding Cas9 protospacer adjacent motif (PAM) sequences: A brief overview. Methods. 2017 May 15;121–122:3–8.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">6. Hang T, Zhang X, Wu M, Wang C, Ling S, Xu L, et al. Structural insights into a novel functional dimer of Staphylococcus aureus RNase HII. Biochem Biophys Res Commun. 2018 Sept 10;503(3):1207–13.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">7. Hyjek M, Figiel M, Nowotny M. RNases H: Structure and mechanism. DNA Repair (Amst). 2019 Dec;84:102672.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">8. Xie W, Zhang S, Pan F, Chen S, Zhong L, Wang J, et al. Nanomaterial-based ROS-mediated strategies for combating bacteria and biofilms. Journal of Materials Research. 2021 Feb 1;36(4):822–45.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">9. Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chem Rev. 2023 Apr 12;123(7):3976–4050.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">10. Berengut JF, Berengut JC, Doye JPK, Prešern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic Acids Res [Internet]. 2019 Dec 16 [cited 2025 Sept 10];47(22):11963–75. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7145641/</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">11. Yang B, Wang R, Li W, Wang J, Liu H. On-Origami Molecular Crowding Control of G-Quadruplex DNAzymes. Small Methods [Internet]. 2025 [cited 2025 Sept 10];9(6):2401401. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/smtd.202401401</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">12. Anthony R. Monte Carlo III, Jinglin Fu. Inactivation Kinetics of G‐Quadruplex/Hemin Complex and Optimization for More Reliable Catalysis - Monte Carlo - 2022 - ChemPlusChem - Wiley Online Library [Internet]. [cited 2025 Oct 3]. Available from: https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cplu.202200090</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">13. Ghahremani Nasab M, Hassani L, Mohammadi Nejad S, Norouzi D. Interaction of hemin with quadruplex DNA. J Biol Phys [Internet]. 2017 Mar [cited 2025 Sept 10];43(1):5–14. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5323342/</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">14. Mela I, Vallejo‐Ramirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed. 2020 July 27;59(31):12698–702.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">15. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">16. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">17. Yin J, Wang S, Wang J, Zhang Y, Fan C, Chao J, et al. An intelligent DNA nanodevice for precision thrombolysis. Nat Mater. 2024 June;23(6):854–62.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">18. Jue Yin, Siyu Wang, Jiahui Wang, Yewei Zhang, Chunhai Fan, Jie Chao, Yu Gao, Lianhui Wang et al. An intelligent DNA nanodevice for precision thrombolysis | Nature Materials [Internet]. [cited 2025 Oct 3]. Available from: https://www.nature.com/articles/s41563-024-01826-y#ref-CR22</p>
+
+
+<!-- Section 2: Aptamer Screening and Optimization -->
+<h1 id="aptamer-screening-and-optimization">Aptamer Screening and Optimization</h1>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Our research team focuses on the aptamer selection for Methicillin-Resistant Staphylococcus aureus (MRSA) receptors, aiming to develop a universal, efficient, and transferable technical workflow. This workflow is not only designed to meet the current aptamer screening needs for MRSA receptors but also to flexibly adapt to receptor targets of other bacterial strains, thereby providing a reusable technical framework for aptamer research related to microorganisms.
+</p>
+
+<details>
+<summary><strong>What is an aptamer?</strong></summary>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+An aptamer is a short-chain nucleic acid molecule isolated from a nucleic acid library via in vitro SELEX (Systematic Evolution of Ligands by Exponential Enrichment) technology. It can bind to target molecules (such as proteins, small molecules, etc.) with high specificity and high affinity. Featuring no immunogenicity and easy modifiability, aptamers are widely used in the fields of biomedicine, detection, and drug development, and are known as "chemical antibodies".
+</p>
+</details>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1. Core Model Selection: Introduction and Application of Aptatrans</h2>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.1 Core Mechanism of Aptatrans</h3>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+We introduce the Aptatrans model based on the Transformer architecture, whose core advantage lies in achieving efficient screening through the aptamer sequence generation algorithm driven by Monte Carlo Tree Search (MCTS), namely Apta-MCTS:
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.1.1 Introduction to the Aptatrans Architecture</h4>
+
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Step 1: Fragmentation of long molecular chains</h5>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Both aptamers and proteins exist as long molecular chains, which cannot be directly "processed" by the model. Thus, they first need to be fragmented into short segments (referred to as "tokens", analogous to words). The fragmentation methods for the two differ to align with their respective characteristics:
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Aptamers:</strong> First, thymine (T) in DNA is replaced with uracil (U) in RNA, and all aptamers are uniformly treated as RNA. The "k-mer algorithm" is adopted, which functions like "small scissors" of fixed length to cut the long chains. For instance, if a 3-nucleotide grouping is selected, a sequence such as "GGC GGA GAA" will be fragmented into short segments like "GGC", "GCG", and "CGG". This approach preserves the key local information of aptamers, as their binding to proteins often relies on local structures.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Proteins:</strong> The "FCS (Frequent Subsequence) mining algorithm" is employed. First, the frequency of short segments composed of 1–3 amino acids in all protein sequences is counted; the infrequent "rare segments" are removed, and the high-frequency segments are retained to construct a "frequent subsequence vocabulary". This vocabulary is then used to fragment new protein sequences. For example, the sequence "MSRLDKSKVI" may be fragmented into "MSR", "LDK", "SK", etc., enabling accurate capture of the functional key segments in proteins.
+</p>
+
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Step 2: Encoding of short segments</h5>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+The model needs to acquire information about each segment, such as its position in the long chain and its relationships with other segments. This step is accomplished by two "dedicated encoders" (one for processing aptamer segments and the other for protein segments). The core of these encoders is the "Transformer" technology, and they have undergone prior "foundation learning" (pre-training).
+</p>
+
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Step 3: Calculation of the "binding potential" of segments (interaction computation)</h5>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+With the encoded segments, the next step is to calculate the "binding probability" between aptamer and protein segments, which is carried out in two steps:
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Calculate the similarity scores between the vectors of each aptamer segment and protein segment, and generate an interaction matrix.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Extract features using convolution blocks.
+</p>
+
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Step 4: Generation of "binding results" (binding determination)</h5>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+The "core information vector" obtained in Step 3 is input into a "fully connected layer" (a simple computation module) to generate a "binding score". If the score exceeds a preset threshold (e.g., 0.5), the aptamer and protein are determined to be "capable of binding"; if the score is below the threshold, they are determined to be "incapable of binding".
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/1.webp" alt="Figure 1. Aptatrans Architecture" style="max-width: 100%; height: auto;">
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.1.2 Advantages of the Model</h4>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Through a dual-cycle mechanism of "probabilistic search + iterative optimization", this algorithm directionally screens aptamer candidates with high affinity for target proteins (e.g., MRSA receptors) from a vast pool of potential nucleic acid sequences.
+</p>
+<ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Key Feature:</strong> It only requires the input of the amino acid sequence of the target protein to complete the prediction of the aptamer sequence, without relying on complex structural information, which significantly reduces the difficulty of target preprocessing.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Existing Issue:</strong> Meanwhile, we recognize that the saturated docking method has limitations in handling macromolecular proteins, primarily manifested in its high demand for computational resources, making it difficult to efficiently perform the search of complex conformational spaces in macromolecular systems.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Advantage:</strong> In contrast, the Aptatrans model, relying on its deep learning-based architectural design and sequence-driven prediction mechanism, exhibits stronger applicability in the aptamer prediction task for macromolecular proteins. It can reduce computational costs while maintaining favorable prediction performance.</li>
+</ul>
+
+<details>
+<summary><strong>What is a Transformer?</strong></summary>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+The Transformer is a deep learning model architecture proposed by Vaswani et al. in 2017, which is widely used in natural language processing (NLP) and sequence-to-sequence tasks. Its core innovation lies in the introduction of the Self-Attention Mechanism, which enables it to achieve excellent performance in processing sequence data.
+</p>
+</details>
+
+<details>
+<summary><strong>What is MCTS?</strong></summary>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Monte Carlo Tree Search (MCTS) is an algorithm applied in decision-making processes, particularly suitable for game-related problems. It estimates the value of each potential action by simulating a large number of random games, thereby selecting the optimal next step. The core idea of the MCTS algorithm is to concentrate computational resources on the most promising branches to improve search efficiency.
+</p>
+</details>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.2 Supplementary Information on Data Sources</h3>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Although Aptatrans demonstrates innovation in the field of aptamer prediction, its direct prediction results cannot yet fully meet the accuracy requirements of this project, which is limited by the scale of the model training dataset. Therefore, we integrate the validated sequences from professional aptamer databases (e.g., the <strong>Aptamer Database (AptaDB)</strong> [2], accessible at <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="https://www.aptamer.org/" target="_blank">https://www.aptamer.org/</a>) to establish a dual-source data support system of "model prediction + database screening", thereby further improving the reliability of candidate aptamers.
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/3.webp" alt="Figure 2. The homepage of the database" style="max-width: 100%; height: auto;">
+</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<strong>Figure 2.</strong> The homepage of the database.
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The specific operations are as follows:</h4>
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Enter the target name (e.g., pbp2a) in the search box at the top right corner, select the "Aptamer" database on the right side, and click "Search".</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Locate the appropriate aptamer results based on the search outcomes and click on the corresponding entry.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Scroll down the page to obtain the sequence and related literature.
+  <ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>The aptamer we selected is shown in the figure below:</strong></li>
+  </ul>
+</li>
+</ol>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/4.webp" alt="The selected aptamer" style="max-width: 100%; height: auto;">
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Procedure for converting an aptamer sequence into a PDB file:</h4>
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Access the website <strong>RNAComposer</strong> [3] via the link: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="http://rnacomposer.ibch.poznan.pl/" target="_blank">http://rnacomposer.ibch.poznan.pl/</a>.
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/5.webp" alt="RNAComposer interface" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Click "Load example" and select "3", then replace the original sequence in the text box with the target aptamer sequence, and click "Compose".</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wait until the prompt "Task completed" appears (as shown in the figure below); the PDB file can be downloaded via the button at the bottom left corner.
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/6.webp" alt="RNAComposer task completed" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+</ol>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.3 Validation of Model Versatility</h3>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+In their published research, the development team of Aptatrans has verified the feasibility of the model through multiple sets of protein targets that are non-MRSA receptors (e.g., <em>Escherichia coli</em> surface proteins, streptococcal adhesins, etc.). This verification confirms that the model possesses aptamer prediction capability across different targets. This characteristic provides crucial technical support for the design of the "universal workflow" in this project, and validates the application potential of the model in aptamer screening for receptors of other bacterial strains.
+</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">2. Candidate Aptamer Validation System: Multi-Tool Cross-Validation</h3>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+To ensure that the screened aptamers (including sequences predicted by Aptatrans and those screened from databases) possess high affinity and specificity, we have established a <strong>triple cross-validation system</strong>, which evaluates the binding effect between aptamers and target proteins through the collaboration of multiple tools:
+</p>
+
+<style>
+/* Light mode - ensure dark text for readability */
+.design-validation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.design-validation-table thead tr {
+  background: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%);
+}
+
+.design-validation-table th {
+  border: 1px solid #4a5568;
+  padding: 12px;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.design-validation-table td {
+  border: 1px solid #4a5568;
+  padding: 12px;
+  color: #1a202c;
+}
+
+.design-validation-table tbody tr:nth-child(odd) {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+
+.design-validation-table tbody tr:nth-child(even) {
+  background-color: rgba(220, 220, 220, 0.15);
+}
+
+/* Dark mode - white text with brighter backgrounds */
+@media (prefers-color-scheme: dark) {
+  .design-validation-table td {
+    color: #ffffff !important;
+  }
+  
+  .design-validation-table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+  }
+  
+  .design-validation-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+  }
+}
+</style>
+<table style="max-width: 100%; box-sizing: border-box; overflow-x: auto; display: block;" class="design-validation-table">
+  <th style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;"ead>
+    <tr style="max-width: 100%; box-sizing: border-box;">
+      <th style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;"><strong>Validation Method</strong></th>
+      <th style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;"><strong>Core Principle</strong></th>
+      <th style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;"><strong>Output Result</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="max-width: 100%; box-sizing: border-box;">
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">Aptatrans Built-in Evaluation System</td>
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">Based on the affinity prediction model trained by the model, the binding potential between aptamers and target proteins is quantified using probability values.</td>
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">Aptamer-target protein binding probability (API probability)</td>
+    </tr>
+    <tr style="max-width: 100%; box-sizing: border-box;">
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">ZDOCK Tool Validation [4]</td>
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">ZDOCK is a computational tool for protein-protein docking. It predicts the most probable 3D conformations of two proteins during binding using a method based on Fast Fourier Transform (FFT).</td>
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">Multiple optimal binding conformations</td>
+    </tr>
+    <tr style="max-width: 100%; box-sizing: border-box;">
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">HDOCK Tool Validation [5]</td>
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">It predicts protein-protein and protein-deoxyribonucleic acid (DNA)/ribonucleic acid (RNA) docking based on a hybrid algorithm combining template-based modeling and ab initio free docking.</td>
+      <td style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box;">Binding probability, visual model of binding region</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Operational Principle</h4>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Each candidate aptamer must undergo validation using the three aforementioned methods. Only sequences that perform excellently in all three validations are retained for subsequent experimental procedures, thereby minimizing the false positive rate to the greatest extent.
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">How to Use ZDOCK</h4>
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Access the ZDOCK website via the link: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="https://zdock.wenglab.org/" target="_blank">ZDOCK</a>, and you will see the interface as shown below:
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/7.webp" alt="ZDOCK interface" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Enter the PDB ID or upload the PDB file, input your email address, and click "Submit". After successful submission, simply wait and check your email.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Once you receive the email, open the included link, download the files, and use MOE (Molecular Operating Environment) to view the results.</li>
+</ol>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">How to Use HDOCK</h4>
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Access the HDOCK website via the link: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="http://hdock.phys.hust.edu.cn/" target="_blank">HDOCK Server</a>.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Select the relevant PDB files (Note: Correcting the typo "pdf" to "PDB" as per academic context) and click "Submit".
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/8.webp" alt="HDOCK interface" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">View the images of aptamer-protein binding and the binding probability online.
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/9.webp" alt="HDOCK results" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+</ol>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">ZDOCK Visualization Display</h4>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">3. Innovative Screening Mechanism: Dual-Path Optimization Strategy</h3>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Based on the integration of the aforementioned technical modules, we propose two aptamer screening and optimization mechanisms, forming a closed-loop process of "Prediction - Validation - Optimization":
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">3.1 Mechanism 1: Prediction-Validation Collaborative Screening</h4>
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Workflow</h5>
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Input the target protein sequence (e.g., MRSA receptor) into Aptatrans to generate an initial candidate aptamer library.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Perform preliminary filtering on the candidate library (e.g., API probability ≥ 0.8) to retain high-potential sequences.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Conduct cross-validation using multiple tools and screen out sequences that meet the standards of all three validations.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Integrate aptamer sequences from databases to finally determine experimental-grade candidate aptamers.</li>
+</ol>
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Advantage</h5>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+Through "model prediction guidance + multi-tool validation check", the screening range is quickly narrowed, and screening efficiency is improved.
+</p>
+
+<h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">3.2 Mechanism 2: Directed Optimization of Low-Affinity Aptamers</h4>
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Workflow</h5>
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">For aptamers with low binding probability (e.g., API probability &lt; 0.6) in validation but with potential structural advantages (e.g., presence of conserved binding motifs), perform manual modification of local sequences (e.g., adjusting stem-loop structures, optimizing base-complementary regions).</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Re-input the modified sequences into the Aptatrans built-in evaluation system, ZDOCK, and HDOCK for secondary validation.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Conduct iterative optimization until the aptamer meets the preset validation standards, or eliminate the sequence if it is confirmed to have no optimization potential.</li>
+</ol>
+<h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Advantage</h5>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+It avoids discarding aptamers with potential value; instead, it improves their binding ability through directed modification, thereby reducing screening costs.
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">1. Shin I, Kang K, Kim J, Sel S, Choi J, Lee JW, et al. AptaTrans: a deep neural network for predicting aptamer-protein interaction using pretrained encoders. BMC Bioinformatics. 2023 Nov 27;24(1):447.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">2. Global Aptamer Database. Global Aptamer Database [Internet]. 2024 [cited 2025-8-22]. Available from: https://www.aptamer.org/</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">3. Institute of Bioorganic Chemistry, Polish Academy of Sciences. RNAComposer: Automated RNA Structure 3D Modeling Server. Available from: http://rnacomposer.ibch.poznan.pl/ (2025-09-30).</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">4. Weng Lab. ZDOCK: Protein-Protein Docking Server. Available from: https://zdock.wenglab.org/ (Accessed 2025-09-30).</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">5. Huazhong University of Science and Technology. HDOCK: a web server for protein-protein and protein-Dna/RNA docking based on a hybrid strategy. Available from: http://hdock.phys.hust.edu.cn/ (2025-09-30).</p>
+
+
+
+
+
+
+
+
+</div>
+  </main>
+
+  <aside id="toc" class="toc"></aside>
+  <script src="/assets/js/main.js"></script>
+  <footer class="site-footer">
+    <img src="/assets/images/logo6.webp" alt="页脚图片">
+  </footer>
+</body>
+</html>

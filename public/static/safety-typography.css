@@ -1,0 +1,419 @@
+/* Safety Page Enhanced Typography Styles - Based on IHP Page CSS */
+
+/* Main content font override - not affecting TOC */
+#auto-safety-content :not(#toc):not(#toc *) {
+  font-family: Arial, sans-serif !important;
+}
+
+/* Main content container improvements */
+#auto-safety-content {
+  font-family: Arial, sans-serif !important;
+  line-height: 1.7;
+  color: #2d3748;
+  max-width: none;
+  padding: 0 2rem;
+}
+
+/* Enhanced heading hierarchy */
+#auto-safety-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 3rem 0 1.5rem 0;
+  padding: 1.5rem 0 1rem 0;
+  border-bottom: 4px solid #38a169;
+  position: relative;
+  letter-spacing: -0.025em;
+}
+
+#auto-safety-content h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #38a169, #48bb78);
+  border-radius: 2px;
+}
+
+#auto-safety-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 2.5rem 0 1rem 0;
+  padding: 1rem 0 0.5rem 1rem;
+  border-left: 5px solid #ed8936;
+  background: linear-gradient(90deg, rgba(237, 137, 54, 0.1), transparent);
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+#auto-safety-content h2::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #ed8936, #dd6b20);
+  border-radius: 3px 0 0 3px;
+}
+
+#auto-safety-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 2rem 0 1rem 0;
+  padding: 0.75rem 0 0.5rem 0.75rem;
+  border-left: 3px solid #4299e1;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.08), transparent);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Enhanced paragraph styling */
+#auto-safety-content p {
+  margin: 1.25rem 0;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1a202c;
+}
+
+/* First paragraph after headings - lead paragraph style */
+#auto-safety-content h1 + p,
+#auto-safety-content h2 + p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(237, 242, 247, 0.8);
+  border-radius: 8px;
+  border-left: 4px solid #38a169;
+}
+
+/* Enhanced list styling */
+#auto-safety-content ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+#auto-safety-content ul li {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  line-height: 1.7;
+  background: rgba(247, 250, 252, 0.5);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  color: #1a202c;
+}
+
+#auto-safety-content ul li:hover {
+  background: rgba(237, 242, 247, 0.8);
+}
+
+#auto-safety-content ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  color: #38a169;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Ordered lists */
+#auto-safety-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+  counter-reset: item;
+}
+
+#auto-safety-content ol li {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  line-height: 1.7;
+  background: rgba(247, 250, 252, 0.5);
+  border-radius: 6px;
+  color: #1a202c;
+  list-style: none;
+  counter-increment: item;
+}
+
+#auto-safety-content ol li::before {
+  content: counter(item) ". ";
+  color: #ed8936;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Nested lists */
+#auto-safety-content ul ul {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}
+
+#auto-safety-content ul ul li {
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+
+#auto-safety-content ul ul li::before {
+  content: '•';
+  color: #ed8936;
+  left: 0.5rem;
+}
+
+/* Enhanced strong text styling */
+#auto-safety-content strong {
+  font-weight: 600;
+  color: #1a202c;
+  background: linear-gradient(120deg, rgba(56, 161, 105, 0.15), rgba(237, 137, 54, 0.15));
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* Emphasis styling */
+#auto-safety-content em {
+  font-style: italic;
+  color: #2d3748;
+  background: rgba(237, 242, 247, 0.7);
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+}
+
+/* Enhanced image styling */
+#auto-safety-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#auto-safety-content img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Link styling - not affecting TOC */
+#auto-safety-content :not(#toc):not(#toc *) a {
+  color: #2f855a;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+#auto-safety-content :not(#toc):not(#toc *) a:hover {
+  color: #276749;
+  border-bottom-color: #2f855a;
+}
+
+/* Section dividers */
+#auto-safety-content h1 + * {
+  margin-top: 2rem;
+}
+
+#auto-safety-content h2 + * {
+  margin-top: 1.5rem;
+}
+
+/* Enhanced content sections with visual cards */
+#auto-safety-content > p:not(:first-child),
+#auto-safety-content > ul {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#auto-safety-content > p:hover,
+#auto-safety-content > ul:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #auto-safety-content {
+    padding: 0 1rem;
+  }
+  
+  #auto-safety-content h1 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+  }
+  
+  #auto-safety-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem 0;
+    padding: 0.75rem 0 0.5rem 0.75rem;
+  }
+  
+  #auto-safety-content h3 {
+    font-size: 1.125rem;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+  
+  #auto-safety-content ul li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+  }
+  
+  #auto-safety-content ul li::before {
+    left: 0.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  #auto-safety-content h1,
+  #auto-safety-content h2,
+  #auto-safety-content h3 {
+    break-after: avoid;
+  }
+  
+  #auto-safety-content img {
+    break-inside: avoid;
+    max-width: 100%;
+  }
+  
+  #auto-safety-content ul li,
+  #auto-safety-content ol li {
+    break-inside: avoid;
+  }
+}
+
+/* Smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states for accessibility */
+#auto-safety-content a:focus,
+#auto-safety-content h1:target,
+#auto-safety-content h2:target,
+#auto-safety-content h3:target {
+  outline: 2px solid #38a169;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading animation for images */
+#auto-safety-content img {
+  opacity: 0;
+  animation: fadeInImage 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dark theme enhancements */
+:root.dark #auto-safety-content h1 {
+  color: #ffffff !important;
+  text-shadow: 0 0 50px rgba(168, 85, 247, 1), 0 0 30px rgba(168, 85, 247, 0.9), 0 0 15px rgba(168, 85, 247, 0.7);
+  border-bottom-color: #a855f7;
+  font-weight: 700;
+}
+
+:root.dark #auto-safety-content h2 {
+  color: #ec4899 !important;
+  text-shadow: 0 0 40px rgba(236, 72, 153, 1), 0 0 20px rgba(236, 72, 153, 0.8), 0 0 10px rgba(236, 72, 153, 0.6);
+  border-left-color: #ec4899;
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.2), transparent);
+  font-weight: 700;
+}
+
+:root.dark #auto-safety-content h3 {
+  color: #c084fc !important;
+  text-shadow: 0 0 30px rgba(192, 132, 252, 0.9), 0 0 15px rgba(192, 132, 252, 0.7), 0 0 8px rgba(192, 132, 252, 0.5);
+  font-weight: 700;
+  border-left-color: #c084fc;
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0.15), transparent);
+}
+
+/* Dark theme - all paragraphs */
+:root.dark #auto-safety-content p {
+  color: #e5e7eb !important;
+}
+
+/* Dark theme - lead paragraphs after headings */
+:root.dark #auto-safety-content h1 + p,
+:root.dark #auto-safety-content h2 + p {
+  color: #f3f4f6 !important;
+  background: rgba(55, 65, 81, 0.7) !important;
+  border-left-color: #f97316 !important;
+}
+
+/* Dark theme - list items */
+:root.dark #auto-safety-content ul li {
+  background: rgba(55, 65, 81, 0.4) !important;
+  color: #e5e7eb !important;
+}
+
+:root.dark #auto-safety-content ul li:hover {
+  background: rgba(75, 85, 99, 0.6) !important;
+}
+
+:root.dark #auto-safety-content ol li {
+  background: rgba(55, 65, 81, 0.4) !important;
+  color: #e5e7eb !important;
+}
+
+/* Dark theme - strong/bold text */
+:root.dark #auto-safety-content strong {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15) !important;
+}
+
+/* Dark theme - em/italic text */
+:root.dark #auto-safety-content em {
+  color: #a78bfa !important;
+  background: rgba(167, 139, 250, 0.15) !important;
+}
+
+/* Dark theme - links */
+:root.dark #auto-safety-content :not(#toc):not(#toc *) a {
+  color: #60a5fa !important;
+}
+
+:root.dark #auto-safety-content :not(#toc):not(#toc *) a:hover {
+  color: #93c5fd !important;
+  border-bottom-color: #60a5fa !important;
+}
+
+/* Dark theme - content cards */
+:root.dark #auto-safety-content > p:not(:first-child),
+:root.dark #auto-safety-content > ul {
+  background: rgba(31, 41, 55, 0.5) !important;
+  border-color: rgba(75, 85, 99, 0.3) !important;
+  color: #e5e7eb !important;
+}
+
+:root.dark #auto-safety-content > p:hover,
+:root.dark #auto-safety-content > ul:hover {
+  background: rgba(31, 41, 55, 0.7) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark theme - images */
+:root.dark #auto-safety-content img {
+  border-color: rgba(75, 85, 99, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+:root.dark #auto-safety-content img:hover {
+  border-color: #38a169 !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+}

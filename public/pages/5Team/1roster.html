@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Team Roster</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+<!--INLINE-CSS-LyogUm9zdGVy-->
+  <style>
+/* Roster-only: reduce initial top gap so content shows immediately */
+
+    .pagecontainer { 
+
+        margin-top: 4vh; 
+
+        /* Make roster content nearly full width on this page only */
+
+        margin-left: min(16px, 1.5vw) !important;
+
+        margin-right: min(16px, 1.5vw) !important;
+
+    }
+
+    .pagecontent { 
+
+        transform: none; 
+
+        margin-top: 0; 
+
+        /* Expand the white content box to almost full background width */
+
+        width: 100% !important;
+
+        max-width: none !important;
+
+    }
+
+ 
+
+ /* Unified title styling */
+
+ .title2 {
+
+     margin-bottom: 60px !important;
+
+     margin-left: -50px !important;
+
+ }
+
+ .title2 > span {
+
+     font-size: 8.5vw !important;
+
+     display: inline-block;
+
+ }
+
+
+
+    /* Override background image for roster page - same as iHP */
+
+    .safety-bg-image {
+
+        background: url("/static/_downloaded/static.igem.wiki/teams/5913/picture/hp-background.webp") !important;
+
+        background-size: cover !important;
+
+        background-position: center center !important;
+
+        background-repeat: no-repeat !important;
+
+    }
+
+
+
+    /* Align roster background with fixed 250px sidebar on desktop */
+
+ @media (min-width: 921px) {
+
+ .safety-bg-image {
+
+ left: 250px;
+
+ width: calc(100% - 250px);
+
+        }
+
+    }
+
+
+
+    /* FLAT STYLE: Single background box like Human Practice page */
+
+    .pagecontent {
+
+        background: var(--nav-bg) !important;
+
+        padding: 40px 3% !important;
+
+        border-radius: 50px !important;
+
+        margin-bottom: 100px !important;
+
+        /* Let width be controlled by overrides above */
+
+        margin-left: 0 !important;
+
+        margin-right: 0 !important;
+
+    }
+
+
+
+    .roster-container {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        padding: 40px 20px;
+
+    }
+
+
+
+    .team-name {
+
+        text-align: center;
+
+        margin-bottom: 60px;
+
+    }
+
+
+
+    .team-name h1 {
+
+        font-size: 3.5rem;
+
+        font-weight: 700;
+
+        color: #e2e8f0;
+
+        margin: 0;
+
+        letter-spacing: 2px;
+
+    }
+
+
+
+    /* Carousel Styles */
+
+    .team-photos-carousel {
+
+        margin-bottom: 80px;
+
+    }
+
+
+
+    .carousel-container {
+
+        position: relative;
+
+        max-width: 98%;
+
+        margin: 0 auto;
+
+        overflow: hidden;
+
+        border-radius: 20px;
+
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    .carousel-slides {
+
+        display: flex;
+
+        transition: transform 0.5s ease-in-out;
+
+    }
+
+
+
+    .carousel-slide {
+
+        min-width: 100%;
+
+        display: none;
+
+    }
+
+
+
+    .carousel-slide.active {
+
+        display: block;
+
+    }
+
+
+
+    .carousel-slide img {
+
+        width: 100%;
+
+        height: auto;
+
+        display: block;
+
+    }
+
+
+
+    .carousel-btn {
+
+        position: absolute;
+
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        background-color: rgba(255, 255, 255, 0.8);
+
+        border: none;
+
+        font-size: 2rem;
+
+        padding: 15px 20px;
+
+        cursor: pointer;
+
+        border-radius: 5px;
+
+        transition: all 0.3s ease;
+
+        z-index: 10;
+
+    }
+
+
+
+    .carousel-btn:hover {
+
+        background-color: rgba(255, 255, 255, 1);
+
+        transform: translateY(-50%) scale(1.1);
+
+    }
+
+
+
+    .carousel-btn.prev {
+
+        left: 20px;
+
+    }
+
+
+
+    .carousel-btn.next {
+
+        right: 20px;
+
+    }
+
+
+
+    .carousel-dots {
+
+        text-align: center;
+
+        padding: 20px 0;
+
+        background-color: rgba(0, 0, 0, 0.05);
+
+    }
+
+
+
+    .dot {
+
+        display: inline-block;
+
+        width: 12px;
+
+        height: 12px;
+
+        margin: 0 6px;
+
+        background-color: #bbb;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+
+    }
+
+
+
+    .dot.active {
+
+        background-color: #3498db;
+
+        transform: scale(1.2);
+
+    }
+
+
+
+    /* Team Section Styles */
+
+    .team-section {
+
+        margin-top: 60px;
+
+        margin-bottom: 80px;
+
+    }
+
+
+
+    .section-title {
+
+        font-size: 2.5rem;
+
+        font-weight: 600;
+
+        color: #e2e8f0;
+
+        text-align: center;
+
+        margin-bottom: 40px;
+
+        position: relative;
+
+        padding-bottom: 15px;
+
+    }
+
+
+
+    .section-title::after {
+
+        content: '';
+
+        position: absolute;
+
+        bottom: 0;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 100px;
+
+        height: 4px;
+
+        background: linear-gradient(90deg, #3498db, #2ecc71);
+
+        border-radius: 2px;
+
+    }
+
+
+
+    .members-grid {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 40px;
+
+        justify-content: center;
+
+        align-items: flex-start;
+
+    }
+
+
+
+    .member-card {
+
+        text-align: center;
+
+        transition: transform 0.3s ease;
+
+    }
+
+
+
+    .member-card:hover {
+
+        transform: translateY(-10px);
+
+    }
+
+
+
+    .member-photo {
+
+        width: 200px;
+
+        height: 200px;
+
+        border-radius: 50%;
+
+        overflow: hidden;
+
+        margin: 0 auto 15px;
+
+        border: 4px solid #f0f0f0;
+
+        transition: all 0.3s ease;
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    .member-card:hover .member-photo {
+
+        border-color: #3498db;
+
+        box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+
+    }
+
+
+
+    .member-photo img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        /* Strongly bias crop to the bottom so more of the face is visible */
+
+        object-position: 50% 100% !important;
+
+        /* Nudge image upwards inside the mask for additional room */
+
+        transform: translateY(-14%);
+
+    }
+
+
+
+    /* Keep centered and show more face by "shrink then crop" */
+
+    .member-photo img[alt="Ming Chen"],
+
+    .member-photo img[alt="Yong Wang"],
+
+    .member-photo img[alt="Zhanpeng Wang"] {
+
+        /* visually shrink while ensuring the circle stays fully covered */
+
+        width: calc(100% / 1) !important;
+
+        height: calc(100% / 1) !important;
+
+        max-width: none !important;
+
+        max-height: none !important;
+
+        transform: scale(1) !important;
+
+        transform-origin: 50% 50% !important;
+
+        object-position: 40% 40% !important;
+
+        object-fit: cover !important;
+
+    }
+
+
+
+    /* Move all other avatars slightly downward */
+
+    .member-photo img:not([alt="Ming Chen"]):not([alt="Yong Wang"]):not([alt="Zhanpeng Wang"]) {
+
+        transform: translateY(-20%) !important;
+
+    }
+
+
+
+    .member-name {
+
+        font-size: 1.1rem;
+
+        font-weight: 500;
+
+        color: #e6f3ff;
+
+    }
+
+
+
+    /* Dark theme support */
+
+    :root.dark .pagecontent {
+
+        background: #1a202c !important;
+
+    }
+
+
+
+    :root.dark .roster-container {
+
+        color: #e6f3ff !important;
+
+    }
+
+
+
+    :root.dark .team-name h1 {
+
+        color: #ffffff !important;
+
+    }
+
+
+
+    :root.dark .section-title {
+
+        color: #ffffff !important;
+
+    }
+
+
+
+    :root.dark .member-name {
+
+        color: #e6f3ff !important;
+
+    }
+
+
+
+    :root.dark .carousel-btn {
+
+        background-color: rgba(26, 32, 44, 0.8);
+
+        color: #ffffff;
+
+    }
+
+
+
+    :root.dark .carousel-btn:hover {
+
+        background-color: rgba(26, 32, 44, 1);
+
+    }
+
+
+
+    :root.dark .dot {
+
+        background-color: #4a5568;
+
+    }
+
+
+
+    :root.dark .dot.active {
+
+        background-color: #60a5fa;
+
+    }
+
+
+
+    /* Responsive Design */
+
+    @media (max-width: 768px) {
+
+        .pagecontent {
+
+            width: 100% !important;
+
+            max-width: none !important;
+
+            padding: 30px 3% !important;
+
+            border-radius: 30px !important;
+
+        }
+
+
+
+        .roster-container {
+
+            width: 100%;
+
+            max-width: 100%;
+
+            padding: 20px 10px;
+
+        }
+
+
+
+        .team-name h1 {
+
+            font-size: 2.5rem;
+
+        }
+
+
+
+        .section-title {
+
+            font-size: 2rem;
+
+        }
+
+
+
+        .members-grid {
+
+            gap: 30px;
+
+            justify-content: center;
+
+        }
+
+
+
+        .member-photo {
+
+            width: 150px;
+
+            height: 150px;
+
+        }
+
+
+
+        .carousel-btn {
+
+            font-size: 1.5rem;
+
+            padding: 10px 15px;
+
+        }
+
+
+
+        .carousel-btn.prev {
+
+            left: 10px;
+
+        }
+
+
+
+        .carousel-btn.next {
+
+            right: 10px;
+
+        }
+
+    }
+  </style>
+</head>
+<body>
+  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <aside class="sidebar">
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<!--SIDEBAR-START-->
+<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<nav class="site-nav">
+  <ul>
+    <li><a href="/" class="home-link">Home</a></li>
+    <li><span>Project</span>
+  <ul>
+<li><a href="/pages/1Project/1background.html">Background</a></li>
+<li><a href="/pages/1Project/2description.html">Description</a></li>
+<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+</li>
+<li><span>Dry Lab</span>
+  <ul>
+<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+</li>
+<li><span>Wet Lab</span>
+  <ul>
+<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+</li>
+<li><span>Human Practice</span>
+  <ul>
+<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+</li>
+<li><span>Team</span>
+  <ul>
+<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+</li>
+
+  </ul>
+</nav>
+<!--SIDEBAR-END-->
+<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+</aside>
+
+  <main class="content">
+<div class="pagecontainer"><div class="title2"><span>Team Roster</span></div></div>
+
+    <div class="pagecontent" id="auto-page-content">
+<div class="roster-container">
+<!-- Team Name -->
+<div class="team-name">
+<h1>IZJU-China 2025</h1>
+</div>
+<!-- Team Photos Carousel -->
+<div class="team-photos-carousel">
+<div class="carousel-container">
+<div class="carousel-slides">
+<div class="carousel-slide active">
+<img alt="Team Photo 1" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/1.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 2" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/2.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 3" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/3.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 4" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/4.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 5" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/5.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 6" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/6.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 7" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/7.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 8" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/8.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 9" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/9.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 10" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/10.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 11" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/11.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Team Photo 12" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/12.webp"/>
+</div>
+</div>
+<button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+<button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+<div class="carousel-dots"></div>
+</div>
+</div>
+<!-- Primary PI -->
+<div class="team-section">
+<h2 class="section-title">Primary PI</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Wenwen Huang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/hww.webp"/>
+</div>
+<div class="member-name">Wenwen Huang</div>
+</div>
+</div>
+</div>
+<!-- Instructors -->
+<div class="team-section">
+<h2 class="section-title">Instructors</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Mengdi Jin" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/jmd.webp"/>
+</div>
+<div class="member-name">Mengdi Jin</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Hangchen Shen" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/shc.webp"/>
+</div>
+<div class="member-name">Hangchen Shen</div>
+</div>
+</div>
+</div>
+<!-- Secondary PIs -->
+<div class="team-section">
+<h2 class="section-title">Secondary PIs</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Ming Chen" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/cm.webp"/>
+</div>
+<div class="member-name">Ming Chen</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yong Wang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/wy.webp"/>
+</div>
+<div class="member-name">Yong Wang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Fangwei Shao" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/sfw.webp"/>
+</div>
+<div class="member-name">Fangwei Shao</div>
+</div>
+</div>
+</div>
+<!-- Wet Lab -->
+<div class="team-section">
+<h2 class="section-title">Wet Lab</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Xiangrong Deng" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/dxr.webp"/>
+</div>
+<div class="member-name">Xiangrong Deng</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yan Le" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/ly.webp"/>
+</div>
+<div class="member-name">Yan Le</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Qingyue Qu" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/qqy.webp"/>
+</div>
+<div class="member-name">Qingyue Qu</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Siqi Wei" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/wsq.webp"/>
+</div>
+<div class="member-name">Siqi Wei</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Guanqiang Pan" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/pgq.webp"/>
+</div>
+<div class="member-name">Guanqiang Pan</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yunchang Gang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/gyc.webp"/>
+</div>
+<div class="member-name">Yunchang Gang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yutian Yang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/yyt.webp"/>
+</div>
+<div class="member-name">Yutian Yang</div>
+</div>
+</div>
+</div>
+<!-- Dry Lab -->
+<div class="team-section">
+<h2 class="section-title">Dry Lab</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Fenglan Pan" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/pfl.webp"/>
+</div>
+<div class="member-name">Fenglan Pan</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Ziheng Shen" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/szl.webp"/>
+</div>
+<div class="member-name">Ziheng Shen</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Xinyue Zhang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/zxy.webp"/>
+</div>
+<div class="member-name">Xinyue Zhang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Shurui Xu" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/xsr.webp"/>
+</div>
+<div class="member-name">Shurui Xu</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Dongting Zhai" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/zdt.webp"/>
+</div>
+<div class="member-name">Dongting Zhai</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Xuanzhu Chen" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/cxz.webp"/>
+</div>
+<div class="member-name">Xuanzhu Chen</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yi Hu" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/hy.webp"/>
+</div>
+<div class="member-name">Yi Hu</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Jiayao Wang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/wjy.webp"/>
+</div>
+<div class="member-name">Jiayao Wang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Haosheng Zhang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/zhs-1.webp"/>
+</div>
+<div class="member-name">Haosheng Zhang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Zhanpeng Wang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/wzp.webp"/>
+</div>
+<div class="member-name">Zhanpeng Wang</div>
+</div>
+</div>
+</div>
+<!-- Human Practice -->
+<div class="team-section">
+<h2 class="section-title">Human Practice</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Canrong Long" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/lcr.webp"/>
+</div>
+<div class="member-name">Canrong Long</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Zhuoying Li" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/lzy.webp"/>
+</div>
+<div class="member-name">Zhuoying Li</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Kan Lao" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/kl.webp"/>
+</div>
+<div class="member-name">Kan Lao</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Hanyumo Chen" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/chym.webp"/>
+</div>
+<div class="member-name">Hanyumo Chen</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Wanling Tang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/twl.webp"/>
+</div>
+<div class="member-name">Wanling Tang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Bozhao Duan" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/dbz.webp"/>
+</div>
+<div class="member-name">Bozhao Duan</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Qijing Jiang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/jqj.webp"/>
+</div>
+<div class="member-name">Qijing Jiang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Tongtong Liu" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/ltt.webp"/>
+</div>
+<div class="member-name">Tongtong Liu</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Junle Zhou" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/zjl.webp"/>
+</div>
+<div class="member-name">Junle Zhou</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Siliang Liu" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/lsl.webp"/>
+</div>
+<div class="member-name">Siliang Liu</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Xufan Chen" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/cxf.webp"/>
+</div>
+<div class="member-name">Xufan Chen</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Ningyu Huang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/hny.webp"/>
+</div>
+<div class="member-name">Ningyu Huang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yuming Wang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/wym.webp"/>
+</div>
+<div class="member-name">Yuming Wang</div>
+</div>
+</div>
+</div>
+<!-- Advisors -->
+<div class="team-section">
+<h2 class="section-title">Advisors</h2>
+<div class="members-grid">
+<div class="member-card">
+<div class="member-photo">
+<img alt="Chen Wang" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/wc.webp"/>
+</div>
+<div class="member-name">Chen Wang</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Junhan Ou" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/ojh.webp"/>
+</div>
+<div class="member-name">Junhan Ou</div>
+</div>
+<div class="member-card">
+<div class="member-photo">
+<img alt="Yiqi Fan" src="/static/_downloaded/static.igem.wiki/teams/5913/team-photo/fyq.webp"/>
+</div>
+<div class="member-name">Yiqi Fan</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </main>
+
+  <aside id="toc" class="toc"></aside>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Carousel functionality for team photos
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Initialize carousel
+    function initCarousel() {
+      // Create dots if they don't exist
+      const dotsContainer = document.querySelector('.carousel-dots');
+      if (dotsContainer && dotsContainer.children.length === 0) {
+        slides.forEach((_, index) => {
+          const dot = document.createElement('span');
+          dot.className = 'dot';
+          dot.onclick = () => goToSlide(index);
+          dotsContainer.appendChild(dot);
+        });
+      }
+      
+      // Update dots and show current slide
+      updateCarousel();
+    }
+    
+    // Update carousel display
+    function updateCarousel() {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+      
+      // Show current slide
+      slides[currentSlide].style.display = 'block';
+      
+      // Update dots
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.className = 'dot';
+        if (index === currentSlide) {
+          dot.classList.add('active');
+        }
+      });
+    }
+    
+    // Move to next/previous slide
+    function moveSlide(n) {
+      currentSlide += n;
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      } else if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      }
+      updateCarousel();
+    }
+    
+    // Go to specific slide
+    function goToSlide(n) {
+      currentSlide = n;
+      updateCarousel();
+    }
+    
+    // Initialize carousel when page loads
+    window.addEventListener('load', initCarousel);
+  </script>
+  <footer class="site-footer">
+    <img src="/assets/images/logo6.webp" alt="页脚图片">
+  </footer>
+</body>
+</html>

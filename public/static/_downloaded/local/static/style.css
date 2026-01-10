@@ -1,0 +1,619 @@
+/* Global font override - set all fonts to Arial */
+* {
+  font-family: Arial, sans-serif !important;
+}
+
+body { 
+  /* padding-top controlled by navbar.css (120px) */
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: Arial, sans-serif !important;
+}
+.left-aligned { margin-left: auto; }
+.bg-dark { background-color: #343a40 !important; }
+.bg-hero { background-color: #45b06cff; }
+
+/* CALLOUT */
+.bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
+.bd-callout h4 { margin-bottom:.25rem }
+.bd-callout p:last-child { margin-bottom:0 }
+.bd-callout code { border-radius:.25rem }
+.bd-callout+.bd-callout { margin-top:-.25rem }
+.bd-callout-info { border-left-color:#5bc0de }
+.bd-callout-warning { border-left-color:#f0ad4e }
+.bd-callout-danger { border-left-color:#d9534f }
+
+/* footer */
+.footer-infos a{
+    color: white; font-weight: bold; text-decoration: none;
+}
+.footer-infos a:hover{
+    color: white; text-decoration: underline;
+}
+/* footer a { color: white; font-weight: bold; text-decoration: none; }
+footer a:hover { color: white; text-decoration: underline; } */
+
+/* Theme background: Sky blue / deep blue sky effect */
+.all {
+  background: var(--background-color);
+  overflow-x: hidden;
+}
+
+.main{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin: 0;
+  width: 60%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+}
+
+.pin-placer {
+  display: flex;
+  justify-content: center;
+}
+
+.pin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60rem;
+  min-width: 60rem;
+  height: auto;
+}
+
+.counter-container {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.counter-box{
+  background-color: var(--default-color-3);
+  color: black;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  text-align: center;
+  min-width: 50%;
+}
+
+.horizontal_path {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;	
+  height: 30vh;
+  margin: 0;
+}
+
+.vertical_path {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  min-width: 20%;	
+  max-height: 100%;
+  margin: 0;
+}
+
+.anchor {
+  width: 1px !important;	
+  height: 1px !important;
+  z-index: 100;
+  margin: 10rem;
+}
+
+.anchor.lung1 {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 49%;
+}
+
+.guidepoint {
+  width: 1px !important;	
+  height: 1px !important;
+  z-index: 100;
+  position: absolute;
+}
+
+.guide1 {
+  left: 49%;
+  top: 36%; 
+}
+
+.guide2 {
+  left: 28.4%;
+  top: 45%; 
+}
+
+.guide3 {
+  left: 28.4%;
+  top: 47.8%; 
+}
+
+.guide4 {
+  left: 28.4%;
+  top: 47%; 
+}
+
+.startpoint {
+  position: relative;
+}
+
+.lipid-container {
+  top: 6.875rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 0.5rem;
+  width: 100%;
+}
+
+.lipid-container2 {
+  top: 6.875rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 19rem;
+}
+
+.plasmid_container{
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  z-index: 100;
+  scale: 1;
+}
+
+.plasmid_container2{
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  z-index: 100;
+  scale: 1;
+  opacity: 0;
+}
+
+.svg-container {
+  position: absolute;
+  height: 0.5rem;
+  transform-origin: 155px 50px;
+  z-index: 100;
+}
+
+.svg-1 {
+  height: 1em;
+  stroke-width: 5;
+  fill: none;
+  overflow: visible;
+}
+
+.path1 {
+  z-index: 100;
+  visibility: visible;
+  position: absolute;
+  stroke-width: 1;
+}
+
+.bilipid {
+  position: absolute;
+  width: 1.25rem;
+  height: 2.5rem;
+  z-index: 100;
+}
+
+.bilipid img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.svg-container2 {
+  position: absolute;
+  height: 0.5rem;
+  transform-origin: 155px 50px;
+  z-index: 100;
+  opacity: 0;
+}
+
+.svg-2 {
+  height: 1em;
+  stroke-width: 5;
+  fill: none;
+  overflow: visible;
+}
+
+.path2 {
+  z-index: 100;
+  visibility: visible;
+  position: absolute;
+  stroke-width: 1;
+}
+
+.bilipid2 {
+  position: absolute;
+  width: 1.25rem;
+  height: 2.5rem;
+  z-index: 100;
+}
+
+.bilipid2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lung-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  width: 12%;
+  top: 48%;
+  left: 25%;
+  opacity: 0; 
+  transform: rotate(7deg);
+}
+
+.text {
+  position: absolute;
+}
+
+.lung_text1 {
+  width: 30%;
+  top: 15%;
+  left: 60%;
+  opacity: 0; 
+}
+
+.lung_text2 {
+  width: 25%;
+  top: 54%;
+  left: 10%;
+  scale: 80%;
+  opacity: 0;
+}
+
+.biofilm-alive {
+  position: absolute;
+  width: 30%;
+  top: 43%;
+  left: 15%;
+  transform: translateZ(0);
+}
+
+.biofilm_text1 {
+  scale: 10%;
+  opacity: 0;
+  z-index: 110;
+  left: -26%;
+  top: -32%;
+}
+
+.biofilm_text2 {
+  scale: 10%;
+  opacity: 0;
+  z-index: 110;
+  left: -10%;
+  top: -30%;
+}
+
+.biofilm_text3 {
+  scale: 10%;
+  opacity: 0;
+  z-index: 110;
+  left: 3%;
+  top: -47%;
+}
+
+.biofilm_text4 {
+  scale: 10%;
+  opacity: 0;
+  z-index: 110;
+  left: 3%;
+  top: -30%;
+}
+
+.bakterium-container {
+  position: absolute;
+  width: 28%;
+  top: 39%;
+  left: 32%;
+  transform: translateZ(0);
+}
+
+.bilipid_bacterium {
+  position: absolute;
+  width: 1.25rem;
+  height: 2.5rem;
+  z-index: 100;
+  scale: 0.25;
+  display: block;
+}
+
+.bilipid_bacterium img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bilipid_bacterium2 {
+  position: absolute;
+  width: 1.25rem;
+  height: 2.5rem;
+  z-index: 100;
+  scale: 0.25;
+}
+
+.bilipid_bacterium2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.amp{
+  position: absolute;
+  z-index: 111;
+  width: 10%; 
+  opacity: 0;
+  transform: translateZ(0);
+}
+
+#amp1{
+  top: 9%;
+  left: 25%;
+}
+
+#amp2{
+  top: 19%;
+  left: 29%;
+}
+
+#amp3{
+  top: 8%;
+  left: 57%;
+}
+
+#amp4{
+  top: 18%;
+  left: 59%;
+}
+
+.biofilm-dead {
+  position: absolute;
+  width: 30%;
+  top: 75%;
+  left: 9%;
+  opacity: 0;
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width: 1001px) {
+  .horizontal_path{
+    display: none;
+  }
+  .vertical_path{
+    display: none;
+  }
+  .lung-container{
+    display: none;
+  }
+  .pin-placer{
+    display: none;
+  }
+  .pin-container{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    height: auto;
+  }
+  
+  .omv-container, .lipo-container {
+    width: auto;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .omv-container img, .lipo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+  
+  .main {
+    width: 90vw;
+    max-width: 100vw;
+  }
+}
+
+.explore-container {
+  justify-content: center;
+}
+
+.explore-button {
+  width: 30%;
+}
+
+@media screen and (max-width: 1250px){
+  .explore-button{
+    width: 40%;
+    padding-bottom: 0px;
+  }
+
+  .top_mobile1{
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .top_mobile2{
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .counter-container{
+    font-size: 1.25em;
+  }
+  .counter-box{
+    min-height: 220px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+}
+
+/* Loading Screen */
+.loading {
+  position: fixed;
+}
+
+.page-loader{
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: var(--nav-bg);
+  z-index: 1100;
+  text-align: center;
+}
+
+.txt{
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.spinner {
+  position: relative;
+  top: 15%;
+  width: 70vw;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.spinner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-container {
+  border: solid 5px #f51889; 
+  border-radius: 15px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%; 
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Three.js Canvas Container */
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#three-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: white;
+}
+
+.heading-container h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.heading-container p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Utility classes */
+.f1 { font-size: 2rem; }
+.f2 { font-size: 1.5rem; }
+.f3 { font-size: 1rem; }
+.f8 { font-size: 0.8rem; }
+.tc { text-align: center; }
+.tl { text-align: left; }
+.tr { text-align: right; }
+.ma0 { margin: 0; }
+.pa0 { padding: 0; }
+.pa3 { padding: 1rem; }
+.pa4 { padding: 1.5rem; }
+.mt5 { margin-top: 3rem; }
+.mt6 { margin-top: 4rem; }
+.mb2 { margin-bottom: 1rem; }
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.items-start { align-items: flex-start; }
+.bg-transparent { background-color: transparent; }
+.iGEMpink { color: #f51889; }
+.iGEMyellow { color: #ffd700; }
+.iGEMblue { color: #0066cc; }
+.no-underline { text-decoration: none; }
+.black { color: black; }
+.w-100 { width: 100%; }
+.jump-on-hover:hover { transform: translateY(-5px); transition: transform 0.3s ease; }

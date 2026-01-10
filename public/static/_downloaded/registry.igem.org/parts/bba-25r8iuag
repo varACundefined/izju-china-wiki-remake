@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="iGEM Registry"/>
+
+    <!-- favicon -->
+    <link rel="icon" href="https://static.igem.org/websites/common/2022/favicons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.igem.org/websites/common/2022/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.igem.org/websites/common/2022/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.igem.org/websites/common/2022/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="https://static.igem.org/websites/common/2022/favicons/safari-pinned-tab.svg" color="#5aaa47" />
+    <meta name="msapplication-TileColor" content="#5aaa47" />
+    <meta name="msapplication-square150x150logo" content="https://static.igem.org/websites/common/2022/favicons/mstile-150x150.png" />
+
+    <!-- HTML Meta Tags -->
+    <title>iGEM Registry</title>
+    <meta name="description" content="The iGEM Registry is a community-curated collection of standardised genetic parts used to design, build and share synthetic biology devices and systems.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="http://registry.igem.org">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="iGEM Registry">
+    <meta property="og:description" content="The iGEM Registry is a community-curated collection of standardised genetic parts used to design, build and share synthetic biology devices and systems.">
+    <meta property="og:image" content="https://static.igem.org/websites/registry/2025/opengraph-thumbnail.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="registry.igem.org">
+    <meta property="twitter:url" content="http://registry.igem.org">
+    <meta name="twitter:title" content="iGEM Registry">
+    <meta name="twitter:description" content="The iGEM Registry is a community-curated collection of standardised genetic parts used to design, build and share synthetic biology devices and systems.">
+    <meta name="twitter:image" content="https://static.igem.org/websites/registry/2025/opengraph-thumbnail.webp">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js" integrity="sha512-HiD3V4nv8fcjtouznjT9TqDNDm1EXngV331YGbfVGeKUoH+OLkRTCMzA34ecjlgSQZpdHZupdSrqHY+Hz3l6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = (window._paq = window._paq || [])
+      _paq.push(['trackPageView'])
+      _paq.push(['enableLinkTracking'])
+      ;(function () {
+        var u = 'https://matomo.igem.org/'
+        _paq.push(['setTrackerUrl', u + 'matomo.php'])
+        _paq.push(['setSiteId', '26'])
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0]
+        g.type = 'text/javascript'
+        g.async = true
+        g.src = u + 'matomo.js'
+        s.parentNode.insertBefore(g, s)
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-B5CRnNpu.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/cm6-theme-basic-light-Bqf7wPOZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/codemirror-C_nFx09d.js">
+    <link rel="modulepreload" crossorigin href="/assets/aria-hidden-Ce-Zf3sL.js">
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-B6JDOgQ-.js">
+    <link rel="modulepreload" crossorigin href="/assets/cmdk-4K9DSfJU.js">
+    <link rel="modulepreload" crossorigin href="/assets/dnd-kit-DgydB5Mu.js">
+    <link rel="modulepreload" crossorigin href="/assets/lexical-BZSKBX0-.js">
+    <link rel="modulepreload" crossorigin href="/assets/floating-ui-CZ1cKOWq.js">
+    <link rel="modulepreload" crossorigin href="/assets/classnames-D6yOrAgU.js">
+    <link rel="modulepreload" crossorigin href="/assets/dequal-V0vHRWBV.js">
+    <link rel="modulepreload" crossorigin href="/assets/diff-CfDx1q83.js">
+    <link rel="modulepreload" crossorigin href="/assets/babel-DfpUS-5U.js">
+    <link rel="modulepreload" crossorigin href="/assets/compute-scroll-into-view-hkZS9tZa.js">
+    <link rel="modulepreload" crossorigin href="/assets/downshift-C1pJguil.js">
+    <link rel="modulepreload" crossorigin href="/assets/estree-util-is-identifier-name-CF6G0Rxz.js">
+    <link rel="modulepreload" crossorigin href="/assets/estree-util-visit-CafkFxfP.js">
+    <link rel="modulepreload" crossorigin href="/assets/kleur-ClQV8VDr.js">
+    <link rel="modulepreload" crossorigin href="/assets/ccount-CYapfc-L.js">
+    <link rel="modulepreload" crossorigin href="/assets/character-entities-legacy-BjRoEjyV.js">
+    <link rel="modulepreload" crossorigin href="/assets/character-reference-invalid-CH37pBiT.js">
+    <link rel="modulepreload" crossorigin href="/assets/decode-named-character-reference-XVdnFsGr.js">
+    <link rel="modulepreload" crossorigin href="/assets/devlop-BjhwAxDz.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-alphabetical-Igle_lSG.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-alphanumerical-BR0hBH99.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-hexadecimal-CwrAzsg9.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-directive-DCfyEpnl.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-from-markdown-t9hJ_-ux.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-gfm-strikethrough-BKcShxqW.js">
+    <link rel="modulepreload" crossorigin href="/assets/longest-streak-BUJHbD_1.js">
+    <link rel="modulepreload" crossorigin href="/assets/markdown-table-B2RsHcek.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-gfm-table-CN7aFOYH.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-gfm-task-list-item-DSS0e0H8.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-highlight-mark-Beyevvjl.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-mdx-jsx-SnQT-1wf.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdast-util-to-markdown-CPT0DFF2.js">
+    <link rel="modulepreload" crossorigin href="/assets/mdxeditor-BBr4VjHS.js">
+    <link rel="modulepreload" crossorigin href="/assets/engine.io-parser-6TCmviHM.js">
+    <link rel="modulepreload" crossorigin href="/assets/mitt-Bu6FVZgC.js">
+    <link rel="modulepreload" crossorigin href="/assets/novu-DkXXSsGa.js">
+    <link rel="modulepreload" crossorigin href="/assets/base64-js-BTCekzrs.js">
+    <link rel="modulepreload" crossorigin href="/assets/brotli-BCYqzlzt.js">
+    <link rel="modulepreload" crossorigin href="/assets/clone-LRbrcCLs.js">
+    <link rel="modulepreload" crossorigin href="/assets/dfa-DCBnMwjw.js">
+    <link rel="modulepreload" crossorigin href="/assets/fast-deep-equal-biZbWPnP.js">
+    <link rel="modulepreload" crossorigin href="/assets/fontkit-BTXn3uS-.js">
+    <link rel="modulepreload" crossorigin href="/assets/abs-svg-path-0CuUMNed.js">
+    <link rel="modulepreload" crossorigin href="/assets/bidi-js-DcAVXfif.js">
+    <link rel="modulepreload" crossorigin href="/assets/color-name-Bde0YDpm.js">
+    <link rel="modulepreload" crossorigin href="/assets/color-string-D_Xt6fl8.js">
+    <link rel="modulepreload" crossorigin href="/assets/crypto-js-BToTsELJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/emoji-regex-xs-DnVoctqs.js">
+    <link rel="modulepreload" crossorigin href="/assets/hsl-to-hex-BZeVngup.js">
+    <link rel="modulepreload" crossorigin href="/assets/hyphen-B6mlsGV4.js">
+    <link rel="modulepreload" crossorigin href="/assets/is-url-k49RuUdL.js">
+    <link rel="modulepreload" crossorigin href="/assets/jay-peg-0KOz-KaJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/linebreak-C5R1VOTh.js">
+    <link rel="modulepreload" crossorigin href="/assets/media-engine-DIVEoUjq.js">
+    <link rel="modulepreload" crossorigin href="/assets/normalize-svg-path-BR9PmaDx.js">
+    <link rel="modulepreload" crossorigin href="/assets/object-assign-BQt7-4qY.js">
+    <link rel="modulepreload" crossorigin href="/assets/pako-NMSknBWX.js">
+    <link rel="modulepreload" crossorigin href="/assets/parse-svg-path-CeUzV-nC.js">
+    <link rel="modulepreload" crossorigin href="/assets/postcss-value-parser-touFrf3D.js">
+    <link rel="modulepreload" crossorigin href="/assets/events-Btl5NhXi.js">
+    <link rel="modulepreload" crossorigin href="/assets/inherits-CqW_lDsb.js">
+    <link rel="modulepreload" crossorigin href="/assets/queue-BRAcwprL.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-pdf-CV7jCzRP.js">
+    <link rel="modulepreload" crossorigin href="/assets/sentry-Cu1oBj5a.js">
+    <link rel="modulepreload" crossorigin href="/assets/call-bind-apply-helpers-B29nz_nJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/call-bound-C3JWtByz.js">
+    <link rel="modulepreload" crossorigin href="/assets/event-target-polyfill-_eLRNwPk.js">
+    <link rel="modulepreload" crossorigin href="/assets/eventemitter3-BrBNe1nI.js">
+    <link rel="modulepreload" crossorigin href="/assets/fast-diff-D-4i580X.js">
+    <link rel="modulepreload" crossorigin href="/assets/fast-xml-parser-DsZyRHld.js">
+    <link rel="modulepreload" crossorigin href="/assets/framer-motion-DIae4rtz.js">
+    <link rel="modulepreload" crossorigin href="/assets/domelementtype-CXCCKbBp.js">
+    <link rel="modulepreload" crossorigin href="/assets/domhandler-B3fdUVza.js">
+    <link rel="modulepreload" crossorigin href="/assets/html-dom-parser-BD0eo1Mf.js">
+    <link rel="modulepreload" crossorigin href="/assets/html-react-parser-BbwmJswQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/lodash.clonedeep-C5KymzIQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/lodash.isequal-CP2LPUlP.js">
+    <link rel="modulepreload" crossorigin href="/assets/lodash-C34JSHyb.js">
+    <link rel="modulepreload" crossorigin href="/assets/mime-DQpEl4xx.js">
+    <link rel="modulepreload" crossorigin href="/assets/moment-St7GKlN2.js">
+    <link rel="modulepreload" crossorigin href="/assets/moment-timezone-CF_3PuDA.js">
+    <link rel="modulepreload" crossorigin href="/assets/node-fetch-CSOIOaxs.js">
+    <link rel="modulepreload" crossorigin href="/assets/object-inspect-JZuf62KY.js">
+    <link rel="modulepreload" crossorigin href="/assets/qs-xX3-tbmW.js">
+    <link rel="modulepreload" crossorigin href="/assets/lodash-es-B8dO-NMU.js">
+    <link rel="modulepreload" crossorigin href="/assets/parchment-VmxO7_zh.js">
+    <link rel="modulepreload" crossorigin href="/assets/quill-ChGD5__6.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-countdown-DesfE2Rj.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-country-flag-C5K-exrZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-device-detect-DXtoTTL9.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-dom-BqBBGARX.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-lazy-load-BgLb-nwv.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-pdf-tailwind-BFemo8TN.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-quill-new-DMjzSBTu.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-redux-Bdt1gBtj.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-simple-typewriter-0A-01bq8.js">
+    <link rel="modulepreload" crossorigin href="/assets/seqparse-BR9O1osq.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-resize-detector-DZsSHdk-.js">
+    <link rel="modulepreload" crossorigin href="/assets/seqviz-DzdXyPDM.js">
+    <link rel="modulepreload" crossorigin href="/assets/immer-wQcPzo9p.js">
+    <link rel="modulepreload" crossorigin href="/assets/redux-thunk-Dyg-6Gw6.js">
+    <link rel="modulepreload" crossorigin href="/assets/redux-9mAZ3p11.js">
+    <link rel="modulepreload" crossorigin href="/assets/reduxjs-BoMjt7M1.js">
+    <link rel="modulepreload" crossorigin href="/assets/uuid-CYFJr0y8.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-DUe7X9r2.js">
+    <link rel="modulepreload" crossorigin href="/assets/data-access-D4MNkJLA.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-router-D-SgZJC6.js">
+    <link rel="modulepreload" crossorigin href="/assets/radix-ui-D4wBRjCx.js">
+    <link rel="modulepreload" crossorigin href="/assets/class-variance-authority-BDNPg0F6.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-error-boundary-ClubiyMT.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-virtuoso-BRQ8ypNt.js">
+    <link rel="modulepreload" crossorigin href="/assets/tailwind-merge-DI3rsa1m.js">
+    <link rel="modulepreload" crossorigin href="/assets/validator-CjzgGPx1.js">
+    <link rel="modulepreload" crossorigin href="/assets/prebuilt-Competition-Dvlh2ecY.js">
+    <link rel="modulepreload" crossorigin href="/assets/prebuilt-undefined-3ikLtfEI.js">
+    <link rel="modulepreload" crossorigin href="/assets/AffiliationSelector.tsx-SP4Dn3jU.js">
+    <link rel="modulepreload" crossorigin href="/assets/ColleaguesSelector.tsx-D9E87hvP.js">
+    <link rel="modulepreload" crossorigin href="/assets/ContributionRolesSelector.tsx-BktvQzUa.js">
+    <link rel="modulepreload" crossorigin href="/assets/KvsCard.tsx-C1YYCvPq.js">
+    <link rel="modulepreload" crossorigin href="/assets/MdxEditor-DuGNONCB.js">
+    <link rel="modulepreload" crossorigin href="/assets/MdxViewer-BnxDgCbE.js">
+    <link rel="modulepreload" crossorigin href="/assets/NewSystemDisclaimer.tsx-BuJvs3mH.js">
+    <link rel="modulepreload" crossorigin href="/assets/OptedOutAlert.tsx-CmfHRTRM.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartCollectionCard.tsx-CMXY2Pc_.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartCompatibility.tsx-D3nVQIDm.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartContext.tsx-Ck8OEtwI.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartLongCard.tsx-DJZaf6Vt.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartSearchBar.tsx-CcpRFK0h.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartSelector.tsx-BduaO6g4.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartSequenceBuilder-CeVCH5ej.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartSequenceViewer.tsx-CzEX2yzW.js">
+    <link rel="modulepreload" crossorigin href="/assets/PartTypeSelector.tsx-D3t2X4n-.js">
+    <link rel="modulepreload" crossorigin href="/assets/Provider.tsx-B2MSH_74.js">
+    <link rel="modulepreload" crossorigin href="/assets/registry-About-C5V95bbR.js">
+    <link rel="modulepreload" crossorigin href="/assets/stepperize-BcD_PTZs.js">
+    <link rel="modulepreload" crossorigin href="/assets/registry-App-B1w0TMGZ.js">
+    <link rel="stylesheet" crossorigin href="/assets/mdxeditor-CSbf-9Wi.css">
+    <link rel="stylesheet" crossorigin href="/assets/react-quill-new-BxFpbbF7.css">
+    <link rel="stylesheet" crossorigin href="/assets/prebuilt-Competition-DD7rRz2Q.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-TlveMhHt.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

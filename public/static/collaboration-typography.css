@@ -1,0 +1,666 @@
+/* Collaboration Page Enhanced Typography Styles */
+
+/* Main content font override - not affecting TOC */
+#auto-collaboration-content :not(#toc):not(#toc *) {
+  font-family: Arial, sans-serif !important;
+}
+
+/* Main content container improvements */
+#auto-collaboration-content {
+  font-family: Arial, sans-serif !important;
+  line-height: 1.7;
+  color: #2d3748;
+  max-width: none;
+  padding: 0 2rem;
+}
+
+/* Enhanced heading hierarchy */
+#auto-collaboration-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 3rem 0 1.5rem 0;
+  padding: 1.5rem 0 1rem 0;
+  border-bottom: 4px solid #38a169;
+  position: relative;
+  letter-spacing: -0.025em;
+}
+
+#auto-collaboration-content h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #38a169, #48bb78);
+  border-radius: 2px;
+}
+
+#auto-collaboration-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 2.5rem 0 1rem 0;
+  padding: 1rem 0 0.5rem 1rem;
+  border-left: 5px solid #ed8936;
+  background: linear-gradient(90deg, rgba(237, 137, 54, 0.1), transparent);
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+#auto-collaboration-content h2::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #ed8936, #dd6b20);
+  border-radius: 3px 0 0 3px;
+}
+
+/* Enhanced paragraph styling */
+#auto-collaboration-content p {
+  margin: 1.25rem 0;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #1a202c;
+}
+
+/* First paragraph after headings - lead paragraph style */
+#auto-collaboration-content h1 + p,
+#auto-collaboration-content h2 + p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(237, 242, 247, 0.8);
+  border-radius: 8px;
+  border-left: 4px solid #38a169;
+}
+
+/* Enhanced list styling */
+#auto-collaboration-content ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+#auto-collaboration-content ul li {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  line-height: 1.7;
+  background: rgba(247, 250, 252, 0.5);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  color: #1a202c;
+}
+
+#auto-collaboration-content ul li:hover {
+  background: rgba(237, 242, 247, 0.8);
+}
+
+#auto-collaboration-content ul li::before {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  color: #38a169;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Nested lists */
+#auto-collaboration-content ul ul {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}
+
+#auto-collaboration-content ul ul li {
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+
+#auto-collaboration-content ul ul li::before {
+  content: '•';
+  color: #ed8936;
+  left: 0.5rem;
+}
+
+/* Enhanced strong text styling */
+#auto-collaboration-content strong {
+  font-weight: 600;
+  color: #1a202c;
+  background: linear-gradient(120deg, rgba(56, 161, 105, 0.15), rgba(237, 137, 54, 0.15));
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* Emphasis styling */
+#auto-collaboration-content em {
+  font-style: italic;
+  color: #2d3748;
+  background: rgba(237, 242, 247, 0.7);
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+}
+
+/* Enhanced image styling */
+#auto-collaboration-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#auto-collaboration-content img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Figure caption styling */
+#auto-collaboration-content p:has(img) + p {
+  text-align: center;
+  font-style: italic;
+  color: #718096;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(247, 250, 252, 0.8);
+  border-radius: 6px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Link styling - not affecting TOC */
+#auto-collaboration-content :not(#toc):not(#toc *) a {
+  color: #2f855a;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+#auto-collaboration-content :not(#toc):not(#toc *) a:hover {
+  color: #276749;
+  border-bottom-color: #2f855a;
+}
+
+/* Special callout boxes for important information */
+#auto-collaboration-content p:contains("More details"),
+#auto-collaboration-content p:contains("Collaboration") {
+  background: linear-gradient(135deg, rgba(56, 161, 105, 0.1), rgba(237, 137, 54, 0.1));
+  border: 1px solid rgba(56, 161, 105, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+
+/* Section dividers */
+#auto-collaboration-content h1 + * {
+  margin-top: 2rem;
+}
+
+#auto-collaboration-content h2 + * {
+  margin-top: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #auto-collaboration-content {
+    padding: 0 1rem;
+  }
+  
+  #auto-collaboration-content h1 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+  }
+  
+  #auto-collaboration-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem 0;
+    padding: 0.75rem 0 0.5rem 0.75rem;
+  }
+  
+  #auto-collaboration-content ul li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+  }
+  
+  #auto-collaboration-content ul li::before {
+    left: 0.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  #auto-collaboration-content h1,
+  #auto-collaboration-content h2 {
+    break-after: avoid;
+  }
+  
+  #auto-collaboration-content img {
+    break-inside: avoid;
+    max-width: 100%;
+  }
+  
+  #auto-collaboration-content ul li {
+    break-inside: avoid;
+  }
+}
+
+/* Smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states for accessibility */
+#auto-collaboration-content a:focus,
+#auto-collaboration-content h1:target,
+#auto-collaboration-content h2:target {
+  outline: 2px solid #38a169;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading animation for images */
+#auto-collaboration-content img {
+  opacity: 0;
+  animation: fadeInImage 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Special styling for numbered sections */
+#auto-collaboration-content h1[id*="1-"],
+#auto-collaboration-content h1[id*="2-"],
+#auto-collaboration-content h1[id*="3-"],
+#auto-collaboration-content h1[id*="4-"],
+#auto-collaboration-content h1[id*="5-"],
+#auto-collaboration-content h1[id*="6-"],
+#auto-collaboration-content h1[id*="7-"],
+#auto-collaboration-content h1[id*="8-"] {
+  counter-increment: section;
+}
+
+#auto-collaboration-content h2[id*="1-1"],
+#auto-collaboration-content h2[id*="1-2"],
+#auto-collaboration-content h2[id*="1-3"] {
+  border-left-color: #ed8936;
+  background: linear-gradient(90deg, rgba(237, 137, 54, 0.1), transparent);
+}
+
+#auto-collaboration-content h2[id*="1-1"]::before,
+#auto-collaboration-content h2[id*="1-2"]::before,
+#auto-collaboration-content h2[id*="1-3"]::before {
+  background: linear-gradient(180deg, #ed8936, #dd6b20);
+}
+
+/* Enhanced content sections with visual cards */
+#auto-collaboration-content > p:not(:first-child),
+#auto-collaboration-content > ul {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#auto-collaboration-content > p:hover,
+#auto-collaboration-content > ul:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Special styling for overview section */
+#auto-collaboration-content h1[id*="overview"] + p,
+#auto-collaboration-content h1[id*="Overview"] + p {
+  background: linear-gradient(135deg, rgba(56, 161, 105, 0.15), rgba(237, 137, 54, 0.15));
+  border: 2px solid rgba(56, 161, 105, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
+}
+
+#auto-collaboration-content h1[id*="overview"] + p::before,
+#auto-collaboration-content h1[id*="Overview"] + p::before {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+/* Image gallery styling - centered images */
+#auto-collaboration-content img {
+  display: block;
+  margin: 2rem auto;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 100%;
+  height: auto;
+}
+
+#auto-collaboration-content img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  border-color: #38a169;
+}
+
+/* Ensure paragraphs containing images are centered */
+#auto-collaboration-content p:has(img) {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* For multiple images in same paragraph - display as centered group */
+#auto-collaboration-content p:has(img + img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#auto-collaboration-content p:has(img + img) img {
+  display: inline-block;
+  margin: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Wrapper for image combinations to keep them centered together */
+#auto-collaboration-content .image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+#auto-collaboration-content .image-group img {
+  flex: 0 1 auto;
+  margin: 0.5rem;
+}
+
+/* Figure captions with enhanced styling */
+#auto-collaboration-content p:has(+ p em),
+#auto-collaboration-content p + p:has(em) {
+  background: linear-gradient(135deg, rgba(247, 250, 252, 0.9), rgba(237, 242, 247, 0.9));
+  border: 1px solid rgba(203, 213, 224, 0.6);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: -1rem auto 2rem auto;
+  max-width: 90%;
+  text-align: center;
+  font-style: italic;
+  color: #4a5568;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+#auto-collaboration-content p:has(+ p em)::before,
+#auto-collaboration-content p + p:has(em)::before {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+/* Enhanced section separators */
+#auto-collaboration-content h1 {
+  position: relative;
+  margin-top: 4rem;
+}
+
+#auto-collaboration-content h1::after {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38a169, transparent);
+  border-radius: 1px;
+}
+
+#auto-collaboration-content h1:first-of-type::after {
+  display: none;
+}
+
+/* Progress indicators for numbered sections */
+
+/* Sub-section indicators */
+
+/* Highlight boxes for important information - using classes instead of :contains */
+#auto-collaboration-content .collaboration-warning {
+  background: linear-gradient(135deg, rgba(245, 101, 101, 0.1), rgba(252, 129, 129, 0.1));
+  border-left: 5px solid #f56565;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+#auto-collaboration-content .collaboration-warning::before {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Success/collaboration indicators */
+#auto-collaboration-content .collaboration-success {
+  background: linear-gradient(135deg, rgba(104, 211, 145, 0.1), rgba(72, 187, 120, 0.1));
+  border-left: 5px solid #68d391;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+#auto-collaboration-content .collaboration-success::before {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* Collaboration information boxes */
+#auto-collaboration-content .collaboration-info {
+  background: linear-gradient(135deg, rgba(56, 161, 105, 0.1), rgba(72, 187, 120, 0.1));
+  border-left: 5px solid #38a169;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+#auto-collaboration-content .collaboration-info::before {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  #auto-collaboration-content > p,
+  #auto-collaboration-content > ul {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  #auto-collaboration-content h1::before {
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+  }
+  
+  #auto-collaboration-content h2[id*="1-1"]::before,
+  #auto-collaboration-content h2[id*="1-2"]::before,
+  #auto-collaboration-content h2[id*="1-3"]::before {
+    left: -1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Mobile image adjustments */
+  #auto-collaboration-content img {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  
+  /* Mobile image groups - stack vertically on small screens */
+  #auto-collaboration-content .image-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #auto-collaboration-content .image-group img {
+    max-width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  #auto-collaboration-content p img {
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+/* Dark theme enhancements - Brighter headings */
+:root.dark #auto-collaboration-content h1 {
+  color: #ffffff !important;
+  text-shadow: 0 0 50px rgba(168, 85, 247, 1), 0 0 30px rgba(168, 85, 247, 0.9), 0 0 15px rgba(168, 85, 247, 0.7);
+  border-bottom-color: #a855f7;
+  font-weight: 700;
+}
+
+:root.dark #auto-collaboration-content h2 {
+  color: #ec4899 !important;
+  text-shadow: 0 0 40px rgba(236, 72, 153, 1), 0 0 20px rgba(236, 72, 153, 0.8), 0 0 10px rgba(236, 72, 153, 0.6);
+  border-left-color: #ec4899;
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.2), transparent);
+  font-weight: 700;
+}
+
+:root.dark #auto-collaboration-content h3 {
+  color: #c084fc !important;
+  text-shadow: 0 0 30px rgba(192, 132, 252, 0.9), 0 0 15px rgba(192, 132, 252, 0.7), 0 0 8px rgba(192, 132, 252, 0.5);
+  font-weight: 700;
+}
+
+:root.dark #auto-collaboration-content h4 {
+  color: #f472b6 !important;
+  text-shadow: 0 0 30px rgba(244, 114, 182, 0.9), 0 0 15px rgba(244, 114, 182, 0.7), 0 0 8px rgba(244, 114, 182, 0.5);
+  font-weight: 700;
+}
+
+:root.dark #auto-collaboration-content h5,
+:root.dark #auto-collaboration-content h6 {
+  color: #93c5fd !important;
+  text-shadow: 0 0 25px rgba(147, 197, 253, 0.8), 0 0 12px rgba(147, 197, 253, 0.6), 0 0 6px rgba(147, 197, 253, 0.4);
+  font-weight: 700;
+}
+
+/* Dark theme - all paragraphs */
+:root.dark #auto-collaboration-content p {
+  color: #e5e7eb !important;
+}
+
+/* Dark theme - lead paragraphs after headings */
+:root.dark #auto-collaboration-content h1 + p,
+:root.dark #auto-collaboration-content h2 + p {
+  color: #f3f4f6 !important;
+  background: rgba(55, 65, 81, 0.7) !important;
+  border-left-color: #f97316 !important;
+}
+
+/* Dark theme - list items */
+:root.dark #auto-collaboration-content ul li {
+  background: rgba(55, 65, 81, 0.4) !important;
+  color: #e5e7eb !important;
+}
+
+:root.dark #auto-collaboration-content ul li:hover {
+  background: rgba(75, 85, 99, 0.6) !important;
+}
+
+/* Dark theme - strong/bold text */
+:root.dark #auto-collaboration-content strong {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15) !important;
+}
+
+/* Dark theme - em/italic text */
+:root.dark #auto-collaboration-content em {
+  color: #a78bfa !important;
+  background: rgba(167, 139, 250, 0.15) !important;
+}
+
+/* Dark theme - links */
+:root.dark #auto-collaboration-content :not(#toc):not(#toc *) a {
+  color: #60a5fa !important;
+}
+
+:root.dark #auto-collaboration-content :not(#toc):not(#toc *) a:hover {
+  color: #93c5fd !important;
+  border-bottom-color: #60a5fa !important;
+}
+
+/* Dark theme - content cards */
+:root.dark #auto-collaboration-content > p:not(:first-child),
+:root.dark #auto-collaboration-content > ul {
+  background: rgba(31, 41, 55, 0.5) !important;
+  border-color: rgba(75, 85, 99, 0.3) !important;
+  color: #e5e7eb !important;
+}
+
+:root.dark #auto-collaboration-content > p:hover,
+:root.dark #auto-collaboration-content > ul:hover {
+  background: rgba(31, 41, 55, 0.7) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark theme - special sections */
+:root.dark #auto-collaboration-content h1[id*="overview"] + p,
+:root.dark #auto-collaboration-content h1[id*="Overview"] + p {
+  background: linear-gradient(135deg, rgba(56, 161, 105, 0.2), rgba(237, 137, 54, 0.2)) !important;
+  border-color: rgba(56, 161, 105, 0.4) !important;
+  color: #f3f4f6 !important;
+}
+
+/* Dark theme - images */
+:root.dark #auto-collaboration-content img {
+  border-color: rgba(75, 85, 99, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+:root.dark #auto-collaboration-content img:hover {
+  border-color: #38a169 !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Dark theme - figure captions */
+:root.dark #auto-collaboration-content p:has(+ p em),
+:root.dark #auto-collaboration-content p + p:has(em) {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.6), rgba(75, 85, 99, 0.6)) !important;
+  border-color: rgba(107, 114, 128, 0.4) !important;
+  color: #d1d5db !important;
+}

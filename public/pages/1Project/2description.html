@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Description</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <link rel="stylesheet" href="/static/safety-typography.css">
+<!--INLINE-CSS-LyogUmVtb3Zl-->
+  <style>
+/* Remove all pseudo-elements globally */
+    [id*="content"] *::before,
+    [id*="content"] *::after,
+    .pagecontent *::before,
+    .pagecontent *::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    /* Description page specific styles */
+    .description-content {
+        max-width: 100%;
+        line-height: 1.6;
+        margin-top: 40px;
+        /* Increase space between page title and content */
+    }
+
+    .description-content h1 {
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .description-content h2 {
+        color: #34495e;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-left: 4px solid #3498db;
+        padding-left: 15px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .description-content h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .description-content ul,
+    .description-content ol {
+        margin: 15px 0;
+        padding-left: 30px;
+    }
+
+    .description-content li {
+        margin: 8px 0;
+    }
+
+    .description-content strong {
+        color: #2c3e50;
+    }
+
+    .description-content em {
+        font-style: italic;
+        color: #7f8c8d;
+    }
+
+    /* Figure styling */
+    .description-content figure {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .description-content figure img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .description-content figcaption {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #666;
+        font-style: italic;
+    }
+
+    /* Table styling */
+    .description-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    .description-content table img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Collapsible sections */
+    .description-content details {
+        background: linear-gradient(135deg, rgba(66, 153, 225, 0.08), rgba(104, 211, 145, 0.08));
+        border: 1px solid rgba(66, 153, 225, 0.25);
+        border-radius: 8px;
+        padding: 0.8rem 1.2rem;
+        margin: 1.2rem 0;
+        transition: all 0.3s ease;
+    }
+
+    .description-content details:hover {
+        background: linear-gradient(135deg, rgba(66, 153, 225, 0.12), rgba(104, 211, 145, 0.12));
+        border-color: rgba(66, 153, 225, 0.4);
+    }
+
+    .description-content details[open] {
+        background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(104, 211, 145, 0.1));
+        border-color: rgba(66, 153, 225, 0.5);
+    }
+
+    .description-content summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: #2c5282;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    /* Remove default triangle marker */
+    .description-content summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Custom arrow icon */
+    .description-content summary::before {
+        content: '▶' !important;
+        display: inline-block !important;
+        position: absolute;
+        left: 0;
+        color: #4299e1;
+        font-size: 0.8em;
+        transition: transform 0.3s ease;
+    }
+
+    .description-content details[open] summary::before {
+        transform: rotate(90deg);
+    }
+
+    .description-content summary:hover {
+        color: #2b6cb0;
+    }
+
+    .description-content details .details-content {
+        margin-top: 0.8rem;
+        padding-left: 1.5rem;
+        color: #4a5568;
+        line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <aside class="sidebar">
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<!--SIDEBAR-START-->
+<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<nav class="site-nav">
+  <ul>
+    <li><a href="/" class="home-link">Home</a></li>
+    <li><span>Project</span>
+  <ul>
+<li><a href="/pages/1Project/1background.html">Background</a></li>
+<li><a href="/pages/1Project/2description.html">Description</a></li>
+<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+</li>
+<li><span>Dry Lab</span>
+  <ul>
+<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+</li>
+<li><span>Wet Lab</span>
+  <ul>
+<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+</li>
+<li><span>Human Practice</span>
+  <ul>
+<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+</li>
+<li><span>Team</span>
+  <ul>
+<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+</li>
+
+  </ul>
+</nav>
+<!--SIDEBAR-END-->
+<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+</aside>
+
+  <main class="content">
+<div class="pagecontainer"><div class="title2"><span>Description</span></div></div>
+
+    <div class="pagecontent" id="auto-page-content"><div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="description-content">
+    <h1>Overview</h1>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The growing crisis of transmissible antimicrobial-resistant bacterial infections calls for innovative therapeutic strategies that go beyond conventional antibiotics. In response, our team introduced the concept of FoCas, a novel platform designed to tackle both drug resistance and infectivity. FoCas utilizes a two-component system: the CRISPR-Cas9 gene-editing system for precise genetic targeting and cleavage, and a DNA origami nanostructure as a smart delivery and targeting vehicle. DNA origami is designed to recruit and protect the sgRNA/Cas9 complex, specifically target pathogens (e.g., Methicillin-resistant <em>Staphylococcus aureus</em> (MRSA)), and facilitate cellular entry. Once inside, endogenous enzymes release the sgRNA/Cas9 from the origami, triggering CRISPR-Cas9 activation to precisely cleave and disable antibiotic resistance genes like <em>mecA</em>. By combining targeted delivery with accurate genetic disruption, FoCas shows strong potential as a future antimicrobial therapy, offering promise in combating superbug infections.</p>
+   
+    <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Design of FoCas</h1>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Our project used MRSA as a model to design, validate, and demonstrate the feasibility and effectiveness of the FoCas concept.</p>
+   
+    <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">System 1: CRISPR-Cas9 gene editing system</h2>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The CRISPR/Cas9 system has emerged as a powerful gene-editing tool in gene therapy. The Cas9 protein can precisely recognize a target double-stranded DNA (dsDNA) through the guidance of a single-guide RNA (sgRNA) and the recruitment of a 3-base protospacer-adjacent motif (PAM), triggering a double-strand break (DSB) (1). As an efficient and well-established tool, CRISPR/Cas9 was selected to target and knockout the <em>mecA</em> gene in MRSA, with the "Cas" in the name "FoCas" corresponding to the system (Figure 1).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-1-crispr-cas9-system-of-focas-2.webp" alt="CRISPR-Cas9 system of FoCas">
+    <figcaption>Figure 1. CRISPR-Cas9 system of FoCas.</figcaption>
+    </figure>
+   
+    <details>
+    <summary>CRISPR Strategies Against Antimicrobial-Resistant Bacteria</summary>
+    <div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="details-content">
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">CRISPR/Cas systems have emerged as valuable tools to approach the problem of antimicrobial resistance (AMR) by either sensitizing or lysing resistant bacteria or by aiding in antibiotic development, with successful applications across diverse organisms, including bacteria and fungi (2,3). CRISPR/Cas systems can target plasmids or the bacterial chromosome of AMR-bacteria (4–6), and it is especially necessary to have an efficient entry into the target cells, which can be achieved through nanoparticles or bacteriophages (7–9).</p>
+    </div>
+    </details>
+   
+    <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">System 2: DNA origami functioned as a delivery system</h2>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami, a remarkable DNA nanostructure, is a promising candidate for next-generation drug delivery due to its self-assembly, programmability, biocompatibility, high drug-loading capacity, and spatial addressability (10,11). It involves folding a long DNA strand (scaffold) into defined shapes by hybridizing with hundreds of short DNA strands (staples). These staples, which can be chemically modified, provide addressable sites for functionalization with various biomolecules and nanoparticles (10–13). In FoCas, the programmable folding DNA origami was selected as the delivery platform, represented by the letters "Fo" (Figure 2).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-2-dna-origami-delivery-system-of-focas.webp" alt="DNA origami delivery system of FoCas">
+    <figcaption>Figure 2. DNA origami delivery system of FoCas.</figcaption>
+    </figure>
+   
+    <details>
+    <summary>What is DNA origami and its advantages in drug delivery?</summary>
+    <div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="details-content">
+    <h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">DNA origami and drug delivery</h3>
+    
+    <h4>The Explanation of DNA Origami</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami is a nanotechnology technique where a long, single-stranded DNA "scaffold" (~7,000 nucleotides, typically viral DNA) is folded into predefined shapes using short ssDNAs called "staples." Each staple has multiple binding domains that connect distant regions of the scaffold via crossover base pairing, folding it in a manner analogous to knitting (Figure 3). The geometries of the resulting structures can be programmed using staple sequences, enabling computer-aided design and universal synthesis protocols (14–16). This programmability makes DNA origami a user-friendly technology suitable for automated fabrication. Recommended tools like caDNAno were employed by our team for DNA origami design <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/2025.igem.wiki/izju-china/design">link to dry lab-origami design</a>. Compared to tile-based DNA assembly, DNA origami achieves higher yield, greater robustness, and the ability to form more complex, non-periodic shapes, largely due to the strong cooperativity between scaffold and staple interactions. Although relatively expensive, new production strategies are continually being explored, as detailed on our <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/2025.igem.wiki/izju-china/project-future">future insights pages</a>.</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-3-principle-of-classic-dna-origami.webp" alt="Principle of classic DNA origami">
+    <figcaption>Figure 3. Principle of classic DNA origami. A long single-stranded scaffold DNA is hybridized with multiple short staple strands (blue). Through base pairing between complementary sequences (marked in red, orange, green, and blue, for example), the staples bring distant regions of the scaffold together, leading to the formation of a predefined shape. This figure is taken from reference (10).</figcaption>
+    </figure>
+   
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Since the demonstration of high-precision, programmable 2D DNA patterns in 2006, which included the first use of rectangular shapes, DNA origami has evolved rapidly (17). It now enables the synthesis of virtually any arbitrary shape, from 1D to 3D structures, with customizable features like asymmetry (18), cavities (19), or curvatures (17). With precise chemical modifications at specific sites, DNA origami offers a highly programmable platform for engineering nanoscale entities—ranging from small-molecule dyes to large protein complexes, inorganic nanowires, and 3D liposomes. These properties make DNA origami highly promising for applications in nanofabrication, nanophotonics/nanoelectronics, catalysis, computation, molecular machines, bioimaging, drug delivery, and biophysics (Figure 4) (10,11).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-4-dna-nanostructure-enabled-applications.webp" alt="DNA nanostructure-enabled applications">
+    <figcaption>Figure 4. DNA nanostructure-enabled applications. DNA origami, a self-assembled 2D or 3D DNA nanostructure, has been applied across diverse fields including nanofabrication, biosensing, drug delivery, and computing and storage. The figure was taken from reference (11).</figcaption>
+    </figure>
+   
+    <h4>Potential Use in Drug Delivery</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The use of DNA origami structures as carriers for drug delivery has gained significant attention (12,20). DNA origami is regarded as a promising candidate for drug delivery vehicles due to the advantageous properties below (21,22).</p>
+   
+    <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Self-assembly:</strong> The structural stability of DNA origami relies mostly on Watson–Crick base pairing and base stacking. The assembly process depends on the sequence-specific binding between the scaffold strand and pre-designed staple strands. Under optimal conditions, DNA origami can self-assemble into its final shape. A detailed overview of the assembly procedure, including strand mixing, annealing, purification, and characterization, is provided on <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/2025.igem.wiki/izju-china/assembly">wet lab webpages</a> (17,19,23,24).</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Programmability and full addressability:</strong> It is easy to design a DNA origami structure that meets specific needs due to the high predictability of interactions between DNA strands. These self-assembled nanostructures offer exceptional addressability with sub-nanometer precision, enabled by the ability to attach functional entities to individual DNA strands (25,26). In addition to basic planar configurations, various therapeutic molecules and materials can be precisely incorporated into DNA nanostructures, such as levofloxacin (27), doxorubicin (28), immunostimulatory nucleic acids (29), small interfering RNAs (30), antibodies (31), and enzymes (32). These molecules can be loaded onto the carriers via interactions like intercalation, base pairing, or covalent bonding (Figure 5) (13). Furthermore, DNA origami structures can serve as containers with internal docking sites or dedicated cavities, offering protection to the payloads from the environment and vice versa (13,28,33). In FoCas, we designed and programmed four components, including sgRNA/Cas9-loading site, G4/hemin-containing site, aptamer-binding site, and disulfide bond-crosslinking site.</li>
+    </ol>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-5-chemical-functionalization-of-dna-nanostructures.webp" alt="Chemical functionalization of DNA nanostructures">
+    <figcaption>Figure 5. Chemical functionalization of DNA nanostructures. The modifications and conjugations of DNA origami depicted in the figure include fluorophores, hybridization with complementary sequences (duplex formation), attachment to lipids or membrane anchors, gold nanoparticles, antibodies, as well as backbone and chemical modifications such as phosphonamidite chemistry, and polymer conjugation (e.g., PEGylation or other polymers). The figure was taken from reference (13).</figcaption>
+    </figure>
+   
+    <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;" start="3">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Biocompatibility:</strong> As a natural biomaterial, DNA is biodegradable and shows little cytotoxicity (28). It is readily degraded and eliminated by the liver and kidneys without generating toxic or harmful byproducts (34). Under certain conditions, DNA origami is non-immunogenic in mouse models (28,33). While the potential immunogenicity of exogenous nucleic acids remains a concern (35), the extent of immunogenicity is highly dependent on factors such as base sequence, structural properties, and chemical modifications. By carefully engineering these parameters, the risk of immunotoxicity can be minimized (36–38).</li>
+    </ol>
+   
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The application of DNA origami as a drug delivery vehicle has been extensively investigated and continuously refined within the field of fundamental science (10,11,28). With ongoing research, DNA origami is expected to overcome current limitations and further realize its potential in drug delivery.</p>
+   
+    <h4>Comparison with Other Delivery Systems</h4>
+    
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/table1.webp" alt="Comparison between DNA origami and other delivery systems">
+    <figcaption>Table 1. A comparison between DNA origami and other common delivery systems. The contents were obtained from references (28,39–41).</figcaption>
+    </figure>
+   
+    <h4>Summary</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">As a delivery platform, DNA origami offers a unique combination of programmability and specificity, making it a promising approach for next-generation therapies targeting high-risk pathogens. Its ability to integrate precision nanostructure design with advanced molecular tools positions it as a potential alternative to conventional delivery technologies.</p>
+    </div>
+    </details>
+   
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">As for FoCas, the self-assembled DNA origami was designed to fold into a rectangular plane as the basic structure and was programmed to comprise four functional components as follows (Figure 6).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-6-illustration-of-four-structural-components-of-focas.webp" alt="Illustration of four structural components of FoCas">
+    <figcaption>Figure 6. Illustration of four structural components of FoCas.</figcaption>
+    </figure>
+   
+    <h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">1. Loading Component</h3>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To efficiently recruit and load sgRNA/Cas9 complex, we organized multiple PAM-rich dsDNA on the center of the DNA origami to recruit Cas9 by PAM-guided assembly, with a single-stranded DNA (ssDNA) overhang to connect sgRNA by pre-designed DNA/RNA hybridization (Figure 7).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-7-loading-of-sgrnacas9-on-focas.webp" alt="Loading of sgRNA/Cas9 on FoCas">
+    <figcaption>Figure 7. Loading of sgRNA/Cas9 on FoCas.</figcaption>
+    </figure>
+   
+    <h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">2. Membrane Permeabilization Component</h3>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">G-quadruplexes (G4) are classical short oligonucleotide sequences. When bound to hemin (Fe(III)-protoporphyrin IX), they form G4/hemin DNAzymes with horseradish peroxidase (HRP)-like activity (42,43). In FoCas, DNA origami with a precisely organized G4 array (DOG) can bind and concentrate hemin, generating reactive oxygen species (ROS) that disrupt the cell membrane (Figure 8).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-8-g4hemin-acting-as-the-membrane-permeabilization-component.webp" alt="G4/hemin acting as the membrane permeabilization component">
+    <figcaption>Figure 8. G4/hemin acting as the membrane permeabilization component.</figcaption>
+    </figure>
+   
+    <details>
+    <summary>G4/Hemin DNAzymes</summary>
+    <div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="details-content">
+    <h4>What are G4/hemin DNAzymes?</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">G-quadruplex (G4)/hemin DNAzymes are catalytic nucleic acid complexes formed when guanine-rich DNA sequences fold into a G-quadruplex structure and bind to the hemin cofactor (iron protoporphyrin IX) (44–46). This complex mimics the activity of peroxidase enzymes, enabling it to catalyze the decomposition of hydrogen peroxide into reactive oxygen species (ROS), such as hydroxyl radicals (47,48).</p>
+   
+    <h4>How Are G4/Hemin DNAzymes Utilized in DNA Origami?</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami provides a programmable scaffold for spatially organizing multiple G4/hemin motifs (Figure 9). By arranging DNAzymes in a controlled pattern, researchers can improve catalytic efficiency, enhance DNAzyme stability against degradation, and endow the nanostructure with permeabilization function (42). When integrated into DNA origami nanostructures, G4/hemin DNAzymes act as localized catalytic centers. In the presence of hydrogen peroxide, the DNAzyme generates ROS in situ (49,50). These ROS species can oxidize lipids and proteins in bacterial cell membranes, leading to membrane disruption (Figure 8) (51,52). The minor pores formed by ROS in bacterial membranes do not significantly affect normal human cells, reducing off-target toxicity (27). Because ROS generation occurs directly at the site of the nanostructure (53), the approach minimizes the need for drug molecules that require a component to conduct transmembrane delivery compared to traditional drug delivery, reducing the risk of resistance development. These make DNA origami an effective delivery vehicle for intracellular antimicrobial therapy, where the drug entry is mediated by ROS rather than direct transport of conventional drugs.</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-9-illustration-of-dna-origami-light-blue-carrying-g4-orange-hemin-red-dnazyme-domain.webp" alt="DNA origami carrying G4/hemin DNAzyme domain">
+    <figcaption>Figure 9. Illustration of DNA origami (light blue) carrying G4 (orange)/ hemin (red) DNAzyme domain. G4 sequences are added to the end of staple strands, forming a G4 array on DNA origami, thereby recruiting hemin and forming a G4/hemin nanodomain. The figure was adapted from reference (42).</figcaption>
+    </figure>
+   
+    <h4>Comparison to Conventional Transmembrane Delivery Methods</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Conventional delivery systems—such as liposomes, polymeric nanoparticles, and peptides—primarily function by transporting therapeutic agents across bacterial membranes. However, their effectiveness is frequently constrained by intrinsic bacterial defense mechanisms, including efflux pumps, enzymatic degradation, and inherently low uptake efficiency. Moreover, bacteria are capable of developing resistance against a wide range of chemical agents and peptides, further diminishing the therapeutic potential of these strategies.</p>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In contrast, G4/hemin complexes assembled on DNA origami do not require crossing the bacterial membrane to exert antimicrobial effects. Instead, they catalyze the generation of ROS either extracellularly or at the bacterial cell surface. These ROS directly damage critical cellular components, such as lipid bilayers and proteins, thereby bypassing the traditional barriers associated with uptake. Importantly, this mechanism substantially reduces the probability of resistance development, as oxidative damage induced by ROS is broad-spectrum and not confined to a single molecular pathway.</p>
+   
+    <h4>Summary</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">G4/hemin DNAzymes integrated into DNA origami nanostructures represent a catalytic therapeutic strategy for combating antimicrobial-resistant bacteria. These nanostructures generate ROS locally at the bacterial membrane, providing a novel alternative to traditional transmembrane drug delivery systems. This strategy uniquely combines the programmability of DNA nanotechnology with enzyme-mimicking catalysis, facilitating precise and targeted eradication of the antimicrobial resistance gene.</p>
+    </div>
+    </details>
+   
+    <h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">3. Targeting Component</h3>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA aptamers are engineered single-stranded DNA molecules capable of specifically recognizing and binding to designated target proteins (54). In the FoCas system, the aptamer was strategically designed to anchor along the shorter edges of the rectangular DNA origami plane through complementary base pairing, thereby enabling selective recognition of the PBP2a protein on MRSA (Figure 10).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-10-dna-aptamer-acting-as-the-targeting-component.webp" alt="DNA aptamer acting as the targeting component">
+    <figcaption>Figure 10. DNA aptamer acting as the targeting component.</figcaption>
+    </figure>
+   
+    <details>
+    <summary>DNA aptamers</summary>
+    <div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="details-content">
+    <h4>What are DNA Aptamers and how are they used?</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA aptamers are short, single-stranded oligonucleotides that fold into distinct three-dimensional conformations, enabling them to bind specifically to target molecules such as proteins, small molecules, or even entire cells (Figure 11). Due to their remarkable ability to recognize and interact with targets with high affinity and specificity, DNA aptamers are often referred to as the nucleic acid analogs of antibodies (55).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-11-illustration-of-sequencing-folding-and-target-binding-of-aptamers.webp" alt="Illustration of sequencing, folding, and target binding of aptamers">
+    <figcaption>Figure 11. Illustration of sequencing, folding, and target binding of aptamers. DNA or RNA aptamers are single-stranded oligonucleotides that undergo specific folding to form well-defined three-dimensional structures. These structures are capable of establishing complementary interactions with their desired targets, which may include small molecules, proteins, cells, or even entire organisms. The figure is taken from the source (56).</figcaption>
+    </figure>
+   
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In DNA origami nanostructures, aptamers are utilized as targeting modules due to their programmable sequences and predictable folding properties, which facilitate seamless integration into DNA-based nanocarriers. By incorporating aptamers onto the surface of DNA origami structures, these nanostructures gain the ability to selectively recognize and bind to specific cell surface markers on bacterial or mammalian cells. In some instances, aptamers can even be engineered to function as regulatory elements, adding an extra layer of versatility to their application (31). This targeted approach significantly enhances therapeutic specificity, improves delivery efficiency, and minimizes off-target interactions. Such features are particularly crucial in antimicrobial resistance (AMR) therapies, where the selective targeting of pathogens while sparing host cells is important (22,57,58).</p>
+   
+    <h4>How to get the sequence of the DNA aptamer?</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Aptamers are typically selected through the Systematic Evolution of Ligands by Exponential Enrichment (SELEX), an iterative in vitro process that screens extensive nucleic acid libraries to identify high-affinity binders specific to a target molecule (59). Once identified, aptamers can be chemically synthesized and integrated into DNA origami structures either by extending staple strands or by attaching them through chemical linkers (27,28,32). Within DNA origami, aptamers function as molecular recognition elements, enabling the nanostructure to selectively bind to and target specific bacterial strains or diseased cells (54,60). In the context of our project, the aptamers incorporated into the FoCas system were specifically engineered to bind to the PBP2a protein on the surface of MRSA. Novel sequences and methods were developed as part of our ongoing efforts to optimize aptamer design and enhance targeting capabilities <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/2025.igem.wiki/izju-china/design">link to dry lab - aptamer design</a>.</p>
+   
+    <h4>Comparison with Other Targeting Modules</h4>
+    
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/table2.webp" alt="Comparison of DNA aptamers and other targeting modules">
+    <figcaption>Table 2. A comparison of DNA aptamers and other common modules used in targeting therapies. The contents were obtained from references (32,61).</figcaption>
+    </figure>
+   
+    <h4>Summary</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA aptamers serve as precise, programmable recognition elements within DNA origami nanostructures. Compared with conventional targeting modules such as antibodies, peptides, or small molecules, aptamers offer a synthetic, scalable, and easily integrable alternative, making them highly attractive for targeted therapeutic delivery.</p>
+    </div>
+    </details>
+   
+    <h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">4. Protection and Release Component</h3>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In FoCas, disulfide bonds are formed through the oxidation of thiol-modified DNA strands along the longer edges of the structure. Specifically, the top of the staples on one side is complementary to the bottom of the staples on the opposite side (Figure 12). Subsequently, under the influence of the locking strands, the rectangular DNA origami, which is loaded with cargo, is transformed into a cylindrical shape. This process encapsulates the sgRNA/Cas9 complex, thereby enhancing its protection and enabling stimulus-responsive opening (Figure 12).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-12-disulfide-bonds-and-complementary-strands-cause-focas-to-roll-up.webp" alt="Disulfide bonds and complementary strands cause FoCas to roll up">
+    <figcaption>Figure 12. Disulfide bonds and complementary strands cause FoCas to roll up.</figcaption>
+    </figure>
+   
+    <details>
+    <summary>The design of origami structures and the protection effect of rolls</summary>
+    <div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="details-content">
+    <h4>Background</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In therapeutic applications, DNA origami is frequently used as a carrier for biomolecules such as sgRNA/Cas9 complexes. However, in environments such as chronic wounds, extracellular enzymes (e.g., proteases, nucleases) and oxidative factors can degrade these biomolecules, reducing therapeutic efficacy (28,33).</p>
+   
+    <h4>Shapes of DNA Origami in Drug Delivery</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami allows the construction of nanostructures in a variety of shapes, each tailored with unique properties ideal for therapeutic delivery. The design of these structures is driven by factors such as the need for cargo encapsulation, stability in physiological environments, and efficient interaction with target cells (10,22,62–64). Below are some common DNA nanostructure shapes used for drug delivery (Figure 13).</p>
+    
+    <ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>2D Sheets (Rectangles, Squares, Triangles):</strong> These structures offer a large surface area for the attachment of functional molecules, including aptamers, peptides, or enzymes. They are particularly useful for surface-based presentations. However, their flat geometry makes them more susceptible to degradation by nucleases and proteases (16,17,58).</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>3D Boxes and Cages:</strong> These are hollow nanostructures capable of encapsulating small molecules, nucleic acids, or proteins. Often, they are engineered with "lock-and-key" mechanisms, such as aptamer locks, which allow for controlled opening in response to specific stimuli (14,31).</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Tubes and Rolls:</strong> These cylindrical structures are created by folding flat DNA sheets into tubular forms. They offer enhanced stability, mechanical rigidity, and provide protection for encapsulated cargo. Additionally, they can be functionalized on the exterior with targeting modules, while maintaining the therapeutic core shielded from the external environment (33,65–67).</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Polygons and Polyhedra (e.g., tetrahedra, cubes, icosahedra):</strong> These symmetrical 3D structures are used for the precise spatial arrangement of functional groups. They provide tunable internal cavities for cargo storage and external binding sites for targeted interactions (68–70).</li>
+    </ul>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-13-example-shapes-of-dna-nanostructures.webp" alt="Example shapes of DNA nanostructures">
+    <figcaption>Figure 13. Example shapes of DNA nanostructures. The figure was adapted from references (28,32,64,66).</figcaption>
+    </figure>
+   
+    <h4>Choice of Rectangular Plane and Roll Box</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The rectangular shape designed by Rothemund (17) was chosen as the foundational plane for FoCas, owing to its proven delivery efficiency (22,28) and the presence of multiple modification sites (13). To address the issue of cargo exposure in the environment, DNA origami nanostructures can be engineered into a rolled configuration rather than remaining as flat sheets (33,65–67). In the case of FoCas, a rectangular DNA origami sheet is folded into a tubular "roll" shape. This configuration is stabilized by complementary staples and disulfide bonds, which are further detailed in the <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/2025.igem.wiki/izju-china/design">design section</a>.</p>
+   
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This rolled configuration creates a protective enclosure around the sgRNA/Cas9 cargo. By shielding the sensitive therapeutic molecules inside the tubular core, the roll structure reduces exposure to proteases and nucleases present in the wound environment (33,65,66). Additionally, the incorporation of redox-sensitive disulfide bonds enables the roll to respond to intracellular conditions. Upon entering the cell, reducing agents such as glutathione cleave the disulfide bonds, triggering the disassembly of the roll and the controlled release of the functional sgRNA/Cas9 complex (Figure 14).</p>
+   
+    <h4>Comparison to Conventional Protection Methods</h4>
+    
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/table3.webp" alt="Comparison of roll-shaped DNA origami and other protection methods">
+    <figcaption>Table 3. A comparison of the roll-shaped DNA origami box and other common protection methods used in therapies. The contents were obtained from references (28,32,39,41).</figcaption>
+    </figure>
+   
+    <h4>Summary</h4>
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The roll-shaped DNA origami design offers an innovative approach to protecting delicate therapeutic molecules, such as sgRNA/Cas9, in challenging environments like infected wounds. Unlike traditional polymeric or lipid-based protective systems, DNA origami rolls provide a structurally programmable, biocompatible, and stimulus-responsive platform. This design not only enhances the stability of the therapeutic cargo but also enables its precise and controlled release, making it a promising alternative for targeted drug delivery.</p>
+    </div>
+    </details>
+   
+    <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Acting Modules of FoCas</h1>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Here, we present a straightforward strategy for constructing a DNA origami-based CRISPR/Cas9 gene-editing system designed for efficient in vivo gene therapy. In the human body, the mechanism by which FoCas operates can be broken down into the following modules (Figure 14).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-14-illustration-of-five-modules-indicating-the-acting-mechanism-of-focas.webp" alt="Illustration of five modules indicating the acting mechanism of FoCas">
+    <figcaption>Figure 14. Illustration of five modules indicating the acting mechanism of FoCas.</figcaption>
+    </figure>
+   
+    <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Protection Module:</strong> When FoCas enters the wound environment within the patient's body, the sgRNA/Cas9 complexes are encapsulated within roll-shaped DNA nanostructures, providing effective protection against environmental factors like protease degradation.</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Targeting Module:</strong> As FoCas enters the wound environment, DNA aptamers on FoCas guide the system to target and aggregate around MRSA. This targeted approach enhances the therapeutic effect while minimizing potential adverse effects on normal human cells.</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Internalization Module:</strong> Subsequently, G4/hemin DNAzymes degrade excess hydrogen peroxide in the wound environment, generating ROS that disrupts the MRSA membrane. This disruption creates small pores, allowing the drug to diffuse freely into the cell.</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Release Module:</strong> Once inside the MRSA cells, the cargo-loaded roll-shaped DNA origami is opened by glutathione (GSH) reduction. The sgRNA/Cas9 complex is then released through RNase H cleavage of the RNA strand in the DNA/RNA hybrid.</li>
+    
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Gene Cleavage Module:</strong> The CRISPR-Cas9 gene-editing system induces a pronounced knockout of the <em>mecA</em> gene, effectively eliminating the methicillin resistance of MRSA.</li>
+    </ol>
+   
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Overall, upon administration, FoCas selectively targets MRSA and accumulates in its vicinity, generating ROS that disrupt the cell membrane, allowing the system to penetrate the cell interior. The encapsulated sgRNA/Cas9 complex is then released, ultimately leading to the cleavage of the target <em>mecA</em> resistance gene.</p>
+   
+    <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Assumed Application Scenario of FoCas</h2>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In clinical applications, FoCas is intended to be assembled in vitro and applied topically to combat MRSA infections of a wound site. The drug is administered topically to the wound surface or as a spray formulation. This approach is based on the characteristics of DNA origami and its current limitations in terms of stability and production (Figure 15).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-15-preset-clinical-usage-scenarios-of-focas.webp" alt="Preset clinical usage scenarios of FoCas">
+    <figcaption>Figure 15. Preset clinical usage scenarios of FoCas.</figcaption>
+    </figure>
+   
+    <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Summary</h1>
+    
+    <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">FoCas: A Novel Antimicrobial Resistance and Infectivity Inhibition Treatment Platform Based on DNA Origami and CRISPR-Cas9</h2>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">FoCas resensitizes MRSA to β-lactam antibiotics, offering a novel gene editing-based strategy utilizing the combined power of DNA origami and CRISPR-Cas9. This platform not only provides a solution to antibiotic resistance but also helps inhibit the transmission risk of MRSA. Beyond MRSA, FoCas has the potential to be adapted flexibly for treating a broad spectrum of infections.</p>
+    
+    <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Looking ahead, FoCas can be further optimized in terms of cost-efficiency, controllability, and adaptability to different operational environments, thereby broadening its applicability across a variety of clinical scenarios <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/2025.igem.wiki/izju-china/project-future">link to project-future</a> (Figure 16).</p>
+   
+    <figure style="max-width: 100%; box-sizing: border-box; margin: 1rem 0; padding: 0; overflow: hidden;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-16-illustration-of-simple-procedures-for-focas-platform.webp" alt="Illustration of simple procedures for FoCas platform">
+    <figcaption>Figure 16. Illustration of simple procedures for FoCas platform.</figcaption>
+    </figure>
+   
+    <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
+    
+    <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jung WJ, Park SJ, Cha S, Kim K. Factors affecting the cleavage efficiency of the CRISPR-Cas9 system. Animal Cells and Systems [Internet]. 2024 Dec 31 [cited 2025 Sep 28]; Available from: https://www.tandfonline.com/doi/abs/10.1080/19768354.2024.2322054</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">de la Fuente Tagarro C, Martín-González D, De Lucas A, Bordel S, Santos-Beneit F. Current Knowledge on CRISPR Strategies Against Antimicrobial-Resistant Bacteria. Antibiotics (Basel). 2024 Nov 27;13(12):1141.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ahmed MM, Kayode HH, Okesanya OJ, Ukoaka BM, Eshun G, Mourid MR, et al. CRISPR-Cas Systems in the Fight Against Antimicrobial Resistance: Current Status, Potentials, and Future Directions. Infect Drug Resist. 2024 Nov 26;17:5229–45.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Sodani M, Misra CS, Rath D, Kulkarni S. Harnessing CRISPR-Cas9 as an anti-mycobacterial system. Microbiological Research. 2023 May 1;270:127319.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Gencay YE, Jasinskytė D, Robert C, Semsey S, Martínez V, Petersen AØ, et al. Engineered phage with antibacterial CRISPR–Cas selectively reduce E. coli burden in mice. Nat Biotechnol. 2024 Feb;42(2):265–74.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wu ZY, Huang YT, Chao WC, Ho SP, Cheng JF, Liu PY. Reversal of carbapenem-resistance in Shewanella algae by CRISPR/Cas9 genome editing. Journal of Advanced Research. 2019 Jul 1;18:61–9.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Gupta S, Kumar P, Rathi B, Verma V, Dhanda RS, Devi P, et al. Targeting of Uropathogenic Escherichia coli papG gene using CRISPR-dot nanocomplex reduced virulence of UPEC. Sci Rep. 2021 Sep 7;11(1):17801.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Rui Y, Varanasi M, Mendes S, Yamagata HM, Wilson DR, Green JJ. Poly(Beta-Amino Ester) Nanoparticles Enable Nonviral Delivery of CRISPR-Cas9 Plasmids for Gene Knockout and Gene Deletion. Mol Ther Nucleic Acids. 2020 Jun 5;20:661–72.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Nath A, Bhattacharjee R, Nandi A, Sinha A, Kar S, Manoharan N, et al. Phage delivered CRISPR-Cas system to combat multidrug-resistant pathogens in gut microbiome. Biomedicine & Pharmacotherapy. 2022 Jul 1;151:113122.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Dey S, Fan C, Gothelf KV, Li J, Lin C, Liu L, et al. DNA origami. Nat Rev Methods Primers. 2021 Jan 28;1(1):13.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">He Z, Shi K, Li J, Chao J. Self-assembly of DNA origami for nanofabrication, biosensing, drug delivery, and computational storage. iScience [Internet]. 2023 May 19 [cited 2025 Sep 29];26(5). Available from: https://www.cell.com/iscience/abstract/S2589-0042(23)00715-0</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jiang Q, Liu S, Liu J, Wang ZG, Ding B. Rationally Designed DNA-Origami Nanomaterials for Drug Delivery In Vivo. Adv Mater. 2019 Nov;31(45):e1804785.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Madsen M, Gothelf KV. Chemistries for DNA Nanotechnology. Chem Rev. 2019 May 22;119(10):6384–458.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Douglas SM, Marblestone AH, Teerapittayanon S, Vazquez A, Church GM, Shih WM. Rapid prototyping of 3D DNA-origami shapes with caDNAno. Nucleic Acids Res. 2009 Aug;37(15):5001–6.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jun H, Shepherd TR, Zhang K, Bricker WP, Li S, Chiu W, et al. Automated Sequence Design of 3D Polyhedral Wireframe DNA Origami with Honeycomb Edges. ACS Nano. 2019 Feb 26;13(2):2083–93.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jun H, Wang X, Bricker WP, Bathe M. Automated sequence design of 2D wireframe DNA origami with honeycomb edges. Nat Commun. 2019 Nov 28;10(1):5419.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297–302.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jung WJ, Park SJ, Cha S, Kim K. Factors affecting the cleavage efficiency of the CRISPR-Cas9 system. Animal Cells and Systems [Internet]. 2024 Dec 31 [cited 2025 Sep 28]; Available from: https://www.tandfonline.com/doi/abs/10.1080/19768354.2024.2322054</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">de la Fuente Tagarro C, Martín-González D, De Lucas A, Bordel S, Santos-Beneit F. Current Knowledge on CRISPR Strategies Against Antimicrobial-Resistant Bacteria. Antibiotics (Basel). 2024 Nov 27;13(12):1141.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ahmed MM, Kayode HH, Okesanya OJ, Ukoaka BM, Eshun G, Mourid MR, et al. CRISPR-Cas Systems in the Fight Against Antimicrobial Resistance: Current Status, Potentials, and Future Directions. Infect Drug Resist. 2024 Nov 26;17:5229–45.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Sodani M, Misra CS, Rath D, Kulkarni S. Harnessing CRISPR-Cas9 as an anti-mycobacterial system. Microbiological Research. 2023 May 1;270:127319.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Gencay YE, Jasinskytė D, Robert C, Semsey S, Martínez V, Petersen AØ, et al. Engineered phage with antibacterial CRISPR–Cas selectively reduce E. coli burden in mice. Nat Biotechnol. 2024 Feb;42(2):265–74.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wu ZY, Huang YT, Chao WC, Ho SP, Cheng JF, Liu PY. Reversal of carbapenem-resistance in Shewanella algae by CRISPR/Cas9 genome editing. Journal of Advanced Research. 2019 Jul 1;18:61–9.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Gupta S, Kumar P, Rathi B, Verma V, Dhanda RS, Devi P, et al. Targeting of Uropathogenic Escherichia coli papG gene using CRISPR-dot nanocomplex reduced virulence of UPEC. Sci Rep. 2021 Sep 7;11(1):17801.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Rui Y, Varanasi M, Mendes S, Yamagata HM, Wilson DR, Green JJ. Poly(Beta-Amino Ester) Nanoparticles Enable Nonviral Delivery of CRISPR-Cas9 Plasmids for Gene Knockout and Gene Deletion. Mol Ther Nucleic Acids. 2020 Jun 5;20:661–72.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Nath A, Bhattacharjee R, Nandi A, Sinha A, Kar S, Manoharan N, et al. Phage delivered CRISPR-Cas system to combat multidrug-resistant pathogens in gut microbiome. Biomedicine & Pharmacotherapy. 2022 Jul 1;151:113122.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Dey S, Fan C, Gothelf KV, Li J, Lin C, Liu L, et al. DNA origami. Nat Rev Methods Primers. 2021 Jan 28;1(1):13.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">He Z, Shi K, Li J, Chao J. Self-assembly of DNA origami for nanofabrication, biosensing, drug delivery, and computational storage. iScience [Internet]. 2023 May 19 [cited 2025 Sep 29];26(5). Available from: https://www.cell.com/iscience/abstract/S2589-0042(23)00715-0</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jiang Q, Liu S, Liu J, Wang ZG, Ding B. Rationally Designed DNA-Origami Nanomaterials for Drug Delivery In Vivo. Adv Mater. 2019 Nov;31(45):e1804785.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Madsen M, Gothelf KV. Chemistries for DNA Nanotechnology. Chem Rev. 2019 May 22;119(10):6384–458.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Douglas SM, Marblestone AH, Teerapittayanon S, Vazquez A, Church GM, Shih WM. Rapid prototyping of 3D DNA-origami shapes with caDNAno. Nucleic Acids Res. 2009 Aug;37(15):5001–6.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jun H, Shepherd TR, Zhang K, Bricker WP, Li S, Chiu W, et al. Automated Sequence Design of 3D Polyhedral Wireframe DNA Origami with Honeycomb Edges. ACS Nano. 2019 Feb 26;13(2):2083–93.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jun H, Wang X, Bricker WP, Bathe M. Automated sequence design of 2D wireframe DNA origami with honeycomb edges. Nat Commun. 2019 Nov 28;10(1):5419.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297–302.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Benson E, Mohammed A, Gardell J, Masich S, Czeizler E, Orponen P, et al. DNA rendering of polyhedral meshes at the nanoscale. Nature. 2015 Jul 1;523(7561):441–4.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Douglas SM, Dietz H, Liedl T, Högberg B, Graf F, Shih WM. Self-assembly of DNA into nanoscale three-dimensional shapes. Nature. 2009 May;459(7245):414–8.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jiang Q, Shang Y, Xie Y, Ding B. DNA Origami: From Molecular Folding Art to Drug Delivery Technology. Adv Mater. 2024 May;36(22):e2301035.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Harvard iGEM. Team:Harvard/Motivations - 2020.igem.org [Internet]. 2020 [cited 2025 Sep 29]. Available from: https://2020.igem.org/Team:Harvard/Motivations</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Weiden J, Bastings MMC. DNA origami nanostructures for controlled therapeutic drug delivery. Current Opinion in Colloid & Interface Science. 2021 Apr 1;52:101411.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Dietz H, Douglas SM, Shih WM. Folding DNA into Twisted and Curved Nanoscale Shapes. Science. 2009 Aug 7;325(5941):725–30.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Saleem SS, Ravichandran S, Ravichandran S, Chinnadurai KR, Saravanan A, Vickram S. A Comprehensive Review Molecular Origami Classical DNA Folding Principle Empowering Modern Nanobiotechnology. ACS Appl Bio Mater [Internet]. 2025 Sep 29 [cited 2025 Oct 1]; Available from: https://doi.org/10.1021/acsabm.5c01094</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Strauss MT, Schueder F, Haas D, Nickels PC, Jungmann R. Quantifying absolute addressability in DNA origami with molecular resolution. Nat Commun. 2018 Apr 23;9(1):1600.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wassermann LM, Scheckenbach M, Baptist AV, Glembockyte V, Heuer-Jungemann A. Full Site‐Specific Addressability in DNA Origami‐Templated Silica Nanostructures. [cited 2025 Sep 30]; Available from: https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202212024</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wu T, Wang H, Tian R, Guo S, Liao Y, Liu J, et al. A DNA Origami-based Bactericide for Efficient Healing of Infected Wounds. Angewandte Chemie International Edition. 2023 Nov 13;62(46):e202311698.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhang Q, Jiang Q, Li N, Dai L, Liu Q, Song L, et al. DNA origami as an in vivo drug delivery vehicle for cancer therapy. ACS Nano. 2014 Jul 22;8(7):6633–43.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Liu S, Jiang Q, Zhao X, Zhao R, Wang Y, Wang Y, et al. A DNA nanodevice-based vaccine for cancer immunotherapy. Nat Mater. 2021 Mar;20(3):421–30.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Rahman MA, Wang P, Zhao Z, Wang D, Nannapaneni S, Zhang C, et al. Systemic Delivery of Bc12-Targeting siRNA by DNA Nanoparticles Suppresses Cancer Cell Growth. Angew Chem Int Ed Engl. 2017 Dec 11;56(50):16023–7.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Douglas SM, Bachelet I, Church GM. A Logic-Gated Nanorobot for Targeted Transport of Molecular Payloads. Science. 2012 Feb 17;335(6070):831–4.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Mela I, Vallejo‐Ramirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed Engl. 2020 Jul 27;59(31):12698–702.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Tang W, Tong T, Wang H, Lu X, Yang C, Wu Y, et al. A DNA Origami-Based Gene Editing System for Efficient Gene Therapy in Vivo. Angewandte Chemie International Edition. 2023 Dec 18;62(51):e202315093.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Jiang D, Ge Z, Im HJ, England CG, Ni D, Hou J, et al. DNA origami nanostructures can exhibit preferential renal uptake and alleviate acute kidney injury. Nat Biomed Eng. 2018 Nov;2(11):865–77.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Surana S, Shenoy AR, Krishnan Y. Designing DNA nanodevices for compatibility with the immune system of higher organisms. Nature Nanotech. 2015 Sep;10(9):741–7.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Perrault SD, Shih WM. Virus-Inspired Membrane Encapsulation of DNA Nanostructures To Achieve In Vivo Stability. ACS Nano. 2014 May 27;8(5):5132–40.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Engelhardt FAS, Praetorius F, Wachauf CH, Brüggenthies G, Kohler F, Kick B, et al. Custom-Size, Functional, and Durable DNA Origami with Design-Specific Scaffolds. ACS Nano. 2019 May 28;13(5):5015–27.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Auvinen H, Zhang H, Nonappa  null, Kopilow A, Niemelä EH, Nummelin S, et al. Protein Coating of DNA Nanostructures for Enhanced Stability and Immunocompatibility. Advanced Healthcare Materials. 2017 Sep 20;6(18).</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ezike TC, Okpala US, Onoja UL, Nwike CP, Ezeako EC, Okpara OJ, et al. Advances in drug delivery systems, challenges and future directions. Heliyon. 2023 Jun 24;9(6):e17488.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Drug delivery. In: Wikipedia [Internet]. 2025 [cited 2025 Oct 1]. Available from: https://en.wikipedia.org/w/index.php?title=Drug_delivery&oldid=1313927350</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Drug delivery: The conceptual perspectives and therapeutic applications. In: Polymer-Drug Conjugates [Internet]. Academic Press; 2023 [cited 2025 Oct 1]. p. 1–38. Available from: https://www.sciencedirect.com/science/article/pii/B9780323916639000102</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Tokura Y, Harvey S, Chen C, Wu Y, Ng DYW, Weil T. Fabrication of Defined Polydopamine Nanostructures by DNA Origami-Templated Polymerization. Angewandte Chemie International Edition. 2018;57(6):1587–91.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Li J, Wu H, Yan Y, Yuan T, Shu Y, Gao X, et al. Zippered G-quadruplex/hemin DNAzyme: exceptional catalyst for universal bioanalytical applications. Nucleic Acids Res. 2021 Dec 8;49(22):13031–44.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Li W, Li Y, Liu Z, Lin B, Yi H, Xu F, et al. Insight into G-quadruplex-hemin DNAzyme/RNAzyme: adjacent adenine as the intramolecular species for remarkable enhancement of enzymatic activity. Nucleic Acids Res. 2016 Sep 6;44(15):7373–84.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Su Z, Wen Q, Li S, Guo L, Li M, Xiong Y, et al. A G-quadruplex/hemin structure-undamaged method to inhibit peroxidase-mimic DNAzyme activity for biosensing development. Analytica Chimica Acta. 2022 Aug 15;1221:340143.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Li J, Jiang L, Wu H, Zou Y, Zhu S, Huang Y, et al. Self-contained G-quadruplex/hemin DNAzyme: a superior ready-made catalyst for in situ imaging analysis. Nucleic Acids Res. 2025 Apr 11;53(6):gkaf227.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wang Y, Xu X, Zhang R, Gu L, Yang J, Xing Y, et al. High-efficiency G4-hemin@peptide biomimetic nanozyme and domain-limited DNA walker for sensitive electrochemical analysis of miRNA-21. Sensors and Actuators B: Chemical. 2025 Mar 1;426:137036.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Cao Y, Li W, Pei R. Exploring the catalytic mechanism of multivalent G-quadruplex/hemin DNAzymes by modulating the position and spatial orientation of connected G-quadruplexes. Analytica Chimica Acta. 2022 Aug 15;1221:340105.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wu S, Jiang L, Lei L, Fu C, Huang J, Hu Y, et al. Crosstalk between G-quadruplex and ROS. Cell Death Dis. 2023 Jan 18;14(1):37.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhu J, Wen T, Qu S, Li Q, Liu B, Zhou W. G-Quadruplex/Hemin DNAzyme-Functionalized Silver Nanoclusters with Synergistic Antibacterial and Wound Healing Capabilities for Infected Wound Management. Small. 2024 Feb 1;20(8):2307220.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Bi Z, Wang W, Zhao L, Wang X, Xing D, Zhou Y, et al. The generation and transformation mechanisms of reactive oxygen species in the environment and their implications for pollution control processes: A review. Environmental Research. 2024 Nov 1;260:119592.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Reactive oxygen species - Wikipedia [Internet]. [cited 2025 Oct 1]. Available from: https://en.wikipedia.org/wiki/Reactive_oxygen_species</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Xiao X, Chen M, Zhang Y, Li L, Peng Y, Li J, et al. Hemin-incorporating DNA nanozyme enabling catalytic oxygenation and GSH depletion for enhanced photodynamic therapy and synergistic tumor ferroptosis. Journal of Nanobiotechnology. 2022 Sep 15;20(1):410.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Hanžek A. Development of the aptamers for detection of ovarian cancer biomarkers in urine. 2023.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Aptamer. In: Wikipedia [Internet]. 2025 [cited 2025 Oct 1]. Available from: https://en.wikipedia.org/w/index.php?title=Aptamer&oldid=1314161546</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Aptamers - the advantages, applications and more - Blog [Internet]. [cited 2025 Oct 1]. Available from: https://www.lubio.ch/blog/aptamers</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhu Q, Liu G, Kai M. DNA Aptamers in the Diagnosis and Treatment of Human Diseases. Molecules. 2015 Nov 25;20(12):20979–97.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ghosal S, Bag S, Bhowmik S. Unravelling the Drug Encapsulation Ability of Functional DNA Origami Nanostructures: Current Understanding and Future Prospects on Targeted Drug Delivery. Polymers (Basel). 2023 Apr 12;15(8):1850.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">A beginners guide to SELEX and DNA aptamers. Analytical Biochemistry. 2025 Aug 1;703:115890.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Liu S, Li X, Gao H, Chen J, Jiang H. Progress in Aptamer Research and Future Applications. ChemistryOpen. 2025 Jul 1;14(7):e202400463.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhou J, Rossi J. Aptamers as targeted therapeutics: current potential and challenges. Nat Rev Drug Discov. 2017 Mar;16(3):181–202.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chemical Reviews [Internet]. 2023 Mar 29 [cited 2025 Oct 1]; Available from: https://pubs.acs.org/doi/full/10.1021/acs.chemrev.3c00028</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ahn SY, Liu J, Vithya S, Wu Y, Um S. DNA Transformations for Diagnosis and Therapy. Advanced Functional Materials. 2020 Dec 27;31:2008279.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Hu Y, Niemeyer C. From DNA Nanotechnology to Material Systems Engineering. Advanced Materials. 2019 Feb 15;1806294.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Berengut J, Berengut J, Doye J, Prešern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic acids research. 2019 Nov 15;47.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Schüller VJ, Heidegger S, Sandholzer N, Nickels PC, Suhartha NA, Endres S, et al. Cellular Immunostimulation by CpG-Sequence-Coated DNA Origami Structures. ACS Nano. 2011 Dec 27;5(12):9696–702.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhao Z, Fu J, Dhakal S, Johnson-Buck A, Liu M, Zhang T, et al. Nanocaged enzymes with enhanced catalytic activity and increased stability against protease digestion. Nat Commun. 2016 Feb 10;7(1):10619.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wang W, Lin M, Wang W, Shen Z, Wu ZS. DNA tetrahedral nanostructures for the biomedical application and spatial orientation of biomolecules. Bioactive Materials. 2024 Mar 1;33:279–310.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ouyang Y, Zhang P, Willner I. DNA Tetrahedra as Functional Nanostructures: From Basic Principles to Applications. Angewandte Chemie International Edition. 2024 Oct 7;63(41):e202411118.</li>
+</div>
+  </main>
+
+  <aside id="toc" class="toc"></aside>
+  <script src="/assets/js/main.js"></script>
+  <footer class="site-footer">
+    <img src="/assets/images/logo6.webp" alt="页脚图片">
+  </footer>
+</body>
+</html>

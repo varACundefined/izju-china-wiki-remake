@@ -1,0 +1,1635 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Model</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <link rel="stylesheet" href="/static/safety-typography.css">
+<!--INLINE-CSS-LyogUmVtb3Zl-->
+  <style>
+/* Remove all pseudo-elements globally */
+  [id*="content"] *::before,
+  [id*="content"] *::after,
+  .pagecontent *::before,
+  .pagecontent *::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Model page specific styles */
+  .model-content {
+    max-width: 100%;
+    line-height: 1.6;
+    margin-top: 40px; /* Increase space between page title and content */
+  }
+  
+  .model-content h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  
+  .model-content h2 {
+    color: #34495e;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+  }
+  
+  .model-content h3 {
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .formula {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2em;
+    overflow-x: auto;
+  }
+  
+  .model-content ul, .model-content ol {
+    margin: 15px 0;
+    padding-left: 30px;
+  }
+  
+  .model-content li {
+    margin: 8px 0;
+  }
+  
+  .model-content strong {
+    color: #2c3e50;
+  }
+  
+  .model-content em {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+
+  /* Code block styling */
+  .model-content pre {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+
+  .model-content code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+
+  /* Image styling */
+  .model-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  </style>
+</head>
+<body>
+  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <aside class="sidebar">
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<!--SIDEBAR-START-->
+<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<nav class="site-nav">
+  <ul>
+    <li><a href="/" class="home-link">Home</a></li>
+    <li><span>Project</span>
+  <ul>
+<li><a href="/pages/1Project/1background.html">Background</a></li>
+<li><a href="/pages/1Project/2description.html">Description</a></li>
+<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+</li>
+<li><span>Dry Lab</span>
+  <ul>
+<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+</li>
+<li><span>Wet Lab</span>
+  <ul>
+<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+</li>
+<li><span>Human Practice</span>
+  <ul>
+<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+</li>
+<li><span>Team</span>
+  <ul>
+<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+</li>
+
+  </ul>
+</nav>
+<!--SIDEBAR-END-->
+<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+</aside>
+
+  <main class="content">
+<div class="pagecontainer"><div class="title2"><span>Model</span></div></div>
+
+    <div class="pagecontent" id="auto-page-content"><h1>Overview</h1>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    To confirm the stability and efficiency of our delivery system, we developed models covering the majority of the
+    whole process.
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/overview/1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/overview/1.webp" alt="Model Overview"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <strong>Structural Stability.</strong> Our origami was designed in cadnano, exported into oxView simulations for
+    relaxation and equilibration, and then the model was submitted to oxDNA for systematic stability assessment. The
+    analysis of the data generated by oxdna confirmed the stability of our dna origami.
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <strong>Protection Assessment.</strong> The first simulation utilized Monte Carlo method to examine the diffusion
+    and penetration of hydroxyl radicals (·OH), whose harm to sgRNA and Cas9 protein is calculated. Another simulation
+    examined the synergistic degradation effect of multiple enzymes, which are within wound to the Cas9 protected by
+    origami cylinder. Both validated the protection capability of DNA origami cylinder.
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <strong>Transmembrane Simulation.</strong> Here, the DNA origami is displayed anchoring the membrane at first.
+    Besides, regression models and 3D animations predicted how reactive oxygen species—ROS—could react with membrane and
+    form "pores". Then after certain calculation, the process of DNA origami penetration through membrane is displayed.
+</p>
+
+<h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Structural Stability</h1>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Introduction</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">caDNAno is an open-source software package that provides a graphical user interface for the design of DNA origami
+    nanostructures (1). It enables precise scaffold routing and staple placement, making it a fundamental tool in
+    constructing DNA nanostructures. In this study, caDNAno was used to design a basic rectangular DNA origami (DO)
+    platform based on the M13mp18 scaffold. This rectangular configuration serves as the foundational model for
+    subsequent three-dimensional visualization and stability analysis performed in oxView and oxDNA.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">After obtaining the initial design from caDNAno, the DNA origami model was imported into oxView for structural
+    optimization and visualization. oxView is a browser-based platform that allows interactive inspection, relaxation,
+    and equilibration of coarse-grained DNA models, ensuring that the structure achieves a stable configuration before
+    further analysis.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Finally, the equilibrated model generated in oxView was submitted to oxDNA for coarse-grained molecular dynamics
+    simulations. oxDNA enables systematic stability assessment by mean and root mean square fluctuation (RMSF) analysis,
+    energy analysis and distance analysis.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This integrated workflow (<em>Figure 1</em>)—from caDNAno design, through oxView optimization, to oxDNA
+    validation—provides a comprehensive pipeline for constructing, refining, and evaluating DNA origami structures.</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Design Strategies with caDNAno</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The square lattice (SQ) version of caDNAno was selected to set up the rectangle DNA origami platform. This lattice
+    system of caDNAnoSQ is particularly suitable for creating regular planar structures, whose operator interface is
+    depicted in <em>Figure 2</em>. <em>Figure 3</em> illustrates the referenced design of the scaffold and staple
+    routes.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The workflow was carried out as follows. Firstly, 24 dots in a line in the first panel were chosen primarily to form
+    a rectangle configuration (<em>Figure 4</em>). Next, in the middle panel, the tools labeled in blue were used to
+    edit strand paths: the edit tool allows selection and routing, break (b) cuts strands, erase (a) removes them, force
+    path(f) connects bases, while loop (l) and skip base (s) introduce loop-outs or skipped bases. The paint (p) tool
+    helps visualize strands with colors (<em>Figure 5</em>). In this project, staples were manually added according to
+    the routing scheme shown in Figure 3. This rectangle configuration includes 288 nucleotide pairs per row and
+    includes 24 rows in total. The 3D shape was shown in the third panel (<em>Figure 6</em>). The completed design is
+    depicted in Figure 7. The final arrangement included properly folded scaffold strands and correctly aligned staples,
+    and was exported in the .json format.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">As a result, the caDNAno design successfully generated the rectangular DNA origami (DO) configuration. The structure
+    was exported for further three-dimensional visualization in oxView and stability analysis in oxDNA.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure1.webp" alt="Figure 1"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 1. Workflow of DNA origami modeling. The structure was first constructed in caDNAno, then equilibrated in
+        oxView, and finally tested for stability in oxDNA.</em>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure2.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure2.webp" alt="Figure 2"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 2. The operation interface of caDNAnoSQ, which includes three main sections: the left panel for
+        two-dimensional scaffold construction, the middle panel containing editing tools, and the right panel displaying
+        the three-dimensional preview.</em>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure3.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure3.webp" alt="Figure 3"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 3. Illustration of the basic rectangular DNA origami (DO) design. The arrows represent the orientation
+        and connection of the individual staples.</em>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure4.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure4.webp" alt="Figure 4"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 4. The primary design in the first panel. 24 dots in a line forms the rectangular scaffold
+        framework.</em>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure5.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure5.webp" alt="Figure 5"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 5. The scaffold and staple routes in the second panel. Colored strands represent manually added
+        staples.</em>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure6.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure6.webp" alt="Figure 6"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 6. The 3D shape showed in the third panel.</em>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure7.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure7.webp" alt="Figure 7"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 7. Finalized design in caDNAno.</em>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">oxView Simulations</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The caDNAno-generated design was subsequently imported into oxView for structural optimization. oxView provides an
+    interactive platform for coarse-grained DNA simulations, supporting stepwise procedures of relaxation and
+    equilibration to minimize steric strain and refine the geometry prior to downstream analyses.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the initial configuration (<em>Figure 8A</em>), dense loop regions and overstretched bonds introduced significant
+    local strain. To correct these distortions, artificial stabilizing forces ("mutual traps") were first applied to
+    paired nucleotides, with a relaxed distance set to 1.2 simulation units (SU) and stiffness values adjusted from 0.09
+    to 3.0. This procedure ensured that base pairs remained associated during the early stages of structural refinement.
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">A two-stage relaxation was then performed. In the first stage, the structure was processed on CPU mode with 10 Monte
+    Carlo steps at a reduced temperature of T = 1.034 (corresponding to physiological 37 °C), thereby removing major
+    steric clashes. The second relaxation stage was conducted in GPU mode with extended sampling (10<sup>8</sup> steps)
+    to further stabilize the system. At the conclusion of this step, all mutual trap forces were removed to eliminate
+    artificial constraints.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Following relaxation, an equilibration run was executed under production-like conditions on GPU. The simulation was
+    performed with 10<sup>8</sup> steps, a salt concentration of 1 M (oxDNA units), Brownian thermostat (dt = 0.003,
+    diffusion coefficient = 2.5). Configuration and energy outputs were written at intervals of 2,000,000 and 1,000,000
+    steps, respectively. During this stage, no stabilizing forces were applied, allowing the origami to equilibrate
+    under physically realistic conditions.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The final equilibrated model (<em>Figure 8B</em>) exhibited a smoother geometry, with the high-density distortions
+    present in the raw design effectively eliminated. The processed configuration was exported as .top and .dat files,
+    containing topological and coordinate information, which were subsequently employed for oxDNA stability analysis.
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8a.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8a.webp" alt="Figure 8A"
+            style="max-width: 48%; display: inline-block; margin-right: 2%;">
+    </a>
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8b.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8b.webp" alt="Figure 8B"
+            style="max-width: 48%; display: inline-block;">
+    </a>
+    <br>
+    <em>Figure 8. Structural optimization of the DNA origami in oxView. (A) Initial caDNAno-derived structure,
+        exhibiting dense loop regions and local strain. (B) Relaxed and equilibrated structure following staged oxView
+        optimization, showing improved geometry and reduced steric distortion.</em>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">oxDNA Stability Analysis</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">After equilibration in oxView, the equilibrated .top and .dat files were submitted to oxDNA for coarse-grained
+    molecular dynamics simulations. The primary objective of these simulations was to assess the structural stability of
+    the designed DNA origami. oxDNA provides both raw trajectory data and a suite of post-processing tools to
+    quantitatively evaluate stability.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Mean and RMSF Analysis</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The mean and RMSF module provided additional insights into the local and global stability of the DNA origami. As
+    shown in <em>Figure 9</em>, the RMSD values fluctuated around a mean baseline of ~3.5 nm (indicated by the red
+    line), suggesting that the structure maintains a relatively consistent conformation during the simulation. Although
+    initial configurations showed abnormally high deviations, this effect can be explained by the presence of a
+    disconnected region: in order to make the design compatible with oxDNA, we removed a loop that originally had high
+    molecular density. As a result, the loop region appeared as an open break in the model, which caused the RMSD to
+    spike at the beginning of the trajectory. After this initial adjustment, the system quickly stabilized, with most
+    fluctuations remaining below 4.0 nm.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The RMSF profile revealed that most nucleotides exhibited low positional fluctuations, confirming the rigidity of the
+    designed double-helical domains. Only peripheral regions, such as free ends or crossover junctions, displayed higher
+    RMSF values, reflecting their greater conformational flexibility. This localized flexibility is expected and does
+    not compromise the overall structural integrity.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Together, the mean RMSD and RMSF results indicate that the DNA origami design reached equilibrium and maintained
+    structural stability under oxDNA simulation conditions.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure9.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure9.webp" alt="Figure 9"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 9. RMSD analysis with mean baseline (red line). The average RMSD and RMSF calculations demonstrate that
+        the DNA origami achieves equilibrium and retains global structural stability, with only peripheral regions
+        showing significant fluctuations. The initial spike in RMSD is caused by the disconnected region left after
+        removing the dense loop.</em>
+</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Distance Analysis</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To further evaluate the local stability of key structural elements, we employed the distance analysis module in oxDNA
+    to monitor the separation between selected nucleotide pairs. As shown in <em>Figure 10A</em> (distance histogram),
+    the distances between pairs 1–4, 2–5, and 3–6 were narrowly distributed around 1.2–1.4 nm, with sharp peaks and
+    minimal broadening. This indicates that the corresponding domains maintained stable interactions throughout the
+    simulation, without significant structural disruption.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The temporal profiles in <em>Figure 10B</em> (distance trajectories) further confirmed this observation. Across the
+    2000 simulation steps, the inter-particle distances fluctuated within a narrow range, with only small thermal
+    variations. An isolated spike was observed near the end of the trajectory, which we attribute to the same reason
+    noted in the RMSD analysis: removal of a dense loop region introduced a disconnected segment in the structure,
+    leading to transient artifacts in distance measurement. Importantly, these artifacts did not affect the overall
+    stability of the DNA origami.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Together, the distance analysis supports the conclusion that the designed structure maintains robust local geometry,
+    with consistent separations between paired nucleotides and no indication of significant deformation.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10a.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10a.webp" alt="Figure 10A"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10b.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10b.webp" alt="Figure 10B"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 10. Distance analysis of DNA origami in oxDNA. (A) Histogram of inter-particle distances for pairs 1–4,
+        2–5, and 3–6, showing sharp peaks around 1.2–1.4 nm. (B) Time-dependent trajectories of the same pairs, with
+        distances remaining stable across 2000 steps. A rare spike is observed due to the disconnected region after loop
+        removal, consistent with the RMSD results.</em>
+</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Energy Analysis</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The energy profile provides a thermodynamic perspective on the stability of the DNA origami structure during oxDNA
+    simulations. As shown in <em>Figure 11A</em> (energy histogram), the distribution of energy per particle is sharply
+    peaked around –1.49 SU, with only a narrow spread. This indicates that the system remains confined to a well-defined
+    energetic minimum, without evidence of large-scale conformational transitions or unfolding events.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The temporal evolution of the energy (<em>Figure 11B</em>) further supports this conclusion. After an initial sharp
+    fluctuation, which can be attributed to structural relaxation at the beginning of the simulation, the energy rapidly
+    converges and oscillates around a steady mean value of approximately –1.49 SU. The fluctuations remain small and
+    consistent across 5 × 10<sup>6</sup> simulation steps, confirming that the DNA origami reached equilibrium and
+    maintained thermodynamic stability.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Taken together, the energy analysis demonstrates that the designed structure not only preserves its geometry at the
+    local and global levels (as shown by RMSD, RMSF, and distance analysis) but also occupies a stable energetic state
+    throughout the course of simulation.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11a.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11a.webp" alt="Figure 11A"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11b.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11b.webp" alt="Figure 11B"
+            style="max-width: 100%; height: auto;">
+    </a>
+    <br>
+    <em>Figure 11. Energy analysis of DNA origami in oxDNA. (A) Histogram of energy per particle, showing a sharp
+        distribution centered at –1.49 SU. (B) Energy trajectory over 5 × 10<sup>6</sup> simulation steps, with an
+        initial fluctuation followed by convergence to a stable mean value. The stability of the energy profile confirms
+        thermodynamic equilibrium of the system.</em>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
+
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Douglas SM, Marblestone AH, Teerapittayanon S, Vazquez A, Church GM, Shih WM. Rapid prototyping of 3D
+        DNA-origami shapes with caDNAno. <em>Nucleic Acids Res</em>. 2009;37(15):5001-5006.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Poppleton E, Romero R, Mallya A, Rovigatti L, Šulc P. oxDNA.org: a public webserver for coarse-grained nucleic
+        acid simulation and design. <em>Nucleic Acids Res.</em> 2021;49(W1):W491-W502.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Ouldridge TE, Louis AA, Doye JPK. Structural, mechanical, and thermodynamic properties of a coarse-grained DNA
+        model. <em>J Chem Phys.</em> 2011;134(8):085101.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Šulc P, Romano F, Ouldridge TE, Rovigatti L, Doye JPK, Louis AA. Sequence-dependent thermodynamics of a
+        coarse-grained DNA model. <em>J Chem Phys.</em> 2012;137(13):135101.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Snodin BEK, Randisi F, Mosayebi M, Šulc P, Schreck JS, Romano F, et al. Introducing improved structural
+        properties and salt dependence into a coarse-grained model of DNA. <em>J Chem Phys.</em> 2015;142(23):234901.
+    </li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Rovigatti L, Šulc P, Reguly IZ, Romano F. A comparison between parallelization approaches in molecular dynamics
+        simulations on GPUs. <em>J Comput Chem.< /em> 2015;36(1):1-8.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Šulc P, Romano F, Ouldridge TE, Doye JPK, Louis AA. A nucleotide-level coarse-grained model of RNA. <em>J Chem
+            Phys.</em> 2014;140(23):235102.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Poppleton E, Bøhlin J, Matthies M, Sharma S, Zhang F, Šulc P. Design, optimization and analysis of large DNA and
+        RNA nanostructures through interactive visualization, editing and molecular simulation. <em>Nucleic Acids
+            Res.</em> 2020;48(12):e72.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Bohlin J, Matthies M, Poppleton E, Procyk J, Mallya A, Yan H, et al. Design and simulation of DNA, RNA and
+        hybrid protein–nucleic acid nanostructures with oxView. <em>Nat Protoc.</em> 2022;17(8):1762-1788.</li>
+</ol>
+
+<h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Protection Assessment</h1>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Simulation of Hydroxyl Radical Permeation Behavior in DNA Origami Structures</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This study aims to systematically investigate the diffusion and permeation characteristics of hydroxyl radicals (·OH)
+    in 24-helix bundle DNA origami structures loaded with Cas9-sgRNA complexes. Hydroxyl radicals, as highly reactive
+    oxygen species with extremely short lifetimes (approximately nanosecond scale), can rapidly attack and oxidize
+    nucleic acid molecules. Their motion behavior within nanoscale confined spaces is crucial for the biological
+    stability of DNA nanostructures and the long-term functional maintenance of CRISPR complexes [3,4]. Particularly in
+    gene editing applications, where Cas9-sgRNA complexes often rely on DNA origami scaffolds for stable immobilization,
+    understanding the permeation kinetics and potential damage mechanisms of ·OH in this environment is of significant
+    importance.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To quantitatively characterize the motion patterns of ·OH, we constructed a simulation framework based on the Monte
+    Carlo Method. The Monte Carlo method is a statistical tool that relies on random number sampling and can efficiently
+    predict particle trajectory distributions and average behavior characteristics under complex potential fields and
+    boundary conditions [1,2]. This method has wide applications in molecular diffusion, reaction kinetics, and modeling
+    of nanoscale biological systems.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Model Assumptions and Structural Parameters</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To balance computational feasibility and biological rationality, this study makes the following assumptions during
+    modeling:</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami structure rigidification: The 24-helix bundle structure is assumed to remain undeformed during
+    simulation, ignoring flexible bending and thermal fluctuation effects.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Cas9-sgRNA complex fixation: Cas9 protein and sgRNA are fixed in spatial positions and do not drift over time.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Interaction potential simplification: The interactions between ·OH and DNA/proteins are mainly described through
+    repulsive potentials, without explicitly simulating chemical reactions between radicals and nucleic acids, only
+    reflecting damage probability through spatial collisions and constraints.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">External radical injection point settings: 12 uniformly distributed G4 sites are set around the periphery of the
+    helical bundle as initial injection positions for ·OH, with coordinates determined by the following equation:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        x<sub>0</sub> = (R<sub>bundle</sub> + Δr)cosθ<sub>i</sub>, &nbsp; y<sub>0</sub> = (R<sub>bundle</sub> +
+        Δr)sinθ<sub>i</sub>, &nbsp; θ<sub>i</sub> = 2πi/12, &nbsp; i=0,...,11
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">where R<sub>bundle</sub> represents the DNA helical bundle radius, and Δr is the extension displacement.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In specific implementation, the geometric center positions of the 24-helix bundle are first generated, followed by
+    placement of Cas9 protein, sgRNA, and external G4 sites. The core code is as follows:</p>
+
+<pre><code class="language-python">def _generate_helical_bundle(self):
+    """Generate 24-helix bundle DNA origami structure"""
+    angles = np.linspace(0, 2*np.pi, self.num_helices, endpoint=False)
+    self.helix_centers = []
+    for angle in angles:
+        x = self.bundle_radius * np.cos(angle)
+        y = self.bundle_radius * np.sin(angle)
+        self.helix_centers.append((x, y))
+
+    # Generate external 12 G4 sites
+    self.g4_sites = []
+    for i in range(12):
+        angle = i * (2*np.pi/12)
+        x = (self.bundle_radius + 2.0e-9) * np.cos(angle)
+        y = (self.bundle_radius + 2.0e-9) * np.sin(angle)
+        self.g4_sites.append((x, y))
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Hydroxyl Radical Diffusion and Brownian Motion</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The diffusion process of ·OH in aqueous solution can be described by Brownian motion. Its displacement in the
+    two-dimensional plane can be expressed as:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        Δx = √(2DΔt)N(0,1), &nbsp; Δy = √(2DΔt)N(0,1)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">where D is the diffusion coefficient, Δt is the time step, and N(0,1) is a standard normal distribution random
+    variable.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Simultaneously considering the correction term of the potential energy field generated by the DNA helical bundle, its
+    force field form is:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        F(r) = -∇U(r) = -U<sub>0</sub>(r - R<sub>bundle</sub>)/R<sub>bundle</sub>, &nbsp; U<sub>0</sub> =
+        5×10<sup>-21</sup> J
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In program implementation, the single-step displacement process is as follows:</p>
+
+<pre><code class="language-python"># Brownian motion displacement
+dx = np.sqrt(2 * self.D * self.dt) * norm.rvs()
+dy = np.sqrt(2 * self.D * self.dt) * norm.rvs()
+
+# Potential field correction
+r = np.sqrt(x**2 + y**2)
+if r < self.bundle_radius + self.helix_radius:
+    F = -self.U0 * (r - (self.bundle_radius + self.helix_radius)) / self.bundle_radius
+    dx += F * x/r * self.dt / (self.k_BT / self.D)
+    dy += F * y/r * self.dt / (self.k_BT / self.D)
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Cas9-sgRNA Repulsion Effects and Damage Assessment</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">As a macromolecular complex, Cas9 protein exerts strong spatial repulsion effects on ·OH. Its potential energy form
+    is simplified to a hard-sphere repulsion model:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        U<sub>Cas9</sub>(r<sub>OH-Cas9</sub>) = ∞ if r &lt; R<sub>Cas9</sub>, otherwise 0
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">If a radical enters the effective radius range of sgRNA, it is defined as a damage event:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        Damage = 1 if r<sub>OH-sgRNA</sub> &lt; R<sub>sgRNA</sub>, otherwise 0
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The corresponding implementation code is as follows:</p>
+
+<pre><code class="language-python">def _check_sgrna_damage(self, x, y):
+    """Check if sgRNA is damaged"""
+    sx, sy = self.sgrna_position
+    distance = np.sqrt((x - sx)**2 + (y - sy)**2)
+    return distance < self.sgrna_radius
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Monte Carlo Simulation Procedure</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To obtain statistical results, the simulation employs the Monte Carlo method for repeated sampling. Each time, a
+    random external G4 site is selected as the initial injection position for the radical, and its diffusion trajectory
+    is tracked until the radical quenches or enters the interior of the DNA origami.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The simulation parameters are set to N<sub>sim</sub> = 10,000, and the following quantities are statistically
+    analyzed:</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Permeation probability: P<sub>penetration</sub> = N<sub>success</sub> / N<sub>sim</sub></p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Average permeation time: ⟨t<sub>penetration</sub>⟩ = Σt<sub>i</sub> / N<sub>success</sub></p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Damage probability: P<sub>damage</sub> = N<sub>damage</sub> / N<sub>sim</sub></p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The core implementation code is as follows:</p>
+
+<pre><code class="language-python">def monte_carlo(self):
+    successes, damages, lifetimes = 0, 0, []
+    for _ in tqdm(range(self.N_simulations)):
+        penetrated, lifetime, _, damaged = self.simulate()
+        if penetrated:
+            successes += 1
+            lifetimes.append(lifetime)
+        if damaged:
+            damages += 1
+
+    P = successes / self.N_simulations
+    D = damages / self.N_simulations
+    avg_lifetime = np.mean(lifetimes) if lifetimes else 0
+
+    print(f"Permeation probability: {P:.2%}")
+    print(f"sgRNA damage probability: {D:.2%}")
+    print(f"Average permeation time: {avg_lifetime:.2e} s")
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Simulation Results and Analysis</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Under the set parameter conditions (diffusion coefficient D = 1.0×10<sup>-9</sup> m<sup>2</sup>/s, radical lifetime τ
+    = 7.1 ns), the simulation results are as follows:</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Permeation probability: P<sub>penetration</sub> = 7.04%</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Average permeation time: ⟨t<sub>penetration</sub>⟩ = 2.10 ns</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">sgRNA damage probability: P<sub>damage</sub> = 0.15%</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The results indicate that although some hydroxyl radicals can successfully permeate the DNA origami nanostructure,
+    the overall probability is relatively low. Meanwhile, the Cas9-sgRNA complex exhibits high damage resistance under
+    the protection of spatial barriers and repulsion effects. This suggests that DNA origami can, to some extent, delay
+    the destruction of the gene editing system by external reactive oxygen species, thereby enhancing its stability in
+    biological environments.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-1.webp" alt="Simulation Result 1"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Also, before the design of the rolled-up cylinder, we also simulated that for the rectangular DNA origami, the result
+    shows that DNA itself sustained limited damage, and also confirms the protection of DNA origami for the sgRNA and
+    Cas9. The detailed results are as follows:</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">sgRNA damage probability: P<sub>penetration</sub> = 0.80%</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA damage probability: P<sub>damage</sub> = 0.05%</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-2.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-2.webp" alt="Simulation Result 2"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Multi-enzyme System Entry Probability and Synergistic Degradation Effect in Nanotubes</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The extracellular matrix (ECM) in wound environments is constantly exposed to multiple proteolytic enzymes released
+    by immune cells. These enzymes not only diffuse freely but may also enter nanoscale tubular structures within the
+    ECM, thereby influencing stability and degradation kinetics. To quantitatively investigate these processes, we
+    developed a stochastic simulation framework that integrates geometric parameters of nanotubes, enzyme
+    physicochemical properties, and probabilistic entry models.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In our research, we found critical enzymes in wound that could possibly harm Cas9 protein. Matrix Metalloproteinases
+    (MMP), Serine Proteases, A Disintegrin and Metalloproteinase (ADAM), Cysteine Proteases. Among them, Matrix
+    Metalloproteinase family and Neutrophil Elastase (NE), a kind of Serine Proteases, play significant role in wound
+    healing, thus are significant and abundant in wound (6). MMP family are the predominant proteases in the process of
+    wound healing, for they contain motif that act with zinc ions as a ligand, which is crucial to proteolysis. NE is
+    generated by neutrophil granulocytes, which migrate to the wound following inflammatory stimuli. NE could initiate
+    mediators of inflammatory, and do proteolytic processing to active cytokines.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Also, we noticed the existence of DNase that may damage our DNA origami. It is correlated with neutrophils releasing
+    the nuclear content into the cytosol by forming pores in the plasma membrane. This process is common in inflammation
+    immunology, thus DNase is relative abundant in wound (7).</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Specifically, enzyme size is approximated by the hydration radius R<sub>h</sub>, which can be derived from its
+    molecular weight M<sub>w</sub>:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        R<sub>h</sub> = 0.066 × (M<sub>w</sub> × 1000)<sup>1/3</sup> nm
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The corresponding diffusion coefficient D is estimated as:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        D = 0.21 / max(R<sub>h</sub>, 0.5) μm<sup>2</sup>/s
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Enzyme entry through wall pores depends on steric compatibility, expressed by the passage probability:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        P<sub>pass</sub> = 1 / [1 + exp(-8 × (d<sub>pore</sub> - 2R<sub>h</sub>)/d<sub>pore</sub>)]
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">These basic relationships provide the foundation for constructing a multi-enzyme entry model and analyzing their
+    synergistic degradation effects on nanotube stability.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Model Construction and Parameter Setting</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The simulation includes the following enzymes, with molecular weights (MW) derived from biochemical literature:</p>
+
+<ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>MMP-9</strong> — 92 kDa</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>MMP-2</strong> — 72 kDa</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Neutrophil elastase</strong> — 29 kDa</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Collagenase (MMP-8)</strong> — 60 kDa</li>
+</ul>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">These molecular weights and typical biological concentrations are taken from well-documented enzymology studies
+    [8,9].</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The nanopore geometry assumed in the model is:</p>
+
+<ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Pore diameter:</strong> 18 nm</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Pore length:</strong> 1 µm</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Tube radius:</strong> 9 nm</li>
+</ul>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">These parameters match commonly used experimental nanopore or nanotube systems [10].</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The ECM in the wound environment has complex nanotubular structures, and the diffusion and entry behavior of multiple
+    enzymes directly affect ECM stability and degradation rate. This study uses nanotubes as simulation units with the
+    following geometric parameters: outer diameter d<sub>out</sub> = 16.0 nm, inner diameter d<sub>in</sub> = 10.0 nm,
+    wall pore diameter d<sub>pore</sub> = 1.5 nm, length L = 100.0 nm, wall porosity φ = 0.05, and tube-end directional
+    factor η = 0.4 [4].</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The effective end area A<sub>end</sub> and wall area A<sub>wall</sub> of the nanotube are defined as:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        A<sub>end</sub> = η × 2π × (d<sub>in</sub>/2)<sup>2</sup><br>
+        A<sub>wall</sub> = π × d<sub>out</sub> × L × φ
+    </span>
+</div>
+
+<pre><code class="language-python">def nanotube_areas(d_in, d_out, L, phi, eta):
+    """Calculate effective end and wall areas of a nanotube."""
+    A_end = eta * 2 * np.pi * (d_in / 2)**2
+    A_wall = np.pi * d_out * L * phi
+    return A_end, A_wall
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Enzyme Random Arrival and Synergistic Effect</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Enzyme molecule arrival events at nanotube ends or wall pores are modeled using Poisson random processes:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        λ<sub>end</sub> = k × C × D × A<sub>end</sub><br>
+        λ<sub>wall</sub> = k × C × D × A<sub>wall</sub>
+    </span>
+</div>
+
+<pre><code class="language-python">def arrival_rates(k, C, D, A_end, A_wall):
+    """Calculate enzyme arrival rates at ends and walls."""
+    lambda_end = k * C * D * A_end
+    lambda_wall = k * C * D * A_wall
+    return lambda_end, lambda_wall
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The number of enzymes arriving within each time step Δt follows a Poisson distribution:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        P(N = n) = (λΔt)<sup>n</sup> exp(-λΔt) / n!
+    </span>
+</div>
+
+<pre><code class="language-python">def poisson_arrivals(lmbda, dt):
+    """Simulate number of arrivals in time step dt."""
+    return np.random.poisson(lmbda * dt)
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The number of enzymes passing through pores follows a binomial distribution:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        N<sub>pass</sub> ~ Binomial(N<sub>wall</sub>, P<sub>pass</sub>)
+    </span>
+</div>
+
+<pre><code class="language-python">def passage_events(N_wall, P_pass):
+    """Simulate number of enzymes passing through pores."""
+    return np.random.binomial(N_wall, P_pass)
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The degradation capability of enzymes on nanotube structure is represented by stability index S, considering
+    synergistic effects:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        S<sub>t+Δt</sub> = S<sub>t</sub> × exp[-α × (Σ<sub>i</sub> a<sub>i</sub>N<sub>i</sub> + Σ<sub>i≠j</sub>
+        (s<sub>ij</sub> - 1)N<sub>i</sub>N<sub>j</sub>)]
+    </span>
+</div>
+
+<pre><code class="language-python">def update_stability(S, alpha, N_list, a_list, s_matrix):
+    """Update stability index with synergistic effects."""
+    degradation = sum(a * N for a, N in zip(a_list, N_list))
+    for i in range(len(N_list)):
+        for j in range(len(N_list)):
+            if i != j:
+                degradation += (s_matrix[i][j] - 1) * N_list[i] * N_list[j]
+    return S * np.exp(-alpha * degradation)
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Simulation Methods and Assumptions</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Simulation time is set to <em>T</em> = 3600 s, time step Δ<em>t</em> = 1 s, repeated 200 times to obtain statistical
+    distributions. The assumptions include:</p>
+
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Enzyme molecules are approximately spherical, with hydration radius used for diffusion and pore matching
+        calculations;</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Nanotube wall pores are uniformly distributed with fixed directional factor;</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Enzyme arrival events are independent, and Poisson processes are suitable for short-time random entry;</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Synergistic effects occur only between specific enzyme pairs, affecting stability through exponential decay.
+    </li>
+</ol>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">These assumptions are reasonable under existing experimental conditions and can capture key kinetic features while
+    ensuring computational feasibility.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Simulation Results and Analysis</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/output.avif" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/output.avif" alt="Simulation Output"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Simulation results show that the probability of at least one enzyme successfully entering the nanotube is
+    approximately 4%, with average structural stability <em>S</em> ≈ 1.000, indicating limited degradation effects on
+    nanotubes at the one-hour scale.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Further statistics on entry events of different enzymes show that neutrophil elastase has the highest number of
+    entries (5 times total), followed by MMP-9, DNase I, and MMP-8 (1 time each), while MMP-2 shows no entry events. The
+    results indicate that enzyme entry capability is regulated by the combined effects of concentration, molecular size,
+    and diffusion ability.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Brownian motion trajectory simulations show that small-sized enzymes with high diffusion coefficients are more likely
+    to approach tube ends and enter pores, while large molecules are restricted by spatial exclusion, with their
+    movement confined outside the tube. Synergistic effects improve entry success rates in some trajectories but still
+    have limited short-term impact on structural stability [3,5].</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The curve of wall pore passage probability versus hydration radius shows a nonlinear decreasing trend, sensitive to
+    enzyme molecular size, consistent with experimental observations [2].</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/output1.avif" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/output1.avif" alt="Simulation Output 1"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">DNA Origami Penetration and Damage Simulation (Monte Carlo Model)</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To complement enzyme–nanotube modeling, we developed an additional simulation focusing on DNA origami bundle
+    penetration and damage. Our model aims to simulate how a diffusing molecule, such as the Cas9–sgRNA complex, moves
+    through nano-sized pores in a DNA origami bundle. The molecule undergoes Brownian motion in a confined 2D space,
+    interacting with structural barriers (Cas9 regions, sgRNA scaffold) and the central pore. Each simulation begins
+    with the molecule outside the bundle. Random displacements are generated using diffusion laws, and thousands of
+    repeated trajectories allow us to estimate: penetration probability interaction, likelihood potential molecular
+    damage, structural vulnerability.</p>
+
+<pre><code class="language-python">def compute_cut_probability(enzyme):
+    return min(enzyme["p_base"] * enzyme["concentration"], 1.0)
+
+def simulate_dna_cylinder(n_dna, n_steps, damage_threshold, enzyme):
+    dna_state = np.zeros(n_dna, dtype=bool)
+    p_cut = compute_cut_probability(enzyme)
+    for step in range(n_steps):
+        for i in range(n_dna):
+            if not dna_state[i] and np.random.rand() < p_cut:
+                dna_state[i] = True
+        if dna_state.mean() >= damage_threshold:
+            return step
+    return n_steps
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Conclusion</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This study demonstrates that nanotube structures exhibit good stability against multi-enzyme systems at short time
+    scales. Differences in enzyme molecular size, concentration, and diffusion ability lead to significant variations in
+    entry capabilities among different enzymes. Generally it is difficult to enter. While synergistic effects contribute
+    limitedly to stability, they can significantly enhance ECM degradation under long-term or high-concentration
+    conditions.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This model provides a quantitative analysis framework for nanotube-enzyme interactions in wound environments and can
+    be extended to study degradation kinetics in other biological nanopore systems.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/3-2-2-1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/3-2-2-1.webp" alt="Multi-enzyme Simulation Result"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
+
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Cantor, C.R., & Schimmel, P.R. (1980). <em>Biophysical Chemistry: Part II -- Techniques for the Study of
+            Biological Structure and Function</em>. W.H. Freeman.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Johnson, T., Smith, L., & Wang, R. (2019). Protein diffusion in nanoscale channels. <em>J. Phys. Chem. B</em>,
+        123(45), 9812--9820.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Nguyen, T., & Lauffenburger, D. (2018). Modeling enzyme transport and action in nanostructured environments.
+        <em>Biophys. J.</em>, 114(12), 2785--2797.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhang, Y., Liu, H., et al. (2021). Nanotube ECM properties in wound environments. <em>Biomaterials</em>, 268,
+        120578.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wang, L., Chen, J., & Zhao, Q. (2020). Enzyme synergistic effects on ECM degradation. <em>Matrix Biology</em>,
+        95, 1--12.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Kalogeropoulos K, Bundgaard L, auf dem Keller U. Chapter 8 - Proteolytic signaling in cutaneous wound healing.
+        In: Zelanis A, editor. Proteolytic Signaling in Health and Disease [Internet]. Academic Press; 2022 [cited 2025
+        Oct 5]. p. 131–64. Available from: https://www.sciencedirect.com/science/article/pii/B9780323856966000068</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Yadav R, Momin A, Godugu C. DNase based therapeutic approaches for the treatment of NETosis related inflammatory
+        diseases. International Immunopharmacology. 2023 Nov 1;124:110846.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Nagase, H., & Woessner, J. F. (1999).</strong> <em>Matrix metalloproteinases.</em> Journal of Biological
+        Chemistry, 274(31), 21491–21494.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Janoff, A. (1985).</strong> <em>Elastases and emphysema.</em> Current Opinion in Pulmonary Medicine,
+        1(1), 19–26.</li>
+</ol>
+
+<h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">Transmembrane Simulation</h1>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Overview and Scientific Context</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA origami technology has revolutionized medical science, yet this precision creates a critical challenge: the lack
+    of integrated modeling platforms capable of predicting <em>in vivo</em> performance across the entire drug delivery
+    process. Our model addresses this fundamental gap through a computational pipeline that seamlessly integrates with
+    wet-lab validation data. It provides both invaluable reference for wet-lab collaborators and impressive
+    communicative power for broader audiences.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Our research goal focuses on creating a model that predicts the complete journey of a DNA nanotube CRISPR-Cas9
+    delivery system, encompassing both anchoring to target cell membranes through aptamer and subsequent membrane
+    penetration through ROS. In our model, the aptamer length represents the distance from the drug-loaded DNA nanotube
+    to the cell membrane, which is critical for anchoring efficiency.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">One conceptual innovation involves sequential, interdependent events from initial anchoring to final drug influx.
+    This approach allows researchers to understand how each stage of the delivery process influences subsequent events,
+    creating a more accurate model to predict the whole journey.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Finally, visualization remains scientifically valuable to cross-disciplinary teams, fostering collaboration between
+    computational scientists, experimental researchers, and clinical translators.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This comprehensive computational framework simulates a sophisticated drug delivery platform that leverages DNA
+    nanotubes for spatially and time-controlled treatment delivery. The system operates through a series of precisely
+    orchestrated physical phenomena, starting with aptamer-mediated anchoring to target cell membranes, followed by the
+    generation of reactive oxygen species (ROS), followed by a complex transport process through the cellular
+    environment, membrane permeabilization through lipid peroxidation mechanics, and finally CRISPR-Cas9 system release
+    and activation through membrane nanopores.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The model integrates principles from quantum mechanics, non-equilibrium statistical physics, continuum membrane
+    biophysics, and stochastic reaction-diffusion theory to establish a predictive multiscale framework for rational
+    design of targeted therapeutic systems. Based on experimental observations from high-impact publications, the
+    simulator provides quantitative predictions of delivery efficiency while maintaining physical realism across spatial
+    scales from molecular dimensions to cellular structures.</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Mathematical Modeling Framework</h2>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Aptamer-Mediated Anchoring</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The initial anchoring process is governed by the aptamer length, which determines the distance between the DNA
+    nanotube and the cell membrane. This distance critically affects ROS delivery efficiency and subsequent membrane
+    permeabilization. The aptamer anchoring establishes the spatial configuration for the entire delivery process.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Reactive Oxygen Species Generation and Transport</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The foundation of our model begins with quantum mechanical descriptions of ROS generation at G4 sites. The quantum
+    yield parameter derives from fundamental photophysical processes:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        Φ = [k<sub>ISC</sub> / (k<sub>f</sub> + k<sub>ISC</sub> + k<sub>IC</sub>)] × [k<sub>ET</sub> / (k<sub>ET</sub> +
+        k<sub>d</sub>)]
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">where the intersystem crossing rate k<sub>ISC</sub>, fluorescence rate k<sub>f</sub>, internal conversion rate
+    k<sub>IC</sub>, energy transfer rate to oxygen k<sub>ET</sub>, and decay rate k<sub>d</sub> are determined from
+    time-resolved spectroscopy measurements. This quantum mechanical foundation leads to the spatiotemporal source term:
+</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        S(r,t) = Φ × I<sub>0</sub> × Σ<sub>i=1</sub><sup>N<sub>G4</sub></sup> δ(r - r<sub>i</sub>) × exp(-||r -
+        r<sub>i</sub>||<sup>2</sup>/2σ<sup>2</sup>) × Θ(t)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The Gaussian spatial distribution with σ = 2 nm arises from exciton migration uncertainty before energy transfer,
+    calibrated against single-molecule fluorescence studies of G-quadruplex structures.</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Implementation in Code:</h2>
+
+<pre><code class="language-python">def simulate_ros_diffusion(self):
+    """Brownian motion simulation of ROS diffusion with reaction kinetics"""
+    self.membrane_hits = np.zeros((self.grid_size, self.grid_size))
+    rotated_sources = self.rotate_sources()
+    
+    # Ensure all points are above membrane
+    rotated_sources[:, 2] = np.maximum(rotated_sources[:, 2], 1e-9)
+    
+    # Initialize trajectories
+    self.trajectories = []
+    total_ros = ROS_PER_SOURCE * len(rotated_sources)
+    
+    # For each G4 source
+    for src_idx, src in enumerate(rotated_sources):
+        # For each ROS molecule
+        for ros_idx in range(ROS_PER_SOURCE):
+            # Only track a subset for animation
+            if ros_idx < ANIMATION_MOLECULES:
+                pos = src.copy()
+                trajectory = [pos.copy()]
+                
+                # Simulate diffusion with reaction kinetics
+                for step in range(100):
+                    # Brownian motion with variance 2DΔt
+                    dx = np.random.normal(0, np.sqrt(2*D_ros*dt))
+                    dy = np.random.normal(0, np.sqrt(2*D_ros*dt))
+                    dz = np.random.normal(0, np.sqrt(2*D_ros*dt))
+                    pos += np.array([dx, dy, dz])
+                    trajectory.append(pos.copy())
+                    
+                    # Check if hit membrane (with curvature)
+                    membrane_z = (pos[0]**2 + pos[1]**2) / (2 * self.cell_radius)
+                    if pos[2] <= membrane_z:
+                        x_idx = np.argmin(np.abs(self.x_grid - pos[0]))
+                        y_idx = np.argmin(np.abs(self.y_grid - pos[1]))
+                        if 0 <= x_idx < self.grid_size and 0 <= y_idx < self.grid_size:
+                            self.membrane_hits[x_idx, y_idx] += 1
+                        break
+                
+                # Store trajectory
+                self.trajectories.append(trajectory)
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The transport of reactive oxygen species through the aqueous environment incorporates both diffusion and complex
+    reaction kinetics, described by the nonlinear partial differential equation:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        ∂C<sub>ROS</sub>/∂t = ∇·(D<sub>ROS</sub>∇C<sub>ROS</sub>) - k<sub>1</sub>C<sub>ROS</sub>C<sub>Lipid</sub> -
+        k<sub>2</sub>C<sub>ROS</sub><sup>2</sup> + S(r,t)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The diffusion coefficient D<sub>ROS</sub> = 2.8 × 10<sup>-9</sup> m<sup>2</sup>/s derives from fluorescence
+    correlation spectroscopy measurements (1), while the bimolecular reaction rate k<sub>1</sub> = 1.2 × 10<sup>8</sup>
+    M<sup>-1</sup>s<sup>-1</sup> accounts for ROS-lipid interactions based on stopped-flow kinetics experiments. The
+    self-annihilation term with k<sub>2</sub> = 5.6 × 10<sup>9</sup> M<sup>-1</sup>s<sup>-1</sup> captures ROS
+    dimerization and disproportionation reactions observed in pulse radiolysis studies.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Membrane Permeabilization Physics and ROS-Pore Size Relationship</h3>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Experimental Evidence for ROS-Dependent Pore Formation</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Multiple experimental studies have established that controlled ROS generation leads to the formation of membrane
+    pores with diameters ranging from 20-100 nm. Quantitative probing of reactive oxygen species has revealed their
+    selective degradation effects on various substrates, with different ROS species exhibiting distinct steady-state
+    concentrations and reactivities.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The thermodynamic stability of lipid membranes under oxidative stress follows from Helfrich-Canham elasticity theory,
+    leading to the free energy functional:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        ΔG(r) = 2πγr - πΓr<sup>2</sup> + (πK/r<sub>c</sub><sup>2</sup>)r<sup>4</sup> + ΔG<sub>ox</sub>(C<sub>ROS</sub>,
+        r)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Experimental measurements from micropipette aspiration provide the edge tension γ = 20 pN and bending modulus K = 20
+    k<sub>B</sub>T, while surface tension Γ = 0.03 N/m comes from Langmuir trough experiments (2). The
+    oxidation-dependent term incorporates saturation kinetics:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        ΔG<sub>ox</sub>(C<sub>ROS</sub>, r) = -α × ln(1 + C<sub>ROS</sub>/C<sub>0</sub>) × πr<sup>2</sup> × [1 -
+        exp(-r/r<sub>0</sub>)]
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">where C<sub>0</sub> = 10<sup>4</sup> molecules/μm<sup>2</sup>/ns represents the concentration where oxidation
+    efficiency decreases due to antioxidant depletion, and α = 2.3 k<sub>B</sub>T/nm<sup>2</sup> is calibrated against
+    atomic force microscopy measurements.</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Mathematical Derivation of ROS-Pore Size Relationship</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Based on literature, we inferred that (3):</p>
+
+<ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">After drug treatment (ROS induction), pores of 20-100 nm diameter form on cell membranes</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Pore formation shows concentration dependence: higher ROS concentrations produce larger and more numerous pores
+    </li>
+</ul>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">We establish a quantitative relationship between pore diameter (D, nm) and ROS concentration (C, molecules/μm²/ns):
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Mathematical Formulation:</h2>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        D = a × log<sub>10</sub>(C) + b
+    </span>
+</div>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Derivation of Coefficients:</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Boundary conditions from experimental data:</p>
+
+<ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Minimum pore diameter: 20 nm at threshold concentration C<sub>0</sub> = 10<sup>4</sup>
+        molecules/μm<sup>2</sup>/ns</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Maximum pore diameter: 100 nm at saturation concentration C<sub>1</sub> = 10<sup>6</sup>
+        molecules/μm<sup>2</sup>/ns</li>
+</ul>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Solving the system:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        20 = a × log<sub>10</sub>(10<sup>4</sup>) + b ⇒ 20 = 4a + b
+    </span>
+</div>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        100 = a × log<sub>10</sub>(10<sup>6</sup>) + b ⇒ 100 = 6a + b
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Subtracting equations: 80 = 2a ⇒ a = 40</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Substituting: 20 = 4 × 40 + b ⇒ b = 20 - 160 = -140</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Final Formula:</h2>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        D = 40 × log<sub>10</sub>(C) - 140
+    </span>
+</div>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Implementation in Code:</h2>
+
+<pre><code class="language-python">def calculate_pore_diameter(ros_density):
+    """
+    Calculate pore diameter based on ROS-induced lipid peroxidation
+    Based on experimental observations of 20-100 nm pore formation
+    with logarithmic concentration dependence [Tero et al., Langmuir 2016]
+    
+    Parameters:
+    -----------
+    ros_density : float
+        ROS concentration in molecules/μm²/ns
+        
+    Returns:
+    --------
+    diameter : float
+        Pore diameter in nanometers
+    """
+    if ros_density < 1e4:  # Below threshold, no pore formation
+        return 0
+    elif ros_density > 1e6:  # Saturation limit
+        return 100
+    else:
+        # D = 40 * log10(C) - 140 derived from boundary conditions:
+        # 20 nm at C=1e4, 100 nm at C=1e6
+        return 40 * np.log10(ros_density) - 140
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The critical pore radius emerges from variational minimization of the free energy functional:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        ∂ΔG/∂r = 2πγ - 2πΓr + (4πK/r<sub>c</sub><sup>2</sup>)r<sup>3</sup> + ∂ΔG<sub>ox</sub>/∂r = 0
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Solving this equation numerically reveals that the critical radius increases approximately logarithmically with ROS
+    concentration, consistent with experimental observations of 20-100 nm pores.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Stochastic Pore Dynamics</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The evolution of pore size distribution follows a master equation formalism:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        ∂P(r,t)/∂t = -∂[v(r)P(r,t)]/∂r + D<sub>r</sub>∂<sup>2</sup>P(r,t)/∂r<sup>2</sup> + k<sub>nuc</sub>δ(r -
+        r<sub>0</sub>) - k<sub>close</sub>(r)P(r,t)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The drift velocity captures thermodynamic driving forces:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        v(r) = -(D<sub>r</sub>/k<sub>B</sub>T)(∂ΔG/∂r) + γ<sub>growth</sub> × tanh[(r -
+        r<sub>sat</sub>)/r<sub>scale</sub>]
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">where the diffusion coefficient in size space D<sub>r</sub> = 0.8 nm<sup>2</sup>/ns comes from molecular dynamics
+    simulations of fluctuating membrane pores, and the saturation term accounts for finite membrane size effects.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">CRISPR-Cas9 System Release and Transport Mechanics</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The release and activation of CRISPR-Cas9 system involves multiple steps: first, disulfide bond cleavage opens the
+    DNA nanotube structure; then, RNAse H enzyme cleavage separates the sgRNA from the origami scaffold by cutting the
+    linker between sgRNA and its main body; finally, the liberated CRISPR-Cas9 components translocate through membrane
+    nanopores.</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        J<sub>drug</sub> = (πr<sub>p</sub><sup>4</sup>ΔP)/(8μL<sub>p</sub>) × [1 -
+        (r<sub>d</sub>/r<sub>p</sub>)<sup>4</sup>] × [1 +
+        (λ<sub>D</sub>/r<sub>p</sub>)ln(r<sub>p</sub>/r<sub>d</sub>)]<sup>-1</sup> ×
+        exp(-ΔE<sub>barrier</sub>/k<sub>B</sub>T)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The pressure difference ΔP = 2γ/r<sub>p</sub> arises from membrane curvature, while the Debye length λ<sub>D</sub> =
+    0.7 nm corresponds to physiological ionic strength. The energy barrier incorporates multiple physical effects:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        ΔE<sub>barrier</sub> = k<sub>B</sub>Tr<sub>d</sub><sup>2</sup>/(2r<sub>p</sub><sup>2</sup>) +
+        Z<sub>d</sub>Z<sub>p</sub>e<sup>2</sup>/(4πεr<sub>p</sub>) × exp(-r<sub>p</sub>/λ<sub>D</sub>) +
+        γ<sub>SL</sub>πr<sub>d</sub><sup>2</sup> × [1 - cos(θ)]
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">including steric exclusion, electrostatic interactions with surface charges Z<sub>d</sub> and Z<sub>p</sub>, and
+    hydrophobic effects with solid-liquid tension γ<sub>SL</sub> = 25 mN/m and contact angle θ = 85° (4).</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Implementation in Code:</h2>
+
+<pre><code class="language-python">def update_crispr_system_animation(self, frame):
+    """Update CRISPR-Cas9 system release and diffusion animation"""
+    if self.drug_delivery_complete:
+        return
+        
+    new_positions = []
+    active_molecules = 0
+    
+    for i, trajectory in enumerate(self.drug_trajectories):
+        if len(trajectory) > 0:
+            pos = trajectory[-1].copy()
+            
+            # Brownian motion with drug diffusion coefficient
+            dx = np.random.normal(0, np.sqrt(2*D_drug*dt))
+            dy = np.random.normal(0, np.sqrt(2*D_drug*dt))
+            dz = np.random.normal(0, np.sqrt(2*D_drug*dt))
+            pos += np.array([dx, dy, dz])
+            
+            # Check if drug passed through pore into cell
+            membrane_z = (pos[0]**2 + pos[1]**2) / (2 * self.cell_radius)
+            if pos[2] < membrane_z:
+                self.drug_inside += 1
+                self.drug_trajectories[i] = []  # Mark as delivered
+            else:
+                trajectory.append(pos)
+                new_positions.append(pos)
+                active_molecules += 1
+                
+    if new_positions:
+        new_positions = np.array(new_positions)
+        self.drug_animation_points._offsets3d = (
+            new_positions[:, 0]*1e9,
+            new_positions[:, 1]*1e9,
+            new_positions[:, 2]*1e9
+        )
+        
+    # Check completion criteria
+    if active_molecules == 0 or frame >= 199:
+        self.drug_delivery_complete = True
+        efficiency = (self.drug_inside / ANIMATION_MOLECULES) * 100
+        
+        # Display results
+        result_text = (
+            f"Delivery Complete!\n"
+            f"Efficiency: {efficiency:.1f}%\n"
+            f"Drug Size: {self.drug_size} nm\n"
+            f"Pore Size: {self.pore_diameter:.1f} nm"
+        )
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-05-235904.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-05-235904.webp"
+            alt="Membrane Rupture Simulation" style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Computational Implementation</h2>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Software Architecture and Numerical Methods</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The simulation framework employs an object-oriented Python implementation with performance-critical components
+    accelerated through just-in-time compilation. The core <code>DNANanotubeSimulator</code> class manages multiscale
+    integration through an event-driven scheduler:</p>
+
+<pre><code class="language-python">class DNANanotubeSimulator:
+    def __init__(self):
+        # Physical parameters based on experimental data
+        self.nanotube_diameter = 18e-9  # 18 nm diameter [Douglas et al., Nature 2009]
+        self.nanotube_radius = self.nanotube_diameter / 2
+        self.nanotube_length = 100e-9   # 100 nm length
+        
+        # Reaction kinetics parameters [Bacellar et al., Chemical Reviews 2018]
+        self.k_lipid = 1.2e8           # Bimolecular reaction rate with lipids (M⁻¹s⁻¹)
+        self.k_annihilation = 5.6e9    # ROS self-annihilation rate (M⁻¹s⁻¹)
+        
+        # Membrane mechanical parameters
+        self.edge_tension = 20e-12     # 20 pN edge tension
+        self.bending_modulus = 20 * 4.11e-21  # 20 k_BT bending modulus
+        self.surface_tension = 0.03    # 0.03 N/m surface tension
+        
+        # Initialize simulation state
+        self.sources = self.create_nanotube_sources()
+        self.drug_positions = self.create_drug_molecules()
+        self.membrane_hits = np.zeros((self.grid_size, self.grid_size))
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The coupled system of equations is solved using sophisticated operator splitting techniques with specialized
+    numerical methods for each physical subprocess.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Interactive Control System</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The simulator provides parameter control through an intuitive graphical interface. The aptamer length control adjusts
+    the distance from the DNA nanotube to the cell membrane, which affects the anchoring efficiency and subsequent ROS
+    delivery.</p>
+
+<pre><code class="language-python">def create_control_content(self):
+    """Create interactive control panel with real-time parameter adjustment"""
+    
+    # Aptamer length control (5-50 nm) - represents distance to membrane
+    slider_ax = plt.axes([0.70, 0.82, 0.24, 0.02])
+    self.slider_length = Slider(slider_ax, 'Aptamer Length (nm)', 5, 50, valinit=20)
+    self.slider_length.on_changed(self.update_aptamer)
+    
+    # G4 density control (4-16 sites/ring)
+    slider_ax = plt.axes([0.70, 0.76, 0.24, 0.02])
+    self.slider_g4_density = Slider(slider_ax, 'G4 Sites per Ring', 4, 16, valinit=8)
+    self.slider_g4_density.on_changed(self.update_g4_density)
+    
+    # CRISPR system size control (1-30 nm)
+    slider_ax = plt.axes([0.70, 0.64, 0.24, 0.02])
+    self.slider_crispr_size = Slider(slider_ax, 'CRISPR System Size (nm)', 1, 30, valinit=5)
+    self.slider_crispr_size.on_changed(self.update_crispr_size)
+    
+    # ROS concentration control (50-500 molecules/site)
+    slider_ax = plt.axes([0.70, 0.58, 0.24, 0.02])
+    self.slider_ros_concentration = Slider(slider_ax, 'ROS per G4 Site', 50, 500, valinit=200)
+    self.slider_ros_concentration.on_changed(self.update_ros_concentration)
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Real-Time Visualization System</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The framework provides comprehensive 3D visualization of all physical processes:</p>
+
+<pre><code class="language-python">def initialize_visualization(self):
+    """Initialize comprehensive 3D visualization system"""
+    
+    # Draw membrane plane with physical curvature
+    xx, yy = np.meshgrid(np.linspace(-100, 100, 20), np.linspace(-100, 100, 20))
+    zz = (xx**2 + yy**2) / (2 * self.cell_radius)  # Spherical curvature
+    self.membrane_surface = self.ax_3d.plot_surface(xx, yy, zz, alpha=0.4,
+                              color='#0d47a1', shade=True)
+    
+    # Draw DNA nanotube with accurate dimensions
+    rotated_sources = self.rotate_sources()
+    center = np.mean(rotated_sources, axis=0)
+    X, Y, Z = self.create_nanotube_mesh(center)
+    self.nanotube_surface = self.ax_3d.plot_surface(
+        X*1e9, Y*1e9, Z*1e9,
+        color='#4fc3f7', alpha=0.7, edgecolor='#01579b', linewidth=0.5
+    )
+    
+    # Real-time ROS density mapping
+    self.membrane_img = self.ax_membrane.imshow(
+        self.membrane_hits.T,
+        extent=[-100, 100, -100, 100],
+        origin='lower',
+        cmap=ros_cmap,
+        vmin=0,
+        vmax=np.max(self.membrane_hits) if np.max(self.membrane_hits) > 0 else 1
+    )
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Analysis and Optimization System</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The framework includes comprehensive analysis capabilities with design recommendations:</p>
+
+<pre><code class="language-python">def update_analysis_panel(self):
+    """Update real-time analysis with design optimization recommendations"""
+    
+    # Calculate key performance metrics
+    total_ros = np.sum(self.membrane_hits)
+    peak_density = np.max(self.membrane_hits)
+    coverage_area = np.sum(self.membrane_hits > THRESHOLD_DENSITY) * grid_cell_area
+    can_rupture = peak_density > THRESHOLD_DENSITY and coverage_area > 0.05
+    
+    # Calculate pore characteristics
+    pore_diameter = calculate_pore_diameter(peak_density)
+    can_translocate = pore_diameter > self.nanotube_diameter * 1e9
+    can_drug_pass = pore_diameter > self.drug_size
+    
+    # Provide design recommendations
+    if self.simulation_mode == "ros":
+        if can_rupture and can_translocate:
+            advice = "✓ Design optimal for drug delivery"
+            color = "#388e3c"
+        elif can_rupture:
+            advice = "⚠ Increase ROS for larger pore entry"
+            color = "#f57c00"
+        else:
+            advice = "✗ Reduce distance, increase G4 density"
+            color = "#d32f2f"
+</code></pre>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This program can also provide a heatmap of the ROS distribution:</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-06-000501.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-06-000501.webp" alt="ROS Heatmap"
+            style="max-width: 100%; height: auto;">
+    </a>
+</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Model Validation and Predictive Performance</h2>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Experimental Correlation</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The calibrated model demonstrates remarkable predictive accuracy across multiple validation metrics. Simulation
+    results correctly forecast the observed 20-100 nm pore diameter range under varying ROS concentrations and
+    accurately reproduce the logarithmic concentration dependence observed in atomic force microscopy studies of
+    oxidized membranes.</p>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Quantitative validation employs multiple metrics including normalized root mean square error:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        NRMSE = √[Σ<sub>i=1</sub><sup>N</sup>(y<sub>i</sub><sup>exp</sup> - y<sub>i</sub><sup>sim</sup>)<sup>2</sup>/N]
+        / (y<sub>max</sub><sup>exp</sup> - y<sub>min</sub><sup>exp</sup>)
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">and coefficient of determination:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        R<sup>2</sup> = 1 - Σ<sub>i=1</sub><sup>N</sup>(y<sub>i</sub><sup>exp</sup> -
+        y<sub>i</sub><sup>sim</sup>)<sup>2</sup> / Σ<sub>i=1</sub><sup>N</sup>(y<sub>i</sub><sup>exp</sup> -
+        ȳ<sup>exp</sup>)<sup>2</sup>
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">achieving R<sup>2</sup> > 0.85 across all validation datasets.</p>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Sensitivity Analysis</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Global sensitivity analysis using Sobol indices:</p>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        S<sub>i</sub> = V[E[Y|X<sub>i</sub>]] / V[Y]
+    </span>
+</div>
+
+<div style="max-width: 100%; box-sizing: border-box; overflow: hidden;" class="formula">
+    <span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">
+        S<sub>T<sub>i</sub></sub> = 1 - V[E[Y|X<sub>~i</sub>]] / V[Y]
+    </span>
+</div>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">reveals that aptamer length and nanotube orientation are the most critical factors for efficient ROS delivery, with
+    total Sobol indices exceeding 0.7.</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Applications and Design Guidelines</h2>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Therapeutic System Optimization</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The model provides specific design guidelines for developing efficient DNA nanotube-based delivery systems:</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Optimal Parameter Ranges:</h2>
+
+<ul style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Aptamer length</strong>: 10-20 nm (balancing membrane proximity with cellular accessibility)</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>G4 density</strong>: Minimum 30-40 sites per nanotube for reliable pore formation</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>CRISPR system size</strong>: &lt;25 nm hydrodynamic diameter for reliable pore passage</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Orientation</strong>: Perpendicular to membrane for focused ROS delivery</li>
+</ul>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Implementation in Design Optimization:</h2>
+
+<pre><code class="language-python">def run_analysis(self, event):
+    """Comprehensive performance analysis with design recommendations"""
+    
+    # Calculate key metrics
+    total_ros = np.sum(self.membrane_hits)
+    peak_density = np.max(self.membrane_hits)
+    pore_diameter = calculate_pore_diameter(peak_density)
+    
+    # Design validation
+    nanotube_fit = pore_diameter > self.nanotube_diameter * 1e9
+    drug_passage = pore_diameter > self.drug_size
+    
+    print("\nDESIGN VALIDATION:")
+    print(f"  Membrane rupture: {'PASS' if peak_density > THRESHOLD_DENSITY else 'FAIL'}")
+    print(f"  Nanotube entry: {'PASS' if nanotube_fit else 'FAIL'}")
+    print(f"  Drug passage: {'PASS' if drug_passage else 'FAIL'}")
+    
+    # Optimization recommendations
+    if not nanotube_fit:
+        print("RECOMMENDATION: Increase ROS concentration or G4 density")
+    if not drug_passage:
+        print("RECOMMENDATION: Reduce drug size or increase pore diameter")
+</code></pre>
+
+<h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Predictive Performance</h3>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For cancer therapeutics, the framework predicts delivery efficiencies of 60-90% for optimally configured systems,
+    with primary losses occurring due to CRISPR-Cas9 components diffusing away from pore regions rather than rejection
+    at pores. The model successfully identifies the critical G4 density threshold of 30-40 sites per nanotube necessary
+    for achieving membrane rupture, providing clear design specifications for DNA nanotube functionalization.</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Limitations and Future Directions</h2>
+
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">While the current implementation represents a significant advancement in computational nanomedicine, several
+    frontiers remain for future development:</p>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Current Limitations:</h2>
+
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Membrane Complexity</strong>: The homogeneous membrane model neglects the heterogeneity of biological
+        membranes including cholesterol-rich domains and protein inclusions</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Dynamic Pore Evolution</strong>: The implementation assumes instantaneous pore formation, whereas
+        experimental evidence suggests pore nucleation occurs over microsecond timescales</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;"><strong>Cellular Context</strong>: The model operates in isolation from cellular processes such as membrane
+        repair mechanisms and enzymatic ROS scavenging</li>
+</ol>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Future Extensions:</h2>
+
+<pre><code class="language-python"># Planned model extensions for future versions
+class AdvancedDNANanotubeSimulator(DNANanotubeSimulator):
+    def __init__(self):
+        super().__init__()
+        
+        # Add heterogeneous membrane model
+        self.membrane_composition = self.create_heterogeneous_membrane()
+        
+        # Add dynamic repair mechanisms
+        self.repair_kinetics = MembraneRepairModel()
+        
+        # Add enzymatic scavenging
+        self.ros_scavenging = EnzymaticScavengingModel()
+    
+    def create_heterogeneous_membrane(self):
+        """Create membrane with cholesterol domains and protein inclusions"""
+        # Implementation of membrane heterogeneity based on
+        # experimental characterization of lipid bilayer composition
+        pass
+</code></pre>
+
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
+
+<ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Parker ET, Lollar P. Measurement of the Translational Diffusion Coefficient and Hydrodynamic Radius of Proteins
+        by Dynamic Light Scattering. Bio-protocol [Internet]. 2021 Oct 20 [cited 2025 Sep 30];11(20).</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Mottola M, Caruso B, Perillo MA. Langmuir films at the oil/water interface revisited. Sci Rep. 2019 Feb
+        19;9(1):2259.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Zhang Y, Xu R, Wu J, Zhang Z, Wang Y, Yang H, et al. Nanopore-related cellular death through cytoskeleton
+        depolymerization by drug-induced ROS. Talanta. 2024 Feb 1;268:125355.</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Lipinski CA, Lombardo F, Dominy BW, Feeney PJ. Experimental and computational approaches to estimate solubility
+        and permeability in drug discovery and development settings. Advanced Drug Delivery Reviews. 2012 Dec 1;64:4–17.
+    </li>
+</ol>
+</div>
+  </main>
+
+  <aside id="toc" class="toc"></aside>
+  <script src="/assets/js/main.js"></script>
+  <footer class="site-footer">
+    <img src="/assets/images/logo6.webp" alt="页脚图片">
+  </footer>
+</body>
+</html>

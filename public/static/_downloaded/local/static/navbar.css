@@ -1,0 +1,469 @@
+/* Basic reset and fonts */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0;
+  font-family: Arial, sans-serif !important;
+}
+
+@font-face {
+  font-family: AlibabaPuHuiTi;
+  src: url(https://static.igem.wiki/teams/5913/fonts/alibabafont.ttf);
+  font-display: swap;
+}
+
+/* Color variables: Sky blue theme (daytime sky) */
+:root {
+  --bg: #e6f3ff;  /* Match navbar sky blue */
+  --text: #1a365d;  /* Deep blue text */
+  --link: #2b6cb0;
+
+  --nav-bg: #e6f3ff;  /* Light sky blue navbar */
+  --nav-text: #1a365d;
+  --nav-link: #1a365d;
+  --nav-link-hover: #2b6cb0;   /* Use deep blue highlight on hover */
+  --nav-bg-alpha: rgba(230, 243, 255, 0.9); /* Glass-morphism background (light sky blue) */
+  --nav-border: rgba(26, 54, 93, 0.1);
+  --nav-shadow: rgba(0, 100, 200, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --bg: #191970;  /* Deep blue background (midnight blue) */
+  --text: #e6f3ff;  /* Light blue text */
+  --link: #90cdf4;
+
+  --nav-bg: #1a202c;  /*  */
+  --nav-text: #e6f3ff;
+  --nav-link: #e6f3ff;
+  --nav-link-hover: #90cdf4;
+  --nav-bg-alpha: rgba(26, 32, 44, 0.8);
+  --nav-border: rgba(230, 243, 255, 0.1);
+  --nav-shadow: rgba(0, 0, 50, 0.4);
+}
+
+/* Body styles */
+body { 
+  padding-top: 120px; /* Match .my-nav height - updated to accommodate larger logo */
+  margin: 0;
+  background: var(--bg); /* Use theme background color */
+  transition: background 0.3s ease; /* Smooth theme transition */
+}
+
+/* Navigation bar - fixed top */
+.my-nav {
+  position: fixed !important;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  height: 120px;              /* Match JS navbox.style.height - increased to fit larger logo */
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px 0 0;         /* Left padding set to 0 to allow logo to shift left */
+  background: var(--nav-bg-alpha);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: none;
+  z-index: 1000 !important;
+  transition: background 0.2s linear, box-shadow 0.2s linear, height 0.2s linear;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Scrolled state with shadow */
+.my-nav.scrolled {
+  background: var(--nav-bg);
+  box-shadow: 0 4px 18px -6px var(--nav-shadow);
+}
+
+/* LOGO container - links to menu.html */
+.my-nav .logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: -20px;        /* Move significantly left for better logo positioning */
+}
+
+.my-nav .logo-container .icon {
+  display: inline-block;
+  width: 300px;              /* Logo width - increased size */
+  height: 115px;             /* Logo height - increased size */
+  text-decoration: none;
+  background-image: url(/static/_downloaded/static.igem.wiki/teams/5913/picture/menu.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transition: opacity 0.3s ease;
+}
+
+.my-nav .logo-container .icon:hover {
+  opacity: 0.8;
+}
+
+/* Navigation menu list */
+.my-navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;                   /* Spacing between menu items */
+  margin: 0 10px 0 20px;
+}
+
+/* Menu item container */
+.my-navbar > li {
+  position: relative;          /* Required for dropdown positioning */
+  white-space: nowrap;
+}
+
+/* Menu item links */
+.my-navbar > li > a {
+  color: var(--nav-link);
+  font-family: AlibabaPuHuiTi, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  padding: 10px 6px;
+  display: inline-block;
+  transition: color 0.15s linear, opacity 0.2s ease;
+}
+
+/* Hover and active states */
+.my-navbar > li > a:hover,
+.my-navbar > li > a:focus {
+  color: var(--nav-link-hover);
+}
+.my-navbar > li > a.active {
+  color: var(--nav-link-hover);
+  border-bottom: 2px solid var(--nav-link-hover); /* Active page indicator */
+}
+
+/* Dropdown menu */
+.son {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 120px;
+  max-width: 200px;   /* Limit dropdown width */
+  list-style: none;
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  box-shadow: 0 12px 28px -12px var(--nav-shadow);
+  border-radius: 10px;
+  padding: 6px 0;
+  display: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 9999; /* High z-index for dropdown */
+}
+
+/* Right-align dropdowns for last two menu items */
+.my-navbar > li:last-child .son,
+.my-navbar > li:nth-last-child(2) .son {
+  right: -24px; /* Push further right */
+  left: auto;
+}
+
+/* Ensure menu items have proper z-index */
+
+/* Set z-index for menu items */
+.my-navbar > li {
+  z-index: 10001;
+}
+
+/* Dropdown hover behavior controlled by JavaScript instead of CSS hover */
+/* .my-navbar > li:hover .son,
+.my-navbar > li:focus-within .son {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.son li a {
+  display: block;
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;    /* Prevent text wrapping */
+  overflow: visible;       /* Allow overflow */
+  text-overflow: unset;    /* No ellipsis */
+  max-width: 180px;        /* Maximum width */
+}
+.son li a:hover,
+.son li a:focus {
+  background: rgba(0,0,0,0.06);
+  color: var(--text);
+}
+
+/* Auxiliary navigation items (search, theme) */
+.my-navbar .aux {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 8px;
+}
+
+/* Theme color picker */
+.color-picker {
+  position: relative;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.color-button {
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.color-button:hover {
+  color: var(--nav-link-hover);
+  border-color: var(--nav-link-hover);
+}
+
+.iconfont {
+  font-size: 1.4rem;
+  color: var(--nav-link);
+}
+
+.color-picker-menu {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 150;
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px -12px var(--nav-shadow);
+  min-width: 125px;
+  padding: 1em;
+}
+
+.mode-options .title {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.color-mode-options {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.color-mode-options li {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 18px;
+  padding: 3px 6px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  background-color: var(--nav-bg);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.color-mode-options li.dark {
+  border-radius: 4px 0 0 4px;
+  border-left: 1px solid #666;
+}
+
+.color-mode-options li.light {
+  border-radius: 0 4px 4px 0;
+  border-right: 1px solid #666;
+}
+
+.color-mode-options li.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.color-mode-options li:not(.active) {
+  border-right: 1px solid #666;
+}
+
+/* Search box container */
+.search-box {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.search-box .iconfont {
+  position: absolute;
+  top: 50%;
+  left: 0.6rem;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: var(--nav-link);
+  font-size: 1rem;
+}
+
+.search-box input {
+  font-family: AlibabaPuHuiTi, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-weight: 600;
+  cursor: text;
+  width: 10rem;
+  height: 2rem;
+  color: var(--nav-link);
+  display: inline-block;
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  padding: 0 0.5rem 0 2rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.search-box input:focus {
+  cursor: auto;
+  border-color: #0d6efd;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.search-box .suggestions {
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  width: 20rem;
+  position: absolute;
+  top: 1.5rem;
+  border: 1px solid var(--nav-border);
+  border-radius: 6px;
+  padding: 0.4rem;
+  list-style-type: none;
+  box-shadow: 0 12px 28px -12px var(--nav-shadow);
+  z-index: 1001;
+}
+
+.search-box .suggestion {
+  line-height: 1.4;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box .suggestion a {
+  white-space: normal;
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+}
+
+.search-box .suggestion .page-title {
+  font-weight: 600;
+}
+
+.search-box .suggestion .header {
+  font-size: 0.9em;
+  margin-left: 0.25em;
+}
+
+.search-box .suggestion.focused {
+  background-color: var(--nav-border);
+}
+
+.search-box .suggestion.focused a {
+  color: #0d6efd;
+}
+
+/* Large screen responsive styles */
+@media screen and (min-width: 1800px) {
+  .my-nav { height: 135px; }                /* Increased height for larger logo */
+  body { padding-top: 135px; }              /* Match navbar height */
+  .my-navbar > li > a { font-size: 22px; }
+  .my-nav .logo-container .icon { height: 130px; width: 340px; }
+  .my-nav .logo-container { margin-left: -25px; }
+}
+
+@media screen and (max-width: 1280px) {
+  .my-nav { height: 95px; padding: 0 10px; }
+  body { padding-top: 95px; }
+  .my-navbar { gap: 16px; }
+  .my-navbar > li > a { font-size: 18px; }
+  .my-nav .logo-container .icon { height: 90px; width: 220px; }
+  .my-nav .logo-container { margin-left: -15px; }
+}
+
+/* Mobile responsive - hide navigation */
+@media screen and (max-width: 830px) {
+  .my-navbar { 
+    display: none; 
+  }
+  
+  .my-navbar .search-li { 
+    display: none; 
+  }
+  
+  .my-navbar .theme-li { 
+    display: none; 
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .search-box input {
+    width: 8rem;
+  }
+  
+  .search-box .suggestions {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .search-box input {
+    width: 6rem;
+  }
+  
+  .search-box .suggestions {
+    width: 14rem;
+  }
+}
+
+/* Theme switcher item */
+.my-navbar .theme-li {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Search input sizing */
+.my-navbar .search-li #search { min-width: 220px; }
+@media (max-width: 1280px) { .my-navbar .search-li #search { min-width: 180px; } }
+
+/* Pagefind search input styling */
+.pagefind-ui__search-input {
+  background: rgba(255,255,255,0.3);
+  color: var(--nav-link);
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+  height: 34px;
+  padding: 0 10px;
+}
+:root[data-theme="dark"] .pagefind-ui__search-input {
+  background: rgba(255,255,255,0.08);
+  color: var(--nav-link);
+}
+
+/* Hide search and theme on mobile (below 830px) */
+@media (max-width: 830px) {
+  .my-navbar .search-li { display: none; }
+  .my-navbar .theme-li { display: none; } /* Hide theme switcher on mobile */
+}
