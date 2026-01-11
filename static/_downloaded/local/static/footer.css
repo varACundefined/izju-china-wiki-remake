@@ -1,0 +1,192 @@
+/* z-index for footer part is 6 */
+/* Global font override for footer */
+* {
+    font-family: Arial, sans-serif !important;
+}
+
+@font-face {
+    font-family: AlibabaPuHuiTi;
+    src: url(https://static.igem.wiki/teams/5913/fonts/alibabafont.ttf);
+}
+.my-footer-container{
+    position: relative;
+    bottom: 0;
+    /* margin: 60px auto 0px; */
+    margin: 0 auto;
+    margin-left: 0; /* Remove left margin to let footer cover sidebar */
+    width: 100%; /* Restore full width to cover entire page */
+    /* padding-bottom: 60px; */
+    /* padding-top: 10px; */
+    background-color: transparent;
+    z-index: 999;
+    /* Ensure footer covers sidebar */
+    /* box-shadow: 0px 0px 20px 10px black; */
+}
+.my-footer{
+    position: relative;
+    bottom: 0;
+    /* margin: 10px auto 0px; */
+    margin: 0px auto 0px;
+    border-top: 2px solid var(--border-color);
+    /* width: 95%; */
+    width: 100%;
+    z-index: 999;
+    background-color: var(--nav-bg);
+}
+
+.footer-navigation{
+    width: 73%;
+    margin: 70px auto 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-navbar-title{
+    margin-bottom: 22px;
+    font-family: AlibabaPuHuiTi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--nav-text);
+}
+
+.footer-navbar-contents{
+    font-family: AlibabaPuHuiTi;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-navbar-contents>a{
+    text-decoration: none;
+    color: var(--nav-text);
+}
+
+.footer-supports{
+    margin: 5px auto 5px;
+    width: 80%;
+    color: var(--text-color-sub);   
+    font-family: AlibabaPuHuiTi;
+    font-size: 17px;
+    text-align: center;
+}
+
+.footer-supports a{
+    color: var(--text-color-sub);
+    text-decoration: none;
+}
+
+.footer-supports a:hover{
+    text-decoration: underline;
+}
+
+/* Light mode: enhance footer-supports text contrast */
+:root.light .footer-supports,
+:root.light .footer-supports a {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Dark mode: keep current style */
+:root.dark .footer-supports,
+:root.dark .footer-supports a {
+    color: var(--text-color-sub);
+}
+
+.footer-logos{
+    margin: 80px auto 5px;  /* Increased top margin from 5px to 80px */
+    width: 70%;
+    text-align: center;
+}
+
+.footer-logos>img{
+    width: 100%;
+    height: auto;
+    max-height: 900px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-infos{
+    color: var(--text-color-sub);
+    font-family: AlibabaPuHuiTi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    background-color: var(--nav-bg);
+    padding-bottom: 30px;
+    padding-top: 60px;  /* Increased from 5px to 60px */
+    margin-top: 40px;    /* Added extra top margin */
+}
+
+/* Light mode: enhance footer text contrast */
+:root.light .footer-infos {
+    color: #2d3748;
+    font-weight: 400;
+}
+
+:root.light .footer-infos a {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Dark mode: keep current style */
+:root.dark .footer-infos,
+:root.dark .footer-infos a {
+    color: var(--text-color-sub);
+}
+
+/* Ensure all footer sub-elements cover sidebar */
+.my-footer-container * {
+    position: relative;
+    z-index: 999;
+}
+
+/* Force footer to cover sidebar */
+.my-footer-container {
+    position: relative !important;
+    z-index: 999 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+.my-footer {
+    position: relative !important;
+    z-index: 999 !important;
+    width: 100% !important;
+}
+
+/* Mobile responsive handling */
+@media all and (max-width: 920px) {
+    .my-footer-container {
+        margin-left: 0; /* Remove left margin on mobile */
+        width: 100%; /* Restore full width on mobile */
+    }
+    
+    .footer-navigation {
+        width: 90%;
+        gap: 30px;
+    }
+    
+    .footer-row {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .footer-navbars {
+        width: 100%;
+        text-align: center;
+    }
+}

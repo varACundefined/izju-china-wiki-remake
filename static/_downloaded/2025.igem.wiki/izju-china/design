@@ -1,0 +1,2433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://static.igem.wiki/teams/5913/picture/logo8.webp" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+
+
+  <!-- Your site-wide CSS -->
+  <link href="static/style.css" rel="stylesheet">
+  <link href="static/navbar.css" rel="stylesheet">
+  <link href="static/page.css" rel="stylesheet">
+  <link href="static/footer.css" rel="stylesheet">
+  <link href="static/homepage.css" rel="stylesheet">
+  <link href="static/sidebar.css" rel="stylesheet">
+  <link href="static/loading.css" rel="stylesheet">
+
+  <!-- Pagefind UI styles (search box styles). Will load from static/pagefind/pagefind-ui.css -->
+  <!-- If pagefind directory is not generated yet, this line will 404 but won't affect page functionality; will work after generation -->
+  <link rel="stylesheet" href="static/pagefind/pagefind-ui.css">
+
+  <!-- Page-specific additional CSS -->
+  
+<link rel="stylesheet" href="static/safety-typography.css">
+
+
+  <!-- Safety-style page CSS -->
+  <style>
+    /* Safety-only: reduce initial top gap so content shows immediately */
+    .pagecontainer {
+      margin-top: 4vh;
+    }
+
+    .pagecontent {
+      transform: none;
+      margin-top: 0;
+    }
+
+    /* Math formula styles */
+    .formula {
+      text-align: center;
+      margin: 1.5em 0;
+      padding: 1em;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-radius: 8px;
+    }
+
+    .formula p {
+      margin: 0;
+      font-size: 1.1em;
+    }
+
+    /* Dark theme formula styles */
+    [data-theme="dark"] .formula {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* MathJax display styles for dark theme */
+    [data-theme="dark"] .MathJax,
+    [data-theme="dark"] .MathJax_Display {
+      color: var(--text-color) !important;
+    }
+
+
+
+    /* Align Safety background with fixed 250px sidebar on desktop */
+    @media (min-width: 921px) {
+      .safety-bg-image {
+        left: 250px;
+        width: calc(100% - 250px);
+      }
+
+      /* Override sidebar position to move it to bottom */
+      .main .menubg {
+        top: 78px !important;
+        height: calc(100vh - 78px) !important;
+      }
+    }
+
+    /* Dark mode table fix */
+    [data-theme="dark"] table {
+      color: #ecf0f1 !important;
+      background-color: transparent !important;
+    }
+
+    [data-theme="dark"] table th,
+    [data-theme="dark"] table td {
+      background-color: rgba(255, 255, 255, 0.05) !important;
+      color: #ecf0f1 !important;
+      border-color: #4a5568 !important;
+    }
+
+    [data-theme="dark"] .pagecontent table {
+      color: #ecf0f1 !important;
+    }
+  </style>
+
+  <!-- Global Back-to-Top Button Styles -->
+  <style>
+    /* Global Back-to-Top button */
+    #global-back-to-top {
+      position: fixed;
+      right: 12px;
+      bottom: 24px;
+      width: auto;
+      height: auto;
+      max-width: 120px;
+      max-height: 120px;
+      background: none;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 999;
+    }
+
+    #global-back-to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    #global-back-to-top:hover {
+      transform: translateY(0) scale(1.05);
+    }
+
+    #global-back-to-top .global-btt-image {
+      width: auto;
+      height: auto;
+      max-width: 120px;
+      max-height: 120px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Respect smaller screens: nudge inward and shrink a bit */
+    @media (max-width: 768px) {
+      #global-back-to-top {
+        right: 8px;
+        bottom: 16px;
+        max-width: 96px;
+        max-height: 96px;
+      }
+
+      #global-back-to-top .global-btt-image {
+        max-width: 96px;
+        max-height: 96px;
+      }
+    }
+  </style>
+
+  <title>Design | IZJU-CHINA - iGEM 2025</title>
+</head>
+
+<body class="all ">
+  <!-- Navigation -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+
+    TEAM NAME
+    <a class="navbar-brand" href="#">IZJU-CHINA</a>
+
+    SMALL SCREEN MENU ICON
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned">
+
+        HOME
+        <li class="nav-item">
+          <a class="nav-link" href="./">Home</a>
+        </li>
+
+        TEAM
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="team" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="team">Team</a></li>
+            <li><a class="dropdown-item" href="attributions">Attributions</a></li>
+          </ul>
+        </li>
+
+        PROJECT
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="contribution">Contribution</a></li>
+            <li><a class="dropdown-item" href="description">Description</a></li>
+            <li><a class="dropdown-item" href="engineering">Engineering</a></li>
+            <li><a class="dropdown-item" href="experiments">Experiments</a></li>
+            <li><a class="dropdown-item" href="notebook">Notebook</a></li>
+            <li><a class="dropdown-item" href="results">Results</a></li>
+          </ul>
+        </li>
+
+        SAFETY
+        <li class="nav-item">
+          <a class="nav-link" href="safety">Safety</a>
+        </li>
+
+        HUMAN PRACTICES
+        <li class="nav-item">
+          <a class="nav-link" href="human-practices">Human Practices</a>
+        </li>
+
+        AWARDS
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Awards
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="education">Education</a></li>
+            <li><a class="dropdown-item" href="entrepreneurship">Entrepreneurship</a></li>
+            <li><a class="dropdown-item" href="hardware">Hardware</a></li>
+            <li><a class="dropdown-item" href="inclusivity">Inclusivity</a></li>
+            <li><a class="dropdown-item" href="measurement">Measurement</a></li>
+            <li><a class="dropdown-item" href="model">Model</a></li>
+            <li><a class="dropdown-item" href="plant">Plant</a></li>
+            <li><a class="dropdown-item" href="software">Software</a></li>
+            <li><a class="dropdown-item" href="sustainable">Sustainable</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="my-nav" id="navbox">
+  <div class="logo-container">
+    <a href="./" class="icon" aria-label="Home"></a>
+  </div>
+
+  <ul class="my-navbar" id="my-navbar">
+    <!-- 1) Light/dark toggle button: first one -->
+    <li class="aux theme-li">
+      <div class="color-picker" id="theme-picker">
+        <a class="color-button" href="#" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="iconfont icon-bulb">🌓</span>
+        </a>
+        <div class="color-picker-menu" id="theme-menu" style="display: none;">
+          <div class="mode-options">
+            <h4 class="title">Choose mode</h4>
+            <ul class="color-mode-options">
+              <li class="dark" data-mode="dark">dark</li>
+              <li class="light" data-mode="light">light</li>
+              <li class="auto active" data-mode="auto">auto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- 2) Search: second one -->
+    <li class="aux search-li">
+      <div class="search-box">
+        <span class="iconfont icon-search">🔍</span>
+        <input id="search-input" type="text" placeholder="Search the wiki" autocomplete="off" spellcheck="false">
+        <ul class="suggestions" id="search-suggestions" style="display: none;"></ul>
+      </div>
+    </li>
+
+    <!-- 3) Other menus (keep original hover expansion logic) -->
+    <li onmouseover="over(this)" onmouseleave="leave(this)">
+      <a href="./">Home</a>
+    </li>
+
+    <li onmouseover="over(this)" onmouseleave="leave(this)">
+      <a href="#" style="cursor:default;">Project</a>
+      <ul class="son" onmouseover="over(this.parentElement)" onmouseleave="leave(this.parentElement)">
+        <li><a href="background">Background</a></li>
+        <li><a href="description">Description</a></li>
+        <li><a href="engineering">Engineering</a></li>
+        <li><a href="contribution">Contribution</a></li>
+        <li><a href="implementation">Implementation</a></li>
+        <li><a href="project-future" data-search-title="Project Future">Future</a></li>
+      </ul>
+    </li>
+
+    <li onmouseover="over(this)" onmouseleave="leave(this)">
+      <a href="#" style="cursor:default;">Dry Lab</a>
+      <ul class="son" onmouseover="over(this.parentElement)" onmouseleave="leave(this.parentElement)">
+        <li><a href="design">Design</a></li>
+        <li><a href="model">Model</a></li>
+      </ul>
+    </li>
+
+    <li onmouseover="over(this)" onmouseleave="leave(this)">
+      <a href="#" style="cursor:default;">Wet Lab</a>
+      <ul class="son" onmouseover="over(this.parentElement)" onmouseleave="leave(this.parentElement)">
+        <li><a href="wetlab-overview">Overview</a></li>
+        <li><a href="gene-cleavage">Gene Cleavage</a></li>
+        <li><a href="assembly">Assembly</a></li>
+        <li><a href="validation">Validation</a></li>
+        <li><a href="wetlab-future" data-search-title="Wetlab Future">Future</a></li>
+        <li><a href="parts">Part</a></li>
+      </ul>
+    </li>
+
+    <li onmouseover="over(this)" onmouseleave="leave(this)">
+      <a href="#" style="cursor:default;">Human Practice</a>
+      <ul class="son" onmouseover="over(this.parentElement)" onmouseleave="leave(this.parentElement)">
+        <li><a href="human-practices">iHP</a></li>
+        <li><a href="entrepreneurship">Entrepreneurship</a></li>
+        <li><a href="collaborations">Collaboration</a></li>
+        <li><a href="safety">Safety</a></li>
+      </ul>
+    </li>
+
+    <li onmouseover="over(this)" onmouseleave="leave(this)">
+      <a href="#" style="cursor:default;">Team</a>
+      <ul class="son" onmouseover="over(this.parentElement)" onmouseleave="leave(this.parentElement)">
+        <li><a href="roster">Roster</a></li>
+        <li><a href="attributions">Attribution</a></li>
+        <li><a href="awards">Awards</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+<script>
+  // Navbar control variables
+  const navbox = document.getElementById("navbox");
+  const navbar = document.getElementById("my-navbar");
+  const items = navbar ? navbar.children : [];
+
+  // Debounce variables
+  let hoverTimeout;
+  let leaveTimeout;
+  let currentHoverItem = null;
+
+  function setAllColor() {
+    for (let i = 0; i < items.length; i++) {
+      const a = items[i].querySelector(':scope > a');
+      if (a) a.style.color = ''; // Clear inline styles, let CSS variables take effect
+    }
+  }
+
+  function hideAllMenus() {
+    // Restore all menu item colors
+    setAllColor();
+
+    // Hide all submenus
+    const allSons = document.querySelectorAll('.son');
+    allSons.forEach(son => {
+      son.style.opacity = 0;
+      son.style.display = "none";
+    });
+
+    // Restore navbar height
+    navbox.style.height = "78px";
+
+    currentHoverItem = null;
+  }
+
+  function over(el) {
+    // Clear previous timer
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    if (leaveTimeout) clearTimeout(leaveTimeout);
+
+
+    if (currentHoverItem && currentHoverItem !== el) {
+      hideAllMenus();
+    }
+
+
+    currentHoverItem = el;
+
+
+    setAllColor();
+
+    //  - CSS
+    const a = el.querySelector(':scope > a');
+    if (a) a.style.color = 'var(--nav-link-hover)';
+
+
+    const son = el.querySelector(':scope > .son');
+    if (son) {
+      son.style.display = "block";
+
+      son.style.opacity = 1;
+
+
+      if (document.documentElement.clientWidth > 1400) {
+        navbox.style.height = "180px";  // 320px180px
+      } else if (document.documentElement.clientHeight < 1120) {
+        navbox.style.height = "150px";  // 245px150px
+      } else {
+        navbox.style.height = "160px";  // 280px160px
+      }
+    }
+  }
+
+  function leave(el) {
+
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    if (leaveTimeout) clearTimeout(leaveTimeout);
+
+
+    if (currentHoverItem === el) {
+      leaveTimeout = setTimeout(() => {
+        hideAllMenus();
+      }, 150); // 150ms
+    }
+  }
+
+
+  navbox.addEventListener('mouseleave', function () {
+
+    leaveTimeout = setTimeout(() => {
+      hideAllMenus();
+    }, 150);
+  });
+
+
+  navbox.addEventListener('mouseenter', function () {
+    if (leaveTimeout) {
+      clearTimeout(leaveTimeout);
+      leaveTimeout = null;
+    }
+  });
+</script>
+
+  <!-- Page Content -->
+  <div class="main">
+    <div class="menubg">
+      <div id="menu">
+        <!-- Sidebar content will be dynamically generated by page-specific JavaScript -->
+      </div>
+    </div>
+    <div id="content">
+      <!-- Safety-style page structure -->
+      <div class="safety-bg-image">
+        <div class="subpage-bg-shelter"></div>
+      </div>
+      <div class="pagecontainer">
+        <div class="title2">
+          <span>Design</span>
+        </div>
+        <div class="pagebody">
+          <div class="pagecontent" id="auto-page-content">
+            
+<div id="auto-design-content">
+ <!-- Design Page Content -->
+
+<!-- Section 1: Design of DNA Origami -->
+<h1>Design of DNA Origami</h1>
+
+<h2>1. Choice of basic structure</h2>
+<p>
+Originally proposed by Rothemund in 2006, the rectangular structure of DNA origami has been utilized in numerous studies and proven to be stable (1-3). It's highly programmable (4), allowing for modifications such as adding functional elements as extensions of staples, attachments or cargos (Figure 1).
+</p>
+<p>
+<img src="https://static.igem.wiki/teams/5913/design/design-1.webp" alt="Figure 1. Illustration of basic structure of DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p>
+<strong>Figure 1.</strong> Illustration of basic structure of DNA origami (DO). The original structure is integrated by M13mp18 ssDNA scaffold strand and 192 short ssDNA staples. The arrows indicate 192 different staples.
+</p>
+
+<h2>2. Addition of S-PAM-cap and PAM-rich DNA strands</h2>
+<p>
+To knockout the drug-resistant pathogenic gene, sgRNA/Cas9 needs to be loaded. To better recruit sgRNA/Cas9, we introduced capturing strands (S-PAM-cap) for PAM-rich strands and sgRNA<sub>L</sub>. Cas9 protospacer adjacent motif (PAM) is sequence that recruit Cas9 (5). To enhance the chance of loading sgRNA/Cas9, the PAM-rich strands were introduced containing multiple copies of PAM sequences, made up of simple staple sequence and a direct addition of PAM sequence.
+</p>
+<p>
+For the design of S-PAM-cap sequences, literature searches and preparations were conducted. To release the sgRNA/Cas9 complex, which was loaded on the DNA origami as above, an intracellular mechanism was required to separate the sgRNA/Cas9 complex from the delivery complex, resulting in an "activated" sgRNA/Cas9 and downstream targeting gene cleavage. Then, RNase H enzyme was found out, functioned as essential enzymes for survival in <em>Staphylococcus aureus</em>, which will cut out the DNA-RNA hybrid region, satisfying our desire for disconnecting the linking site of sgRNA<sub>L</sub> and DNA origami (6). Thus, active sites and catalytic mechanisms of RNase H were investigated. The grooves of the DNA-RNA hybrid interacted with highly conserved residues of the enzyme (7), so both DNA and RNA will be recognized. Besides, the cleavage effect of the enzyme does not require existence of specific sequence of substrates, unlike the effect of Cas9 protein, which requires a unique PAM sequence. Thus, the composition and arrangement sequence of bases on the cleavage site are not important. Regardless of the sequence, all kind of substrate possess the possibility to be cut, and the only difference is the catalytic speed and efficiency. For the speed, what should be highly considered is the overall shape formation of the substrate DNA, given that the more the area matches the enzyme's depression, the easier it is to be catalyzed. In our designed FoCas, the S-PAM-cap sequences, derived from former articles, were designed to display a suitable structure for RNase H enzyme to recognize.
+</p>
+<p>
+Meanwhile, except for the design of specific staple sequences, the location of those S-PAM-cap and PAM-rich DNA strands were considered. Based on preliminary estimates, the diameter of the Cas9 protein is about one fourth of the width of the rectangular DNA origami. To reserve space for protecting sgRNA/Cas9 from complex environment of the wound, we excluded choices of staples near the edges. Additionally, to balance the space and the loading efficiency, arranging 6 staples in the center of each DNA origami were finally considered 6 staples to be reasonable (Figure 2).
+</p>
+<p>
+<img src="https://static.igem.wiki/teams/5913/design/design-2.webp" alt="Figure 2. Illustration of loading structure of DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p>
+<strong>Figure 2.</strong> Illustration of loading structure of DNA origami (DO<sub>PAM</sub>). The arrows indicate 192 different staples. The red arrows indicate the S-PAM-cap strands, which are located in the middle of rectangular DNA origami plane.
+</p>
+
+<h2>3. Addition of S-G4</h2>
+<p>
+Reactive oxygen species (ROS) could harm bacteria membrane (8) and create "pores", while the G4/hemin complex facilitates the controlled release of ROS, perforating the bacterial membrane without harming other cells and tissues. The detailed reason why we chose G4/hemin as the membrane permeabilization component can be found in the <a href="description">description</a>.
+</p>
+<p>
+To integrate G4 into the DNA origami, we selected specific staple strands and appended the G4 array sequence GGGTAGGGCGGGTTGGG to the 3' end of these staples, and these modified staples are called S-G4 (Figure 3). For G4/hemin, though the density, quantity, location of loading site and order of assembly lack normalized standards corresponding to different forms of DNA-origami, general principles guiding the locations for functional staple strands on DNA origami advise against locations that are near the edge of the origami structure to avoid structural errors (9). To affirm whether the G4 sequence is connected to the 3' end or the 5' end, so that the connector will extend in the desired direction, we referred to statistics provided in DNA-nanotube models (10). Crowding of G4/hemin is proved to result in a lowering of its catalytic efficiency (11), so compromise between the density and quantity of G4/hemin should be highly considered. Finally, to refine the synthesis protocol, we decided to first allow the assembly of G4 and the DNA-origami and then add hemin, instead of assembling G4/hemin beforehand. This is due to relative instability of G4/hemin DNAzyme compared to native enzymes, when exposed to the solvent (12). Also, the stability of the G4 structure was proved to be affected by the addition of hemin, while G4 itself could remain stable until the hemin was added (13). After analyzing the characteristics and interaction between G4/hemin and DNA origami, we comprehensively designed a new DNA-origami with 136 copies of G4 (Figure 3).
+</p>
+<p>
+<img src="https://static.igem.wiki/teams/5913/design/design-3.webp" alt="Figure 3. Illustration of loading and G4 sites on the DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p>
+<strong>Figure 3.</strong> Illustration of loading and G4 sites on the DNA origami (DO<sub>PAM</sub>G). The arrows indicate 192 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The blue dots are G4 sequences added at 3' ends of staples (a total of 136 sites).
+</p>
+
+<h2>4. Addition of aptamers</h2>
+<p>
+To enhance the membrane disruption efficiency of DNA origami while minimizing damage to human cells, we added aptamers to the sides of DNA origami. The membrane protein, PBP2a, was selected as target for aptamers.
+</p>
+<p>
+After screening and optimization of the aptamer sequence targeting MRSA (<a href="#aptamer-screening-and-optimization">link to aptamer screening</a>), a suitable aptamer was found (sequence: CCATCCACACTCCGCAAGGGTGCCCCGGGGGGCTGTTCAGCGTGGTGGTGGGATGCCGTGTTGGTCCTTAGTCTCCGTCGTCGGCTGCCTCTAC AT). Given that the model used for experimental validation is <em>Escherichia coli</em> MG1655, which was utilized as an alternative organism due to biosafety concerns, we employed an aptamer sequence that has been validated in the literature to specifically target <em>Escherichia coli</em> (sequence: CATATCCGCGTCGCTGCGCTCAGACCCACCACCACGCACC) (14). To enable the aptamer and the DNA origami to be connected through base pairing, we added a linker to the 3' end of the aptamer (C-APT), designed to be complementary to the origami structure (linker sequence: TTTTTCGCTTATTATTATTATTATTA). Subsequently, we incorporated 12 staple strands on the DNA origami that contain complementary sequences to the aptamer linker sequence at its 5' end (Apt-cap), allowing it to pair with the aptamer (sequence: TAATAATAATAATAAGCGTTTTT) (Figure 4). This ensures that the aptamer can bind to the DNA origami through base pairing facilitated by the complementary sequences. Considering that aptamers have a more complex structure than linear DNAs, they are more likely to interfere with each other if placed in the middle of the DNA origami rectangle. Additionally, aptamers would bind to the target more effectively if they were not obstructed by other functional staples. Therefore, we positioned the aptamers along the short sides of the DNA origami. For the placement pattern, we referenced the work of Li et al. and added two additional adjacent aptamers in the middle of the short side to ensure efficient targeting (15).
+</p>
+<p>
+<a href="https://static.igem.wiki/teams/5913/design/design-4.webp" target="_blank">
+<img src="https://static.igem.wiki/teams/5913/design/design-4.webp" alt="Figure 4. Illustration of loading and aptamer sites on the DNA origami" style="max-width: 100%; height: auto;">
+</a>
+</p>
+<p>
+<strong>Figure 4.</strong> Illustration of loading and aptamer sites on the DNA origami (DO<sup>A</sup><sub>PAM</sub>). The arrows indicate 204 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The purple arrows indicate the S-Apt-cap (a total of 12 sites), which capture C-APT.
+</p>
+
+<h2>5. Addition of disulfide bonds</h2>
+<p>
+To enhance the stability of the sgRNA/Cas9 complex during application, we decided to introduce a new staple to roll the rectangular DNA origami structure into a cylindrical shape, referred to as S-Lock. The evidence for the process of folding from a rectangle to a cylinder was given by previous study. Approaches like thrombin-loaded origami cylinder (16) and tissue plasminogen activator-loaded origami cylinder (17) were achieved. Our cargo, the Cas9 protein, is similar with the thrombin and tissue plasminogen activator, as they all contain regions of typical high-density positive charge. Also, Yin et al. mentioned that DNA backbones contain negative charge that repulse negatively charged molecules (19). So, we incorporated a DNA strand that is complementary to the frame at both ends of the origami, aiming to fold the rectangular structure into a cylindrical form (Figure 5). Additionally, we introduced thiol groups to each strand so that adjacent S-Lock structures could form disulfide bonds, further stabilizing the overall structure. To optimize the unutilized staples on the long sides, we placed disulfide bonds in the middle of 8 staples on each side. This arrangement strengthens the bond between the two sides, facilitating the transformation of the origami rectangle into a tubule. Yin et al. used a similar number of staples for side-to-side binding, which demonstrated an appropriate density of functional staples (18). Furthermore, the length of their staples that do not pair with the scaffold is similar to ours. Based on this, we assume that the adjacent staples will not interfere with each other, and the likelihood of incorrect pairing is minimal.
+</p>
+<p>
+<img src="https://static.igem.wiki/teams/5913/design/design-5.webp" alt="Figure 5. Illustration of loading, G4, aptamer and lock sites on the DNA origami" style="max-width: 100%; height: auto;">
+</p>
+<p>
+<strong>Figure 5.</strong> Illustration of loading, G4, aptamer and lock sites on the DNA origami (S-DO<sup>A</sup><sub>PAM</sub>G). The arrows indicate 204 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The purple arrows indicate the S-Apt-cap (a total of 12 sites), which cap C-APT. The green arrows with orange dots at the middle are staples with disulfide bonds (a total of 16 sites), the orange dots indicate the disulfide bond formation sites. They are complementary to the scaffold on the other side so that the two sides will meet and bind.
+</p>
+
+<p><strong>Supporting tables: <a href="https://static.igem.wiki/teams/5913/design/sequence.pdf" target="_blank">Lists of DNA sequences for DNA origami</a>.</strong></p>
+<p>
+<em>Note: Supporting tables will be provided in PDF format.</em>
+</p>
+
+<p><strong>References</strong></p>
+<p>1. Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297–302.</p>
+<p>2. Li Z, Wang L, Yan H, Liu Y. Effect of DNA Hairpin Loops on the Twist of Planar DNA Origami Tiles. Langmuir. 2012 Jan 31;28(4):1959–65.</p>
+<p>3. Yu L, Xu Y, Al-Amin M, Jiang S, Sample M, Prasad A, et al. CytoDirect: A Nucleic Acid Nanodevice for Specific and Efficient Delivery of Functional Payloads to the Cytoplasm. J Am Chem Soc. 2023 Dec 20;145(50):27336–47.</p>
+<p>4. Fu J, Li T. Spatial Organization of Enzyme Cascade on a DNA Origami Nanostructure. Methods Mol Biol. 2017;1500:153–64.</p>
+<p>5. Karvelis T, Gasiunas G, Siksnys V. Methods for decoding Cas9 protospacer adjacent motif (PAM) sequences: A brief overview. Methods. 2017 May 15;121–122:3–8.</p>
+<p>6. Hang T, Zhang X, Wu M, Wang C, Ling S, Xu L, et al. Structural insights into a novel functional dimer of Staphylococcus aureus RNase HII. Biochem Biophys Res Commun. 2018 Sept 10;503(3):1207–13.</p>
+<p>7. Hyjek M, Figiel M, Nowotny M. RNases H: Structure and mechanism. DNA Repair (Amst). 2019 Dec;84:102672.</p>
+<p>8. Xie W, Zhang S, Pan F, Chen S, Zhong L, Wang J, et al. Nanomaterial-based ROS-mediated strategies for combating bacteria and biofilms. Journal of Materials Research. 2021 Feb 1;36(4):822–45.</p>
+<p>9. Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chem Rev. 2023 Apr 12;123(7):3976–4050.</p>
+<p>10. Berengut JF, Berengut JC, Doye JPK, Prešern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic Acids Res [Internet]. 2019 Dec 16 [cited 2025 Sept 10];47(22):11963–75. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7145641/</p>
+<p>11. Yang B, Wang R, Li W, Wang J, Liu H. On-Origami Molecular Crowding Control of G-Quadruplex DNAzymes. Small Methods [Internet]. 2025 [cited 2025 Sept 10];9(6):2401401. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/smtd.202401401</p>
+<p>12. Anthony R. Monte Carlo III, Jinglin Fu. Inactivation Kinetics of G‐Quadruplex/Hemin Complex and Optimization for More Reliable Catalysis - Monte Carlo - 2022 - ChemPlusChem - Wiley Online Library [Internet]. [cited 2025 Oct 3]. Available from: https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cplu.202200090</p>
+<p>13. Ghahremani Nasab M, Hassani L, Mohammadi Nejad S, Norouzi D. Interaction of hemin with quadruplex DNA. J Biol Phys [Internet]. 2017 Mar [cited 2025 Sept 10];43(1):5–14. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5323342/</p>
+<p>14. Mela I, Vallejo‐Ramirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed. 2020 July 27;59(31):12698–702.</p>
+<p>15. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</p>
+<p>16. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</p>
+<p>17. Yin J, Wang S, Wang J, Zhang Y, Fan C, Chao J, et al. An intelligent DNA nanodevice for precision thrombolysis. Nat Mater. 2024 June;23(6):854–62.</p>
+<p>18. Jue Yin, Siyu Wang, Jiahui Wang, Yewei Zhang, Chunhai Fan, Jie Chao, Yu Gao, Lianhui Wang et al. An intelligent DNA nanodevice for precision thrombolysis | Nature Materials [Internet]. [cited 2025 Oct 3]. Available from: https://www.nature.com/articles/s41563-024-01826-y#ref-CR22</p>
+
+
+<!-- Section 2: Aptamer Screening and Optimization -->
+<h1 id="aptamer-screening-and-optimization">Aptamer Screening and Optimization</h1>
+
+<p>
+Our research team focuses on the aptamer selection for Methicillin-Resistant Staphylococcus aureus (MRSA) receptors, aiming to develop a universal, efficient, and transferable technical workflow. This workflow is not only designed to meet the current aptamer screening needs for MRSA receptors but also to flexibly adapt to receptor targets of other bacterial strains, thereby providing a reusable technical framework for aptamer research related to microorganisms.
+</p>
+
+<details>
+<summary><strong>What is an aptamer?</strong></summary>
+<p>
+An aptamer is a short-chain nucleic acid molecule isolated from a nucleic acid library via in vitro SELEX (Systematic Evolution of Ligands by Exponential Enrichment) technology. It can bind to target molecules (such as proteins, small molecules, etc.) with high specificity and high affinity. Featuring no immunogenicity and easy modifiability, aptamers are widely used in the fields of biomedicine, detection, and drug development, and are known as "chemical antibodies".
+</p>
+</details>
+
+<h2>1. Core Model Selection: Introduction and Application of Aptatrans</h2>
+
+<p><strong>1.1 Core Mechanism of Aptatrans</strong></p>
+<p>
+We introduce the Aptatrans model based on the Transformer architecture, whose core advantage lies in achieving efficient screening through the aptamer sequence generation algorithm driven by Monte Carlo Tree Search (MCTS), namely Apta-MCTS:
+</p>
+
+<p><strong>1.1.1 Introduction to the Aptatrans Architecture</strong></p>
+
+<p><strong>Step 1: Fragmentation of long molecular chains</strong></p>
+<p>
+Both aptamers and proteins exist as long molecular chains, which cannot be directly "processed" by the model. Thus, they first need to be fragmented into short segments (referred to as "tokens", analogous to words). The fragmentation methods for the two differ to align with their respective characteristics:
+</p>
+<p>
+<strong>Aptamers:</strong> First, thymine (T) in DNA is replaced with uracil (U) in RNA, and all aptamers are uniformly treated as RNA. The "k-mer algorithm" is adopted, which functions like "small scissors" of fixed length to cut the long chains. For instance, if a 3-nucleotide grouping is selected, a sequence such as "GGC GGA GAA" will be fragmented into short segments like "GGC", "GCG", and "CGG". This approach preserves the key local information of aptamers, as their binding to proteins often relies on local structures.
+</p>
+<p>
+<strong>Proteins:</strong> The "FCS (Frequent Subsequence) mining algorithm" is employed. First, the frequency of short segments composed of 1–3 amino acids in all protein sequences is counted; the infrequent "rare segments" are removed, and the high-frequency segments are retained to construct a "frequent subsequence vocabulary". This vocabulary is then used to fragment new protein sequences. For example, the sequence "MSRLDKSKVI" may be fragmented into "MSR", "LDK", "SK", etc., enabling accurate capture of the functional key segments in proteins.
+</p>
+
+<p><strong>Step 2: Encoding of short segments</strong></p>
+<p>
+The model needs to acquire information about each segment, such as its position in the long chain and its relationships with other segments. This step is accomplished by two "dedicated encoders" (one for processing aptamer segments and the other for protein segments). The core of these encoders is the "Transformer" technology, and they have undergone prior "foundation learning" (pre-training).
+</p>
+
+<p><strong>Step 3: Calculation of the "binding potential" of segments (interaction computation)</strong></p>
+<p>
+With the encoded segments, the next step is to calculate the "binding probability" between aptamer and protein segments, which is carried out in two steps:
+</p>
+<p>
+Calculate the similarity scores between the vectors of each aptamer segment and protein segment, and generate an interaction matrix.
+</p>
+<p>
+Extract features using convolution blocks.
+</p>
+
+<p><strong>Step 4: Generation of "binding results" (binding determination)</strong></p>
+<p>
+The "core information vector" obtained in Step 3 is input into a "fully connected layer" (a simple computation module) to generate a "binding score". If the score exceeds a preset threshold (e.g., 0.5), the aptamer and protein are determined to be "capable of binding"; if the score is below the threshold, they are determined to be "incapable of binding".
+</p>
+<p>
+<img src="https://static.igem.wiki/teams/5913/aptamer/1.webp" alt="Figure 1. Aptatrans Architecture" style="max-width: 100%; height: auto;">
+</p>
+
+<p><strong>1.1.2 Advantages of the Model</strong></p>
+<p>
+Through a dual-cycle mechanism of "probabilistic search + iterative optimization", this algorithm directionally screens aptamer candidates with high affinity for target proteins (e.g., MRSA receptors) from a vast pool of potential nucleic acid sequences.
+</p>
+<ul>
+<li><strong>Key Feature:</strong> It only requires the input of the amino acid sequence of the target protein to complete the prediction of the aptamer sequence, without relying on complex structural information, which significantly reduces the difficulty of target preprocessing.</li>
+<li><strong>Existing Issue:</strong> Meanwhile, we recognize that the saturated docking method has limitations in handling macromolecular proteins, primarily manifested in its high demand for computational resources, making it difficult to efficiently perform the search of complex conformational spaces in macromolecular systems.</li>
+<li><strong>Advantage:</strong> In contrast, the Aptatrans model, relying on its deep learning-based architectural design and sequence-driven prediction mechanism, exhibits stronger applicability in the aptamer prediction task for macromolecular proteins. It can reduce computational costs while maintaining favorable prediction performance.</li>
+</ul>
+
+<details>
+<summary><strong>What is a Transformer?</strong></summary>
+<p>
+The Transformer is a deep learning model architecture proposed by Vaswani et al. in 2017, which is widely used in natural language processing (NLP) and sequence-to-sequence tasks. Its core innovation lies in the introduction of the Self-Attention Mechanism, which enables it to achieve excellent performance in processing sequence data.
+</p>
+</details>
+
+<details>
+<summary><strong>What is MCTS?</strong></summary>
+<p>
+Monte Carlo Tree Search (MCTS) is an algorithm applied in decision-making processes, particularly suitable for game-related problems. It estimates the value of each potential action by simulating a large number of random games, thereby selecting the optimal next step. The core idea of the MCTS algorithm is to concentrate computational resources on the most promising branches to improve search efficiency.
+</p>
+</details>
+
+<p><strong>1.2 Supplementary Information on Data Sources</strong></p>
+<p>
+Although Aptatrans demonstrates innovation in the field of aptamer prediction, its direct prediction results cannot yet fully meet the accuracy requirements of this project, which is limited by the scale of the model training dataset. Therefore, we integrate the validated sequences from professional aptamer databases (e.g., the <strong>Aptamer Database (AptaDB)</strong> [2], accessible at <a href="https://www.aptamer.org/" target="_blank">https://www.aptamer.org/</a>) to establish a dual-source data support system of "model prediction + database screening", thereby further improving the reliability of candidate aptamers.
+</p>
+<p>
+<img src="https://static.igem.wiki/teams/5913/aptamer/3.webp" alt="Figure 2. The homepage of the database" style="max-width: 100%; height: auto;">
+</p>
+<p>
+<strong>Figure 2.</strong> The homepage of the database.
+</p>
+
+<p><strong>The specific operations are as follows:</strong></p>
+<ol>
+<li>Enter the target name (e.g., pbp2a) in the search box at the top right corner, select the "Aptamer" database on the right side, and click "Search".</li>
+<li>Locate the appropriate aptamer results based on the search outcomes and click on the corresponding entry.</li>
+<li>Scroll down the page to obtain the sequence and related literature.
+  <ul>
+    <li><strong>The aptamer we selected is shown in the figure below:</strong></li>
+  </ul>
+</li>
+</ol>
+<p>
+<img src="https://static.igem.wiki/teams/5913/aptamer/4.webp" alt="The selected aptamer" style="max-width: 100%; height: auto;">
+</p>
+
+<p><strong>Procedure for converting an aptamer sequence into a PDB file:</strong></p>
+<ol>
+<li>Access the website <strong>RNAComposer</strong> [3] via the link: <a href="http://rnacomposer.ibch.poznan.pl/" target="_blank">http://rnacomposer.ibch.poznan.pl/</a>.
+  <p>
+  <img src="https://static.igem.wiki/teams/5913/aptamer/5.webp" alt="RNAComposer interface" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+<li>Click "Load example" and select "3", then replace the original sequence in the text box with the target aptamer sequence, and click "Compose".</li>
+<li>Wait until the prompt "Task completed" appears (as shown in the figure below); the PDB file can be downloaded via the button at the bottom left corner.
+  <p>
+  <img src="https://static.igem.wiki/teams/5913/aptamer/6.webp" alt="RNAComposer task completed" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+</ol>
+
+<p><strong>1.3 Validation of Model Versatility</strong></p>
+<p>
+In their published research, the development team of Aptatrans has verified the feasibility of the model through multiple sets of protein targets that are non-MRSA receptors (e.g., <em>Escherichia coli</em> surface proteins, streptococcal adhesins, etc.). This verification confirms that the model possesses aptamer prediction capability across different targets. This characteristic provides crucial technical support for the design of the "universal workflow" in this project, and validates the application potential of the model in aptamer screening for receptors of other bacterial strains.
+</p>
+
+<h2>2. Candidate Aptamer Validation System: Multi-Tool Cross-Validation</h2>
+<p>
+To ensure that the screened aptamers (including sequences predicted by Aptatrans and those screened from databases) possess high affinity and specificity, we have established a <strong>triple cross-validation system</strong>, which evaluates the binding effect between aptamers and target proteins through the collaboration of multiple tools:
+</p>
+
+<style>
+/* Light mode - ensure dark text for readability */
+.design-validation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.design-validation-table thead tr {
+  background: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%);
+}
+
+.design-validation-table th {
+  border: 1px solid #4a5568;
+  padding: 12px;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.design-validation-table td {
+  border: 1px solid #4a5568;
+  padding: 12px;
+  color: #1a202c;
+}
+
+.design-validation-table tbody tr:nth-child(odd) {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+
+.design-validation-table tbody tr:nth-child(even) {
+  background-color: rgba(220, 220, 220, 0.15);
+}
+
+/* Dark mode - white text with brighter backgrounds */
+@media (prefers-color-scheme: dark) {
+  .design-validation-table td {
+    color: #ffffff !important;
+  }
+  
+  .design-validation-table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+  }
+  
+  .design-validation-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+  }
+}
+</style>
+<table class="design-validation-table">
+  <thead>
+    <tr>
+      <th><strong>Validation Method</strong></th>
+      <th><strong>Core Principle</strong></th>
+      <th><strong>Output Result</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aptatrans Built-in Evaluation System</td>
+      <td>Based on the affinity prediction model trained by the model, the binding potential between aptamers and target proteins is quantified using probability values.</td>
+      <td>Aptamer-target protein binding probability (API probability)</td>
+    </tr>
+    <tr>
+      <td>ZDOCK Tool Validation [4]</td>
+      <td>ZDOCK is a computational tool for protein-protein docking. It predicts the most probable 3D conformations of two proteins during binding using a method based on Fast Fourier Transform (FFT).</td>
+      <td>Multiple optimal binding conformations</td>
+    </tr>
+    <tr>
+      <td>HDOCK Tool Validation [5]</td>
+      <td>It predicts protein-protein and protein-deoxyribonucleic acid (DNA)/ribonucleic acid (RNA) docking based on a hybrid algorithm combining template-based modeling and ab initio free docking.</td>
+      <td>Binding probability, visual model of binding region</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Operational Principle</strong></p>
+<p>
+Each candidate aptamer must undergo validation using the three aforementioned methods. Only sequences that perform excellently in all three validations are retained for subsequent experimental procedures, thereby minimizing the false positive rate to the greatest extent.
+</p>
+
+<p><strong>How to Use ZDOCK</strong></p>
+<ol>
+<li>Access the ZDOCK website via the link: <a href="https://zdock.wenglab.org/" target="_blank">ZDOCK</a>, and you will see the interface as shown below:
+  <p>
+  <img src="https://static.igem.wiki/teams/5913/aptamer/7.webp" alt="ZDOCK interface" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+<li>Enter the PDB ID or upload the PDB file, input your email address, and click "Submit". After successful submission, simply wait and check your email.</li>
+<li>Once you receive the email, open the included link, download the files, and use MOE (Molecular Operating Environment) to view the results.</li>
+</ol>
+
+<p><strong>How to Use HDOCK</strong></p>
+<ol>
+<li>Access the HDOCK website via the link: <a href="http://hdock.phys.hust.edu.cn/" target="_blank">HDOCK Server</a>.</li>
+<li>Select the relevant PDB files (Note: Correcting the typo "pdf" to "PDB" as per academic context) and click "Submit".
+  <p>
+  <img src="https://static.igem.wiki/teams/5913/aptamer/8.webp" alt="HDOCK interface" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+<li>View the images of aptamer-protein binding and the binding probability online.
+  <p>
+  <img src="https://static.igem.wiki/teams/5913/aptamer/9.webp" alt="HDOCK results" style="max-width: 100%; height: auto;">
+  </p>
+</li>
+</ol>
+
+<p><strong>ZDOCK Visualization Display</strong></p>
+
+<h2>3. Innovative Screening Mechanism: Dual-Path Optimization Strategy</h2>
+<p>
+Based on the integration of the aforementioned technical modules, we propose two aptamer screening and optimization mechanisms, forming a closed-loop process of "Prediction - Validation - Optimization":
+</p>
+
+<p><strong>3.1 Mechanism 1: Prediction-Validation Collaborative Screening</strong></p>
+<p><strong>Workflow</strong></p>
+<ol>
+<li>Input the target protein sequence (e.g., MRSA receptor) into Aptatrans to generate an initial candidate aptamer library.</li>
+<li>Perform preliminary filtering on the candidate library (e.g., API probability ≥ 0.8) to retain high-potential sequences.</li>
+<li>Conduct cross-validation using multiple tools and screen out sequences that meet the standards of all three validations.</li>
+<li>Integrate aptamer sequences from databases to finally determine experimental-grade candidate aptamers.</li>
+</ol>
+<p><strong>Advantage</strong></p>
+<p>
+Through "model prediction guidance + multi-tool validation check", the screening range is quickly narrowed, and screening efficiency is improved.
+</p>
+
+<p><strong>3.2 Mechanism 2: Directed Optimization of Low-Affinity Aptamers</strong></p>
+<p><strong>Workflow</strong></p>
+<ol>
+<li>For aptamers with low binding probability (e.g., API probability &lt; 0.6) in validation but with potential structural advantages (e.g., presence of conserved binding motifs), perform manual modification of local sequences (e.g., adjusting stem-loop structures, optimizing base-complementary regions).</li>
+<li>Re-input the modified sequences into the Aptatrans built-in evaluation system, ZDOCK, and HDOCK for secondary validation.</li>
+<li>Conduct iterative optimization until the aptamer meets the preset validation standards, or eliminate the sequence if it is confirmed to have no optimization potential.</li>
+</ol>
+<p><strong>Advantage</strong></p>
+<p>
+It avoids discarding aptamers with potential value; instead, it improves their binding ability through directed modification, thereby reducing screening costs.
+</p>
+
+<p><strong>References</strong></p>
+<p>1. Shin I, Kang K, Kim J, Sel S, Choi J, Lee JW, et al. AptaTrans: a deep neural network for predicting aptamer-protein interaction using pretrained encoders. BMC Bioinformatics. 2023 Nov 27;24(1):447.</p>
+<p>2. Global Aptamer Database. Global Aptamer Database [Internet]. 2024 [cited 2025-8-22]. Available from: https://www.aptamer.org/</p>
+<p>3. Institute of Bioorganic Chemistry, Polish Academy of Sciences. RNAComposer: Automated RNA Structure 3D Modeling Server. Available from: http://rnacomposer.ibch.poznan.pl/ (2025-09-30).</p>
+<p>4. Weng Lab. ZDOCK: Protein-Protein Docking Server. Available from: https://zdock.wenglab.org/ (Accessed 2025-09-30).</p>
+<p>5. Huazhong University of Science and Technology. HDOCK: a web server for protein-protein and protein-Dna/RNA docking based on a hybrid strategy. Available from: http://hdock.phys.hust.edu.cn/ (2025-09-30).</p>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- <footer class="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-6 col-xs-12">
+        <h4 class="mb-3">Heading</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis</p>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+          <ul class="m-2 p-2">
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Nam mauris velit</a></li>
+            <li><a href="#">Etiam vitae mauris</a></li>
+            <li><a href="#">Fusce scelerisque</a></li>
+            <li><a href="#">Sed faucibus</a></li>
+            <li><a href="#">Mauris efficitur nulla</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
+        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+        <p class="mb-0">(541) 754-3010</p>
+        <p>info@hsdf.com</p>
+      </div>
+    </div>
+    <hr>
+    The following MUST be on every page: license information and link to the repository on gitlab.igem.org
+    <div class="row mt-4">
+      <div class="col" style="text-align:center;">
+        <p class="mb-0"><small> 2025 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/izju-china">gitlab.igem.org/2025/izju-china</a>.</small></p>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<footer class="my-footer-container">
+  <div class="my-footer">
+    <div class="footer-navigation">
+      <!-- Single row with all five main categories -->
+      <div class="footer-row">
+        <div class="footer-navbars">
+          <div class="footer-navbar-title"><span>Project</span></div>
+          <div class="footer-navbar-contents"><a href="background">Background</a></div>
+          <div class="footer-navbar-contents"><a href="description">Description</a></div>
+          <div class="footer-navbar-contents"><a href="engineering">Engineering</a></div>
+          <div class="footer-navbar-contents"><a href="contribution">Contribution</a>
+          </div>
+          <div class="footer-navbar-contents"><a href="implementation">Implementation</a>
+          </div>
+          <div class="footer-navbar-contents"><a href="project-future">Future</a></div>
+        </div>
+        <div class="footer-navbars">
+          <div class="footer-navbar-title"><span>Dry Lab</span></div>
+          <div class="footer-navbar-contents"><a href="design">Design</a></div>
+          <div class="footer-navbar-contents"><a href="model">Model</a></div>
+        </div>
+        <div class="footer-navbars">
+          <div class="footer-navbar-title"><span>Wet Lab</span></div>
+          <div class="footer-navbar-contents"><a href="wetlab-overview">Overview</a>
+          </div>
+          <div class="footer-navbar-contents"><a href="gene-cleavage">Gene Cleavage</a>
+          </div>
+          <div class="footer-navbar-contents"><a href="assembly">Assembly</a></div>
+          <div class="footer-navbar-contents"><a href="validation">Validation</a></div>
+          <div class="footer-navbar-contents"><a href="wetlab-future">Future</a></div>
+          <div class="footer-navbar-contents"><a href="parts">Part</a></div>
+        </div>
+        <div class="footer-navbars">
+          <div class="footer-navbar-title"><span>Human Practice</span></div>
+          <div class="footer-navbar-contents"><a href="human-practices">iHP</a></div>
+          <div class="footer-navbar-contents"><a
+              href="entrepreneurship">Entrepreneurship</a></div>
+          <div class="footer-navbar-contents"><a href="collaborations">Collaboration</a>
+          </div>
+          <div class="footer-navbar-contents"><a href="safety">Safety</a></div>
+        </div>
+        <div class="footer-navbars">
+          <div class="footer-navbar-title"><span>Team</span></div>
+          <div class="footer-navbar-contents"><a href="roster">Roster</a></div>
+          <div class="footer-navbar-contents"><a href="attributions">Attribution</a>
+          </div>
+          <div class="footer-navbar-contents"><a href="awards">Awards</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-logos">
+      <img src="https://static.igem.wiki/teams/5913/picture/logo6.webp" alt="IZJU-CHINA Logo">
+    </div>
+    <div class="footer-infos">
+      <p><small>© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+            rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+      <p><small>The repository used to create this website is available at <a
+            href="https://gitlab.igem.org/2025/izju-china">gitlab.igem.org/2025/izju-china</a>.</small></p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Global Back-to-Top Button -->
+  <a id="global-back-to-top" href="#" aria-label="Back to top" title="Back to top">
+    <img src="https://static.igem.wiki/teams/5913/picture/uptotop.webp" alt="Back to top" class="global-btt-image">
+  </a>
+
+  <!-- ScrollReveal -->
+  <script src="static/scrollreveal.js"></script>
+
+  <!-- MathJax Configuration and Loading -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      displayAlign: 'center',
+      "HTML-CSS": {
+        styles: { '.MathJax_Display': { margin: '1em 0' } },
+        linebreaks: { automatic: true }
+      }
+    };
+  </script>
+  <script type="text/javascript" async
+    src="static/MathJax-2.7.7/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+  <!-- Dark mode script: place after menu.html to bind #theme-toggle click event -->
+  <script src="static/theme.js?v=2"></script>
+  <!-- Unified sidebar logic/icons -->
+  <script src="static/sidebar-common.js?v=1"></script>
+
+  <!-- Search functionality script -->
+  <script src="static/search.js"></script>
+
+  <!-- Loading page script -->
+  <script src="static/loading.js?v=3"></script>
+
+  <!-- Optional: make navigation background more solid when scrolling down -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.my-nav');
+      if (!nav) return;
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+
+
+
+  <!-- Global Back-to-Top Button Functionality -->
+  <script>
+    // Global Back-to-Top button behavior
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        var btt = document.getElementById('global-back-to-top');
+        if (btt) {
+          var toggleBtt = function () {
+            var shouldShow = (window.pageYOffset || document.documentElement.scrollTop) > 300;
+            if (shouldShow) {
+              btt.classList.add('show');
+            } else {
+              btt.classList.remove('show');
+            }
+          };
+          window.addEventListener('scroll', toggleBtt, { passive: true });
+          window.addEventListener('load', toggleBtt);
+          btt.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+      } catch (e) {
+        console.warn('Global back-to-top button initialization failed:', e);
+      }
+    });
+  </script>
+
+  <!-- Sidebar functionality -->
+  <script>
+    // Sidebar menu functionality
+    function bind(tagStr, eventStr, func) {
+      let el = document.querySelectorAll(tagStr);
+      el.forEach((item) => item.addEventListener(eventStr, func))
+    }
+
+    // Smooth scroll to element and place it in upper-middle area of viewport
+    function smoothScrollToElement(targetElement, offsetRatio = 0.3) {
+      if (!targetElement) return;
+
+      // Get navbar height
+      const nav = document.querySelector('.my-nav');
+      const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+
+
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+
+
+      const desiredOffsetFromTop = Math.floor(viewportHeight * offsetRatio) + navHeight;
+
+
+      const targetRect = targetElement.getBoundingClientRect();
+      const targetTop = targetRect.top + window.pageYOffset;
+
+
+      const scrollToPosition = Math.max(0, targetTop - desiredOffsetFromTop);
+
+      console.log('Scroll calculation:', {
+        targetTop,
+        navHeight,
+        viewportHeight,
+        desiredOffsetFromTop,
+        scrollToPosition,
+        currentScroll: window.pageYOffset
+      });
+
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: 'smooth'
+      });
+    }
+
+    function stickyMenu() {
+
+      function adjustSidebarDimensions() {
+        const menu = document.getElementById('menu');
+        const menubg = document.querySelector('.menubg');
+        const content = document.getElementById('content');
+        const footer = document.querySelector('.my-footer-container');
+
+        if (menu && menubg && content) {
+
+          if (document.body.classList.contains('no-sidebar')) {
+            menubg.style.display = 'none';
+            menubg.style.position = 'relative';
+            content.style.marginLeft = '0px';
+            content.style.width = '100%';
+            if (footer) {
+              footer.style.marginLeft = '0px';
+              footer.style.width = '100%';
+            }
+            return;
+          }
+
+          const isMobile = window.innerWidth <= 920;
+
+          if (isMobile) {
+
+            menubg.style.display = 'none';
+            menubg.style.position = 'relative';
+            content.style.marginLeft = '0px';
+            content.style.width = '100%';
+
+            if (footer) {
+              footer.style.marginLeft = '0px';
+              footer.style.width = '100%';
+            }
+          } else {
+
+            menubg.style.display = 'block';
+            menubg.style.position = 'fixed';
+            menubg.style.top = '0';
+            menubg.style.left = '0';
+            menubg.style.width = '250px';
+            menubg.style.height = '100vh';
+            content.style.marginLeft = '250px';
+            content.style.width = 'calc(100% - 250px)';
+
+            if (footer) {
+              footer.style.marginLeft = '250px';
+              footer.style.width = 'calc(100% - 250px)';
+            }
+          }
+        }
+      }
+
+
+      adjustSidebarDimensions();
+
+
+      window.addEventListener('resize', adjustSidebarDimensions);
+    }
+
+    let cb_t1 = function (e) {
+
+      let t1 = [...document.querySelectorAll("#menu .t1")];
+      t1.forEach((item) => item.classList.remove("unfold"));
+      e.currentTarget.classList.add("unfold");
+
+
+      const targetId = e.currentTarget.getAttribute("tid");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) smoothScrollToElement(targetElement, 0.3);
+
+
+      window.userManualNavigation = true;
+      setTimeout(() => {
+        window.userManualNavigation = false;
+      }, 800);
+    }
+
+    let cb_t2 = function (e) {
+
+      const targetId = e.currentTarget.getAttribute("tid");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) smoothScrollToElement(targetElement, 0.3);
+
+
+      window.userManualNavigation = true;
+      setTimeout(() => {
+        window.userManualNavigation = false;
+      }, 800);
+    }
+
+    let cb_t3 = function (e) {
+
+      const targetId = e.currentTarget.getAttribute("tid");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) smoothScrollToElement(targetElement, 0.3);
+
+
+      window.userManualNavigation = true;
+      setTimeout(() => {
+        window.userManualNavigation = false;
+      }, 800);
+    }
+
+    let cb_t4 = function (e) {
+
+      const targetId = e.currentTarget.getAttribute("tid");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) smoothScrollToElement(targetElement, 0.3);
+
+
+      window.userManualNavigation = true;
+      setTimeout(() => {
+        window.userManualNavigation = false;
+      }, 800);
+    }
+
+    let cb_t5 = function (e) {
+
+      const targetId = e.currentTarget.getAttribute("tid");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) smoothScrollToElement(targetElement, 0.3);
+
+
+      window.userManualNavigation = true;
+      setTimeout(() => {
+        window.userManualNavigation = false;
+      }, 800);
+    }
+
+
+    function initScrollHighlight() {
+      // Support both old content structure and new Safety-style structure
+      const sections = document.querySelectorAll('#content h1, #content h2, #content h3, #content h4, #content h5, #auto-page-content h1, #auto-page-content h2, #auto-page-content h3, #auto-page-content h4, #auto-page-content h5');
+      const menuItems = {
+        t1: document.querySelectorAll('#menu .t1'),
+        t2: document.querySelectorAll('#menu .t2'),
+        t3: document.querySelectorAll('#menu .t3'),
+        t4: document.querySelectorAll('#menu .t4'),
+        t5: document.querySelectorAll('#menu .t5')
+      };
+
+      function updateActiveSection() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const nav = document.querySelector('.my-nav');
+        const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+        const dynamicOffset = Math.floor(viewportHeight * 0.3) + navHeight;
+
+        let activeSection = null;
+        let activeSubsection = null;
+        let activeSubSubsection = null;
+        let activeH4 = null;
+        let activeH5 = null;
+        let closestSection = null;
+        let minDistance = Infinity;
+
+
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const sectionTop = rect.top + scrollTop;
+          const distance = Math.abs(sectionTop - (scrollTop + dynamicOffset));
+
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestSection = section;
+          }
+
+
+
+          const targetPosition = scrollTop + dynamicOffset;
+          const tolerance = 50; // 50px
+
+          if (Math.abs(sectionTop - targetPosition) <= tolerance) {
+            if (section.tagName === 'H1') {
+              activeSection = section;
+            } else if (section.tagName === 'H2') {
+              activeSubsection = section;
+            } else if (section.tagName === 'H3') {
+              activeSubSubsection = section;
+            } else if (section.tagName === 'H4') {
+              activeH4 = section;
+            } else if (section.tagName === 'H5') {
+              activeH5 = section;
+            }
+          }
+        });
+
+
+        if (!activeSection && !activeSubsection && !activeSubSubsection && !activeH4 && !activeH5 && closestSection) {
+          if (closestSection.tagName === 'H1') {
+            activeSection = closestSection;
+          } else if (closestSection.tagName === 'H2') {
+            activeSubsection = closestSection;
+          } else if (closestSection.tagName === 'H3') {
+            activeSubSubsection = closestSection;
+          } else if (closestSection.tagName === 'H4') {
+            activeH4 = closestSection;
+          } else if (closestSection.tagName === 'H5') {
+            activeH5 = closestSection;
+          }
+        }
+
+        // unfold
+        menuItems.t1.forEach(item => {
+          item.classList.remove('active', 'show');
+          // unfold
+        });
+        menuItems.t2.forEach(item => item.classList.remove('active', 'show'));
+        menuItems.t3.forEach(item => item.classList.remove('active', 'show'));
+        menuItems.t4.forEach(item => item.classList.remove('active', 'show'));
+        menuItems.t5.forEach(item => item.classList.remove('active', 'show'));
+
+
+        if (activeSection) {
+          const activeT1 = document.querySelector(`#menu .t1[tid="${activeSection.id}"]`);
+          if (activeT1) {
+            activeT1.classList.add('active', 'show');
+
+            if (!activeT1.classList.contains('unfold')) {
+
+              const nextElement = activeT1.nextElementSibling;
+              if (nextElement && nextElement.classList.contains('h2-sec') && nextElement.children.length > 0) {
+                activeT1.classList.add('unfold');
+              }
+            }
+          }
+        }
+
+
+        if (activeSubsection) {
+          const activeT2 = document.querySelector(`#menu .t2[tid="${activeSubsection.id}"]`);
+          if (activeT2) {
+            activeT2.classList.add('active', 'show');
+
+            const parentT1 = activeT2.closest('.h2-sec').previousElementSibling;
+            if (parentT1 && parentT1.classList.contains('t1')) {
+              parentT1.classList.add('active', 'show');
+
+              if (!parentT1.classList.contains('unfold')) {
+                parentT1.classList.add('unfold');
+              }
+            }
+          }
+        }
+
+
+        if (activeSubSubsection) {
+          const activeT3 = document.querySelector(`#menu .t3[tid="${activeSubSubsection.id}"]`);
+          if (activeT3) {
+            activeT3.classList.add('active', 'show');
+            // (t2t1)
+            const parentT2 = activeT3.closest('.h3-sec').previousElementSibling;
+            if (parentT2 && parentT2.classList.contains('t2')) {
+              parentT2.classList.add('active', 'show');
+              // t2
+              if (!parentT2.classList.contains('unfold')) {
+                const nextElement = parentT2.nextElementSibling;
+                if (nextElement && nextElement.classList.contains('h3-sec') && nextElement.children.length > 0) {
+                  parentT2.classList.add('unfold');
+                }
+              }
+
+
+              const parentT1 = parentT2.closest('.h2-sec').previousElementSibling;
+              if (parentT1 && parentT1.classList.contains('t1')) {
+                parentT1.classList.add('active', 'show');
+
+                if (!parentT1.classList.contains('unfold')) {
+                  parentT1.classList.add('unfold');
+                }
+              }
+            }
+          }
+        }
+
+        // Handle h4 highlighting
+        if (activeH4) {
+          const activeT4 = document.querySelector(`#menu .t4[tid="${activeH4.id}"]`);
+          if (activeT4) {
+            activeT4.classList.add('active', 'show');
+            // Activate parent t3
+            const parentT3 = activeT4.closest('.h4-sec').previousElementSibling;
+            if (parentT3 && parentT3.classList.contains('t3')) {
+              parentT3.classList.add('active', 'show');
+              // Unfold t3 if needed
+              if (!parentT3.classList.contains('unfold')) {
+                const nextElement = parentT3.nextElementSibling;
+                if (nextElement && nextElement.classList.contains('h4-sec') && nextElement.children.length > 0) {
+                  parentT3.classList.add('unfold');
+                }
+              }
+
+              // Activate parent t2
+              const parentT2 = parentT3.closest('.h3-sec').previousElementSibling;
+              if (parentT2 && parentT2.classList.contains('t2')) {
+                parentT2.classList.add('active', 'show');
+                if (!parentT2.classList.contains('unfold')) {
+                  parentT2.classList.add('unfold');
+                }
+
+                // Activate parent t1
+                const parentT1 = parentT2.closest('.h2-sec').previousElementSibling;
+                if (parentT1 && parentT1.classList.contains('t1')) {
+                  parentT1.classList.add('active', 'show');
+                  if (!parentT1.classList.contains('unfold')) {
+                    parentT1.classList.add('unfold');
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // Handle h5 highlighting
+        if (activeH5) {
+          const activeT5 = document.querySelector(`#menu .t5[tid="${activeH5.id}"]`);
+          if (activeT5) {
+            activeT5.classList.add('active', 'show');
+            // Activate parent t4
+            const parentT4 = activeT5.closest('.h5-sec').previousElementSibling;
+            if (parentT4 && parentT4.classList.contains('t4')) {
+              parentT4.classList.add('active', 'show');
+              // Unfold t4 if needed
+              if (!parentT4.classList.contains('unfold')) {
+                const nextElement = parentT4.nextElementSibling;
+                if (nextElement && nextElement.classList.contains('h5-sec') && nextElement.children.length > 0) {
+                  parentT4.classList.add('unfold');
+                }
+              }
+
+              // Activate parent t3
+              const parentT3 = parentT4.closest('.h4-sec').previousElementSibling;
+              if (parentT3 && parentT3.classList.contains('t3')) {
+                parentT3.classList.add('active', 'show');
+                if (!parentT3.classList.contains('unfold')) {
+                  parentT3.classList.add('unfold');
+                }
+
+                // Activate parent t2
+                const parentT2 = parentT3.closest('.h3-sec').previousElementSibling;
+                if (parentT2 && parentT2.classList.contains('t2')) {
+                  parentT2.classList.add('active', 'show');
+                  if (!parentT2.classList.contains('unfold')) {
+                    parentT2.classList.add('unfold');
+                  }
+
+                  // Activate parent t1
+                  const parentT1 = parentT2.closest('.h2-sec').previousElementSibling;
+                  if (parentT1 && parentT1.classList.contains('t1')) {
+                    parentT1.classList.add('active', 'show');
+                    if (!parentT1.classList.contains('unfold')) {
+                      parentT1.classList.add('unfold');
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+
+        if (window.userManualNavigation) {
+          return;
+        }
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveSection, 10);
+      });
+
+
+      setTimeout(updateActiveSection, 100);
+
+
+      console.log('Scroll highlight initialized with', sections.length, 'sections');
+    }
+
+    // Initialize sidebar functionality
+    if (document.getElementById("menu")) {
+      stickyMenu();
+      initScrollHighlight();
+      bind("#menu .t1", "click", cb_t1);
+      bind("#menu .t2", "click", cb_t2);
+      bind("#menu .t3", "click", cb_t3);
+      bind("#menu .t4", "click", cb_t4);
+      bind("#menu .t5", "click", cb_t5);
+    }
+
+    // Safety-style navigation generation for pages with auto-page-content
+    function initSafetyStyleNavigation() {
+      // Skip when a page defines its own converter (e.g., Collaboration page)
+      if (document.getElementById('auto-collaboration-content')) return;
+      const contentRoot = document.getElementById('auto-page-content');
+      if (!contentRoot) return;
+
+      function slugify(text) {
+        return text.toLowerCase()
+          .replace(/[^a-z0-9\u4e00-\u9fa5\s\.-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-');
+      }
+
+      // Promote <p><strong>Title</strong></p> to <h1>/<h2>
+      const paragraphs = Array.from(contentRoot.querySelectorAll('p'));
+      const promoted = [];
+      paragraphs.forEach(p => {
+        const strong = p.querySelector('strong');
+        if (!strong) return;
+        const text = strong.textContent.trim();
+        if (!text) return;
+
+        const isThirdLevel = /^\d+\.\d+\.\d+/.test(text); // 3.2.1 format
+        const isSecondLevel = /^\d+\.\d+/.test(text) && !isThirdLevel; // 3.2 format but not 3.2.1
+        const isTopNumbered = /^\d+\./.test(text) && !isSecondLevel && !isThirdLevel; // 3. format
+        const isOverview = /^overview$/i.test(text.trim());
+        const isSafety = /^safety$/i.test(text.trim()); // Handle the first "Safety" title
+        const level = isThirdLevel ? 'H3' : (isSecondLevel ? 'H2' : (isTopNumbered || isOverview || isSafety ? 'H1' : null));
+        if (!level) return;
+
+        // Convert "Safety" to "Overview" for consistency
+        const finalText = isSafety ? 'Overview' : text;
+        const id = slugify(finalText);
+        const h = document.createElement(level);
+        h.textContent = finalText.replace(/\s+$/, '');
+        h.id = id;
+
+        // Replace paragraph with heading
+        p.parentNode.replaceChild(h, p);
+        promoted.push(h);
+      });
+
+      // Build sidebar menu from generated headings
+      const menu = document.getElementById('menu');
+      const menubg = document.querySelector('.menubg');
+      if (!menu || !menubg) return;
+      // Clear existing items
+      menu.innerHTML = '';
+
+      // Group headings with proper hierarchy (h1 > h2 > h3 > h4 > h5)
+      const headings = Array.from(contentRoot.querySelectorAll('h1, h2, h3, h4, h5'));
+      let currentH2Container = null;
+      let currentH3Container = null;
+      let currentH4Container = null;
+      let currentH5Container = null;
+
+      // First pass: collect all headings and determine which ones have children
+      const headingInfo = headings.map((node, index) => {
+        const level = parseInt(node.tagName.charAt(1));
+        const nextHeading = headings[index + 1];
+        const hasChildren = nextHeading && parseInt(nextHeading.tagName.charAt(1)) > level;
+
+        return {
+          node,
+          level,
+          hasChildren,
+          id: node.id,
+          text: node.textContent
+        };
+      });
+
+      headingInfo.forEach((info, index) => {
+        if (info.level === 1) {
+          const t1 = document.createElement('div');
+          t1.className = 't1';
+          t1.setAttribute('tid', info.id);
+
+          // Create text span
+          const textSpan = document.createElement('span');
+          textSpan.className = 'heading-text';
+          textSpan.textContent = info.text;
+          t1.appendChild(textSpan);
+
+          // Add expand icon if has children
+          if (info.hasChildren) {
+            const icon = document.createElement('span');
+            icon.className = 'expand-icon';
+            icon.innerHTML = '▶';
+            t1.appendChild(icon);
+          }
+
+          menu.appendChild(t1);
+
+          const h2sec = document.createElement('div');
+          h2sec.className = 'h2-sec';
+          menu.appendChild(h2sec);
+
+          currentH2Container = h2sec;
+          currentH3Container = null; // Reset h3 container when new h1 starts
+          currentH4Container = null; // Reset h4 container when new h1 starts
+          currentH5Container = null; // Reset h5 container when new h1 starts
+        } else if (info.level === 2) {
+          if (!currentH2Container) {
+            currentH2Container = document.createElement('div');
+            currentH2Container.className = 'h2-sec';
+            menu.appendChild(currentH2Container);
+          }
+          const t2 = document.createElement('div');
+          t2.className = 't2';
+          t2.setAttribute('tid', info.id);
+
+          // Create text span
+          const textSpan = document.createElement('span');
+          textSpan.className = 'heading-text';
+          textSpan.textContent = info.text;
+          t2.appendChild(textSpan);
+
+          // Add expand icon if has children
+          if (info.hasChildren) {
+            const icon = document.createElement('span');
+            icon.className = 'expand-icon';
+            icon.innerHTML = '▶';
+            t2.appendChild(icon);
+          }
+
+          currentH2Container.appendChild(t2);
+
+          // Create container for h3 items under this h2
+          const h3sec = document.createElement('div');
+          h3sec.className = 'h3-sec';
+          currentH2Container.appendChild(h3sec);
+          currentH3Container = h3sec;
+          currentH4Container = null; // Reset h4 container when new h2 starts
+          currentH5Container = null; // Reset h5 container when new h2 starts
+        } else if (info.level === 3) {
+          if (!currentH3Container) {
+            // If no h2 container exists, create one
+            if (!currentH2Container) {
+              currentH2Container = document.createElement('div');
+              currentH2Container.className = 'h2-sec';
+              menu.appendChild(currentH2Container);
+            }
+            currentH3Container = document.createElement('div');
+            currentH3Container.className = 'h3-sec';
+            currentH2Container.appendChild(currentH3Container);
+          }
+          const t3 = document.createElement('div');
+          t3.className = 't3';
+          t3.setAttribute('tid', info.id);
+
+          // Create text span
+          const textSpan = document.createElement('span');
+          textSpan.className = 'heading-text';
+          textSpan.textContent = info.text;
+          t3.appendChild(textSpan);
+
+          // Add expand icon if has children
+          if (info.hasChildren) {
+            const icon = document.createElement('span');
+            icon.className = 'expand-icon';
+            icon.innerHTML = '▶';
+            t3.appendChild(icon);
+          }
+
+          currentH3Container.appendChild(t3);
+
+          // Create container for h4 items under this h3
+          const h4sec = document.createElement('div');
+          h4sec.className = 'h4-sec';
+          currentH3Container.appendChild(h4sec);
+          currentH4Container = h4sec;
+          currentH5Container = null; // Reset h5 container when new h3 starts
+        } else if (info.level === 4) {
+          if (!currentH4Container) {
+            // If no h3 container exists, create one
+            if (!currentH3Container) {
+              if (!currentH2Container) {
+                currentH2Container = document.createElement('div');
+                currentH2Container.className = 'h2-sec';
+                menu.appendChild(currentH2Container);
+              }
+              currentH3Container = document.createElement('div');
+              currentH3Container.className = 'h3-sec';
+              currentH2Container.appendChild(currentH3Container);
+            }
+            currentH4Container = document.createElement('div');
+            currentH4Container.className = 'h4-sec';
+            currentH3Container.appendChild(currentH4Container);
+          }
+          const t4 = document.createElement('div');
+          t4.className = 't4';
+          t4.setAttribute('tid', info.id);
+
+          // Create text span
+          const textSpan = document.createElement('span');
+          textSpan.className = 'heading-text';
+          textSpan.textContent = info.text;
+          t4.appendChild(textSpan);
+
+          // Add expand icon if has children
+          if (info.hasChildren) {
+            const icon = document.createElement('span');
+            icon.className = 'expand-icon';
+            icon.innerHTML = '▶';
+            t4.appendChild(icon);
+          }
+
+          currentH4Container.appendChild(t4);
+
+          // Create container for h5 items under this h4
+          const h5sec = document.createElement('div');
+          h5sec.className = 'h5-sec';
+          currentH4Container.appendChild(h5sec);
+          currentH5Container = h5sec;
+        } else if (info.level === 5) {
+          if (!currentH5Container) {
+            // If no h4 container exists, create one
+            if (!currentH4Container) {
+              if (!currentH3Container) {
+                if (!currentH2Container) {
+                  currentH2Container = document.createElement('div');
+                  currentH2Container.className = 'h2-sec';
+                  menu.appendChild(currentH2Container);
+                }
+                currentH3Container = document.createElement('div');
+                currentH3Container.className = 'h3-sec';
+                currentH2Container.appendChild(currentH3Container);
+              }
+              currentH4Container = document.createElement('div');
+              currentH4Container.className = 'h4-sec';
+              currentH3Container.appendChild(currentH4Container);
+            }
+            currentH5Container = document.createElement('div');
+            currentH5Container.className = 'h5-sec';
+            currentH4Container.appendChild(currentH5Container);
+          }
+          const t5 = document.createElement('div');
+          t5.className = 't5';
+          t5.setAttribute('tid', info.id);
+          t5.textContent = info.text;
+          currentH5Container.appendChild(t5);
+        }
+      });
+
+      // Re-bind sidebar interactions
+      if (typeof window !== 'undefined') {
+        const clickBind = function (selector, event, cb) {
+          document.querySelectorAll(selector).forEach(el => el.addEventListener(event, cb));
+        };
+
+        clickBind('#menu .t1', 'click', cb_t1);
+        clickBind('#menu .t2', 'click', cb_t2);
+        clickBind('#menu .t3', 'click', cb_t3);
+        clickBind('#menu .t4', 'click', cb_t4);
+        clickBind('#menu .t5', 'click', cb_t5);
+      }
+    }
+
+    // Initialize Safety-style navigation if applicable
+    document.addEventListener('DOMContentLoaded', function () {
+      initSafetyStyleNavigation();
+    });
+
+    // ScrollReveal functionality for sidebar
+    window.addEventListener('load', function () {
+      if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal().reveal('.lr', {
+          reset: true,
+          origin: 'left',
+          distance: '200px',
+          duration: 1000,
+          easing: 'ease',
+          opacity: 0
+        });
+        ScrollReveal().reveal('.rl', {
+          reset: true,
+          origin: 'right',
+          distance: '200px',
+          duration: 1000,
+          easing: 'ease',
+          opacity: 0
+        });
+
+
+      }
+    });
+  </script>
+
+  <script src="static/pagefind/pagefind-ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const el = document.querySelector('#search');
+      if (!el) return;
+
+      // Calculate Pagefind directory (avoid frozen 404 from directory URL)
+      const PF_UI_SRC = "static/pagefind/pagefind-ui.js";
+      const PF_BUNDLE = PF_UI_SRC.replace(/\/pagefind-ui\.js$/, '');
+
+      if (window.PagefindUI) {
+        // Normal: render search UI with Pagefind
+        new PagefindUI({
+          element: '#search',
+          bundlePath: PF_BUNDLE,
+          showSubResults: true,
+          placeholder: 'Search the wiki'
+        });
+      } else {
+
+        el.innerHTML = '<input type="search" class="pagefind-ui__search-input" placeholder="Search (index not built yet)">';
+      }
+    });
+  </script>
+
+
+  <!-- ECharts -->
+  <script src="static/vendor/echarts/echarts.min.js"></script>
+
+  
+<style>
+ /* Design-only: reduce initial top gap so content shows immediately */
+ .pagecontainer { margin-top: 4vh; }
+ .pagecontent { transform: none; margin-top: 0; }
+ 
+ /* Unified title styling */
+ .title2 { 
+ margin-bottom: 60px !important;
+ margin-left: -100px !important;
+ }
+ .title2 > span {
+ font-size: 8.5vw !important;
+ }
+
+ /* Navbar styles managed by global navbar.css, remove page-specific overrides here */
+
+ /* Dry Lab: set background image for Design & related pages */
+ .safety-bg-image {
+ background: url("https://static.igem.wiki/teams/5913/picture/drylab-background.webp") !important;
+ background-size: cover !important;
+ background-position: center center !important;
+ background-repeat: no-repeat !important;
+ }
+
+ /* Align Design page with fixed 250px sidebar on desktop */
+ @media (min-width: 921px) {
+ .design-bg-image {
+ left: 250px;
+ width: calc(100% - 250px);
+ }
+ 
+ /* Override sidebar position to move it to bottom */
+ .main .menubg {
+ top: 78px !important;
+ height: calc(100vh - 78px) !important;
+ }
+ }
+
+ /* Collapsible details/summary styling */
+ #auto-design-content details {
+ background: linear-gradient(135deg, rgba(66, 153, 225, 0.08), rgba(104, 211, 145, 0.08));
+ border: 1px solid rgba(66, 153, 225, 0.25);
+ border-radius: 8px;
+ padding: 0.8rem 1.2rem;
+ margin: 1.2rem 0;
+ transition: all 0.3s ease;
+ }
+
+ #auto-design-content details:hover {
+ background: linear-gradient(135deg, rgba(66, 153, 225, 0.12), rgba(104, 211, 145, 0.12));
+ border-color: rgba(66, 153, 225, 0.4);
+ }
+
+ #auto-design-content details[open] {
+ background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(104, 211, 145, 0.1));
+ border-color: rgba(66, 153, 225, 0.5);
+ }
+
+ #auto-design-content summary {
+ cursor: pointer;
+ font-weight: 600;
+ color: #2c5282;
+ list-style: none;
+ display: flex;
+ align-items: center;
+ user-select: none;
+ position: relative;
+ padding-left: 1.5rem;
+ }
+
+ /* Remove default triangle marker */
+ #auto-design-content summary::-webkit-details-marker {
+ display: none;
+ }
+
+ /* Custom arrow icon */
+ #auto-design-content summary::before {
+ content: '▶' !important;
+ display: inline-block !important;
+ position: absolute;
+ left: 0;
+ color: #4299e1;
+ font-size: 0.8em;
+ transition: transform 0.3s ease;
+ }
+
+ #auto-design-content details[open] summary::before {
+ transform: rotate(90deg);
+ }
+
+ #auto-design-content summary:hover {
+ color: #2b6cb0;
+ }
+
+ #auto-design-content details p {
+ margin-top: 0.8rem;
+ padding-left: 1.5rem;
+ color: #4a5568;
+ line-height: 1.7;
+ }
+
+ /* Remove pseudo-elements for everything except summary */
+ [id*="content"] *:not(summary)::before,
+ [id*="content"] *::after,
+ .pagecontent *:not(summary)::before,
+ .pagecontent *::after {
+ content: none !important;
+ display: none !important;
+ }
+
+</style>
+<script>
+ // Convert bold paragraph titles to semantic headings and build sidebar
+ document.addEventListener('DOMContentLoaded', function () {
+ const contentRoot = document.getElementById('auto-design-content');
+ if (!contentRoot) return;
+
+ function slugify(text) {
+ return text.toLowerCase()
+ .replace(/[^a-z0-9\u4e00-\u9fa5\s\.-]/g, '')
+ .trim()
+ .replace(/\s+/g, '-');
+ }
+
+ // Add IDs to existing headings for navigation
+ const allHeadings = Array.from(contentRoot.querySelectorAll('h1, h2, h3'));
+ allHeadings.forEach(heading => {
+ if (!heading.id) {
+ const text = heading.textContent.trim();
+ heading.id = slugify(text);
+ }
+ });
+
+ // Build sidebar menu from generated headings
+ const menu = document.getElementById('menu');
+ const menubg = document.querySelector('.menubg');
+ if (!menu || !menubg) return;
+ // Clear existing items
+ menu.innerHTML = '';
+
+ // Group headings with proper hierarchy (h1 > h2 > h3)
+ const headings = Array.from(contentRoot.querySelectorAll('h1, h2, h3'));
+ let currentH2Container = null;
+ let currentH3Container = null;
+ 
+ // First pass: collect all headings and determine which ones have children
+ const headingInfo = headings.map((node, index) => {
+ const level = parseInt(node.tagName.charAt(1));
+ const nextHeading = headings[index + 1];
+ const hasChildren = nextHeading && parseInt(nextHeading.tagName.charAt(1)) > level;
+ 
+ return {
+ node,
+ level,
+ hasChildren,
+ id: node.id,
+ text: node.textContent
+ };
+ });
+
+ headingInfo.forEach((info, index) => {
+ if (info.level === 1) {
+ const t1 = document.createElement('div');
+ t1.className = 't1';
+ t1.setAttribute('tid', info.id);
+ 
+ // Create text span
+ const textSpan = document.createElement('span');
+ textSpan.className = 'heading-text';
+ textSpan.textContent = info.text;
+ t1.appendChild(textSpan);
+ 
+ // Add expand icon if has children
+ if (info.hasChildren) {
+ const icon = document.createElement('span');
+ icon.className = 'expand-icon';
+				icon.innerHTML = '▶'; // Right arrow for collapsed state
+ t1.appendChild(icon);
+ }
+ 
+ menu.appendChild(t1);
+
+ const h2sec = document.createElement('div');
+ h2sec.className = 'h2-sec';
+ menu.appendChild(h2sec);
+
+ currentH2Container = h2sec;
+ currentH3Container = null; // Reset h3 container when new h1 starts
+ } else if (info.level === 2) {
+ if (!currentH2Container) {
+ currentH2Container = document.createElement('div');
+ currentH2Container.className = 'h2-sec';
+ menu.appendChild(currentH2Container);
+ }
+ const t2 = document.createElement('div');
+ t2.className = 't2';
+ t2.setAttribute('tid', info.id);
+ 
+ // Create text span
+ const textSpan = document.createElement('span');
+ textSpan.className = 'heading-text';
+ textSpan.textContent = info.text;
+ t2.appendChild(textSpan);
+ 
+ // Add expand icon if has children
+ if (info.hasChildren) {
+ const icon = document.createElement('span');
+ icon.className = 'expand-icon';
+				icon.innerHTML = '▶'; // Right arrow for collapsed state
+ t2.appendChild(icon);
+ }
+ 
+ currentH2Container.appendChild(t2);
+ 
+ // Create container for h3 items under this h2
+ const h3sec = document.createElement('div');
+ h3sec.className = 'h3-sec';
+ currentH2Container.appendChild(h3sec);
+ currentH3Container = h3sec;
+ } else if (info.level === 3) {
+ if (!currentH3Container) {
+ // If no h2 container exists, create one
+ if (!currentH2Container) {
+ currentH2Container = document.createElement('div');
+ currentH2Container.className = 'h2-sec';
+ menu.appendChild(currentH2Container);
+ }
+ currentH3Container = document.createElement('div');
+ currentH3Container.className = 'h3-sec';
+ currentH2Container.appendChild(currentH3Container);
+ }
+ const t3 = document.createElement('div');
+ t3.className = 't3';
+ t3.setAttribute('tid', info.id);
+ t3.textContent = info.text;
+ currentH3Container.appendChild(t3);
+ }
+ });
+
+ // Re-bind sidebar interactions provided in layout
+ if (typeof window !== 'undefined') {
+ const clickBind = function (selector, event, cb) {
+ document.querySelectorAll(selector).forEach(el => el.addEventListener(event, cb));
+ };
+
+ const cb_t1 = function (e) {
+ // Get the actual t1 element (in case user clicked on text span or icon)
+ const t1Element = e.target.closest('.t1');
+ if (!t1Element) return;
+ 
+ const isCurrentlyUnfolded = t1Element.classList.contains('unfold');
+ 
+ // Remove unfold class from all t1 elements and reset their icons
+ document.querySelectorAll('#menu .t1').forEach(item => {
+ item.classList.remove('unfold');
+ const icon = item.querySelector('.expand-icon');
+				if (icon) icon.innerHTML = '▶'; // Reset to right arrow (collapsed)
+ });
+ 
+ // Also reset all t2 elements when collapsing t1
+ document.querySelectorAll('#menu .t2').forEach(item => {
+ item.classList.remove('unfold');
+ const icon = item.querySelector('.expand-icon');
+				if (icon) icon.innerHTML = '▶'; // Reset to right arrow (collapsed)
+ });
+ 
+ // Toggle: if it was unfolded, keep it folded; if it was folded, unfold it
+ if (!isCurrentlyUnfolded) {
+ t1Element.classList.add('unfold');
+ const icon = t1Element.querySelector('.expand-icon');
+				if (icon) icon.innerHTML = '▼'; // Down arrow for expanded state
+ }
+ 
+ const targetId = t1Element.getAttribute('tid');
+ const el = document.getElementById(targetId);
+ if (el) {
+ // Calculate scroll to 70% position of section
+ const nav = document.querySelector('.my-nav');
+ const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+ const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+ const dynamicOffset = Math.floor(viewportHeight * 0.3) + navHeight;
+ 
+ const targetRect = el.getBoundingClientRect();
+ const targetTop = targetRect.top + window.pageYOffset;
+ const targetHeight = targetRect.height;
+ 
+ // Scroll to 70% position of section so highlight logic activates immediately
+ const target70PercentPoint = targetTop + (targetHeight * 0.7);
+ const scrollToPosition = Math.max(0, target70PercentPoint - dynamicOffset);
+ 
+ window.scrollTo({ 
+ top: scrollToPosition, 
+ behavior: 'smooth' 
+ });
+ }
+ window.userManualNavigation = true;
+ // Immediately update highlight state
+ setTimeout(() => {
+ updateActiveSection();
+ window.userManualNavigation = false;
+ }, 100);
+ };
+
+ const cb_t2 = function (e) {
+ // Get the actual t2 element (in case user clicked on text span or icon)
+ const t2Element = e.target.closest('.t2');
+ if (!t2Element) return;
+ 
+ // Check if this t2 has an expand icon (meaning it has children)
+ const icon = t2Element.querySelector('.expand-icon');
+ if (icon) {
+ // Toggle the h3-sec visibility using CSS classes
+ const h3Container = t2Element.nextElementSibling;
+ if (h3Container && h3Container.classList.contains('h3-sec')) {
+ const isCurrentlyExpanded = t2Element.classList.contains('unfold');
+ if (isCurrentlyExpanded) {
+ t2Element.classList.remove('unfold');
+						icon.innerHTML = '▶'; // Collapsed state - right arrow
+ } else {
+ t2Element.classList.add('unfold');
+						icon.innerHTML = '▼'; // Expanded state - down arrow
+ }
+ }
+ }
+ 
+ const targetId = t2Element.getAttribute('tid');
+ const el = document.getElementById(targetId);
+ if (el) {
+ // Calculate scroll to 70% position of section
+ const nav = document.querySelector('.my-nav');
+ const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+ const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+ const dynamicOffset = Math.floor(viewportHeight * 0.3) + navHeight;
+ 
+ const targetRect = el.getBoundingClientRect();
+ const targetTop = targetRect.top + window.pageYOffset;
+ const targetHeight = targetRect.height;
+ 
+ // Scroll to 70% position of section so highlight logic activates immediately
+ const target70PercentPoint = targetTop + (targetHeight * 0.7);
+ const scrollToPosition = Math.max(0, target70PercentPoint - dynamicOffset);
+ 
+ window.scrollTo({ 
+ top: scrollToPosition, 
+ behavior: 'smooth' 
+ });
+ }
+ window.userManualNavigation = true;
+ window.navigationClicked = true; // Set navigation click flag
+ // Immediately update highlight state
+ setTimeout(() => {
+ updateActiveSection();
+ window.userManualNavigation = false;
+ }, 100);
+ };
+
+ const cb_t3 = function (e) {
+ const targetId = e.target.getAttribute('tid');
+ const el = document.getElementById(targetId);
+ if (el) {
+ // Calculate scroll to 70% position of section
+ const nav = document.querySelector('.my-nav');
+ const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+ const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+ const dynamicOffset = Math.floor(viewportHeight * 0.3) + navHeight;
+ 
+ const targetRect = el.getBoundingClientRect();
+ const targetTop = targetRect.top + window.pageYOffset;
+ const targetHeight = targetRect.height;
+ 
+ // Scroll to 70% position of section so highlight logic activates immediately
+ const target70PercentPoint = targetTop + (targetHeight * 0.7);
+ const scrollToPosition = Math.max(0, target70PercentPoint - dynamicOffset);
+ 
+ window.scrollTo({ 
+ top: scrollToPosition, 
+ behavior: 'smooth' 
+ });
+ }
+ window.userManualNavigation = true;
+ window.navigationClicked = true; // Set navigation click flag
+ // Immediately update highlight state
+ setTimeout(() => {
+ updateActiveSection();
+ window.userManualNavigation = false;
+ }, 100);
+ };
+
+ // Enhanced scroll highlighting for design page (supports h1, h2, h3)
+ const sections = document.querySelectorAll('#auto-design-content h1, #auto-design-content h2, #auto-design-content h3');
+ const menuItems = {
+ t1: document.querySelectorAll('#menu .t1'),
+ t2: document.querySelectorAll('#menu .t2'),
+ t3: document.querySelectorAll('#menu .t3')
+ };
+ 
+ 
+ // Global updateActiveSection function for design page
+ window.updateActiveSection = function() {
+ // Skip if user is manually navigating or has clicked navigation
+ if (window.userManualNavigation || window.navigationClicked) {
+ return;
+ }
+ 
+ const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+ const nav = document.querySelector('.my-nav');
+ const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+ const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+ const dynamicOffset = Math.floor(viewportHeight * 0.3) + navHeight;
+ 
+ const currentViewPosition = scrollTop + dynamicOffset;
+ 
+ // Simplified logic: find the section heading closest to current viewport (most precise hierarchy)
+ let activeHeading = null;
+ let minDistance = Infinity;
+ 
+ sections.forEach(section => {
+ const rect = section.getBoundingClientRect();
+ const sectionTop = rect.top + scrollTop;
+ 
+ // Only consider sections already scrolled past (section top is above current position)
+ if (sectionTop <= currentViewPosition) {
+ const distance = currentViewPosition - sectionTop;
+ 
+ // Select the nearest section
+ if (distance < minDistance) {
+ minDistance = distance;
+ activeHeading = section;
+ }
+ }
+ });
+ 
+ 
+ if (activeHeading) {
+ console.log('Active section:', activeHeading.tagName, activeHeading.textContent.trim(), 'ID:', activeHeading.id);
+ }
+ 
+ // Clear all active states
+ menuItems.t1.forEach(item => {
+ item.classList.remove('active', 'show');
+ });
+ menuItems.t2.forEach(item => {
+ item.classList.remove('active', 'show');
+ });
+ menuItems.t3.forEach(item => item.classList.remove('active', 'show'));
+ 
+ 
+ if (activeHeading) {
+ const headingLevel = activeHeading.tagName;
+ const headingId = activeHeading.id;
+ 
+ if (headingLevel === 'H1') {
+ const activeT1 = document.querySelector(`#menu .t1[tid="${headingId}"]`);
+ if (activeT1) {
+ activeT1.classList.add('active', 'show');
+ 
+ // H2
+ const h2Container = activeT1.nextElementSibling;
+ if (h2Container && h2Container.classList.contains('h2-sec') && h2Container.children.length > 0) {
+ activeT1.classList.add('unfold');
+ const icon = activeT1.querySelector('.expand-icon');
+					if (icon) icon.innerHTML = '▼'; // Expanded state - down arrow
+ }
+ }
+ } else if (headingLevel === 'H2') {
+ const activeT2 = document.querySelector(`#menu .t2[tid="${headingId}"]`);
+ if (activeT2) {
+ activeT2.classList.add('active', 'show');
+ 
+ // H3
+ const h3Container = activeT2.nextElementSibling;
+ if (h3Container && h3Container.classList.contains('h3-sec') && h3Container.children.length > 0) {
+ activeT2.classList.add('unfold');
+ const icon = activeT2.querySelector('.expand-icon');
+					if (icon) icon.innerHTML = '▼'; // Expanded state - down arrow
+ }
+ 
+ // H1
+ const parentH2Sec = activeT2.closest('.h2-sec');
+ if (parentH2Sec) {
+ const parentT1 = parentH2Sec.previousElementSibling;
+ if (parentT1 && parentT1.classList.contains('t1')) {
+ parentT1.classList.add('unfold');
+ const icon = parentT1.querySelector('.expand-icon');
+						if (icon) icon.innerHTML = '▼'; // Expanded state - down arrow
+ }
+ }
+ }
+ } else if (headingLevel === 'H3') {
+ const activeT3 = document.querySelector(`#menu .t3[tid="${headingId}"]`);
+ if (activeT3) {
+ activeT3.classList.add('active', 'show');
+ 
+ // H2H1
+ const parentH3Sec = activeT3.closest('.h3-sec');
+ if (parentH3Sec) {
+ const parentT2 = parentH3Sec.previousElementSibling;
+ if (parentT2 && parentT2.classList.contains('t2')) {
+ parentT2.classList.add('unfold');
+ const icon = parentT2.querySelector('.expand-icon');
+						if (icon) icon.innerHTML = '▼'; // Expanded state - down arrow
+ 
+ const parentH2Sec = parentT2.closest('.h2-sec');
+ if (parentH2Sec) {
+ const parentT1 = parentH2Sec.previousElementSibling;
+ if (parentT1 && parentT1.classList.contains('t1')) {
+ parentT1.classList.add('unfold');
+ const icon = parentT1.querySelector('.expand-icon');
+								if (icon) icon.innerHTML = '▼'; // Expanded state - down arrow
+ }
+ }
+ }
+ }
+ }
+ }
+ }
+ }
+ 
+ // Initialize design-specific scroll highlighting
+ function initDesignScrollHighlight() {
+ // Listen for scroll events with throttling
+ let scrollTimeout;
+ window.addEventListener('scroll', () => {
+ 
+ if (window.navigationClicked) {
+ window.navigationClicked = false;
+ }
+ clearTimeout(scrollTimeout);
+ scrollTimeout = setTimeout(window.updateActiveSection, 10);
+ });
+ 
+ // Initial update
+ setTimeout(window.updateActiveSection, 100);
+ 
+ console.log('Design scroll highlight initialized with', sections.length, 'sections');
+ }
+ 
+ initDesignScrollHighlight();
+ 
+ clickBind('#menu .t1', 'click', cb_t1);
+ clickBind('#menu .t2', 'click', cb_t2);
+ clickBind('#menu .t3', 'click', cb_t3);
+ }
+ });
+</script>
+<script>
+ // Additional functionality for Design page
+ (function() {
+ var contentRoot = document.getElementById('auto-design-content');
+ if (!contentRoot) return;
+
+ function textOf(node) {
+ return (node && node.textContent || '').trim();
+ }
+
+ // Hide Table of Contents block if present
+ try {
+ var allNodes = contentRoot.querySelectorAll('*');
+ for (var z = 0; z < allNodes.length; z++) {
+ var node = allNodes[z];
+ var t = textOf(node).toLowerCase();
+ if (!t) continue;
+ if (t.indexOf('table of contents') !== -1) {
+ // try to hide its nearest block that also contains a UL
+ var container = node;
+ for (var up = 0; up < 5 && container; up++) {
+ if (container.querySelector && container.querySelector('ul')) break;
+ container = container.parentElement;
+ }
+ if (container && container !== contentRoot) {
+ container.style.display = 'none';
+ } else {
+ node.style.display = 'none';
+ var next = node.nextElementSibling;
+ if (next && next.tagName === 'UL') next.style.display = 'none';
+ }
+ break;
+ }
+ }
+ } catch (e) {}
+
+
+ // Enhanced typography: Auto-apply styling classes
+ try {
+ var paragraphs = contentRoot.querySelectorAll('p');
+ paragraphs.forEach(function(p) {
+ var text = p.textContent.toLowerCase();
+ 
+ // Apply warning styles for critical information
+ if (text.includes('challenge') || text.includes('limitation') || text.includes('issue')) {
+ p.classList.add('design-warning');
+ }
+ 
+ // Apply success styles for solutions
+ if (text.includes('solution') || text.includes('advantage') || text.includes('optimization')) {
+ p.classList.add('design-success');
+ }
+ 
+ // Apply info styles for technical details
+ if (text.includes('workflow') || text.includes('mechanism') || text.includes('validation')) {
+ p.classList.add('design-info');
+ }
+ 
+ // Handle image groups - if paragraph contains multiple images, wrap them
+ var images = p.querySelectorAll('img');
+ if (images.length > 1) {
+ // Create wrapper for multiple images
+ var wrapper = document.createElement('div');
+ wrapper.className = 'image-group';
+ 
+ // Move all images to the wrapper
+ images.forEach(function(img) {
+ wrapper.appendChild(img.cloneNode(true));
+ });
+ 
+ // Clear the paragraph and add the wrapper
+ p.innerHTML = '';
+ p.appendChild(wrapper);
+ }
+ });
+
+ // Enhanced image loading with fade-in effect
+ var images = contentRoot.querySelectorAll('img');
+ images.forEach(function(img) {
+ if (img.complete) {
+ img.style.opacity = '1';
+ } else {
+ img.addEventListener('load', function() {
+ this.style.opacity = '1';
+ });
+ }
+ });
+
+ // Add smooth scroll behavior for better UX
+ var links = contentRoot.querySelectorAll('a[href^="#"]');
+ links.forEach(function(link) {
+ link.addEventListener('click', function(e) {
+ var target = document.querySelector(this.getAttribute('href'));
+ if (target) {
+ e.preventDefault();
+ target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }
+ });
+ });
+
+ } catch (e) {
+ console.log('Enhanced design typography features failed to load:', e);
+ }
+ })();
+</script>
+
+
+
+  <!-- Bootstrap Bundle -->
+  <script src="static/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

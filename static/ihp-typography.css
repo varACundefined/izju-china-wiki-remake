@@ -1,0 +1,839 @@
+/* iHP Page Enhanced Typography Styles - Based on Collaboration CSS */
+
+/* Global font override */
+*:not(#toc):not(#toc *):not(.toc):not(.toc *) {
+  font-family: Arial, sans-serif !important;
+}
+
+/* 弹窗整体容器：居中显示，无暗化背景 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: none;          /* ✅ 去掉整体模糊 */
+  background: transparent;        /* ✅ 去掉暗化背景 */
+  z-index: 10000;
+}
+
+/* 弹窗主体内容（弱毛玻璃 + 提高白度 + 清晰黑字） */
+.ihp-modal .modal-content {
+  background: linear-gradient(135deg, rgba(255,255,255,0.93), rgba(245,248,255,0.87)) !important;
+  backdrop-filter: blur(1.5px) !important;
+  border: 1.5px solid rgba(200, 220, 255, 0.4) !important;
+  border-radius: 20px !important;
+  padding: 4vh 3vw !important;
+  width: 70vw !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  color: #1a2238 !important; /* 深蓝灰主字体 */
+  font-family: "Inter", "Noto Sans", "Helvetica Neue", Arial, sans-serif !important;
+  line-height: 1.75 !important;
+  font-size: 17px !important;
+  letter-spacing: 0.2px !important;
+  box-shadow: 0 8px 32px rgba(0, 20, 60, 0.25) !important;
+  position: relative !important;
+  animation: modalFadeIn 0.6s ease both !important;
+}
+
+.ihp-modal .modal-content h3,
+.ihp-modal .modal-content h4 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: revert !important;
+  line-height: 1.4 !important;
+  font-weight: revert !important;
+  margin: 1em 0 !important;
+  color: #0b2545 !important;
+  text-shadow: none !important;
+  overflow: visible !important;
+}
+
+/* 重新定义样式层级 */
+.ihp-modal .modal-content h3 {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #10316b !important;
+  text-align: center !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+  text-transform: none !important;
+}
+
+.ihp-modal .modal-content h4 {
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  color: #0b2545 !important;
+  margin-top: 1.6em !important;
+  margin-bottom: 0.6em !important;
+  padding-left: 12px !important;
+  border-left: 4px solid #4a90e2 !important;
+  background: rgba(74,144,226,0.08) !important;
+  border-radius: 6px !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* 段落与列表 */
+.ihp-modal .modal-content p {
+  font-size: 17px !important;
+  color: #1a2238 !important;
+  margin-bottom: 1em !important;
+}
+.ihp-modal .modal-content ul,
+.ihp-modal .modal-content ol {
+  margin-left: 1.5em !important;
+  margin-bottom: 1em !important;
+}
+.ihp-modal .modal-content li {
+  margin-bottom: 0.5em !important;
+}
+
+/* 链接颜色（冷蓝） */
+.ihp-modal .modal-content a {
+  color: #2b7cff !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+.ihp-modal .modal-content a:hover {
+  text-decoration: underline !important;
+  color: #1c4fe0 !important;
+}
+
+
+/* 关闭按钮 */
+/* 圆形关闭按钮 */
+.close-modal {
+  position: absolute;
+  top: 15px; right: 20px; transform: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);   /* 白底微透明 */
+  color: #111;
+  font-size: 26px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+.close-modal:hover {
+  background: #ff4444;
+  color: white;
+  transform: translateX(-50%) scale(1.05);
+}
+
+
+/* ✅ 淡入+上升动画 */
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ✅ 关闭时的淡出动画（可选） */
+@keyframes modalFadeOut {
+  from {opacity: 1; transform: translateY(0) scale(1);}
+  to {opacity: 0; transform: translateY(40px) scale(0.98);}
+}
+
+/* === iHP Timeline Button 蓝白玻璃风格 === */
+.timeline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(200, 220, 255, 0.25);  /* ✅ 蓝白玻璃背景 */
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  padding: 1.2vh 2vw;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0b2545;                          /* ✅ 深蓝字体 */
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 50, 0.15);
+}
+
+/* 悬停效果：更亮的蓝色玻璃 + 轻微放大 */
+.timeline-btn:hover {
+  background: rgba(220, 235, 255, 0.45);
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 80, 0.25);
+}
+
+/* 左侧圆形数字 */
+.timeline-btn .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #003366;                     /* ✅ 深蓝色圆圈 */
+  color: white;                            /* ✅ 白字 */
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 右侧标题文字 */
+.timeline-btn .label {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+/* Main content container improvements */
+#auto-ihp-content {
+  font-family: Arial, sans-serif !important;
+  line-height: 1.7;
+  color: #2d3748;
+  max-width: none;
+  padding: 0 2rem;
+}
+
+/* Enhanced heading hierarchy */
+#auto-ihp-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 3rem 0 1.5rem 0;
+  padding: 1.5rem 0 1rem 0;
+  border-bottom: 4px solid #38a169;
+  position: relative;
+  letter-spacing: -0.025em;
+}
+
+#auto-ihp-content h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #38a169, #48bb78);
+  border-radius: 2px;
+}
+
+#auto-ihp-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 2.5rem 0 1rem 0;
+  padding: 1rem 0 0.5rem 1rem;
+  border-left: 5px solid #ed8936;
+  background: linear-gradient(90deg, rgba(237, 137, 54, 0.1), transparent);
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+#auto-ihp-content h2::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #ed8936, #dd6b20);
+  border-radius: 3px 0 0 3px;
+}
+
+#auto-ihp-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 2rem 0 1rem 0;
+  padding: 0.75rem 0 0.5rem 0.75rem;
+  border-left: 3px solid #4299e1;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.08), transparent);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Enhanced paragraph styling */
+#auto-ihp-content p {
+  margin: 1.25rem 0;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1a202c;
+}
+
+/* First paragraph after headings - lead paragraph style */
+#auto-ihp-content h1 + p,
+#auto-ihp-content h2 + p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(237, 242, 247, 0.8);
+  border-radius: 8px;
+  border-left: 4px solid #38a169;
+}
+
+/* Enhanced list styling */
+#auto-ihp-content ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+#auto-ihp-content ul li {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  line-height: 1.7;
+  background: rgba(247, 250, 252, 0.5);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  color: #1a202c;
+}
+
+#auto-ihp-content ul li:hover {
+  background: rgba(237, 242, 247, 0.8);
+}
+
+#auto-ihp-content ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  color: #38a169;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Ordered lists */
+#auto-ihp-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+  counter-reset: item;
+}
+
+#auto-ihp-content ol li {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  line-height: 1.7;
+  background: rgba(247, 250, 252, 0.5);
+  border-radius: 6px;
+  color: #1a202c;
+  list-style: none;
+  counter-increment: item;
+}
+
+#auto-ihp-content ol li::before {
+  content: counter(item) ". ";
+  color: #ed8936;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Nested lists */
+#auto-ihp-content ul ul {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}
+
+#auto-ihp-content ul ul li {
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+
+#auto-ihp-content ul ul li::before {
+  content: '•';
+  color: #ed8936;
+  left: 0.5rem;
+}
+
+/* Enhanced strong text styling */
+#auto-ihp-content strong {
+  font-weight: 600;
+  color: #1a202c;
+  background: linear-gradient(120deg, rgba(56, 161, 105, 0.15), rgba(237, 137, 54, 0.15));
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* Emphasis styling */
+#auto-ihp-content em {
+  font-style: italic;
+  color: #2d3748;
+  background: rgba(237, 242, 247, 0.7);
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+}
+
+/* Enhanced image styling */
+#auto-ihp-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#auto-ihp-content img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Link styling */
+#auto-ihp-content a {
+  color: #2f855a;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+#auto-ihp-content a:hover {
+  color: #276749;
+  border-bottom-color: #2f855a;
+}
+
+/* Section dividers */
+#auto-ihp-content h1 + * {
+  margin-top: 2rem;
+}
+
+#auto-ihp-content h2 + * {
+  margin-top: 1.5rem;
+}
+
+/* Enhanced content sections with visual cards */
+#auto-ihp-content > p:not(:first-child),
+#auto-ihp-content > ul {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#auto-ihp-content > p:hover,
+#auto-ihp-content > ul:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #auto-ihp-content {
+    padding: 0 1rem;
+  }
+  
+  #auto-ihp-content h1 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+  }
+  
+  #auto-ihp-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem 0;
+    padding: 0.75rem 0 0.5rem 0.75rem;
+  }
+  
+  #auto-ihp-content h3 {
+    font-size: 1.125rem;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+  
+  #auto-ihp-content ul li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+  }
+  
+  #auto-ihp-content ul li::before {
+    left: 0.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  #auto-ihp-content h1,
+  #auto-ihp-content h2,
+  #auto-ihp-content h3 {
+    break-after: avoid;
+  }
+  
+  #auto-ihp-content img {
+    break-inside: avoid;
+    max-width: 100%;
+  }
+  
+  #auto-ihp-content ul li,
+  #auto-ihp-content ol li {
+    break-inside: avoid;
+  }
+}
+
+/* Smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states for accessibility */
+#auto-ihp-content a:focus,
+#auto-ihp-content h1:target,
+#auto-ihp-content h2:target,
+#auto-ihp-content h3:target {
+  outline: 2px solid #38a169;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading animation for images */
+#auto-ihp-content img {
+  opacity: 0;
+  animation: fadeInImage 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* PDF embed styling */
+#auto-ihp-content object[type="application/pdf"],
+#auto-ihp-content iframe[src*=".pdf"] {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+/* Responsive PDF viewer */
+@media (max-width: 768px) {
+  #auto-ihp-content object[type="application/pdf"],
+  #auto-ihp-content iframe[src*=".pdf"] {
+    height: 500px !important;
+  }
+}
+
+/* Dark theme enhancements */
+:root.dark #auto-ihp-content h1 {
+  color: #ffffff !important;
+  text-shadow: 0 0 50px rgba(168, 85, 247, 1), 0 0 30px rgba(168, 85, 247, 0.9), 0 0 15px rgba(168, 85, 247, 0.7);
+  border-bottom-color: #a855f7;
+  font-weight: 700;
+}
+
+:root.dark #auto-ihp-content h2 {
+  color: #ec4899 !important;
+  text-shadow: 0 0 40px rgba(236, 72, 153, 1), 0 0 20px rgba(236, 72, 153, 0.8), 0 0 10px rgba(236, 72, 153, 0.6);
+  border-left-color: #ec4899;
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.2), transparent);
+  font-weight: 700;
+}
+
+:root.dark #auto-ihp-content h3 {
+  color: #c084fc !important;
+  text-shadow: 0 0 30px rgba(192, 132, 252, 0.9), 0 0 15px rgba(192, 132, 252, 0.7), 0 0 8px rgba(192, 132, 252, 0.5);
+  font-weight: 700;
+  border-left-color: #c084fc;
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0.15), transparent);
+}
+
+/* Dark theme - all paragraphs */
+:root.dark #auto-ihp-content p {
+  color: #e5e7eb !important;
+}
+
+/* Dark theme - lead paragraphs after headings */
+:root.dark #auto-ihp-content h1 + p,
+:root.dark #auto-ihp-content h2 + p {
+  color: #f3f4f6 !important;
+  background: rgba(55, 65, 81, 0.7) !important;
+  border-left-color: #f97316 !important;
+}
+
+/* Dark theme - list items */
+:root.dark #auto-ihp-content ul li {
+  background: rgba(55, 65, 81, 0.4) !important;
+  color: #e5e7eb !important;
+}
+
+:root.dark #auto-ihp-content ul li:hover {
+  background: rgba(75, 85, 99, 0.6) !important;
+}
+
+:root.dark #auto-ihp-content ol li {
+  background: rgba(55, 65, 81, 0.4) !important;
+  color: #e5e7eb !important;
+}
+
+/* Dark theme - strong/bold text */
+:root.dark #auto-ihp-content strong {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15) !important;
+}
+
+/* Dark theme - em/italic text */
+:root.dark #auto-ihp-content em {
+  color: #a78bfa !important;
+  background: rgba(167, 139, 250, 0.15) !important;
+}
+
+/* Dark theme - links */
+:root.dark #auto-ihp-content a {
+  color: #60a5fa !important;
+}
+
+:root.dark #auto-ihp-content a:hover {
+  color: #93c5fd !important;
+  border-bottom-color: #60a5fa !important;
+}
+
+/* Dark theme - content cards */
+:root.dark #auto-ihp-content > p:not(:first-child),
+:root.dark #auto-ihp-content > ul {
+  background: rgba(31, 41, 55, 0.5) !important;
+  border-color: rgba(75, 85, 99, 0.3) !important;
+  color: #e5e7eb !important;
+}
+
+:root.dark #auto-ihp-content > p:hover,
+:root.dark #auto-ihp-content > ul:hover {
+  background: rgba(31, 41, 55, 0.7) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark theme - images */
+:root.dark #auto-ihp-content img {
+  border-color: rgba(75, 85, 99, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+:root.dark #auto-ihp-content img:hover {
+  border-color: #38a169 !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Dark theme - PDF viewer */
+:root.dark #auto-ihp-content object[type="application/pdf"] {
+  border-color: rgba(75, 85, 99, 0.5) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* 修复弹窗内有序/无序列表的层级缩进与样式 */
+.ihp-modal .modal-content ul,
+.ihp-modal .modal-content ol {
+  margin: 0.6em 0 0.6em 1.6em !important;
+  padding-left: 1.4em !important;
+  list-style-position: outside !important;
+}
+
+/* 第一层列表样式 */
+.ihp-modal .modal-content ul {
+  list-style-type: disc !important;
+}
+.ihp-modal .modal-content ol {
+  list-style-type: decimal !important;
+}
+
+/* 第二层（嵌套） */
+.ihp-modal .modal-content ul ul {
+  list-style-type: circle !important;
+  margin-left: 1.4em !important;
+}
+.ihp-modal .modal-content ol ol {
+  list-style-type: lower-alpha !important;
+  margin-left: 1.4em !important;
+}
+
+/* 第三层（嵌套更深） */
+.ihp-modal .modal-content ul ul ul {
+  list-style-type: square !important;
+  margin-left: 1.4em !important;
+}
+.ihp-modal .modal-content ol ol ol {
+  list-style-type: lower-roman !important;
+  margin-left: 1.4em !important;
+}
+
+/* 每个列表项之间加轻微行距 */
+.ihp-modal .modal-content li {
+  margin: 0.35em 0 !important;
+  padding-left: 0.2em !important;
+  text-indent: 0 !important;
+  line-height: 1.6 !important;
+  color: #1a2238 !important;
+}
+
+
+/* =============== 基础：默认 Light 变量（仅作用于弹窗） =============== */
+.ihp-modal {
+  /* glass tokens */
+  --ihp-modal-bg: linear-gradient(135deg, rgba(255,255,255,0.93), rgba(245,248,255,0.87));
+  --ihp-modal-stroke: rgba(200, 220, 255, 0.40);
+  --ihp-modal-text: #1a2238;           /* 深蓝灰 */
+  --ihp-modal-strong: #0e2f5a;         /* 强调色 */
+  --ihp-modal-em: #274c77;             /* 斜体色 */
+  --ihp-modal-shadow: 0 8px 32px rgba(0, 20, 60, 0.25);
+  --ihp-modal-blur: 1.5px;             /* 轻毛玻璃 */
+}
+
+/* 实际应用变量到弹窗主体（保持你现有结构） */
+.ihp-modal .modal-content {
+  background: var(--ihp-modal-bg) !important;
+  border: 1.5px solid var(--ihp-modal-stroke) !important;
+  color: var(--ihp-modal-text) !important;
+  box-shadow: var(--ihp-modal-shadow) !important;
+  -webkit-backdrop-filter: blur(var(--ihp-modal-blur));
+          backdrop-filter: blur(var(--ihp-modal-blur));
+}
+
+/* 文本细节（仅在弹窗内生效） */
+.ihp-modal .modal-content p,
+.ihp-modal .modal-content li { text-indent: 0 !important; }
+.ihp-modal .modal-content strong { color: var(--ihp-modal-strong) !important; font-weight: 700 !important; display:inline !important; }
+.ihp-modal .modal-content em { color: var(--ihp-modal-em) !important; font-style: italic !important; }
+
+/* 图片阴影在不同主题都好看 */
+.ihp-modal .modal-content img {
+  max-width: 85%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 20, 60, 0.25);
+}
+
+/* =============== 自动暗黑模式：跟随系统（English: prefers-color-scheme） =============== */
+@media (prefers-color-scheme: dark) {
+  .ihp-modal {
+    --ihp-modal-bg: linear-gradient(135deg, rgba(20,26,40,0.75), rgba(12,16,28,0.72));
+    --ihp-modal-stroke: rgba(120, 140, 200, 0.35);
+    --ihp-modal-text: #e8eefc;         /* 亮字色 */
+    --ihp-modal-strong: #b9d2ff;       /* 强调浅蓝 */
+    --ihp-modal-em: #9bb8ff;           /* 斜体浅蓝 */
+    --ihp-modal-shadow: 0 12px 36px rgba(0, 10, 30, 0.55);
+    --ihp-modal-blur: 2.5px;           /* 暗色下略增毛玻璃便于对比 */
+  }
+  .ihp-modal .modal-content img {
+    box-shadow: 0 6px 24px rgba(0, 10, 30, 0.55);
+  }
+}
+
+/* =============== 手动覆盖：当 <html data-theme="light|dark"> 存在时优先 =============== */
+/* 强制 Light */
+html[data-theme="light"] .ihp-modal {
+  --ihp-modal-bg: linear-gradient(135deg, rgba(255,255,255,0.93), rgba(245,248,255,0.87));
+  --ihp-modal-stroke: rgba(200, 220, 255, 0.40);
+  --ihp-modal-text: #1a2238;
+  --ihp-modal-strong: #0e2f5a;
+  --ihp-modal-em: #274c77;
+  --ihp-modal-shadow: 0 8px 32px rgba(0, 20, 60, 0.25);
+  --ihp-modal-blur: 1.5px;
+}
+/* 强制 Dark */
+html[data-theme="dark"] .ihp-modal {
+  --ihp-modal-bg: linear-gradient(135deg, rgba(20,26,40,0.75), rgba(12,16,28,0.72));
+  --ihp-modal-stroke: rgba(120, 140, 200, 0.35);
+  --ihp-modal-text: #e8eefc;
+  --ihp-modal-strong: #b9d2ff;
+  --ihp-modal-em: #9bb8ff;
+  --ihp-modal-shadow: 0 12px 36px rgba(0, 10, 30, 0.55);
+  --ihp-modal-blur: 2.5px;
+}
+
+/* ================== Timeline 按钮基础样式 ================== */
+.timeline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 1.2vh 2vw;
+  border-radius: 14px;
+  border: 2px solid var(--timeline-border);
+  background: var(--timeline-bg);
+  color: var(--timeline-text);
+  font-family: "Inter", "Noto Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 悬停发光效果 */
+.timeline-btn:hover {
+  box-shadow: 0 0 15px var(--timeline-glow);
+  transform: translateY(-2px);
+}
+
+/* 编号圆圈 */
+.timeline-btn .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--circle-bg);
+  color: var(--circle-text);
+  box-shadow: 0 2px 8px var(--circle-shadow);
+}
+
+/* ================== Light 主题（默认） ================== */
+:root {
+  --timeline-bg: rgba(255,255,255,0.15);
+  --timeline-border: rgba(160,180,220,0.45);
+  --timeline-text: #1a2238;
+  --timeline-glow: rgba(70,120,255,0.4);
+
+  --circle-bg: radial-gradient(circle at 30% 30%, #4c8bf5, #2a65d0);
+  --circle-text: #ffffff;
+  --circle-shadow: rgba(60,90,160,0.3);
+}
+
+/* ================== Dark 模式自动切换 ================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --timeline-bg: rgba(255,255,255,0.08);
+    --timeline-border: rgba(150,180,250,0.25);
+    --timeline-text: #e8eefc;
+    --timeline-glow: rgba(120,180,255,0.6);
+
+    --circle-bg: radial-gradient(circle at 30% 30%, #274a86, #0f295a);
+    --circle-text: #dfe8ff;
+    --circle-shadow: rgba(50,90,200,0.5);
+  }
+}
+
+/* ================== 手动覆盖（data-theme） ================== */
+html[data-theme="light"] {
+  --timeline-bg: rgba(255,255,255,0.15);
+  --timeline-border: rgba(160,180,220,0.45);
+  --timeline-text: #1a2238;
+  --timeline-glow: rgba(70,120,255,0.4);
+
+  --circle-bg: radial-gradient(circle at 30% 30%, #4c8bf5, #2a65d0);
+  --circle-text: #ffffff;
+  --circle-shadow: rgba(60,90,160,0.3);
+}
+
+html[data-theme="dark"] {
+  --timeline-bg: rgba(255,255,255,0.08);
+  --timeline-border: rgba(150,180,250,0.25);
+  --timeline-text: #e8eefc;
+  --timeline-glow: rgba(120,180,255,0.6);
+
+  --circle-bg: radial-gradient(circle at 30% 30%, #274a86, #0f295a);
+  --circle-text: #dfe8ff;
+  --circle-shadow: rgba(50,90,200,0.5);
+}

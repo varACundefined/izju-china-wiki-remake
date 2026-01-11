@@ -1,0 +1,331 @@
+﻿<!doctype html>
+<html lang="en">
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Embed</title>
+  <link href="/izju-china-wiki-remake./static/home.css" rel="stylesheet">
+</head>
+<body class="all no-sidebar">
+  <div id="title">
+    <div class="hero-animation-container">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/picture/menu.webp" 
+           alt="Team Logo" 
+           class="hero-team-logo" 
+           id="teamLogo">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/home/0.webp" 
+           alt="Fox Mascot" 
+           class="hero-fox-mascot" 
+           id="foxMascot">
+    </div>
+  </div>
+  <div class="content" style="margin-top: 0vh;overflow: hidden;">
+    <div class="section-bg-1"></div>
+
+    <div class="appear" id="rising-title" style="position: absolute; top: 165vh; width: 100%; text-align: center; z-index: 10;">
+      <span style="font-size: 45px; font-weight: bold; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+        Antimicrobial Resistance is <span id="rising-text" class="rising-animation">Rising</span>
+      </span>
+    </div>
+
+    <div class="amr-stats-container appear" id="stats-container" style="position: absolute; top: 185vh; left: 10vw; right: 10vw; display: flex; justify-content: space-around; align-items: flex-start;">
+      <div class="stat-box death-stat" style="flex: 1; text-align: center; padding: 3vh 2vw;">
+        <div class="stat-emoji">馃拃</div>
+        <div class="stat-number" style="font-size: 60px; font-weight: bold; color: #ff6b6b; margin-bottom: 2vh;">
+          <span id="death-count">0</span>
+        </div>
+        <div class="stat-label" style="font-size: 22px; color: white; line-height: 1.5;">
+          deaths / year by 2050
+        </div>
+        <div class="stat-source" style="font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 1vh; font-style: italic;">
+          (The Lancet 2022; O'Neill Report 2016)
+        </div>
+      </div>
+      <div class="stat-box money-stat" style="flex: 1; text-align: center; padding: 3vh 2vw;">
+        <div class="stat-emoji">馃挵</div>
+        <div class="stat-number" style="font-size: 60px; font-weight: bold; color: #ffd93d; margin-bottom: 2vh;">
+          $<span id="money-count">0</span>
+        </div>
+        <div class="stat-label" style="font-size: 22px; color: white; line-height: 1.5;">
+          cumulative loss by 2050
+        </div>
+        <div class="stat-source" style="font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 1vh; font-style: italic;">
+          (O'Neill Report 2016; World Bank 2017)
+        </div>
+      </div>
+    </div>
+
+    <div class="appear" id="failing-title" style="position: absolute; top: 250vh; width: 100%; text-align: center; z-index: 10;">
+      <span style="font-size: 45px; font-weight: bold; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+        Conventional antibiotics are <span id="failing-text" class="falling-animation">failing</span>
+      </span>
+    </div>
+
+    <div class="appear" id="transmission-title" style="position: absolute; top: 280vh; width: 100%; text-align: center; z-index: 10;">
+      <span style="font-size: 45px; font-weight: bold; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+        <span id="resistance-text" class="pulse-animation">Resistance</span> fuels transmission
+      </span>
+    </div>
+
+    <div style="position: absolute; top: 310vh; width: 100%; display: flex; justify-content: center; align-items: center; padding: 0 5vw;">
+      <div class="appear transmission-chart" id="transmission-image" style="flex: 1; max-width: 45%; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+        <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/home/r0.webp" 
+             alt="Transmission visualization" 
+             style="width: 200%; max-width: none; transform: scale(1.3);">
+      </div>
+      <div style="flex: 1; max-width: 45%; display: flex; flex-direction: column; gap: 3vh; padding-left: 3vw;">
+        <div class="appear data-box" id="transmission-stat1" 
+             style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2); 
+                    border-radius: 20px; padding: 3vh 2vw; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+          <div style="font-size: 28px; font-weight: bold; color: white; margin-bottom: 1vh;">
+            Resistant infections spread <span style="color: #ffd93d; font-size: 36px;">2鈥?脳</span> faster 馃搱
+          </div>
+          <div style="font-size: 18px; color: rgba(255, 255, 255, 0.8); margin-top: 1vh;">
+            (The Lancet 2013)
+          </div>
+        </div>
+        <div class="appear data-box" id="transmission-stat2" 
+             style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2); 
+                    border-radius: 20px; padding: 3vh 2vw; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+          <div style="font-size: 28px; font-weight: bold; color: white; margin-bottom: 1vh;">
+            <span style="color: #ffd93d; font-size: 36px;">10%</span> of post-surgical infections are resistant 馃彞
+          </div>
+          <div style="font-size: 18px; color: rgba(255, 255, 255, 0.8); margin-top: 1vh;">
+            (ESPAUR Report 2023)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="appear" id="spread-title" style="position: absolute; top: 400vh; width: 100%; text-align: center; z-index: 10;">
+      <span style="font-size: 45px; font-weight: bold; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">
+        "<span id="spread-text" class="shake-animation">Resist</span> and spread"
+      </span>
+    </div>
+
+    <div class="appear" id="eskape-title" style="position: absolute; top: 450vh; left: 5vw; right: 5vw; text-align: center; z-index: 10;">
+      <div style="font-size: 48px; font-weight: 900; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.4); margin-bottom: 2vh;">
+        The ESKAPE Pathogens
+      </div>
+      <div style="font-size: 20px; line-height: 1.7; color: rgba(255,255,255,0.92); max-width: 80vw; margin: 0 auto;">
+        Together, they represent the leading cause of hospital-acquired infections worldwide 鈥?escaping most conventional antibiotics and spreading rapidly across settings.
+      </div>
+    </div>
+
+    <div class="appear" id="eskape-image" style="position: absolute; top: 470vh; left: 0; right: 0; text-align: center; z-index: 9;">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/home/eskape.webp" alt="ESKAPE pathogens" style="width: 50vw; max-width: 80vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+    </div>
+
+    <div class="appear" id="eskape-stats" style="position: absolute; top: 520vh; left: 8vw; right: 8vw; z-index: 10;">
+      <div style="display: flex; gap: 2.5vw; justify-content: center; align-items: stretch;">
+        <div style="flex: 1; min-width: 18vw; background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 3vh 2vw; text-align: center; box-shadow: 0 10px 35px rgba(0,0,0,0.35); color: white;">
+          <div style="font-size: 20px; opacity: 0.95; margin-bottom: 1vh;">Hospital infections (ESKAPE)</div>
+          <div style="font-size: 36px; font-weight: 900; color: #ff8c42;">~60%</div>
+        </div>
+        <div style="flex: 1; min-width: 18vw; background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 3vh 2vw; text-align: center; box-shadow: 0 10px 35px rgba(0,0,0,0.35); color: white;">
+          <div style="font-size: 20px; opacity: 0.95; margin-bottom: 1vh;">Global cases / year</div>
+          <div style="font-size: 36px; font-weight: 900; color: #ff8c42;">&gt;2M</div>
+        </div>
+        <div style="flex: 1; min-width: 18vw; background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 3vh 2vw; text-align: center; box-shadow: 0 10px 35px rgba(0,0,0,0.35); color: white;">
+          <div style="font-size: 20px; opacity: 0.95; margin-bottom: 1vh;">Mortality rate</div>
+          <div style="font-size: 36px; font-weight: 900; color: #ff8c42;">~25%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="appear" id="mrsa-title" style="position: absolute; top: 590vh; left: 5vw; right: 5vw; text-align: center; z-index: 10;">
+      <div style="font-size: 48px; font-weight: 900; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.4); margin-bottom: 1vh;">
+        MRSA
+      </div>
+      <div style="font-size: 24px; color: rgba(255,255,255,0.9); font-weight: 600;">
+        Methicillin-Resistant Staphylococcus aureus
+      </div>
+    </div>
+
+    <div class="appear" id="mrsa-content" style="position: absolute; top: 610vh; left: 8vw; right: 8vw; z-index: 10;">
+      <div style="display: flex; gap: 4vw; align-items: flex-start;">
+        <div style="flex: 1; text-align: center;">
+          <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/home/1-2.webp" 
+               alt="MRSA Molecular Mechanism" 
+               style="width: 100%; max-width: 40vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 3vh;">
+          <div style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 3vh 2.5vw; box-shadow: 0 10px 35px rgba(0,0,0,0.35);">
+            <div style="font-size: 32px; font-weight: 900; color: #ff6b6b; margin-bottom: 2vh; text-align: center;">
+              The Superbug
+            </div>
+            <div style="font-size: 22px; color: white; text-align: center; line-height: 1.6;">
+              <span style="font-weight: 700;">Global MRSA infections (2019):</span><br>
+              <span style="font-size: 36px; font-weight: 900; color: #ffd93d;">~150 million</span>
+            </div>
+          </div>
+          <div style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 3vh 2.5vw; box-shadow: 0 10px 35px rgba(0,0,0,0.35);">
+            <div style="font-size: 24px; font-weight: 900; color: #4ecdc4; margin-bottom: 1.5vh; text-align: center;">
+              <span style="font-style: italic;">mecA</span> 鈫?PBP2a 鈫?尾-lactam resistance
+            </div>
+            <div style="font-size: 18px; color: rgba(255,255,255,0.9); line-height: 1.7; text-align: left;">
+              <span style="font-style: italic;">mecA</span> encodes PBP2a with low 尾-lactam affinity,
+              enabling MRSA to keep cell-wall synthesis under drug pressure.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="appear" id="mrsa-goal" style="position: absolute; top: 662vh; left: 10vw; right: 10vw; z-index: 10;">
+      <div style="background: rgba(255,255,255,0.16); backdrop-filter: blur(12px); border: 2.5px solid rgba(255,255,255,0.3); border-radius: 24px; padding: 3.5vh 2.5vw; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.4);">
+        <p style="color: white; font-size: 32px; font-weight: 700; margin: 0; line-height: 1.5;">
+          Our goal is to overcome resistant and transmissible pathogens.<br>
+          <span style="color: #ffd93d;">MRSA serves as our model organism.</span>
+        </p>
+      </div>
+    </div>
+
+    <div style="position: absolute; top: 700vh; left: 0; right: 0; z-index: 10;">
+      <div class="appear" id="focas-title" style="text-align: center; margin-bottom: 3vh;">
+        <h1 style="font-size: 48px; font-weight: 900; color: white; margin: 0; text-shadow: 2px 2px 12px rgba(0,0,0,0.4);">FoCas</h1>
+        <p style="font-size: 24px; color: white; margin-top: 2vh; letter-spacing: 0.5px;">
+          A Novel <span style="color: #ff6b6b; font-weight: 700;">Antimicrobial-Resistance</span> Treatment and <span style="color: #ff9800; font-weight: 700;">Infectivity Inhibition</span> Platform
+        </p>
+      </div>
+
+      <div class="appear" id="focas-content" style="display: flex; gap: 4vw; justify-content: center; align-items: flex-start; padding: 0 8vw; margin-top: 5vh;">
+        <div style="flex: 1; text-align: center;">
+          <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/description/figure-2-dna-origami-delivery-system-of-focas.webp" 
+               alt="DNA Origami Delivery System" 
+               style="width: 100%; max-width: 35vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4)); margin-bottom: 3vh;">
+          <h3 style="color: white; font-size: 28px; font-weight: 700; margin-bottom: 1vh;">[Fo] Delivery System: DNA Origami</h3>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/description/figure-1-crispr-cas9-system-of-focas-2.webp" 
+               alt="CRISPR-Cas9 System" 
+               style="width: 100%; max-width: 35vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4)); margin-bottom: 3vh;">
+          <h3 style="color: white; font-size: 28px; font-weight: 700; margin-bottom: 1vh;">[Cas] Gene Editing System: CRISPR-Cas9</h3>
+        </div>
+      </div>
+
+      <div class="appear" id="focas-target" style="text-align: center; margin-top: 6vh; padding: 0 10vw;">
+        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border: 2.5px solid rgba(255,255,255,0.3); border-radius: 24px; padding: 3vh 3vw; box-shadow: 0 12px 40px rgba(0,0,0,0.4);">
+          <p style="color: white; font-size: 32px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">
+            Targeted Knockout of the MRSA Resistance Gene <span style="font-style: italic;">mecA</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="appear" id="four-component-title" style="position: absolute; top: 820vh; left: 5vw; right: 5vw; text-align: center; z-index: 10;">
+      <div style="font-size: 48px; font-weight: 900; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.4); margin-bottom: 5vh;">
+        Four Functional Component
+      </div>
+    </div>
+
+    <div class="appear" id="four-component-image" style="position: absolute; top: 840vh; left: 0; right: 0; text-align: center; z-index: 9;">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/description/figure-6-illustration-of-four-structural-components-of-focas.webp" 
+           alt="Four Functional Component" 
+           style="width: 60vw; max-width: 90vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+    </div>
+
+    <div class="appear" id="five-module-title" style="position: absolute; top: 940vh; left: 5vw; right: 5vw; text-align: center; z-index: 10;">
+      <div style="font-size: 48px; font-weight: 900; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.4); margin-bottom: 5vh;">
+        Five Acting Module
+      </div>
+    </div>
+
+    <div class="appear" id="five-module-image" style="position: absolute; top: 960vh; left: 0; right: 0; text-align: center; z-index: 9;">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/description/figure-14-illustration-of-five-modules-indicating-the-acting-mechanism-of-focas.webp" 
+           alt="Five Acting Module" 
+           style="width: 60vw; max-width: 90vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+    </div>
+
+    <div class="appear" id="application-title" style="position: absolute; top: 1060vh; left: 5vw; right: 5vw; text-align: center; z-index: 10;">
+      <div style="font-size: 48px; font-weight: 900; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.4); margin-bottom: 5vh;">
+        Application: MRSA Wound Infection
+      </div>
+    </div>
+
+    <div class="appear" id="application-image" style="position: absolute; top: 1080vh; left: 0; right: 0; text-align: center; z-index: 9;">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/description/wound-application.webp" 
+           alt="MRSA Wound Infection Application" 
+           style="width: 50vw; max-width: 80vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+    </div>
+
+    <div class="appear" id="application-method" style="position: absolute; top: 1140vh; left: 10vw; right: 10vw; text-align: center; z-index: 10;">
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border: 2.5px solid rgba(255,255,255,0.3); border-radius: 24px; padding: 3vh 3vw; box-shadow: 0 12px 40px rgba(0,0,0,0.4);">
+        <p style="color: white; font-size: 32px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">
+          Method of Administration: Hydrogel or Spray
+        </p>
+      </div>
+    </div>
+
+    <div class="appear" id="procedure-title" style="position: absolute; top: 1200vh; left: 5vw; right: 5vw; text-align: center; z-index: 10;">
+      <div style="font-size: 48px; font-weight: 900; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.4); margin-bottom: 5vh;">
+        Simple Procedure of FoCas Acting as A Universal Platform
+      </div>
+      <div style="font-size: 36px; font-weight: 600; color: white; text-shadow: 1px 1px 8px rgba(0,0,0,0.4); margin-top: 2vh; word-spacing: 2em;">
+        Programmable Modular Scalable
+      </div>
+    </div>
+
+    <div class="appear" id="procedure-image" style="position: absolute; top: 1220vh; left: 0; right: 0; text-align: center; z-index: 9;">
+      <img src="/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/description/figure-16-illustration-of-simple-procedures-for-focas-platform.webp" 
+           alt="Simple Procedure" 
+           style="width: 60vw; max-width: 90vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+    </div>
+
+    <div class="appear" id="procedure-steps" style="position: absolute; top: 1320vh; left: 10vw; right: 10vw; text-align: center; z-index: 10;">
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border: 2.5px solid rgba(255,255,255,0.3); border-radius: 24px; padding: 3vh 3vw; box-shadow: 0 12px 40px rgba(0,0,0,0.4);">
+        <p style="color: white; font-size: 32px; font-weight: 700; margin: 0; letter-spacing: 0.5px;">
+          Assembly-Design-Administration
+        </p>
+        <p style="color: #ff4444; font-size: 24px; font-weight: 500; margin: 2vh 0 0 0; letter-spacing: 0.3px; font-style: italic;">
+          FoCas redefines how we fight superbugs.
+        </p>
+      </div>
+    </div>
+
+    <div class="home-page-title" style="position: absolute;top: 1360vh;left: 5vw;right: 5vw;z-index: 10;">
+      <span class="appear" id="subtitle-video">Promotion Video</span>
+    </div>
+
+    <div style="position: absolute;top: 1385vh;left: 15vw;right: 15vw;text-align: center;z-index: 10;" class="appear" id="video-container">
+      <iframe src="/izju-china-wiki-remake./static/_downloaded/video.igem.org/videos/embed/q8BWiXTythjiEpDBJ79dm8" 
+              style="width: 70vw; height: 39.375vw; max-width: 100%; border: none;" 
+              allowfullscreen 
+              sandbox="allow-same-origin allow-scripts allow-popups"
+              title="Promotion Video">
+      </iframe>
+    </div>
+
+  </div>
+
+  <script src="/izju-china-wiki-remake./static/_downloaded/code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/izju-china-wiki-remake./static/scrollreveal.js"></script>
+  <script src="/izju-china-wiki-remake./static/theme.js?v=2"></script>
+  <script src="/izju-china-wiki-remake./static/loading.js?v=3"></script>
+  <script src="/izju-china-wiki-remake./static/home.js"></script>
+
+  <script>
+    // 灏嗛〉闈㈤珮搴﹀彂閫佺粰鐖堕〉闈㈢敤浜庤嚜閫傚簲 iframe 楂樺害
+    function postHeight(){
+      try{
+        const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        parent && parent.postMessage({ type: 'home-embed-height', height: h }, '*');
+      }catch(e){}
+    }
+    window.addEventListener('load', postHeight);
+    window.addEventListener('resize', postHeight);
+    setTimeout(postHeight, 1000);
+  </script>
+</body>
+</html>
+

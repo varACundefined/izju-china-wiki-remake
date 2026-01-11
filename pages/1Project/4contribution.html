@@ -1,0 +1,425 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Contribution</title>
+  <link rel="stylesheet" href="/izju-china-wiki-remake./assets/css/styles.css">
+
+  <link rel="stylesheet" href="/izju-china-wiki-remake./static/safety-typography.css">
+  <style>
+ /* Remove all pseudo-elements globally */
+ [id*="content"] *::before,
+ [id*="content"] *::after,
+ .pagecontent *::before,
+ .pagecontent *::after {
+ content: none !important;
+ display: none !important;
+ }
+
+ /* Contribution page specific styles */
+ .contribution-content {
+ max-width: 100%;
+ line-height: 1.6;
+ margin-top: 40px;
+ }
+
+ /* Set background image for Contribution page (same as Background page) */
+ .safety-bg-image {
+ background: url("/izju-china-wiki-remake./static/_downloaded/static.igem.wiki/teams/5913/picture/project-background.webp") !important;
+ background-size: cover !important;
+ background-position: center center !important;
+ background-repeat: no-repeat !important;
+ }
+ 
+ .contribution-content h1 {
+ color: #2c3e50;
+ border-bottom: 3px solid #3498db;
+ padding-bottom: 10px;
+ margin-bottom: 30px;
+ }
+ 
+ .contribution-content h2 {
+ color: #34495e;
+ margin-top: 40px;
+ margin-bottom: 20px;
+ border-left: 4px solid #3498db;
+ padding-left: 15px;
+ }
+ 
+ .contribution-content h3 {
+ color: #2c3e50;
+ margin-top: 30px;
+ margin-bottom: 15px;
+ font-weight: 600;
+ }
+ 
+ .contribution-content h4 {
+ color: #34495e;
+ margin-top: 25px;
+ margin-bottom: 12px;
+ font-weight: 600;
+ font-size: 1.1em;
+ }
+ 
+ .contribution-content details {
+ margin: 15px 0;
+ border: 1px solid #374151;
+ border-radius: 5px;
+ padding: 0;
+ background-color: #1f2937;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .contribution-content details summary {
+ cursor: pointer;
+ padding: 1rem 1.5rem;
+ font-weight: 600;
+ color: #e5e7eb !important;
+ background-color: #374151;
+ border-radius: 8px;
+ transition: background-color 0.2s ease;
+ user-select: none;
+ }
+
+ .contribution-content details summary:hover {
+ background-color: #4b5563;
+ }
+
+ .contribution-content details[open] summary {
+ margin-bottom: 10px;
+ border-bottom: 1px solid #4b5563;
+ border-radius: 8px 8px 0 0;
+ background-color: #4b5563;
+ }
+
+ .contribution-content details p {
+ padding: 0 1.5rem 1rem 1.5rem;
+ margin: 0;
+ color: #d1d5db !important;
+ }
+ 
+ .contribution-content details p:first-of-type {
+ padding-top: 1rem;
+ }
+ 
+ .contribution-figure {
+ margin: 30px 0;
+ text-align: center;
+ }
+ 
+ .contribution-figure img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 8px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .contribution-figure figcaption {
+ margin-top: 10px;
+ font-style: italic;
+ color: #666;
+ font-size: 0.9em;
+ }
+ 
+ .contribution-content ul, .contribution-content ol {
+ margin: 15px 0;
+ padding-left: 30px;
+ }
+ 
+ .contribution-content li {
+ margin: 8px 0;
+ }
+ 
+ .contribution-content strong {
+ color: #2c3e50;
+ font-weight: 700;
+ }
+ 
+ .contribution-content em {
+ font-style: italic;
+ color: #7f8c8d;
+ }
+ 
+ .contribution-content sub {
+ font-size: 0.8em;
+ vertical-align: sub;
+ }
+ 
+ /* Dark mode styles */
+ :root.dark .contribution-content h1 {
+ color: #ffffff;
+ border-bottom-color: #3b82f6;
+ text-shadow: 0 0 50px rgba(59, 130, 246, 1.0),
+ 0 0 30px rgba(59, 130, 246, 0.9),
+ 0 0 15px rgba(59, 130, 246, 0.7);
+ font-weight: 700;
+ }
+ 
+ :root.dark .contribution-content h2 {
+ color: #10b981;
+ border-left-color: #10b981;
+ text-shadow: 0 0 50px rgba(16, 185, 129, 1.0),
+ 0 0 30px rgba(16, 185, 129, 0.9),
+ 0 0 15px rgba(16, 185, 129, 0.7);
+ font-weight: 700;
+ }
+ 
+ :root.dark .contribution-content h3 {
+ color: #60a5fa;
+ text-shadow: 0 0 50px rgba(96, 165, 250, 0.9),
+ 0 0 30px rgba(96, 165, 250, 0.8),
+ 0 0 15px rgba(96, 165, 250, 0.6);
+ font-weight: 700;
+ }
+ 
+ :root.dark .contribution-content h4 {
+ color: #34d399;
+ text-shadow: 0 0 40px rgba(52, 211, 153, 0.8),
+ 0 0 20px rgba(52, 211, 153, 0.7),
+ 0 0 10px rgba(52, 211, 153, 0.5);
+ font-weight: 700;
+ }
+ 
+ :root.dark .contribution-content p {
+ color: #d1d5db !important;
+ }
+ 
+ :root.dark .contribution-content strong {
+ color: #f3f4f6 !important;
+ font-weight: 700;
+ }
+ 
+ :root.dark .contribution-content em {
+ color: #e5e7eb !important;
+ }
+ 
+ :root.dark .contribution-content a {
+ color: #60a5fa !important;
+ }
+ 
+ :root.dark .contribution-content a:hover {
+ color: #93c5fd !important;
+ }
+ 
+ :root.dark .contribution-figure figcaption {
+ color: #9ca3af !important;
+ }
+ 
+ :root.dark .contribution-content details {
+ border-color: #374151;
+ background-color: #1f2937;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+ }
+ 
+ :root.dark .contribution-content details summary {
+ color: #e5e7eb !important;
+ background-color: #374151;
+ font-weight: 700;
+ }
+ 
+ :root.dark .contribution-content details summary:hover {
+ background-color: #4b5563;
+ }
+ 
+ :root.dark .contribution-content details[open] summary {
+ background-color: #4b5563;
+ border-bottom-color: #4b5563;
+ }
+ 
+ :root.dark .contribution-content details p {
+ color: #d1d5db !important;
+ }
+ 
+ :root.dark .contribution-content details strong {
+ color: #f3f4f6 !important;
+ }
+ 
+ :root.dark .contribution-content ol li {
+ color: #d1d5db !important;
+ }
+ 
+ :root.dark .contribution-content ul li {
+ color: #d1d5db !important;
+ }
+  </style>
+</head>
+<body>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
+  <aside class="sidebar">
+<a class="home" href="/izju-china-wiki-remake/"><img src="/izju-china-wiki-remake./assets/images/menu.webp" alt="涓婚〉"></a>
+<!--SIDEBAR-START-->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
+<nav class="site-nav">
+  <ul>
+    <li><a href="/izju-china-wiki-remake/" class="home-link">Home</a></li>
+    <li><span>Project</span>
+  <ul>
+<li><a href="/izju-china-wiki-remake./pages/1Project/1background.html">Background</a></li>
+<li><a href="/izju-china-wiki-remake./pages/1Project/2description.html">Description</a></li>
+<li><a href="/izju-china-wiki-remake./pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/izju-china-wiki-remake./pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/izju-china-wiki-remake./pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/izju-china-wiki-remake./pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+</li>
+<li><span>Dry Lab</span>
+  <ul>
+<li><a href="/izju-china-wiki-remake./pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/izju-china-wiki-remake./pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+</li>
+<li><span>Wet Lab</span>
+  <ul>
+<li><a href="/izju-china-wiki-remake./pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/izju-china-wiki-remake./pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/izju-china-wiki-remake./pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/izju-china-wiki-remake./pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/izju-china-wiki-remake./pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/izju-china-wiki-remake./pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+</li>
+<li><span>Human Practice</span>
+  <ul>
+<li><a href="/izju-china-wiki-remake./pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/izju-china-wiki-remake./pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/izju-china-wiki-remake./pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/izju-china-wiki-remake./pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+</li>
+<li><span>Team</span>
+  <ul>
+<li><a href="/izju-china-wiki-remake./pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/izju-china-wiki-remake./pages/5Team/3awards.html">Awards</a></li>  </ul>
+</li>
+
+  </ul>
+</nav>
+<!--SIDEBAR-END-->
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/izju-china-wiki-remake./assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
+</aside>
+
+  <main class="content">
+<div class="pagecontainer"><div class="title2"><span>Contribution</span></div></div>
+
+    <div class="pagecontent" id="auto-page-content">
+<div id="auto-contribution-content">
+ <div class="contribution-content">
+ <h1>Contribution</h1>
+ 
+ <p>During the preparation for our iGEM competition, we not only continuously improved and enhanced our project by designing a novel platform based on CRISPR-Cas9 and DNA origami to treat antibiotic-resistance and inhibit risk of transmission, but also hoped to provide some assistance to future iGEM teams and participants through our efforts. This section introduces the contributions we have made for future teams and members, which involve the scalability of our universal platform FoCas, bio-safety manual and dissemination and educational significance that contributes to society, lists of companies specializing in the production of DNA origami materials, and novel designed procedures for screening aptamers and models.</p>
+
+ <h2>Scalability of our treatment strategy for infectious AMR</h2>
+ 
+ <h3>FoCas can act as a universal platform for multiple infectious antimicrobial-resistant bacteria</h3>
+ 
+ <p>Antimicrobial-resistant (AMR) bacteria pose a critical threat to public health, especially in nosocomial infections (1). In our project, we designed a universal platform based on CRISPR-Cas9 gene editing system and DNA origami delivery system to specifically eliminate the target resistance gene of the target resistant bacteria. The platform was named FoCas, whose feasibility and functionality have been demonstrated and showcased in our project, using <em>methicillin-resistant staphylococcus aureus</em> (MRSA) as the example target strain. For MRSA, resistance gene <em>mecA</em> was first identified as the target gene through analysis and screening, and sgRNA targeting <em>mecA</em> (sgRNA-螖<em>mecA</em>) and aptamer targeting MRSA were designed. After initial design, the platform treating MRSA was assembled by incorporating each component: loading component (including designed sgRNA<sub>L</sub>-螖<em>mecA</em>), membrane permeabilization component, targeting component (including designed aptamer), and protection and release component. Then, the complete drug was applied on the wound surface, targeting MRSA, entering the cell, and eliminating <em>mecA</em> gene, resulting in a regained methicillin sensitivity and significantly reduced risk of <em>staphylococcus aureus</em> (Figure 1).</p>
+
+ <h3>Examples of the platform's strategies on some other candidate high-risk resistant and transmissible bacterial infectious</h3>
+ 
+ <p>In many AMR cases, antibiotic resistance genes are evident, and traditional treatments are limited. Examples include methicillin-resistant <em>Staphylococcus aureus</em> (MRSA), vancomycin-resistant <em>Enterococci</em> (VRE), and extended-spectrum 尾-lactamase鈥損roducing <em>Enterobacterales</em> (ESBL-E). Our delivery system can be easily adapted to these diseases, according to the specific genes and membrane proteins involved.</p>
+
+ <p>Besides methicillin-resistant <em>Staphylococcus aureus</em> (MRSA), the focus of our current project, other potential targets include:</p>
+
+ <h4>Vancomycin-Resistant Enterococci (VRE)</h4>
+ 
+ <details>
+ <summary><strong>Description</strong></summary>
+ <p>Vancomycin-resistant <em>Enterococci</em> (VRE) can lead to blood infections with high morbidity and mortality rates (2). Also, it is inducing increasing nosocomial infections (3). They form opportunistic infections, causing surgical infections through wounds and leading to severe and fatal situations. While treatments such as high-dose daptomycin (鈮?0 mg/kg) or linezolid often result in better patient outcomes, their long-term efficacy is uncertain.</p>
+ </details>
+
+ <details>
+ <summary><strong>Gene</strong></summary>
+ <p>There are different types, associated with different "core" genes in different types of bacteria (4). Most common types are VanA and VanB, their regulatory mechanism is well understood. The core gene performs crucial part in the replacement of d鈥怉la鈥恉鈥怉la with d鈥怉la鈥恉鈥恖ac, decreasing the binding constant of vancomycin and peptidoglycan, which directly induces high levels of resistance. So, if their "core" genes are removed, this mechanism will cease, and they'll resume sensitivity to drugs.</p>
+ </details>
+
+ <details>
+ <summary><strong>Parts to be modified</strong></summary>
+ <p>The sgRNA and aptamer need modification according to the specific gene and membrane protein target respectively. Follow our instructions to complete this process.</p>
+ </details>
+
+ <h4>Extended-spectrum 尾-lactamase鈥損roducing Enterobacterales (ESBL-E)</h4>
+ 
+ <details>
+ <summary><strong>Description</strong></summary>
+ <p>The rise of antimicrobial resistance from extended-spectrum 尾-lactamase鈥損roducing <em>Enterobacteriaceae</em> (ESBL-E) also poses a significant challenge to global health (5). Extended-spectrum 尾-lactamase-producing <em>Enterobacteriaceae</em> (ESBL-E) is crucial antimicrobial-resistant organisms for human, and is common reason for urinary tract infections and bloodstream infections (6). Also, it has strong ability to transfer. The ESBL genes are commonly found on transposons or insertion sequences of plasmid that they could spread easily.</p>
+ </details>
+
+ <details>
+ <summary><strong>Gene</strong></summary>
+ <p>ESBL genes. Though ESBL genes are a large family with different genes, however, as most of them encode enzyme ESBL that leads to drug-resistance, they contain conserved sequences. As long as the crucial and conserved sequences are knocked out, the bacteria may resume sensitivity to the drugs.</p>
+ </details>
+
+ <details>
+ <summary><strong>Parts to be modified</strong></summary>
+ <p>Same as above.</p>
+ </details>
+
+ <p>Despite VRE and ESBL-E, many other drug-resistant bacterial infections also have limited effective treatments. And in cases that pathogenic genes were well-identified our delivery system can be easily modified and utilized.</p>
+
+ <h2>Bio-safety manual</h2>
+ 
+ <p><em>In vivo</em> drug safety evaluation is essential in drug development, providing crucial insights into a drug's safety and efficacy within a living system, thereby ensuring patient protection and regulatory compliance. We collaborated with Beijing University to establish a manual, providing safety guidelines for drug use in living organisms. This manual can guide future iGEM teams in their work on <em>in vivo</em> drug applications. It could also provide a framework that could impact societal health by advancing personalized medicine and improving drug safety standards.</p>
+
+ <h2>Dissemination and educational significance</h2>
+ 
+ <p>Our team has been to Meitan, Guizhou, for volunteer teaching at Zhejiang university primary school. We taught about DNA and antibiotics in a simple way to stimulate children's curiosity about science. The teaching was successful, with students quickly grasping basic information and gaining a preliminary understanding of infectious diseases and synthetic biology.</p>
+
+ <h2>List of companies specializing in the production of DNA origami materials</h2>
+
+ <h3>Creative Biostructure (America)</h3>
+ <p>Creative Biostructure offers DNA self-assembly services, using DNA origami technology to construct specific nanostructures. The company provides customized DNA origami structure, using advanced design tools such as caDNAno and DAEDALUS for structural optimization and conducts final structural tests through techniques, which is suitable for projects that require highly customized complex DNA nanostructures.</p>
+
+ <h3>Tilibit Nanosystems (Germany)</h3>
+ <p>Tilibit Nanosystems offers specialized DNA origami structure customization services. Customers can cooperate with the company based on their own needs to develop and optimize DNA sequences to ensure the stability and accuracy of the structure. The company has profound experience in DNA nanotechnology and is suitable for DNA origami projects of all scales and complexities.</p>
+
+ <h3>Eurofins Genomics (India)</h3>
+ <p>Eurofins Genomics offers customized DNA origami services, including the synthesis and assembly of DNA scaffolds. The company can provide M13mp18 single strand DNA of specific lengths and related DNA origami customization services according to the design requirements of customers. Eurofins Genomics also combines the prefabricated structure library of Tilibit Nanosystems to provide customers with more diverse choices.</p>
+
+ <h3>Guild BioSciences (America)</h3>
+ <p>Guild BioSciences offers M13mp18 single strand DNA and other DNA origami related services. This company focuses on the field of DNA origami, providing high-quality scaffold DNA suitable for origami experiments of different scales. The company also offers customized services to meet various specific experimental requirements.</p>
+
+ <h3>Bayou Biolabs (America)</h3>
+ <p>Bayou Biolabs offers the relatively affordable M13mp18 single strand DNA, which is suitable for DNA origami experiments. The company focuses on providing cost-effective DNA origami materials for small laboratories and projects with limited budgets. This company has many global agents, making it very convenient to purchase.</p>
+
+ <h3>Shaanxi Weishinuo Biotech (China)</h3>
+ <p>Shaanxi Weishinuo Biotech is a company specializing in DNA synthesis and biotechnology services, offering a wide range of DNA scaffold ordering services, including customized M13mp18 single strand DNA.</p>
+
+ <h2>Procedure for screening aptamers</h2>
+ 
+ <p>Our delivery system requires aptamers. After some exploration, we found limited existing procedures for identifying suitable aptamers for our target bacteria. Therefore, we established a standard procedure encompassing molecular dynamics, docking simulation, and artificial selection and evolution.</p>
+
+ <h2>Models</h2>
+ 
+ <p>Our delivery system is nanoscale, but due to computational limitations, highly accurate molecular dynamics simulations may be challenging for our relatively long-duration and high-molecular-weight system. There is also a gap between wet lab experiments and molecular dynamics, as neither can fully achieve the necessary spatial and temporal scales. Our model aims to bridge this gap, benefiting not only our research but also the entire iGEM community. You may find inspiration for preliminary analysis and prediction in your own nanoscale designs. For example, our model simulating membrane penetration could be applied to other experiments involving "membrane damage."</p>
+
+ <p>Additionally, describing the protective effect of carriers on payloads at the nanoscale can be challenging. Our model addresses this from the perspective of chemistry and physics, and we introduced physical formulas and set coefficients to represent chemical influences.</p>
+
+ <h2>References</h2>
+ 
+ <ol>
+ <li>van Duin D, Paterson DL. Multidrug Resistant Bacteria in the Community: An Update. <em>Infect Dis Clin North Am</em>. 2020 Dec;34(4):709鈥?2.</li>
+ <li>Cairns KA, Udy AA, Peel TN, Abbott IJ, Dooley MJ, Peleg AY. Therapeutics for Vancomycin-Resistant Enterococcal Bloodstream Infections. <em>Clin Microbiol Rev</em>. 36(2):e00059-22.</li>
+ <li>Marekovi膰 I, Markanovi膰 M, Le拧in J, 膯ori膰 M. Vancomycin-Resistant Enterococci: Current Understandings of Resistance in Relation to Transmission and Preventive Strategies. <em>Pathogens</em>. 2024 Nov 5;13(11):966.</li>
+ <li>Stogios PJ, Savchenko A. Molecular mechanisms of vancomycin resistance. <em>Protein Sci</em>. 2020 Mar;29(3):654鈥?9.</li>
+ <li>Husna A, Rahman MM, Badruzzaman ATM, Sikder MH, Islam MR, Rahman MT, et al. Extended-Spectrum 尾-Lactamases (ESBL): Challenges and Opportunities. <em>Biomedicines</em>. 2023 Oct 30;11(11):2937.</li>
+ <li>Peirano G, Pitout JDD. Extended-Spectrum 尾-Lactamase-Producing Enterobacteriaceae: Update on Molecular Epidemiology and Treatment Options. <em>Drugs</em>. 2019 Sept 1;79(14):1529鈥?1.</li>
+ </ol>
+ </div>
+</div>
+    </div>
+  </main>
+
+  <aside id="toc" class="toc"></aside>
+  <script src="/izju-china-wiki-remake./assets/js/main.js"></script>
+  <footer class="site-footer">
+    <img src="/izju-china-wiki-remake./assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
+  </footer>
+</body>
+</html>

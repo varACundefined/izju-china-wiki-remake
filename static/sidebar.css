@@ -1,0 +1,682 @@
+/* Sidebar styles based on zju-china design */
+/* Global font override for sidebar */
+* {
+  font-family: Arial, sans-serif !important;
+}
+
+:root {
+  --bg: #FFF9E9;
+  --lg: #D5E5CA;
+  --mg: #6D966B;
+  --dg: #006C62;
+  --y: #FFC570;
+  --shy: #FFE3B9;
+  --font: #402C1A;
+  --disc: #A9C09E;
+}
+
+/* Use Flexbox layout, sidebar fixed positioning */
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Sidebar background - fixed positioning */
+.main .menubg {
+  background-color: var(--nav-bg);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100 !important;
+  position: fixed !important;
+  top: 78px !important; /* Directly below navbar, considering body padding-top */
+  left: 0 !important;
+  width: 250px !important;
+  height: calc(100vh - 78px) !important; /* Subtract navbar height */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-top: 20px !important; /* Add top padding to prevent content from being covered */
+}
+
+/* Hide when sidebar has no content */
+.main .menubg:empty {
+  display: none;
+}
+
+/* Adjust minimum height when sidebar has little content */
+.main .menubg #menu:empty {
+  display: none;
+}
+
+/* Content area - add left margin to make room for sidebar */
+.main #content {
+  flex: 1;
+  position: relative;
+  padding: 30px 50px;
+  background-color: var(--bg);
+  min-height: 100vh;
+  height: auto;
+  margin-left: 250px; /* Make room for fixed sidebar */
+  width: calc(100% - 250px); /* Ensure content area width is correct */
+  box-sizing: border-box; /* padding */
+}
+
+/*  */
+body.no-sidebar .main .menubg {
+  display: none !important;
+}
+
+body.no-sidebar .main #content {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+.main #content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--shy);
+}
+
+/* Sidebar menu */
+.main .menubg #menu {
+  position: relative;
+  padding: 30px 20px;
+  width: 100%;
+  transition: width .5s;
+  top: 0;
+}
+
+/* Main section titles */
+.main .menubg #menu .t1 {
+  position: relative;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  transition: .5s;
+  cursor: pointer;
+  color: var(--mg);
+  font-weight: 600;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.main .menubg #menu .t1::before {
+  opacity: .3;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 18px;
+  height: 20px;
+  left: -2px;
+  top: 8px;
+  transform: translateX(-100%);
+  transition: .5s;
+  background-image: url('/static/_downloaded/static.igem.wiki/teams/5913/picture/sidebar.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main .menubg #menu .t1:hover::before {
+  opacity: 1;
+}
+
+.main .menubg #menu .t1.unfold::before {
+  top: 10px;
+}
+
+.main .menubg #menu .t1.unfold {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main .menubg #menu .t1.unfold + .h2-sec {
+  max-height: 1000px; /*  */
+  opacity: 1;
+  font-size: 14px;
+}
+
+.main .menubg #menu .t1.unfold + .h2-sec .t2 {
+  text-transform: capitalize;
+  padding: 6px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* Subsection container */
+.main .menubg #menu .h2-sec {
+  overflow: hidden;
+  display: block;
+  max-height: 0; /*  */
+  transition: max-height .35s ease, opacity .25s ease;
+  opacity: 0;
+  font-size: 0;
+  margin: 0; /*  */
+}
+
+.main .menubg #menu .h2-sec .t2 {
+  transition: .8s;
+  min-height: 0;
+  cursor: pointer;
+  color: var(--font);
+  padding: 6px 20px;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.main .menubg #menu .h2-sec .t2:hover {
+  color: var(--mg);
+  background-color: var(--shy);
+}
+
+/* Active/highlighted states */
+.main .menubg #menu .t1.active {
+  color: var(--dg);
+  font-weight: 700;
+  background-color: var(--shy);
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main .menubg #menu .t2.active {
+  color: var(--mg);
+  background-color: var(--shy);
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 6px 20px;
+}
+
+.main .menubg #menu .t1.show {
+  color: var(--dg);
+  font-weight: 700;
+}
+
+.main .menubg #menu .t2.show {
+  color: var(--mg);
+  font-weight: bold;
+}
+
+/* Divider */
+.main .menubg #menu .divide {
+  display: none; /*  */
+  opacity: 0;
+  height: 0;
+  width: fit-content;
+  position: relative;
+  margin-top: 0;
+  left: 15px;
+  transition: .3s;
+}
+
+.main .menubg #menu .t1.unfold + .h2-sec .divide {
+  display: block;
+  height: 20px;
+  margin-top: 5px;
+  opacity: 1;
+}
+
+.main .menubg #menu .divide img {
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Content sections */
+.main #content .s1 {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.main #content .s1.ref p {
+  text-indent: 0;
+  font-size: .8em;
+  text-align: left;
+}
+
+.main #content .s1 p {
+  padding-left: 40px;
+}
+
+.main #content .s2 {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.main #content .s2 p {
+  padding-left: calc(40px + 2em);
+}
+
+.main #content .math {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 40px;
+}
+
+.main #content .h1-wrap {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin: 40px 0;
+}
+
+.main #content .h1-wrap h1 {
+  padding: 2px;
+  letter-spacing: .02em;
+}
+
+.main #content h1,
+.main #content h2 {
+  scroll-margin-top: 25vh; /*  JS  */
+}
+
+.main #content h2 {
+  margin: 30px 20px;
+}
+
+.main #content p {
+  width: 100%;
+  margin: 10px 0;
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 1.5em;
+}
+
+.main #content p.no-indent {
+  text-indent: 0;
+}
+
+.main #content img,
+.main #content video {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main #content .img-wrap {
+  width: 100%;
+  display: flex;
+  margin: 15px 0;
+  padding-left: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.main #content .img-wrap img {
+  object-fit: contain;
+}
+
+.main #content .img-wrap .border {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid var(--y);
+  box-shadow: 5px 6px var(--y);
+  overflow: hidden;
+  background-color: var(--nav-bg);
+}
+
+.main #content .img-wrap .disc {
+  font-size: .8em;
+}
+
+.main #content .o-o {
+  display: flex;
+  gap: 20px;
+}
+
+/*  */
+@media (min-width: 921px) {
+  .main {
+    display: flex;
+  }
+  
+  .main .menubg {
+    display: block !important;
+    position: fixed !important;
+    top: 78px !important; /* Directly below navbar, considering body padding-top */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 78px) !important; /* Subtract navbar height */
+  }
+  
+  .main #content {
+    margin-left: 250px !important;
+    width: calc(100% - 250px) !important;
+  }
+}
+
+/* Mobile responsive handling */
+@media (max-width: 768px) {
+  .main {
+    display: block;
+  }
+  
+  .main .menubg {
+    display: block;
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+  
+  .main #content {
+    display: block;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/*  */
+@media all and (max-width: 920px) {
+  .main {
+    display: block;
+  }
+  
+  .main .menubg {
+    display: none !important;
+  }
+  
+  .main #content {
+    margin-left: 0 !important; /* Remove left margin on mobile */
+    width: 100% !important; /* Restore full width on mobile */
+    padding: 20px;
+  }
+}
+
+@media all and (max-width: 700px), all and (max-aspect-ratio: 2/3) {
+  .main {
+    background-color: var(--background-color) !important;
+    margin-bottom: 0;
+    padding: 0 !important;
+  }
+  
+  .main #content {
+    width: 100vw !important;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0 20px;
+    background-color: var(--background-color);
+  }
+  
+  .main #content.mem {
+    background-color: var(--bg) !important;
+  }
+  
+  .main #content::before {
+    display: none;
+  }
+  
+  .main #content h2,
+  .main #content h3,
+  .main #content p {
+    max-width: 100%;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+  
+  .main #content p.quote {
+    padding-left: 20px !important;
+  }
+  
+  .main #content .img-wrap {
+    padding-left: 0 !important;
+  }
+  
+  .main #content .img-wrap img {
+    height: 200px;
+  }
+}
+
+/* H3  -  */
+.main .menubg #menu .h3-sec {
+  margin-left: 15px !important;
+  border-left: 1px solid var(--disc) !important;
+  padding-left: 10px !important;
+  margin-top: 5px !important;
+  overflow: hidden !important;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  transition: max-height 0.35s ease, opacity 0.25s ease !important;
+}
+
+/* H3  */
+.main .menubg #menu .t3 {
+  font-size: 13px !important;
+  color: var(--font) !important;
+  padding: 4px 15px !important;
+  margin: 1px 0 !important;
+  cursor: pointer !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+}
+
+.main .menubg #menu .t3:hover {
+  background-color: var(--shy) !important;
+  color: var(--mg) !important;
+}
+
+.main .menubg #menu .t3:active,
+.main .menubg #menu .t3.active {
+  background-color: var(--shy) !important;
+  color: var(--dg) !important;
+  font-weight: 600 !important;
+}
+
+/* H1H3 */
+.main .menubg #menu .t1.unfold + .h2-sec .h3-sec {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+/* H3 */
+.main .menubg #menu .t1.unfold + .h2-sec .h3-sec .t3 {
+  font-size: 13px;
+  padding: 4px 15px;
+}
+
+/*  */
+.expand-icon {
+  float: right;
+  font-size: 12px;
+  color: var(--mg);
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-right: 8px;
+  line-height: inherit;
+  user-select: none;
+}
+
+/*  */
+.heading-text {
+  display: inline-block;
+  flex: 1;
+}
+
+/* t1t2flex */
+.main .menubg #menu .t1,
+.main .menubg #menu .t2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*  */
+.main .menubg #menu .t1:hover .expand-icon,
+.main .menubg #menu .t2:hover .expand-icon {
+  color: var(--dg);
+}
+
+/*  */
+.main .menubg #menu .t1.unfold .expand-icon {
+  transform: none;
+}
+
+/* H2 */
+.main .menubg #menu .t2 .expand-icon {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+/* H2 */
+.main .menubg #menu .t2.unfold .expand-icon {
+  transform: none;
+}
+
+/* H2H3 */
+.main .menubg #menu .t2.unfold + .h3-sec {
+  max-height: 1000px !important;
+  opacity: 1 !important;
+}
+
+/* H4 container - similar to H3 but deeper indentation */
+.main .menubg #menu .h4-sec {
+  margin-left: 15px !important;
+  border-left: 1px solid var(--disc) !important;
+  padding-left: 10px !important;
+  margin-top: 5px !important;
+  overflow: hidden !important;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  transition: max-height 0.35s ease, opacity 0.25s ease !important;
+}
+
+/* H4 items */
+.main .menubg #menu .t4 {
+  font-size: 12px !important;
+  color: var(--font) !important;
+  padding: 3px 12px !important;
+  margin: 1px 0 !important;
+  cursor: pointer !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+}
+
+.main .menubg #menu .t4:hover {
+  background-color: var(--shy) !important;
+  color: var(--mg) !important;
+}
+
+.main .menubg #menu .t4:active,
+.main .menubg #menu .t4.active {
+  background-color: var(--shy) !important;
+  color: var(--dg) !important;
+  font-weight: 600 !important;
+}
+
+/* When H3 unfolds, show H4 container */
+.main .menubg #menu .t3.unfold + .h4-sec {
+  max-height: 1000px !important;
+  opacity: 1 !important;
+}
+
+/* H3 flex layout with expand icon */
+.main .menubg #menu .t3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Expand icon for H3 */
+.main .menubg #menu .t3 .expand-icon {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+/* H3 unfold state */
+.main .menubg #menu .t3.unfold .expand-icon {
+  transform: none;
+}
+
+/* H4 flex layout with expand icon */
+.main .menubg #menu .t4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Expand icon for H4 */
+.main .menubg #menu .t4 .expand-icon {
+  font-size: 9px;
+  margin-right: 4px;
+}
+
+/* H4 unfold state */
+.main .menubg #menu .t4.unfold .expand-icon {
+  transform: none;
+}
+
+/* H5 container - deepest indentation level */
+.main .menubg #menu .h5-sec {
+  margin-left: 15px !important;
+  border-left: 1px solid var(--disc) !important;
+  padding-left: 8px !important;
+  margin-top: 4px !important;
+  overflow: hidden !important;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  transition: max-height 0.35s ease, opacity 0.25s ease !important;
+}
+
+/* H5 items */
+.main .menubg #menu .t5 {
+  font-size: 11px !important;
+  color: var(--font) !important;
+  padding: 2px 10px !important;
+  margin: 1px 0 !important;
+  cursor: pointer !important;
+  border-radius: 2px !important;
+  transition: all 0.2s ease !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+}
+
+.main .menubg #menu .t5:hover {
+  background-color: var(--shy) !important;
+  color: var(--mg) !important;
+}
+
+.main .menubg #menu .t5:active,
+.main .menubg #menu .t5.active {
+  background-color: var(--shy) !important;
+  color: var(--dg) !important;
+  font-weight: 600 !important;
+}
+
+/* When H4 unfolds, show H5 container */
+.main .menubg #menu .t4.unfold + .h5-sec {
+  max-height: 1000px !important;
+  opacity: 1 !important;
+}
+
+/* H4 and H5 show state */
+.main .menubg #menu .t4.show {
+  color: var(--mg);
+  font-weight: 600;
+}
+
+.main .menubg #menu .t5.show {
+  color: var(--mg);
+  font-weight: 600;
+}
