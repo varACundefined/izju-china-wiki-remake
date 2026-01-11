@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Future Directions</title>
@@ -9,11 +19,11 @@
   <link rel="stylesheet" href="/static/safety-typography.css">
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -56,7 +66,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -69,7 +79,7 @@
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Design Criterion</h2>
 
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The engineered <em>E. coli</em> system consists of an artificial phagemid and a helper plasmid. The former contains the crucial regulatory sequences required to initiate rolling circle amplification—a specific amplification pattern derived from phages that produces long single-strand DNA—but it lacks the genes for capsid proteins. The latter incorporates both the phage backbone and a regular plasmid backbone, enabling the continuous production of the main capsid protein but not the initiation of rolling circle amplification. This design prevents the phages from self-replicating, thereby eliminating the risk of engineered phage residues being released into the environment. Simultaneously, the separation and controllability of these components enhance production efficiency.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The engineered <em>E. coli</em> system consists of an artificial phagemid and a helper plasmid. The former contains the crucial regulatory sequences required to initiate rolling circle amplification鈥攁 specific amplification pattern derived from phages that produces long single-strand DNA鈥攂ut it lacks the genes for capsid proteins. The latter incorporates both the phage backbone and a regular plasmid backbone, enabling the continuous production of the main capsid protein but not the initiation of rolling circle amplification. This design prevents the phages from self-replicating, thereby eliminating the risk of engineered phage residues being released into the environment. Simultaneously, the separation and controllability of these components enhance production efficiency.</p>
 
   <figure style="text-align: center; margin: 30px 0;">
     <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-1.webp" alt="Phagemid and helper plasmid design" style="max-width: 100%; height: auto;">
@@ -78,7 +88,7 @@
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Detailed Plasmid Design Concept</h2>
 
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In our design, the crucial sequence for initiating rolling circle amplification—F1-ori (2)—is regulated by a promoter that is only active when stimulated by specific substances. Otherwise, the engineered bacteria will maintain normal double-strand DNA replication to accumulate capsid proteins and DNA material until a critical density is reached.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In our design, the crucial sequence for initiating rolling circle amplification鈥擣1-ori (2)鈥攊s regulated by a promoter that is only active when stimulated by specific substances. Otherwise, the engineered bacteria will maintain normal double-strand DNA replication to accumulate capsid proteins and DNA material until a critical density is reached.</p>
 
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The plasmid's main component is an artificial pseudogene, into which all target staple sequences (including m13) are interleaved with self-cleaving catalytic DNAzymes. Each DNAzyme is approximately 70 base pairs long. Due to time constraints, we use one type of staples (F-cap-x) as an example and design its corresponding pseudogene sequence.</p>
 
@@ -94,12 +104,12 @@
 
   <figure style="text-align: center; margin: 30px 0;">
     <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-3.webp" alt="Industrial production flowchart" style="max-width: 100%; height: auto;">
-    <figcaption>Figure 3. Illustration of the procedure for biologically producing DNA origami. Engineered <em>E. coli</em> is first cultured until bacterial accumulation reaches a critical density. If not, cultivation continues; if yes, a signaling substance is added to initiate rolling circle amplification so that phages unable to replicate themselves are produced. Then, phages are collected and subjected to DNA purification. After adding Zn²⁺ to facilitate DNA self-excision to obtain scaffold and staple strands, a PCR program is run to construct the DNA origami, which is then stored before transported applying to the patients.</figcaption>
+    <figcaption>Figure 3. Illustration of the procedure for biologically producing DNA origami. Engineered <em>E. coli</em> is first cultured until bacterial accumulation reaches a critical density. If not, cultivation continues; if yes, a signaling substance is added to initiate rolling circle amplification so that phages unable to replicate themselves are produced. Then, phages are collected and subjected to DNA purification. After adding Zn虏鈦?to facilitate DNA self-excision to obtain scaffold and staple strands, a PCR program is run to construct the DNA origami, which is then stored before transported applying to the patients.</figcaption>
   </figure>
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Rough Calculation of Production Costs</h2>
 
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">With biotechnological mass production, the cost is estimated to be approximately €0.18 per milligram of folded DNA origami in an 800-liter volume at a contract biotech facility. This is at least three orders of magnitude cheaper than the estimated cost of producing the same amount via conventional solid-phase chemical oligonucleotide synthesis. Furthermore, costs decrease with an expansion of the production scale (1).</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">With biotechnological mass production, the cost is estimated to be approximately 鈧?.18 per milligram of folded DNA origami in an 800-liter volume at a contract biotech facility. This is at least three orders of magnitude cheaper than the estimated cost of producing the same amount via conventional solid-phase chemical oligonucleotide synthesis. Furthermore, costs decrease with an expansion of the production scale (1).</p>
 
   <figure style="text-align: center; margin: 30px 0;">
     <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-4.webp" alt="Cost breakdown" style="max-width: 100%; height: auto;">
@@ -114,7 +124,7 @@
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Respiratory Infections</h2>
 
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">MRSA respiratory infections can cause life-threatening diseases, including pneumonia, empyema, and respiratory failure. Conventional oral and parenteral antibiotic treatments are often inefficient at targeting the lower respiratory tract and can cause systemic adverse effects (4). In contrast, nebulized inhalation is considered an optimal method for lung disease treatment due to the long drug retention time in the lungs, improved delivery of hydrophobic drugs, and reduced systemic toxicity. Specifically, nebulized samples are administered as 10–50 μm microdroplets via a nebulizer. Focas possesses the characteristics of nanomedicines that are likely to pass through the airways and cross the mucus barrier. Previous studies have shown that DNA origami-based drugs can successfully diffuse into deeper regions and remain stable. We plan to conduct experiments to validate our design. The potential crucial role of peptide modification in the treatment requires further evidence (5).</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">MRSA respiratory infections can cause life-threatening diseases, including pneumonia, empyema, and respiratory failure. Conventional oral and parenteral antibiotic treatments are often inefficient at targeting the lower respiratory tract and can cause systemic adverse effects (4). In contrast, nebulized inhalation is considered an optimal method for lung disease treatment due to the long drug retention time in the lungs, improved delivery of hydrophobic drugs, and reduced systemic toxicity. Specifically, nebulized samples are administered as 10鈥?0 渭m microdroplets via a nebulizer. Focas possesses the characteristics of nanomedicines that are likely to pass through the airways and cross the mucus barrier. Previous studies have shown that DNA origami-based drugs can successfully diffuse into deeper regions and remain stable. We plan to conduct experiments to validate our design. The potential crucial role of peptide modification in the treatment requires further evidence (5).</p>
 
   <figure style="text-align: center; margin: 30px 0;">
     <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-5.webp" alt="Nebulized drug delivery" style="max-width: 100%; height: auto;">
@@ -132,11 +142,11 @@
 
   <h1 style="color: #ffffff !important; text-shadow: 0 0 50px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.9), 0 0 15px rgba(96, 165, 250, 0.7);">PART 3: Stability Enhancement</h1>
 
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Although our wet lab experiments indicate that Focas can maintain its structure for a few hours in PBS and a few days when stored at 4°C. However, the therapeutic must remain stable long enough to be effective in a more complex body environment when delivered through vascular system or pulmonary mucosa. Moreover, DNA origami material should be able to store for much longer time in practical implementation. Therefore, our future plan is to enhance stability of Focas by analyzing both exogenous and endogenous factors.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Although our wet lab experiments indicate that Focas can maintain its structure for a few hours in PBS and a few days when stored at 4掳C. However, the therapeutic must remain stable long enough to be effective in a more complex body environment when delivered through vascular system or pulmonary mucosa. Moreover, DNA origami material should be able to store for much longer time in practical implementation. Therefore, our future plan is to enhance stability of Focas by analyzing both exogenous and endogenous factors.</p>
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Exogenous Reasons and Enhancement Plan</h2>
 
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the complex wound microenvironment, the degradation of free DNase enzymes and lysosomal in host cells like phagocytes poses a threat to the stability of the entire biomaterial delivery platform. A potential solution involves using a bio-reducible, cationic polymer—poly(cystaminebisacrylamide-1,6-diaminohexane) (PCD)—as a reversible protective capsule for the DNA origami. Previous studies have demonstrated PCD's protective effect against low salt conditions and DNase I degradation. Interestingly, it may also enhance target combination (9). We will test the stability of Focas encapsulated with PCD in a modeled wound microenvironment and concurrently collect data on changes to aptamer targeting efficiency.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In the complex wound microenvironment, the degradation of free DNase enzymes and lysosomal in host cells like phagocytes poses a threat to the stability of the entire biomaterial delivery platform. A potential solution involves using a bio-reducible, cationic polymer鈥攑oly(cystaminebisacrylamide-1,6-diaminohexane) (PCD)鈥攁s a reversible protective capsule for the DNA origami. Previous studies have demonstrated PCD's protective effect against low salt conditions and DNase I degradation. Interestingly, it may also enhance target combination (9). We will test the stability of Focas encapsulated with PCD in a modeled wound microenvironment and concurrently collect data on changes to aptamer targeting efficiency.</p>
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Endogenous Reasons and Enhancement Plan</h2>
 
@@ -156,15 +166,15 @@
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
 
   <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;" class="references" style="padding-left: 20px; word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; margin: 0; padding-right: 20px; line-height: 1.6; list-style-position: inside; overflow-x: hidden;">
-    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Praetorius F, Kick B, Behler KL, Honemann MN, Weuster-Botz D, Dietz H. Biotechnological mass production of DNA origami. Nature [Internet]. 2017 Dec [cited 2025 Sept 11];552(7683):84–7. Available from: https://www.nature.com/articles/nature24650</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Praetorius F, Kick B, Behler KL, Honemann MN, Weuster-Botz D, Dietz H. Biotechnological mass production of DNA origami. Nature [Internet]. 2017 Dec [cited 2025 Sept 11];552(7683):84鈥?. Available from: https://www.nature.com/articles/nature24650</li>
     
-    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Behler KL, Honemann MN, Silva-Santos AR, Dietz H, Weuster-Botz D. Phage-free production of artificial ssDNA with Escherichia coli. Biotechnology and Bioengineering [Internet]. 2022 [cited 2025 Sept 11];119(10):2878–89. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/bit.28171</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Behler KL, Honemann MN, Silva-Santos AR, Dietz H, Weuster-Botz D. Phage-free production of artificial ssDNA with Escherichia coli. Biotechnology and Bioengineering [Internet]. 2022 [cited 2025 Sept 11];119(10):2878鈥?9. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/bit.28171</li>
     
     <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Nandhini P, Kumar P, Mickymaray S, Alothaim AS, Somasundaram J, Rajan M. Recent Developments in Methicillin-Resistant Staphylococcus aureus (MRSA) Treatment: A Review. Antibiotics (Basel) [Internet]. 2022 Apr 29 [cited 2025 Sept 12];11(5):606. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9137690/</li>
     
     <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Kwong PTH, Arnold JC, Chan HK, Kwok PCL. Co-spray drying of cannabidiol and vancomycin combination powder formulations for the treatment of methicillin-resistant Staphylococcus aureus respiratory infections International Journal of Pharmaceutics [Internet]. 2025 Oct 15 [cited 2025 Sept 11];683:126063. Available from: https://www.sciencedirect.com/science/article/pii/S0378517325009007</li>
     
-    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wang H, Jiao Y, Ma S, Li Z, Gong J, Jiang Q, et al. Nebulized Inhalation of Peptide-Modified DNA Origami To Alleviate Acute Lung Injury. Nano Lett [Internet]. 2024 May 22 [cited 2025 Sept 11];24(20):6102–11. Available from: https://doi.org/10.1021/acs.nanolett.4c01222</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wang H, Jiao Y, Ma S, Li Z, Gong J, Jiang Q, et al. Nebulized Inhalation of Peptide-Modified DNA Origami To Alleviate Acute Lung Injury. Nano Lett [Internet]. 2024 May 22 [cited 2025 Sept 11];24(20):6102鈥?1. Available from: https://doi.org/10.1021/acs.nanolett.4c01222</li>
     
     <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Bai AD, Boyd JG, Li W, Campbell RJ, Gill SS. Microbiology and long-term outcomes in community-acquired, nosocomial and post-neurosurgical meningitis with positive bacterial culture in Ontario, Canada: A population-based cohort study International Journal of Infectious Diseases [Internet]. 2025 Aug 1 [cited 2025 Sept 12];157:107925. Available from: https://www.sciencedirect.com/science/article/pii/S1201971225001493</li>
     
@@ -174,11 +184,11 @@
     
     <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Youssef S, Tsang E, Samanta A, Kumar V, Gothelf KV. Reversible Protection and Targeted Delivery of DNA Origami with a Disulfide-Containing Cationic Polymer. Small [Internet]. 2024 [cited 2025 Sept 13];20(10):2301058. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202301058</li>
     
-    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Torres AG, Gait MJ. Exploiting cell surface thiols to enhance cellular uptake Trends in Biotechnology [Internet]. 2012 Apr 1 [cited 2025 Sept 13];30(4):185–90. Available from: https://www.sciencedirect.com/science/article/pii/S016777991100206X</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Torres AG, Gait MJ. Exploiting cell surface thiols to enhance cellular uptake Trends in Biotechnology [Internet]. 2012 Apr 1 [cited 2025 Sept 13];30(4):185鈥?0. Available from: https://www.sciencedirect.com/science/article/pii/S016777991100206X</li>
     
-    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Shu Z, Tanaka I, Ota A, Fushihara D, Abe N, Kawaguchi S, et al. Disulfide-Unit Conjugation Enables Ultrafast Cytosolic Internalization of Antisense DNA and siRNA. Angewandte Chemie International Edition [Internet]. 2019 [cited 2025 Sept 12];58(20):6611–5. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201900993</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Shu Z, Tanaka I, Ota A, Fushihara D, Abe N, Kawaguchi S, et al. Disulfide-Unit Conjugation Enables Ultrafast Cytosolic Internalization of Antisense DNA and siRNA. Angewandte Chemie International Edition [Internet]. 2019 [cited 2025 Sept 12];58(20):6611鈥?. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201900993</li>
     
-    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Yu L, Xu Y, Al-Amin M, Jiang S, Sample M, Prasad A, et al. CytoDirect: A Nucleic Acid Nanodevice for Specific and Efficient Delivery of Functional Payloads to the Cytoplasm. J Am Chem Soc [Internet]. 2023 Dec 20 [cited 2025 Sept 12];145(50):27336–47. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10789493/</li>
+    <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Yu L, Xu Y, Al-Amin M, Jiang S, Sample M, Prasad A, et al. CytoDirect: A Nucleic Acid Nanodevice for Specific and Efficient Delivery of Functional Payloads to the Cytoplasm. J Am Chem Soc [Internet]. 2023 Dec 20 [cited 2025 Sept 12];145(50):27336鈥?7. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10789493/</li>
   </ol>
 </div>
 
@@ -201,7 +211,8 @@
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
+

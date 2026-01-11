@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Engineering</title>
@@ -9,11 +19,11 @@
   <link rel="stylesheet" href="/static/safety-typography.css">
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -56,7 +66,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -76,21 +86,21 @@
 <details>
 <summary>Design (D)</summary>
 <p>The threat of antimicrobial resistance (AMR) does not originate from a single pathogen or gene, but from a complex spectrum of resistant organisms and determinants: CRE (carbapenem-resistant <em>Enterobacteriaceae</em>), VRE (vancomycin-resistant <em>Enterococcus</em>), MRSA (methicillin-resistant <em>Staphylococcus aureus</em>), and key resistance genes such as <em>bla</em>, <em>van</em>, and <em>mecA</em>. Attempting to address all of them simultaneously would dilute focus, hinder closed-loop validation in modeling and experiments, and obscure innovation.</p>
-<p>Therefore, the goal of DBTL1 was to establish a <strong>stepwise filtering logic</strong>: from <strong>epidemiological burden at the pathogen level</strong> → <strong>mechanistic centrality at the gene level</strong> → <strong>detectability and translational potential</strong>, ultimately converging on the most rational template for our project.</p>
+<p>Therefore, the goal of DBTL1 was to establish a <strong>stepwise filtering logic</strong>: from <strong>epidemiological burden at the pathogen level</strong> 鈫?<strong>mechanistic centrality at the gene level</strong> 鈫?<strong>detectability and translational potential</strong>, ultimately converging on the most rational template for our project.</p>
 </details>
 <details>
 <summary>Build (B)</summary>
 <h3>(1) Pathogen-level screening</h3>
-<p>We constructed a <strong>two-strain SIRD (Susceptible–Infectious–Recovered–Deceased) competition model</strong> to simulate the dynamics of “resistant strain vs. susceptible strain” within the same population. This allowed us to compare epidemiological outcomes across candidate resistant pathogens.</p>
+<p>We constructed a <strong>two-strain SIRD (Susceptible鈥揑nfectious鈥揜ecovered鈥揇eceased) competition model</strong> to simulate the dynamics of 鈥渞esistant strain vs. susceptible strain鈥?within the same population. This allowed us to compare epidemiological outcomes across candidate resistant pathogens.</p>
 <ul>
 <li><strong>Equations (two-strain SIRD system):</strong></li>
 </ul>
 <div class="math-content" style="font-family: 'Times New Roman', serif; line-height: 1.6;">
-<div> dS/dt = - ( β<sub>m</sub> S I<sub>m</sub> ) / N - ( β<sub>s</sub> S I<sub>s</sub> ) / N </div>
-<div> dI<sub>m</sub>/dt = ( β<sub>m</sub> S I<sub>m</sub> ) / N - γ<sub>m</sub> I<sub>m</sub> - μ<sub>m</sub> I<sub>m</sub> </div>
-<div> dI<sub>s</sub>/dt = ( β<sub>s</sub> S I<sub>s</sub> ) / N - γ<sub>s</sub> I<sub>s</sub> - μ<sub>s</sub> I<sub>s</sub> </div>
-<div> dR/dt = γ<sub>m</sub> I<sub>m</sub> + γ<sub>s</sub> I<sub>s</sub> </div>
-<div> dD/dt = μ<sub>m</sub> I<sub>m</sub> + μ<sub>s</sub> I<sub>s</sub> </div>
+<div> dS/dt = - ( 尾<sub>m</sub> S I<sub>m</sub> ) / N - ( 尾<sub>s</sub> S I<sub>s</sub> ) / N </div>
+<div> dI<sub>m</sub>/dt = ( 尾<sub>m</sub> S I<sub>m</sub> ) / N - 纬<sub>m</sub> I<sub>m</sub> - 渭<sub>m</sub> I<sub>m</sub> </div>
+<div> dI<sub>s</sub>/dt = ( 尾<sub>s</sub> S I<sub>s</sub> ) / N - 纬<sub>s</sub> I<sub>s</sub> - 渭<sub>s</sub> I<sub>s</sub> </div>
+<div> dR/dt = 纬<sub>m</sub> I<sub>m</sub> + 纬<sub>s</sub> I<sub>s</sub> </div>
+<div> dD/dt = 渭<sub>m</sub> I<sub>m</sub> + 渭<sub>s</sub> I<sub>s</sub> </div>
 </div>
 <strong>Variables and parameters</strong>:
 
@@ -100,16 +110,16 @@
 <li><em>I<sub>s</sub></em>: infections caused by sensitive strain</li>
 <li>R*: recovered population</li>
 <li>D*: deceased population</li>
-<li>β*: transmission rate</li>
-<li>γ*: recovery rate</li>
-<li>μ*: mortality rate</li>
+<li>尾*: transmission rate</li>
+<li>纬*: recovery rate</li>
+<li>渭*: mortality rate</li>
 <li><em>N</em>: total population size</li>
 </ul>
-<p>By substituting parameters from different candidate pathogens, we directly compared their epidemic peaks, duration, and cumulative mortality—thereby identifying which resistant strains impose the heaviest burden.</p>
+<p>By substituting parameters from different candidate pathogens, we directly compared their epidemic peaks, duration, and cumulative mortality鈥攖hereby identifying which resistant strains impose the heaviest burden.</p>
 <h3>(2) Gene-level screening</h3>
-<p>At the genetic level, we evaluated candidate resistance determinants (bla*, <em>van</em>, <em>mecA</em>) using isolates from the <strong>NCBI Pathogen Detection database (2024–2025)</strong>.</p>
+<p>At the genetic level, we evaluated candidate resistance determinants (bla*, <em>van</em>, <em>mecA</em>) using isolates from the <strong>NCBI Pathogen Detection database (2024鈥?025)</strong>.</p>
 <ul>
-<li><strong>Method</strong>: Logistic regression was applied with gene status as predictor and resistance phenotype (resistant vs. susceptible) as outcome. Performance was assessed by ROC-AUC, sensitivity/specificity, odds ratios (OR), and Fisher’s exact test. Subgroup analyses (OXA, FOX, combined indicators) and cross-validation ensured robustness.</li>
+<li><strong>Method</strong>: Logistic regression was applied with gene status as predictor and resistance phenotype (resistant vs. susceptible) as outcome. Performance was assessed by ROC-AUC, sensitivity/specificity, odds ratios (OR), and Fisher鈥檚 exact test. Subgroup analyses (OXA, FOX, combined indicators) and cross-validation ensured robustness.</li>
 <li><strong>Objective</strong>: To quantify the discriminative power of each gene and identify the most decisive molecular target.</li>
 </ul>
 </details>
@@ -119,64 +129,64 @@
 <div class="img-block"><img alt="" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/dbtl1-1.webp" style="max-width: 100%; height: auto;"/><label class="img-alt"></label></div>
 <strong>Parameter examples (literature-based):</strong>
 <ul>
-<li>Community MRSA: γ ≈ 0.0016/day; R₀ ≈ 1.3; 30-day CFR 20–24%.</li>
-<li>Community MSSA: γ ≈ 0.011/day; R₀ ≈ 1.1–1.2; 30-day CFR 10–12%.</li>
-<li>ICU MRSA: R₀ ≈ 0.28–0.34; 3-month CFR 27–30%.</li>
-<li>ICU MSSA: R₀ &lt; 1; 3-month CFR 20–23%.</li>
+<li>Community MRSA: 纬 鈮?0.0016/day; R鈧€ 鈮?1.3; 30-day CFR 20鈥?4%.</li>
+<li>Community MSSA: 纬 鈮?0.011/day; R鈧€ 鈮?1.1鈥?.2; 30-day CFR 10鈥?2%.</li>
+<li>ICU MRSA: R鈧€ 鈮?0.28鈥?.34; 3-month CFR 27鈥?0%.</li>
+<li>ICU MSSA: R鈧€ &lt; 1; 3-month CFR 20鈥?3%.</li>
 </ul>
 <p>2. <strong>Gene-level results</strong></p>
 <ul>
-<li>Methicillin-class composite (MET∪OXA∪FOX): AUC = <strong>0.967</strong>, sensitivity ≈ <strong>95.8%</strong>, specificity ≈ <strong>97.6%</strong>.</li>
+<li>Methicillin-class composite (MET鈭狾XA鈭狥OX): AUC = <strong>0.967</strong>, sensitivity 鈮?<strong>95.8%</strong>, specificity 鈮?<strong>97.6%</strong>.</li>
 </ul>
 <ul>
-<li>OXA subgroup: AUC = <strong>0.944</strong>, sensitivity ≈ <strong>96.8%</strong>, specificity ≈ <strong>92.1%</strong>.</li>
+<li>OXA subgroup: AUC = <strong>0.944</strong>, sensitivity 鈮?<strong>96.8%</strong>, specificity 鈮?<strong>92.1%</strong>.</li>
 </ul>
 <ul>
-<li>Logistic regression OR ≈ <strong>352</strong> (p &lt; 0.001).</li>
+<li>Logistic regression OR 鈮?<strong>352</strong> (p &lt; 0.001).</li>
 </ul>
 <div class="img-block"><img alt="" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/dbtl1-2.webp" style="max-width: 100%; height: auto;"/><label class="img-alt"></label></div>
 <p>These results show that <em>mecA</em> positivity is nearly equivalent to phenotypic resistance, while <em>mecA</em>-negative isolates rarely exhibit resistance. In other words, <em>mecA</em> is both the mechanistic core and the most reliable clinical marker.</p>
-<p>3. <strong>Literature validation</strong> Epidemiological studies and surveillance reports consistently highlight that MRSA, compared with MSSA, causes higher mortality and greater healthcare burden in both community and hospital settings. Meanwhile, the <em>mecA → PBP2a</em> pathway has been repeatedly confirmed as the hallmark mechanism of methicillin resistance. These external findings align with and reinforce our modeling and data-driven results.</p>
+<p>3. <strong>Literature validation</strong> Epidemiological studies and surveillance reports consistently highlight that MRSA, compared with MSSA, causes higher mortality and greater healthcare burden in both community and hospital settings. Meanwhile, the <em>mecA 鈫?PBP2a</em> pathway has been repeatedly confirmed as the hallmark mechanism of methicillin resistance. These external findings align with and reinforce our modeling and data-driven results.</p>
 <p>For further details, see the <em>Responsiveness</em> section of our <a href="human-practices">iHP</a> documentation.
   </p></details>
 <details>
 <summary>Learn (L)</summary>
 <ul>
-<li>Our choice emerged from a <strong>stepwise narrowing process</strong>: broad-spectrum screening → epidemiological modeling → gene-level prediction → literature validation.</li>
-<li>Among many resistant pathogens and genes, <strong>MRSA × mecA uniquely satisfies all criteria</strong>: high transmissibility, heavy burden, mechanistic centrality, and clinical measurability..</li>
+<li>Our choice emerged from a <strong>stepwise narrowing process</strong>: broad-spectrum screening 鈫?epidemiological modeling 鈫?gene-level prediction 鈫?literature validation.</li>
+<li>Among many resistant pathogens and genes, <strong>MRSA 脳 mecA uniquely satisfies all criteria</strong>: high transmissibility, heavy burden, mechanistic centrality, and clinical measurability..</li>
 </ul>
 </details>
 <!-- DBTL2 -->
 <h1>DBTL2: CRISPR-mecA Cleavage</h1>
 <details>
 <summary>Design (D)</summary>
-<p>In DBTL1, we have chosen the mecA gene as a representative antibiotic resistance gene, which combines a stable molecular mechanism of resistance with dynamic gene mobility (1,2).</p>
-<p>To address this issue, we proposed a new strategy: eliminate the resistance gene itself, thereby removing the resistance and preventing its horizontal transfer to other bacteria. We selected CRISPR/Cas9 technology for the targeted cleavage of the mecA gene, given its high feasibility for directly disrupting the mecA gene (3). This approach provides a fundamental solution to combat the spread of antibiotic resistance at the genetic level.</p>
+<p>In DBTL1, we have chosen the聽mecA gene聽as a representative antibiotic resistance gene, which combines a stable molecular mechanism of resistance with dynamic gene mobility (1,2).</p>
+<p>To address this issue, we proposed a new strategy: eliminate the resistance gene itself, thereby removing the resistance and preventing its horizontal transfer to other bacteria. We selected聽CRISPR/Cas9聽technology for the targeted cleavage of the mecA gene, given its high feasibility for directly disrupting the mecA gene (3). This approach provides a fundamental solution to combat the spread of antibiotic resistance at the genetic level.</p>
 <p>To design the target sequence, the ChopChop tool (https://chopchop.cbu.uib.no) was used (Figure 1). After evaluating multiple potential sequences, we selected the rank 2 target sequence: TGGCAAAAAGATAAATCTTGGGG, with 0 mismatches and an efficiency of 67.83% (Figure 2).</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/2-1.pdf#zoom=page-width"></iframe></div>
-<p>Figure 1. Ranking and evaluation of candidate CRISPR target sequences for mecA generated by ChopChop. The ChopChop output displays the distribution of candidate target sequences across the input genomic region. Each candidate is ranked according to predicted efficiency, GC content, and self-complementarity. Among the top 10 ranked sequences, the rank 2 sequence (TGGCAAAAAGATAAATCTTGGGG) was selected for further use.</p>
+<p>Figure 1. Ranking and evaluation of candidate CRISPR target sequences for mecA generated by ChopChop. The ChopChop output displays the distribution of candidate target sequences across the input genomic region. Each candidate is ranked according to predicted efficiency, GC content, and self-complementarity. Among the top 10 ranked sequences, the聽rank 2 sequence (TGGCAAAAAGATAAATCTTGGGG)聽was selected for further use.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/2-2.pdf#zoom=page-width"></iframe></div>
-<p>Figure 2. Off-target analysis of the selected CRISPR target sequence. Potential off-target sites were evaluated using the ChopChop tool. The analysis identified one exact match (0 mismatches) at genomic location MRSA_Scaffold1:649055.</p>
+<p>Figure 2. Off-target analysis of the selected CRISPR target sequence. Potential off-target sites were evaluated using the ChopChop tool. The analysis identified one exact match (0 mismatches) at genomic location聽MRSA_Scaffold1:649055.</p>
 </details>
 <details>
 <summary>Build (B)</summary>
-<p>Based on the mecA target sequence (TGGCAAAAAGATAAATCTTG), we identified the corresponding guide region (UGGCAAAAAGAUAAAUCUUG). We then ordered the sgRNA-ΔmecA from Genscript, which was adapted for the Cas9 system and contained this guide region.</p>
+<p>Based on the mecA target sequence (TGGCAAAAAGATAAATCTTG), we identified the corresponding guide region (UGGCAAAAAGAUAAAUCUUG). We then ordered the sgRNA-螖mecA from Genscript, which was adapted for the Cas9 system and contained this guide region.</p>
 </details>
 <details>
 <summary>Test (T)</summary>
-<p>After the sgRNA-Δ<em>mecA</em>/Cas9 complex was formed, it was incubated with the <em>mecA</em> gene fragment. The cleavage was assessed by performing DNA gel electrophoresis. In the experimental group where the <em>mecA</em> gene was incubated with the sgRNA-Δ<em>mecA</em>/Cas9 complex, the 2004bp <em>mecA</em> gene fragment was cleaved into two fragments of approximately 700bp and 1300bp (Figure 3). In all other control groups, only a single band of approximately 2000bp was observed, indicating no cleavage.</p>
+<p>After the sgRNA-螖<em>mecA</em>/Cas9 complex was formed, it was incubated with the <em>mecA</em> gene fragment. The cleavage was assessed by performing DNA gel electrophoresis. In the experimental group where the <em>mecA</em> gene was incubated with the sgRNA-螖<em>mecA</em>/Cas9 complex, the 2004bp <em>mecA</em> gene fragment was cleaved into two fragments of approximately 700bp and 1300bp (Figure 3). In all other control groups, only a single band of approximately 2000bp was observed, indicating no cleavage.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/2-3.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 3.</strong> 1% agarose gel electrophoresis analysis of the <em>mecA</em> gene treated with different components. A. <em>mecA</em> gene treated with the Cas9 nuclease reaction buffer. B. <em>mecA</em> gene treated with only Cas9 protein. C. <em>mecA</em> gene treated with only sgRNA-Δ<em>mecA</em>. D. <em>mecA</em> gene treated with sgRNA-Δ<em>EGFP</em>/Cas9 complex. E. <em>mecA</em> gene treated with sgRNA-Δ<em>mecA</em>/Cas9 complex.</p>
+<p><strong>Figure 3.</strong> 1% agarose gel electrophoresis analysis of the <em>mecA</em> gene treated with different components. A. <em>mecA</em> gene treated with the Cas9 nuclease reaction buffer. B. <em>mecA</em> gene treated with only Cas9 protein. C. <em>mecA</em> gene treated with only sgRNA-螖<em>mecA</em>. D. <em>mecA</em> gene treated with sgRNA-螖<em>EGFP</em>/Cas9 complex. E. <em>mecA</em> gene treated with sgRNA-螖<em>mecA</em>/Cas9 complex.</p>
 </details>
 <details>
 <summary>Learn (L)</summary>
 <p>Since the target sequence begins approximately at the 1300th nucleotide of the 2004bp-long mecA gene, the gene was expected to be cleaved into two fragments of around 1300bp and 700bp, which aligns with our experimental results. This confirms that the designed guide region is effective and can successfully target the mecA gene for cleavage using the CRISPR/Cas9 system.</p>
 <p>However, direct application of the sgRNA/Cas9 complex to target and cleave antibiotic resistance genes in resistant bacteria is not feasible. The complex must overcome cell membrane barriers and face challenges of poor stability (4). Therefore, an effective delivery system is crucial to ensure that the CRISPR/Cas9 complex can successfully reach the target and function in vivo.</p>
 <p>References</p>
-<p>1.	Fergestad ME, Stamsås GA, Angeles DM, Salehian Z, Wasteson Y, Kjos M. Penicillin-binding protein PBP2a provides variable levels of protection toward different β-lactams in Staphylococcus aureus RN4220. MicrobiologyOpen. 2020 Aug 1;9(8):e1057.</p>
-<p>2.	Lowy FD. Antimicrobial resistance: the example of Staphylococcus aureus. J Clin Invest. 2003 May 1;111(9):1265–73.</p>
-<p>3.	Hsu PD, Lander ES, Zhang F. Development and Applications of CRISPR-Cas9 for Genome Engineering. Cell. 2014 June;157(6):1262–78.</p>
-<p>4.	Seijas A, Cora D, Novo M, Al-Soufi W, Sánchez L, Arana ÁJ. CRISPR/Cas9 Delivery Systems to Enhance Gene Editing Efficiency. International Journal of Molecular Sciences. 2025 Jan;26(9):4420.</p>
+<p>1.	Fergestad ME, Stams氓s GA, Angeles DM, Salehian Z, Wasteson Y, Kjos M. Penicillin-binding protein PBP2a provides variable levels of protection toward different 尾-lactams in Staphylococcus aureus RN4220. MicrobiologyOpen. 2020 Aug 1;9(8):e1057.</p>
+<p>2.	Lowy FD. Antimicrobial resistance: the example of Staphylococcus aureus. J Clin Invest. 2003 May 1;111(9):1265鈥?3.</p>
+<p>3.	Hsu PD, Lander ES, Zhang F. Development and Applications of CRISPR-Cas9 for Genome Engineering. Cell. 2014 June;157(6):1262鈥?8.</p>
+<p>4.	Seijas A, Cora D, Novo M, Al-Soufi W, S谩nchez L, Arana 脕J. CRISPR/Cas9 Delivery Systems to Enhance Gene Editing Efficiency. International Journal of Molecular Sciences. 2025 Jan;26(9):4420.</p>
 </details>
 <!-- DBTL3 -->
 <h1>DBTL3: Origami-CRISPR Delivery</h1>
@@ -202,7 +212,7 @@
 <p>To confirm the stability of DO, we built the DNA origami and conducted molecular dynamics simulations within the dry lab. Using oxDNA, a platform specific for molecular dynamics simulation of DNA origami, we acquired figures of "Trajectory Inspection", "Energy Monitoring", "RMSD and Alignment", "RMSF and Mean Structures", "Base-Pairing Statistics", and "Global Metrics". The results illustrated high stability of the origami, though set in high temperature and with more than ten thousand steps of simulation.</p>
 <p>Atomic force microscope (AFM) imaging was used to verify the successful assembly of DO<sub>PAM</sub>GH. In AFM imaging, the DO<sub>PAM</sub>GH maintained the rectangular shape (Figure 4A). Height analysis of a selected single rectangular DO<sub>PAM</sub>GH shows that the length and the width of DO<sub>PAM</sub>GH are also in line with our expectations (Figure 4B). These structural values indicate the successful assembly of DO<sub>PAM</sub>GH.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-4.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 4.</strong> AFM image and Height analysis of a single rectangular DO<sub>PAM</sub>GH. A. A schematic diagram of the designed DO<sub>PAM</sub>GH (100nm × 80nm × 2nm) and an AFM image showing a selected assembled rectangular nanostructure. B. Height analysis for the length (upper) and width (below) of DO<sub>PAM</sub>GH by AFM. The left picture shows the drawn lines, and the right picture shows the height variation curve along the line, which changes with distance. Scale bar: 100nm.</p>
+<p><strong>Figure 4.</strong> AFM image and Height analysis of a single rectangular DO<sub>PAM</sub>GH. A. A schematic diagram of the designed DO<sub>PAM</sub>GH (100nm 脳 80nm 脳 2nm) and an AFM image showing a selected assembled rectangular nanostructure. B. Height analysis for the length (upper) and width (below) of DO<sub>PAM</sub>GH by AFM. The left picture shows the drawn lines, and the right picture shows the height variation curve along the line, which changes with distance. Scale bar: 100nm.</p>
 <p>To validate the successful loading of the sgRNA<sub>L</sub>/Cas9 complex onto the DNA origami, we used UV-Vis spectroscopy to measure the absorbance of the system. The DNA origami carrying the sgRNA<sub>L</sub>/Cas9 complex exhibited absorption peaks at both 495 nm (FITC) and 650 nm (Cy5), confirming the presence of both components (Figure 5). This result validated that the sgRNA<sub>L</sub>/Cas9 complex had been successfully incorporated into the DNA origami, and the system was ready for further application in gene editing.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-5.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 5.</strong> The UV absorption spectra of Cy5-labeled DNA origami loaded with FITC-sgRNA<sub>L</sub>/Cas9 (Cy5-labeled DO<sub>PAM</sub>R<sup>FITC</sup>C), Cy5-labeled DNA origami (Cy5-labeled DO<sub>PAM</sub>), and FITC-sgRNA<sub>L</sub>/Cas9 (R<sup>FITC</sup>C). The absorption peaks at both 495 nm and 650 nm of Cy5-labeled DO<sub>PAM</sub>R<sup>FITC</sup>C confirm the presence of both DNA origami and sgRNA<sub>L</sub>/Cas9, indicating successful loading.</p>
@@ -228,12 +238,12 @@
 </ul>
 <p>References</p>
 <p>Tang W, Tong T, Wang H, Lu X, Yang C, Wu Y, et al. A DNA Origami-Based Gene Editing System for Efficient Gene Therapy in Vivo. Angewandte Chemie International Edition. 2023;62(51):e202315093.<p>
-<p>Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297–302.<p>
+<p>Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297鈥?02.<p>
 </p></p></p></p></details>
 <h2>3.1 Modify sgRNA</h2>
 <details>
 <summary>Design (D)</summary>
-<p>We designed a modified version, termed sgRNA<sub>L</sub>, by adding an extra linker (sequence: GGGUGGUGCCCAUCCUGGUC) at its 3′ end. This linker is intended to form complementary base pairing with specific sequences on the DNA origami, thereby enabling stable binding. The reason behind this design was to utilize an intrinsic mechanism within bacterial cells to release the sgRNA/Cas9 complex. RNase H is a key enzyme that is widely present in bacteria and essential for maintaining genomic stability, as it cleaves the DNA-RNA hybrid region (1). This enzyme naturally recognizes and cleaves DNA-RNA hybrids, which is exactly what would occur between the sgRNA<sub>L</sub> and the DNA origami. Although RNase H does not require specific sequences, it prefers certain structural features of DNA. Our design, based on prior studies, aligns with these features, allowing RNase H to efficiently recognize and release the sgRNA/Cas9 complex within the bacterial system.</p>
+<p>We designed a modified version, termed sgRNA<sub>L</sub>, by adding an extra linker (sequence: GGGUGGUGCCCAUCCUGGUC) at its 3鈥?end. This linker is intended to form complementary base pairing with specific sequences on the DNA origami, thereby enabling stable binding. The reason behind this design was to utilize an intrinsic mechanism within bacterial cells to release the sgRNA/Cas9 complex. RNase H is a key enzyme that is widely present in bacteria and essential for maintaining genomic stability, as it cleaves the DNA-RNA hybrid region (1). This enzyme naturally recognizes and cleaves DNA-RNA hybrids, which is exactly what would occur between the sgRNA<sub>L</sub> and the DNA origami. Although RNase H does not require specific sequences, it prefers certain structural features of DNA. Our design, based on prior studies, aligns with these features, allowing RNase H to efficiently recognize and release the sgRNA/Cas9 complex within the bacterial system.</p>
 <p>To eventually test whether DNA origami carrying the sgRNA<sub>L</sub>/Cas9 complex can be delivered into bacteria for targeted gene editing, we initially considered MRSA and its resistance gene <em>mecA</em> as a potential model. However, carrying out experiments with MRSA presents significant biosafety risks. After an extensive literature review, we chose <em>Escherichia coli</em> (<em>E. coli</em>) MG1655 as the model organism instead to ensure feasibility and safety. We targeted the <em>lacZ</em> gene because its phenotypic changes are easy to monitor: on X-gal indicator plates, colonies with intact <em>lacZ</em> appear blue, whereas those with disrupted <em>lacZ</em> appear white (2). This provides a straightforward and reliable readout for evaluating gene-editing outcomes.</p>
 <p>To design suitable sgRNA target sites for <em>lacZ</em>, we used the ChopChop tool (https://chopchop.cbu.uib.no). After evaluating multiple potential sequences, we selected the target sequence CTGGGGAATGAATCAGGCCACGG. The decision was supported by the repair outcome predictions (Figure 1). Specifically, this site exhibited a high frameshift frequency (70.08%), indicating that cleavage at this locus is highly likely to disrupt the reading frame of <em>lacZ</em>. Moreover, the high microhomology deletion frequency (68.79%) suggests that error-prone repair is effectively activated at this site, helping <em>E. coli</em> survive CRISPR/Cas9-induced double-strand breaks that might otherwise be lethal (3). Taken together, these statistical features strongly support the use of this sequence as a robust target for functional knockout of <em>lacZ</em>.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-1-1.pdf#zoom=page-width"></iframe></div>
@@ -250,24 +260,24 @@
 </details>
 <details>
 <summary>Test (T)</summary>
-<p>We assessed the concentration and purity of the purified sgRNA<sub>L</sub> using a nanodrop spectrophotometer. The measured concentration was 2813.8 ng/μL, with an A260/A280 ratio of 2.05 and an A260/A230 ratio of 2.55, indicating high purity and suitability for downstream experiments.</p>
-<p>To further investigate whether the addition of a linker at the 3′ end affects the function of the sgRNA<sub>L</sub>, we first PCR-amplified a 2001 bp DNA fragment from the <em>lacZ</em> gene region of <em>E. coli</em> MG1655, which contains the sgRNA target site. Subsequently, the sgRNA<sub>L</sub> was incubated with Cas9 protein to assemble a ribonucleoprotein (RNP) complex. This RNP complex was then incubated with the <em>lacZ</em> PCR fragment under appropriate reaction conditions. To evaluate whether the <em>lacZ</em> fragment was successfully cleaved, we performed agarose gel electrophoresis on the reaction products (Figure 4). Given that the target sequence is located at positions 657-677 within the 2001 bp fragment, successful cleavage is expected to yield two DNA fragments of approximately 670 bp and 1330 bp. The observed band pattern on the gel matched these theoretical sizes, confirming that the addition of a 3′ linker does not impair the function of the sgRNA.</p>
+<p>We assessed the concentration and purity of the purified sgRNA<sub>L</sub> using a nanodrop spectrophotometer. The measured concentration was 2813.8 ng/渭L, with an A260/A280 ratio of 2.05 and an A260/A230 ratio of 2.55, indicating high purity and suitability for downstream experiments.</p>
+<p>To further investigate whether the addition of a linker at the 3鈥?end affects the function of the sgRNA<sub>L</sub>, we first PCR-amplified a 2001 bp DNA fragment from the <em>lacZ</em> gene region of <em>E. coli</em> MG1655, which contains the sgRNA target site. Subsequently, the sgRNA<sub>L</sub> was incubated with Cas9 protein to assemble a ribonucleoprotein (RNP) complex. This RNP complex was then incubated with the <em>lacZ</em> PCR fragment under appropriate reaction conditions. To evaluate whether the <em>lacZ</em> fragment was successfully cleaved, we performed agarose gel electrophoresis on the reaction products (Figure 4). Given that the target sequence is located at positions 657-677 within the 2001 bp fragment, successful cleavage is expected to yield two DNA fragments of approximately 670 bp and 1330 bp. The observed band pattern on the gel matched these theoretical sizes, confirming that the addition of a 3鈥?linker does not impair the function of the sgRNA.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-1-4.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 4.</strong> 1% agarose gel electrophoresis analysis of <em>lacZ</em> gene treated with different components. A. <em>lacZ</em> gene treated with sgRNA<sub>L</sub>/Cas9 complex. B. <em>lacZ</em> gene treated with buffer.</p>
 </details>
 <details>
 <summary>Learn (L)</summary>
-<p>The cleavage results confirmed that the sgRNA<sub>L</sub> retained full function even after the addition of a 3′ linker, as evidenced by the expected ~670 bp and ~1330 bp bands observed in agarose gel electrophoresis. This indicates that the 3′ extension does not interfere with the formation or functionality of the sgRNA/Cas9 complex.</p>
+<p>The cleavage results confirmed that the sgRNA<sub>L</sub> retained full function even after the addition of a 3鈥?linker, as evidenced by the expected ~670 bp and ~1330 bp bands observed in agarose gel electrophoresis. This indicates that the 3鈥?extension does not interfere with the formation or functionality of the sgRNA/Cas9 complex.</p>
 <p>However, modifying the sgRNA alone is not sufficient to enable hybridization with the DNA origami structure. To achieve stable base-pairing between the sgRNA and DNA origami, complementary sequences must also be incorporated into selected staple strands of the origami that match the linker region of the sgRNA.</p>
 <p>References</p>
-<p>Hang T, Zhang X, Wu M, Wang C, Ling S, Xu L, et al. Structural insights into a novel functional dimer of Staphylococcus aureus RNase HII. Biochemical and Biophysical Research Communications. 2018 Sept 10;503(3):1207–13.<p>
+<p>Hang T, Zhang X, Wu M, Wang C, Ling S, Xu L, et al. Structural insights into a novel functional dimer of Staphylococcus aureus RNase HII. Biochemical and Biophysical Research Communications. 2018 Sept 10;503(3):1207鈥?3.<p>
 <p>Zhao D, Yuan S, Xiong B, Sun H, Ye L, Li J, et al. Development of a fast and easy method for Escherichia coli genome editing with CRISPR/Cas9. Microb Cell Fact. 2016 Dec;15(1):205.<p>
-<p>Huang C, Ding T, Wang J, Wang X, Guo L, Wang J, et al. CRISPR-Cas9-assisted native end-joining editing offers a simple strategy for efficient genetic engineering in Escherichia coli. Appl Microbiol Biotechnol. 2019 Oct 1;103(20):8497–509.<p>
+<p>Huang C, Ding T, Wang J, Wang X, Guo L, Wang J, et al. CRISPR-Cas9-assisted native end-joining editing offers a simple strategy for efficient genetic engineering in Escherichia coli. Appl Microbiol Biotechnol. 2019 Oct 1;103(20):8497鈥?09.<p>
 </p></p></p></p></p></p></details>
 <h2>3.2 Modify DNA Origami</h2>
 <details>
 <summary>Design (D)</summary>
-<p>To enable base-pairing between the modified sgRNA<sub>L</sub> and the DNA origami structure, we designed complementary sequences that match the 3′ linker region of the sgRNA and incorporated them into selected staple strands of the DNA origami. These complementary sequences were added to the 5′ end of the chosen staples, facilitating the hybridization of the sgRNA with the origami through Watson-Crick base pairing. Preliminary calculations indicated that the diameter of the Cas9 protein is approximately one-fourth of the width of the DNA origami rectangle. To provide sufficient space for Cas9 protection within the complex wound environment, we deliberately excluded staples near the edges. After balancing the available space and the need for efficient loading, we chose six staple strands in the middle (102, 103, 104, 113, 114, and 115) as the insertion sites.</p>
+<p>To enable base-pairing between the modified sgRNA<sub>L</sub> and the DNA origami structure, we designed complementary sequences that match the 3鈥?linker region of the sgRNA and incorporated them into selected staple strands of the DNA origami. These complementary sequences were added to the 5鈥?end of the chosen staples, facilitating the hybridization of the sgRNA with the origami through Watson-Crick base pairing. Preliminary calculations indicated that the diameter of the Cas9 protein is approximately one-fourth of the width of the DNA origami rectangle. To provide sufficient space for Cas9 protection within the complex wound environment, we deliberately excluded staples near the edges. After balancing the available space and the need for efficient loading, we chose six staple strands in the middle (102, 103, 104, 113, 114, and 115) as the insertion sites.</p>
 <p>In addition, to further enhance the recruitment and stable binding of the Cas9 protein, we inserted a PAM-capturing sequence between the complementary region and the original staple sequence (Figure 1). This intermediate segment is designed to hybridize with PAM-rich DNA strands, thereby increasing the local concentration of potential Cas9 binding sites and promoting more stable association of the sgRNA/Cas9 complex with the origami scaffold. These six modified staple strands are collectively referred to as S-PAM-cap.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-2-1.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 1.</strong> Design of the basic rectangular DNA origami structure with S-PAM-cap and PAM-rich (DO<sub>PAM</sub>). DO<sub>PAM</sub> is constructed using the M13mp18 phage genome as the scaffold strand (black long single strand), which is folded into a rectangular shape by staple strands. The modified staple strands, shown in red, are labeled as S-PAM-cap, which captures PAM-rich. Each numbered position in the figure corresponds to a unique site on the scaffold strand, indicating precise staple placement.</p>
@@ -280,7 +290,7 @@
 <summary>Test (T)</summary>
 <p>AFM imaging was used to verify the successful assembly of DO<sub>PAM</sub>. In AFM imaging, the DO<sub>PAM</sub> maintained the rectangular shape (Figure 2A). Height analysis of a selected single rectangular DO<sub>PAM</sub> shows that the length and the width of DO<sub>PAM</sub> are also in line with our expectations (Figure 2B). These structural values indicate the successful assembly of DO<sub>PAM</sub>.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-2-2.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 2.</strong> AFM image and Height analysis of a single rectangular DO<sub>PAM</sub>. A. A schematic diagram of the designed DO<sub>PAM</sub> (100nm × 80nm × 2nm) and an AFM image showing a selected assembled rectangular nanostructure. B. Height analysis for the length (upper) and width (below) of DO<sub>PAM</sub> by AFM. The left pictures show the drawn lines, and the right pictures show the height variation curve along the line, which changes with the distance. Scale bar: 100nm.</p>
+<p><strong>Figure 2.</strong> AFM image and Height analysis of a single rectangular DO<sub>PAM</sub>. A. A schematic diagram of the designed DO<sub>PAM</sub> (100nm 脳 80nm 脳 2nm) and an AFM image showing a selected assembled rectangular nanostructure. B. Height analysis for the length (upper) and width (below) of DO<sub>PAM</sub> by AFM. The left pictures show the drawn lines, and the right pictures show the height variation curve along the line, which changes with the distance. Scale bar: 100nm.</p>
 </details>
 <details>
 <summary>Learn (L)</summary>
@@ -295,7 +305,7 @@
 </details>
 <details>
 <summary>Build (B)</summary>
-<p>We first perform desalting on the purchased Cas9 to replace the original solvent provided by the supplier with PBS. Subsequently, Cas9 was diluted to the desired reaction concentration, and the corresponding concentrations of FITC-labeled reagent and labeling buffer were added according to the pre-designed reaction system. After incubation at 4°C for 1 hour in the dark, the termination buffer was added, and binding continued for an additional 15 minutes. The Cas9 (160 kDa) samples were then purified using a G-25 Mini Deionization Column to remove unbound FITC, thereby minimizing potential fluorescence interference in subsequent experiments. The eluate was collected, and the absorbance at 280 nm and 495 nm was measured using a Nanodrop and a UV spectrophotometer. Finally, the recovery rate, product concentration, and labeling efficiency were calculated.</p>
+<p>We first perform desalting on the purchased Cas9 to replace the original solvent provided by the supplier with PBS. Subsequently, Cas9 was diluted to the desired reaction concentration, and the corresponding concentrations of FITC-labeled reagent and labeling buffer were added according to the pre-designed reaction system. After incubation at 4掳C for 1 hour in the dark, the termination buffer was added, and binding continued for an additional 15 minutes. The Cas9 (160 kDa) samples were then purified using a G-25 Mini Deionization Column to remove unbound FITC, thereby minimizing potential fluorescence interference in subsequent experiments. The eluate was collected, and the absorbance at 280 nm and 495 nm was measured using a Nanodrop and a UV spectrophotometer. Finally, the recovery rate, product concentration, and labeling efficiency were calculated.</p>
 </details>
 <details>
 <summary>Test (T)</summary>
@@ -314,20 +324,20 @@
 <tr>
 <td>spCas9</td>
 <td>0.37</td>
-<td>100 µl</td>
-<td>50 µg</td>
+<td>100 碌l</td>
+<td>50 碌g</td>
 <td>-</td>
 </tr>
 <tr>
 <td>Desalted sample</td>
 <td>0.02</td>
-<td>998 µl</td>
-<td>26.9 µg</td>
+<td>998 碌l</td>
+<td>26.9 碌g</td>
 <td>53.8%</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Table 1.</strong> Profiles of one example set of desalting pretreatments of Cas9 protein. The table presents the comparison of the spCas9 protein and the desalted sample, showing the measurements of A<sub>280</sub> (absorbance at 280 nm), volume, mass, and the recovery rate after desalting. The recovery rate of the desalted sample was calculated as the ratio of the recovered mass (26.9 µg) to the initial mass (50 µg), resulting in a recovery rate of 53.8%.</p>
+<p><strong>Table 1.</strong> Profiles of one example set of desalting pretreatments of Cas9 protein. The table presents the comparison of the spCas9 protein and the desalted sample, showing the measurements of A<sub>280</sub> (absorbance at 280 nm), volume, mass, and the recovery rate after desalting. The recovery rate of the desalted sample was calculated as the ratio of the recovered mass (26.9 碌g) to the initial mass (50 碌g), resulting in a recovery rate of 53.8%.</p>
 <p>By recovering and measuring the filtration from the purified column, a simple recovery graph was obtained, in which the first peak is the FITC-Cas9 we needed (Figure 1). The desired product was recovered at the bottom of the first peak, but the loss rate was extremely high, and the yield was not ideal (Table 2). The SDS-PAGE electrophoresis of the products did not reveal any bands. One possible reason could be the insufficiently loaded protein.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-3-1-1.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 1.</strong> Elution profile of FITC-Cas9 in Sephadex G-25 column. 20 tubes were used to collect the eluted solution, with each tube containing 1 ml, for a total of 20 ml. Absorbance was quantified for each 1 ml fraction, and the data were plotted. The A<sub>280</sub> curve (black) represents protein content, while the A<sub>495</sub> curve (red) indicates the presence of FITC. Two distinct peaks were observed. The separation of these peaks reflects the size-based separation of proteins, confirming the presence of both labeled and unlabeled Cas9 proteins, as anticipated. The larger FITC-labeled Cas9 protein eluted first. Consequently, the six tubes corresponding to the first peak (3-8 ml) were collected, as indicated by the dashed lines, yielding the desired FITC-labeled Cas9 protein.</p>
@@ -349,8 +359,8 @@
 <td>Purified FITC-Cas9</td>
 <td>1.93</td>
 <td>1.82</td>
-<td>16.00 µM</td>
-<td>26.12 µM</td>
+<td>16.00 碌M</td>
+<td>26.12 碌M</td>
 <td>6 ml</td>
 <td>1.63</td>
 <td>28.61%</td>
@@ -370,7 +380,7 @@
 </details>
 <details>
 <summary>Build (B)</summary>
-<p>The pre-synthesized sgRNA<sub>L</sub> and other pre-configured FITC-NHS labeling reagents and labeling buffer were mixed and incubated at 37°C for an hour. The FITC-sgRNA<sub>L</sub> was purified by the ethanol precipitation method. During the first purification step, the unreacted fluorescein will remain in the supernatant, while the fluorescein-labeled precipitate will appear dark brown. The presence of a white precipitate indicates that the reaction was unsuccessful. This can act as secondary evidence to examine if the labeling is successful. Similarly, the absorbance values at 260nm and 495nm were measured using a nanodrop after purification, and the recovery rate, product concentration, and labeling efficiency were calculated.</p>
+<p>The pre-synthesized sgRNA<sub>L</sub> and other pre-configured FITC-NHS labeling reagents and labeling buffer were mixed and incubated at 37掳C for an hour. The FITC-sgRNA<sub>L</sub> was purified by the ethanol precipitation method. During the first purification step, the unreacted fluorescein will remain in the supernatant, while the fluorescein-labeled precipitate will appear dark brown. The presence of a white precipitate indicates that the reaction was unsuccessful. This can act as secondary evidence to examine if the labeling is successful. Similarly, the absorbance values at 260nm and 495nm were measured using a nanodrop after purification, and the recovery rate, product concentration, and labeling efficiency were calculated.</p>
 </details>
 <details>
 <summary>Test (T)</summary>
@@ -392,26 +402,26 @@
 <tbody>
 <tr>
 <td>FITC-sgRNA<sub>L</sub></td>
-<td>11.43 µM</td>
-<td>5 µl</td>
+<td>11.43 碌M</td>
+<td>5 碌l</td>
 <td>6.70</td>
 <td>66.70%</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Table 1.</strong> Profiles of one example set of FITC-labeled sgRNA<sub>L</sub> product. The molar concentration (absorbance/ extinction coefficient) was measured to be 11.43 μM, with a purification yield of 5 μL volume. The labeling efficiency of FITC (molarity of FITC/ molarity of sgRNA<sub>L</sub>) was calculated to be about 6.70. The recovery rate of sgRNA (mass after purification/ mass before purification) was about 66.70%. Details of the calculation can be seen in the protocol.</p>
+<p><strong>Table 1.</strong> Profiles of one example set of FITC-labeled sgRNA<sub>L</sub> product. The molar concentration (absorbance/ extinction coefficient) was measured to be 11.43 渭M, with a purification yield of 5 渭L volume. The labeling efficiency of FITC (molarity of FITC/ molarity of sgRNA<sub>L</sub>) was calculated to be about 6.70. The recovery rate of sgRNA (mass after purification/ mass before purification) was about 66.70%. Details of the calculation can be seen in the protocol.</p>
 </details>
 <details>
 <summary>Learn (L)</summary>
 <p>In this FITC labeling experiment, we first attempted to label Cas9 with FITC, only to find significant sample loss and low recovery rates during the desalting and purification processes. Worse still, the high cost and limited availability of the Cas9 protein posed a considerable challenge. After switching to labeling sgRNA<sub>L</sub> with FITC-NHS ester, we achieved ideal molarity and labeling efficiency, which met the requirements for DNA origami assembly and fluorescence imaging. This shift in strategy underscored the necessity of considering alternative approaches when faced with technical and budgetary limitations.</p>
 <p>References</p>
 <p>1.	Chaganti LK, Venkatakrishnan N, Bose K. An efficient method for FITC labelling of proteins using tandem affinity purification. Biosci Rep. 2018 Dec 21;38(6):BSR20181764.</p>
-<p>2.	Nasri M, Mir P, Dannenmann B, Amend D, Skroblyn T, Xu Y, et al. Fluorescent labeling of CRISPR/Cas9 RNP for gene knockout in HSPCs and iPSCs reveals an essential role for GADD45b in stress response. Blood Adv. 2019 Jan 8;3(1):63–71.</p>
+<p>2.	Nasri M, Mir P, Dannenmann B, Amend D, Skroblyn T, Xu Y, et al. Fluorescent labeling of CRISPR/Cas9 RNP for gene knockout in HSPCs and iPSCs reveals an essential role for GADD45b in stress response. Blood Adv. 2019 Jan 8;3(1):63鈥?1.</p>
 </details>
 <h3>3.4.1 Gel Electrophoresis Verification</h3>
 <details>
 <summary>Design (D)</summary>
-<p>To label the DNA origami with fluorescence, we selected 36 staple strands and added 15 thymine (T) bases at their 5′ ends (denoted as F-cap), which are designed to capture DNA strands with 15 adenine (A) bases labeled with Cy5 fluorescence at 3' ends (denoted as F-H) (Figure 1).</p>
+<p>To label the DNA origami with fluorescence, we selected 36 staple strands and added 15 thymine (T) bases at their 5鈥?ends (denoted as F-cap), which are designed to capture DNA strands with 15 adenine (A) bases labeled with Cy5 fluorescence at 3' ends (denoted as F-H) (Figure 1).</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/3-4-1-1.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 1.</strong> Design of DO<sub>PAM</sub> with F-cap, and F-H (Cy5-labeled DO<sub>PAM</sub>). Cy5-labeled DO<sub>PAM</sub> is constructed using the M13mp18 phage genome as the scaffold strand (black long single strand), which is folded into a rectangular shape by staple strands. The modified staple strands, shown in red, are labeled as S-PAM-cap, which captures PAM-rich. Yellow dots indicate the F-cap strands that capture the F-H strand. Each numbered position in the figure corresponds to a unique site on the scaffold strand, indicating precise staple placement.</p>
 </details>
@@ -449,7 +459,7 @@
 <p>The DNA origami carrying sgRNA<sub>L</sub>/Cas9 exhibited absorption peaks at both 495 nm and 650 nm, indicating the presence of FITC and Cy5, respectively. This confirms the successful incorporation of sgRNA<sub>L</sub>/Cas9 onto the origami structure, thereby validating the effectiveness of our design and methodology. However, this delivery system still faces challenges in overcoming the barriers posed by bacterial cell membranes and cell walls. Therefore, we need to incorporate elements that can disrupt these barriers to facilitate the delivery to the bacteria.</p>
 <p>References</p>
 <p>1.	Schaub JM, Best QA, Zhao C, Haack RA, Ruan Q. Three sample-sparing techniques to estimate the molar absorption coefficient of luminescent dyes. Biochemistry and Biophysics Reports. 2025 June 1;42:101971.</p>
-<p>2.	Eggleton P, Nissim A, Ryan BJ, Whiteman M, Winyard PG. Detection and isolation of human serum autoantibodies that recognize oxidatively modified autoantigens. Free Radical Biology and Medicine. 2013 Apr 1;57:79–91.</p>
+<p>2.	Eggleton P, Nissim A, Ryan BJ, Whiteman M, Winyard PG. Detection and isolation of human serum autoantibodies that recognize oxidatively modified autoantigens. Free Radical Biology and Medicine. 2013 Apr 1;57:79鈥?1.</p>
 </details>
 <!-- DBTL4 -->
 <h1>DBTL4: Membrane-Disrupting DNA Origami</h1>
@@ -469,18 +479,18 @@
 <p>G4s are introduced to disrupt the bacterial membrane. However, they are known to exhibit a strong tendency to dimerize through stacking interactions, which can influence the structure and functions of DNA origami (6). To examine whether the new DNA origami structure exhibited dimerization, we subjected DO<sub>PAM</sub>G to agarose gel electrophoresis (Figure 2). The results revealed a similar single band of DO<sub>PAM</sub>G to that of DO<sub>PAM</sub>, with an approximate size double that of M13, indicating correct folding and the absence of dimerization.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-2.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 2.</strong> 1% agarose gel electrophoresis analysis of M13, DO<sub>PAM</sub>, and DO<sub>PAM</sub>G. A. M13 scaffold solution. B. DO<sub>PAM</sub> solution. C. DO<sub>PAM</sub>G solution.</p>
-<p>To verify whether hemin was successfully incorporated into the DNA origami to form the G4/hemin complex, we performed a UV–Vis assay on the DNA origami (Figure 3). Since hemin exhibits an absorbance peak around 400nm in the presence of DO<sub>PAM</sub>G (7), the presence of a distinct peak around this wavelength in our samples confirmed the successful loading of hemin and the formation of the G4/hemin complex.</p>
+<p>To verify whether hemin was successfully incorporated into the DNA origami to form the G4/hemin complex, we performed a UV鈥揤is assay on the DNA origami (Figure 3). Since hemin exhibits an absorbance peak around 400nm in the presence of DO<sub>PAM</sub>G (7), the presence of a distinct peak around this wavelength in our samples confirmed the successful loading of hemin and the formation of the G4/hemin complex.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-3.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 3.</strong> The UV absorption spectra of DO<sub>PAM</sub>G and DO<sub>PAM</sub>GH. DO<sub>PAM</sub>G (blue) exhibited an absorption peak at 260nm (DNA), while DO<sub>PAM</sub>GH (orange) exhibited two absorption peaks at 260nm and 400nm, corresponding to DNA and hemin, respectively.</p>
 <p>To further evaluate the peroxidase-mimicking activity of the G4/hemin complex, we performed an ABTS assay. The DNA origami was incubated with ABTS, and then the absorbance at 415 nm was measured (8) (Figure 4). This absorbance reflects the concentration of oxidized ABTS, which correlates with the peroxidase-mimicking activity of the G4/hemin complex. Our results demonstrated that the G4/hemin loaded on DNA origami exhibited higher peroxidase-mimicking activity compared to an equivalent amount of free G4/hemin complex.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-4.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 4.</strong> The absorbance of each group at 415nm. Data represent the mean ± s.d. from three independent replicates.</p>
+<p><strong>Figure 4.</strong> The absorbance of each group at 415nm. Data represent the mean 卤 s.d. from three independent replicates.</p>
 <p>Though the peroxidase was generated efficiently, we simulated in silico that it won't harm the DNA origami itself, sgRNA, and Cas9 protein loaded on it. We performed a cross-section where they are most likely to be harmed (Figure 5). Then, with simulation for more than 10 thousand steps, there was no or limited ROS entering the origami, and even less ROS that reached the protein. The final percentage of the harm of protein and sgRNA is lower than 3 percent, respectively.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/dbtl4-dry-new.webp#zoom=page-width"></iframe></div>
-<p><strong>Figure 5.</strong> ROS Diffusion and Damage Probability Analysis of the sgRNA/Cas9-DNA Origami System. The result showed that sgRNA damage probability is 0.70%, Cas9 damage probability is 0.40%, and DNA damage probability is 11.15%, and the average ROS lifetime is 7.22 × 10<sup>−9</sup> s.</p>
+<p><strong>Figure 5.</strong> ROS Diffusion and Damage Probability Analysis of the sgRNA/Cas9-DNA Origami System. The result showed that sgRNA damage probability is 0.70%, Cas9 damage probability is 0.40%, and DNA damage probability is 11.15%, and the average ROS lifetime is 7.22 脳 10<sup>鈭?</sup> s.</p>
 <p>To directly assess the effect of DNA origami on bacterial membrane disruption, we employed the NPN assay. In this assay, increased membrane permeability allows greater uptake of NPN, leading to enhanced fluorescence intensity. After incubating the bacteria with the DNA origami structures, we added NPN and measured the fluorescence as an indicator of membrane permeability (Figure 6). The results showed that the DNA origami induced a significant increase in membrane permeability, with an effect even stronger than that of EDTA, the positive control.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-5.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 6.</strong> The background-subtracted fluorescence values of four groups. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean ± s.d. from three independent replicates.</p>
+<p><strong>Figure 6.</strong> The background-subtracted fluorescence values of four groups. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean 卤 s.d. from three independent replicates.</p>
 </details>
 <details>
 <summary>Learn (L)</summary>
@@ -488,14 +498,14 @@
 <p>Although the DNA origami structures have demonstrated promising membrane-disrupting abilities, the incorporation of aptamers for targeting can further enhance membrane permeability. Aptamers, by enabling selective targeting of specific cells, could improve the efficiency of membrane disruption while potentially minimizing damage to human cells. This approach could be particularly useful in improving the precision and safety of DNA delivery systems.</p>
 <h4>References</h4>
 <ol>
-<li>Mergny JL, Sen D. DNA Quadruple Helices in Nanotechnology. Chem Rev. 2019 May 22;119(10):6290–325.</li>
-<li>Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chem Rev. 2023 Apr 12;123(7):3976–4050.</li>
-<li>Berengut JF, Berengut JC, Doye JPK, Prešern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic Acids Res [Internet]. 2019 Dec 16 [cited 2025 Sept 10];47(22):11963–75. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7145641/</li>
+<li>Mergny JL, Sen D. DNA Quadruple Helices in Nanotechnology. Chem Rev. 2019 May 22;119(10):6290鈥?25.</li>
+<li>Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chem Rev. 2023 Apr 12;123(7):3976鈥?050.</li>
+<li>Berengut JF, Berengut JC, Doye JPK, Pre拧ern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic Acids Res [Internet]. 2019 Dec 16 [cited 2025 Sept 10];47(22):11963鈥?5. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7145641/</li>
 <li>Yang B, Wang R, Li W, Wang J, Liu H. On-Origami Molecular Crowding Control of G-Quadruplex DNAzymes. Small Methods [Internet]. 2025 [cited 2025 Sept 10];9(6):2401401. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/smtd.202401401</li>
-<li>Monte Carlo AR, Fu J. Inactivation Kinetics of G‐Quadruplex/Hemin Complex and Optimization for More Reliable Catalysis. ChemPlusChem. 2022 July;87(7):e202200090.</li>
-<li>Rosi BP, Libera V, Bertini L, Orecchini A, Corezzi S, Schirò G, et al. Stacking Interactions and Flexibility of Human Telomeric Multimers. J Am Chem Soc. 2023 July 26;145(29):16166–75.</li>
-<li>Tokura Y, Harvey S, Chen C, Wu Y, Ng DYW, Weil T. Fabrication of Defined Polydopamine Nanostructures by DNA Origami‐Templated Polymerization. Angew Chem Int Ed. 2018 Feb 5;57(6):1587–91.</li>
-<li>Re R, Pellegrini N, Proteggente A, Pannala A, Yang M, Rice-Evans C. Antioxidant activity applying an improved ABTS radical cation decolorization assay. Free Radical Biology and Medicine. 1999 May 1;26(9):1231–7.</li>
+<li>Monte Carlo AR, Fu J. Inactivation Kinetics of G鈥怮uadruplex/Hemin Complex and Optimization for More Reliable Catalysis. ChemPlusChem. 2022 July;87(7):e202200090.</li>
+<li>Rosi BP, Libera V, Bertini L, Orecchini A, Corezzi S, Schir貌 G, et al. Stacking Interactions and Flexibility of Human Telomeric Multimers. J Am Chem Soc. 2023 July 26;145(29):16166鈥?5.</li>
+<li>Tokura Y, Harvey S, Chen C, Wu Y, Ng DYW, Weil T. Fabrication of Defined Polydopamine Nanostructures by DNA Origami鈥怲emplated Polymerization. Angew Chem Int Ed. 2018 Feb 5;57(6):1587鈥?1.</li>
+<li>Re R, Pellegrini N, Proteggente A, Pannala A, Yang M, Rice-Evans C. Antioxidant activity applying an improved ABTS radical cation decolorization assay. Free Radical Biology and Medicine. 1999 May 1;26(9):1231鈥?.</li>
 </ol>
 </details>
 <h3>4.1.1 Preliminary NPN Uptake Assay</h3>
@@ -511,7 +521,7 @@
 <summary>Test (T)</summary>
 <p>The fluorescence intensity of NPN in each well was measured (Figure 1; Figure 2).</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-1-1.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 1.</strong> The Background-Subtracted Fluorescence Values of Each Group. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean ± s.d. from three independent replicates.</p>
+<p><strong>Figure 1.</strong> The Background-Subtracted Fluorescence Values of Each Group. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean 卤 s.d. from three independent replicates.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-1-2.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 2.</strong> The NPN uptake factors of each group. The NPN uptake factor of the buffer group is set to 1. The uptake factors for the other groups are calculated as the ratio of the background-subtracted fluorescence of each group to the background-subtracted fluorescence of the buffer group. This method allows for the comparison of NPN uptake between different experimental conditions.</p>
 </details>
@@ -532,7 +542,7 @@
 <summary>Test (T)</summary>
 <p>The fluorescence intensity of NPN in each well was measured (Figure 1; Figure 2).</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-1-3.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 1.</strong> The Background-Subtracted Fluorescence Values of Each Group. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean ± s.d. from three independent replicates.</p>
+<p><strong>Figure 1.</strong> The Background-Subtracted Fluorescence Values of Each Group. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean 卤 s.d. from three independent replicates.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/4-1-4.pdf#zoom=page-width"></iframe></div>
 <p><strong>Figure 2.</strong> The NPN Uptake Factors of the Four Groups. The NPN uptake factor of the buffer group is set to 1. The uptake factors for the other groups are calculated as the ratio of the background-subtracted fluorescence of each group to the background-subtracted fluorescence of the buffer group. This method allows for the comparison of NPN uptake between different experimental conditions.</p>
 </details>
@@ -540,9 +550,9 @@
 <summary>Learn (L)</summary>
 <p>After modifying the experimental conditions, the NPN uptake factor of the EDTA positive control increased, indicating that our improvements were effective. Additionally, we found that the NPN uptake factor for the DO<sub>PAM</sub>GH group was even higher than that of EDTA, suggesting that DO<sub>PAM</sub>GH effectively enhances bacterial cell membrane permeability.</p>
 <p>References</p>
-<p>1.	Helander IM, Mattila‐Sandholm T. Fluorometric assessment of Gram‐negative bacterial permeabilization. J Appl Microbiol. 2000 Feb 1;88(2):213–9.</p>
+<p>1.	Helander IM, Mattila鈥怱andholm T. Fluorometric assessment of Gram鈥恘egative bacterial permeabilization. J Appl Microbiol. 2000 Feb 1;88(2):213鈥?.</p>
 <p>2.	Fluorescence Intensity Measurements | BMG LABTECH [Internet]. [cited 2025 Sept 29]. Available from: https://www.bmglabtech.com/en/fluorescence-intensity/</p>
-<p>3.	Vaara M. Agents that increase the permeability of the outer membrane. Microbiol Rev. 1992 Sept;56(3):395–411.</p>
+<p>3.	Vaara M. Agents that increase the permeability of the outer membrane. Microbiol Rev. 1992 Sept;56(3):395鈥?11.</p>
 </details>
 <!-- DBTL5 -->
 <h1>DBTL5: Aptamer-Targeted DNA Origami</h1>
@@ -569,26 +579,26 @@
 <summary>Test (T)</summary>
 <p>To verify whether the incorporation of the aptamer enhances the membrane-disrupting effect of DNA origami against <em>E. coli</em>, we incubated bacteria separately with DNA origami containing the aptamer and with DNA origami lacking the aptamer. Subsequently, we performed an NPN assay. The results demonstrated that the NPN fluorescence of bacteria incubated with aptamer-functionalized DNA origami was significantly higher than that of bacteria incubated with DNA origami without the aptamer (Figure 4). This indicates that the presence of the aptamer targeting <em>E. coli</em> indeed improves the membrane disruption efficiency of the DNA origami.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/5-4.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 4.</strong> The background-subtracted fluorescence values of two groups. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean ± s.d. from three independent replicates.</p>
+<p><strong>Figure 4.</strong> The background-subtracted fluorescence values of two groups. The background-subtracted fluorescence values are expressed as relative fluorescent units. Data represent the mean 卤 s.d. from three independent replicates.</p>
 <p>To visually compare the targeting and internalization effects of DNA origami with and without the aptamer, we incubated <em>E. coli</em> with Cy5-labeled DNA origami containing or lacking the aptamer. Afterward, we washed off any non-targeted or non-internalized origami using PBS. The samples were then analyzed using laser confocal microscopy.</p>
 <p>In the targeting validation, DNA origami with the aptamer was observed surrounding the bacteria, whereas DNA origami without the aptamer was randomly scattered around, confirming that the aptamer indeed facilitates targeted binding to <em>E. coli</em> (Figure 5). The quantitative analysis of the mean fluorescence intensity (MFI) co-localized with <em>E. coli</em> also indicated that the MFI of <em>E. coli</em> treated with Cy5-labeled DO<sup>A</sup><sub>PAM</sub> is higher than that treated with Cy5-labeled DO<sub>PAM</sub>, further confirming the targeted effect of the aptamer (Figure 6).</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/5-5.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 5.</strong> Representative confocal microscopy images of <em>E. coli</em> cells after the incubation of Cy5-labeled DO<sub>PAM</sub> with or without the modification of the aptamer. Scale bar: 20µm × 20µm.</p>
+<p><strong>Figure 5.</strong> Representative confocal microscopy images of <em>E. coli</em> cells after the incubation of Cy5-labeled DO<sub>PAM</sub> with or without the modification of the aptamer. Scale bar: 20碌m 脳 20碌m.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/5-6.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 6.</strong> Quantification of the mean fluorescence intensity (MFI) of <em>E. coli</em> cells after the incubation of Cy5-labeled DO<sub>PAM</sub> with or without the modification of the aptamer. - Aptamer: Cy5-labeled DO<sub>PAM</sub>. + Aptamer: Cy5-labeled DO<sup>A</sup><sub>PAM</sub>. Data represent the mean ± s.d.. Statistical significance was calculated by the unpaired two-tailed Student's t-test. (***P &lt; 0.001).</p>
+<p><strong>Figure 6.</strong> Quantification of the mean fluorescence intensity (MFI) of <em>E. coli</em> cells after the incubation of Cy5-labeled DO<sub>PAM</sub> with or without the modification of the aptamer. - Aptamer: Cy5-labeled DO<sub>PAM</sub>. + Aptamer: Cy5-labeled DO<sup>A</sup><sub>PAM</sub>. Data represent the mean 卤 s.d.. Statistical significance was calculated by the unpaired two-tailed Student's t-test. (***P &lt; 0.001).</p>
 <p>In the internalization validation, strong red fluorescence was observed inside the bacteria in the aptamer group, while the fluorescence was much weaker in the group without the aptamer (Figure 7). The MFI analysis co-localized with <em>E. coli</em> further confirmed this (Figure 8). This indicates that DNA origami with the aptamer enhances the internalization efficiency of the origami into <em>E. coli</em>.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/5-7.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 7.</strong> Internalization of Cy5-labeled DO<sub>PAM</sub>GH and DO<sup>A</sup><sub>PAM</sub>GH on <em>E. coli</em>. With the addition of the aptamer, the amount of fluorescence entering the cells increased, and the area with fluorescence also expanded. Scale bar: 20µm × 20µm.</p>
+<p><strong>Figure 7.</strong> Internalization of Cy5-labeled DO<sub>PAM</sub>GH and DO<sup>A</sup><sub>PAM</sub>GH on <em>E. coli</em>. With the addition of the aptamer, the amount of fluorescence entering the cells increased, and the area with fluorescence also expanded. Scale bar: 20碌m 脳 20碌m.</p>
 <div class="pdf-viewer-container"><iframe loading="lazy" src="/static/_downloaded/static.igem.wiki/teams/5913/dbtl/5-8.pdf#zoom=page-width"></iframe></div>
-<p><strong>Figure 8.</strong> Quantification of the mean fluorescence intensity (MFI) of <em>E. coli</em> cells after the incubation of Cy5-labeled DO<sub>PAM</sub>GH with or without the modification of the aptamer. - Aptamer: Cy5-labeled DO<sub>PAM</sub>GH. + Aptamer: Cy5-labeled DO<sup>A</sup><sub>PAM</sub>GH. Data represent the mean ± s.d.. Statistical significance was calculated by the unpaired two-tailed Student's t-test. (*P &lt; 0.05).</p>
+<p><strong>Figure 8.</strong> Quantification of the mean fluorescence intensity (MFI) of <em>E. coli</em> cells after the incubation of Cy5-labeled DO<sub>PAM</sub>GH with or without the modification of the aptamer. - Aptamer: Cy5-labeled DO<sub>PAM</sub>GH. + Aptamer: Cy5-labeled DO<sup>A</sup><sub>PAM</sub>GH. Data represent the mean 卤 s.d.. Statistical significance was calculated by the unpaired two-tailed Student's t-test. (*P &lt; 0.05).</p>
 </details>
 <details>
 <summary>Learn (L)</summary>
 <p>Our experimental results demonstrate that the aptamer we used for targeting <em>E. coli</em> is effective and can increase the probability of DNA origami internalizing into the cells. However, the issue of poor stability of Cas9 remains unresolved. After reviewing the literature, we discovered that rolling rectangular DNA origami into tubular structures to encapsulate sgRNA/Cas9 can improve its stability (3). This approach has become our next step in the project.</p>
 <h4>References</h4>
 <ol>
-<li>Mela I, Vallejo‐Ramirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed. 2020 July 27;59(31):12698–702.</li>
-<li>Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</li>
+<li>Mela I, Vallejo鈥怰amirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed. 2020 July 27;59(31):12698鈥?02.</li>
+<li>Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258鈥?4.</li>
 <li>Tang W, Tong T, Wang H, Lu X, Yang C, Wu Y, et al. A DNA Origami-Based Gene Editing System for Efficient Gene Therapy in Vivo. Angewandte Chemie International Edition. 2023;62(51):e202315093.</li>
 </ol>
 </details>
@@ -613,12 +623,12 @@
 </details>
 <details>
 <summary>Learn (L)</summary>
-<p>Given the experimental conditions, we abandoned the wet-lab experiment to demonstrate the protective effect of the tubular structure on sgRNA/Cas9 and considered using a dry-lab approach instead. On the programmatic aspect, several optimizations and corrections were made during development: a parameter error in the Brownian motion visualization function (c → color) was fixed, type hints were enhanced to improve code reliability, and a minimum value protection was added to the diffusion coefficient calculation to prevent division-by-zero errors. Furthermore, the synergy matrix was expanded (e.g., the synergy factor between MMP-9 and elastase was set to 1.2), and the Brownian motion trajectory simulation function was enhanced, deepening the model's capability to describe complex biophysical processes.</p>
+<p>Given the experimental conditions, we abandoned the wet-lab experiment to demonstrate the protective effect of the tubular structure on sgRNA/Cas9 and considered using a dry-lab approach instead. On the programmatic aspect, several optimizations and corrections were made during development: a parameter error in the Brownian motion visualization function (c 鈫?color) was fixed, type hints were enhanced to improve code reliability, and a minimum value protection was added to the diffusion coefficient calculation to prevent division-by-zero errors. Furthermore, the synergy matrix was expanded (e.g., the synergy factor between MMP-9 and elastase was set to 1.2), and the Brownian motion trajectory simulation function was enhanced, deepening the model's capability to describe complex biophysical processes.</p>
 <p>From a biological perspective, though we already simulated typical and abundant enzymes that may harm the Cas9 protein, more complex situations still exist. In the future, we may conduct deeper research on different attributes of enzymes to better simulate their unique features. Also, we will increase the variety of enzymes to fit more practical applications.</p>
 <h4>References</h4>
 <ol>
-<li>Yin J, Wang S, Wang J, Zhang Y, Fan C, Chao J, et al. An intelligent DNA nanodevice for precision thrombolysis. Nat Mater. 2024 June;23(6):854–62.</li>
-<li>Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</li>
+<li>Yin J, Wang S, Wang J, Zhang Y, Fan C, Chao J, et al. An intelligent DNA nanodevice for precision thrombolysis. Nat Mater. 2024 June;23(6):854鈥?2.</li>
+<li>Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258鈥?4.</li>
 <li>Harrison RL. Introduction to monte carlo simulation. In 2010. p. 17.</li>
 </ol>
 </details>
@@ -629,7 +639,8 @@
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
+

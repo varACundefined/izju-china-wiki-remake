@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Background</title>
@@ -135,11 +145,11 @@
   </style>
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -182,7 +192,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -195,23 +205,23 @@
 <p>The global threat of antimicrobial resistance (AMR) has already been quantified on a large scale. An analysis in <em>The Lancet</em> (2022) reported that <strong>in 2019, approximately 4.95 million deaths were associated with bacterial resistance, of which 1.27 million were directly attributable to resistance</strong> (1). Without intervention, AMR-related deaths are projected to reach <strong>10 million per year by 2050</strong>, surpassing the mortality rate of cancer, and to cause a <strong>cumulative economic loss of USD 100 trillion</strong> (2). Clinically, resistance significantly increases the risk of procedures dependent on antibiotics, such as routine surgery, caesarean section, and chemotherapy. Data from the United Kingdom indicate that approximately <strong>10% of postoperative infections are caused by resistant bacteria</strong> (3). Thus, resistance is not only a medical issue but also a combined threat to public health and socio-economic systems.</p>
 <h2>Resistance-Transmissibility Coupling</h2>
 <p>Antimicrobial resistance (<strong>AMR</strong>) and transmissibility (<strong>infectiousness/transmissibility</strong>) show a mutually reinforcing relationship in many bacterial diseases. Resistance leads to treatment failure, thereby prolonging the infectious period; while highly transmissible strains are more likely to spread resistance genes within populations. This <strong>"resistance + transmissibility" coupling effect</strong> is an important reason why resistant bacteria are so difficult to control (4).</p>
-<p>At the level of transmission dynamics, there exists a significant positive feedback between resistance and transmissibility. In the classical <strong>SIR model (Susceptible–Infectious–Recovered)</strong>, epidemic potential is usually expressed by the <strong>basic reproduction number (R₀)</strong> (5).</p>
+<p>At the level of transmission dynamics, there exists a significant positive feedback between resistance and transmissibility. In the classical <strong>SIR model (Susceptible鈥揑nfectious鈥揜ecovered)</strong>, epidemic potential is usually expressed by the <strong>basic reproduction number (R鈧€)</strong> (5).</p>
 <p>Its approximate formula is:</p>
 <div class="formula">
-<span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">R<sub>0</sub> = β × c × D</span>
+<span style="font-size: 1.3em; font-family: 'Times New Roman', serif;">R<sub>0</sub> = 尾 脳 c 脳 D</span>
 </div>
-<p>where β is the transmission probability per contact, c is the contact rate, and D is the infectious period. Therefore, <strong>resistance-induced prolongation of the infectious period directly increases R₀</strong>, enhancing the transmission capacity of resistant bacteria (D ↑ leads to R₀ ↑, leading to higher transmissibility).</p>
+<p>where 尾 is the transmission probability per contact, c is the contact rate, and D is the infectious period. Therefore, <strong>resistance-induced prolongation of the infectious period directly increases R鈧€</strong>, enhancing the transmission capacity of resistant bacteria (D 鈫?leads to R鈧€ 鈫? leading to higher transmissibility).</p>
 <p>A longer carriage period further increases opportunities for spread, giving resistant strains a population-level advantage that makes them harder to eliminate, often showing epidemiological features of <strong>"delayed peaks, slow decline, and long persistence"</strong> (4). Studies have shown that MRSA can circulate simultaneously in both hospital and community settings, a <strong>"dual ecological niche"</strong> that makes its resistance more difficult to eradicate (6).</p>
 <h2>MRSA: A Paradigm of Dual Threat</h2>
-<p>Among resistant pathogens, <strong>methicillin-resistant <em>Staphylococcus aureus</em> (MRSA)</strong> exemplifies this dual threat. It is not only a leading cause of hospital-associated infection deaths, resulting in more than <strong>100,000 deaths annually</strong> (1), but in some countries, its proportion among <em>S. aureus</em> isolates has long exceeded <strong>30–40%</strong> (7). MRSA has the dual characteristics of healthcare transmission (causing sepsis, pneumonia, and postoperative infections) and community transmission (causing outbreaks of skin and soft tissue infections) (7,8). Environmental monitoring has shown that <strong>the positivity rate of MRSA on subway handrails and hospital equipment surfaces can reach 2.5–8.8%</strong>, and <strong>46.3% are coagulase-negative staphylococci (CoNS)</strong>, which often serve as "intermediate hosts" for mecA (9). Because of the combination of high resistance and strong transmissibility, MRSA has been listed by the WHO as a <strong>"high-priority resistant pathogen"</strong> (10).</p>
+<p>Among resistant pathogens, <strong>methicillin-resistant <em>Staphylococcus aureus</em> (MRSA)</strong> exemplifies this dual threat. It is not only a leading cause of hospital-associated infection deaths, resulting in more than <strong>100,000 deaths annually</strong> (1), but in some countries, its proportion among <em>S. aureus</em> isolates has long exceeded <strong>30鈥?0%</strong> (7). MRSA has the dual characteristics of healthcare transmission (causing sepsis, pneumonia, and postoperative infections) and community transmission (causing outbreaks of skin and soft tissue infections) (7,8). Environmental monitoring has shown that <strong>the positivity rate of MRSA on subway handrails and hospital equipment surfaces can reach 2.5鈥?.8%</strong>, and <strong>46.3% are coagulase-negative staphylococci (CoNS)</strong>, which often serve as "intermediate hosts" for mecA (9). Because of the combination of high resistance and strong transmissibility, MRSA has been listed by the WHO as a <strong>"high-priority resistant pathogen"</strong> (10).</p>
 <h3>Molecular Basis of MRSA Resistance</h3>
-<p>The core of MRSA resistance lies in the acquisition of the <strong><em>mecA</em> gene</strong>, which is usually located on the mobile genetic element <strong>staphylococcal cassette chromosome mec (SCCmec)</strong> (11). <strong><em>MecA</em></strong> encodes <strong>penicillin-binding protein 2a (PBP2a)</strong>, which has very low affinity for β-lactam antibiotics. Even under antibiotic pressure, bacteria can continue peptidoglycan cross-linking and cell wall synthesis. This <strong>"target replacement"</strong> mechanism forms the molecular basis of MRSA resistance. Structural biology studies have clearly revealed how the unique conformation of the PBP2a active-site pocket prevents β-lactam binding, explaining the stability and persistence of MRSA resistance (12).</p>
+<p>The core of MRSA resistance lies in the acquisition of the <strong><em>mecA</em> gene</strong>, which is usually located on the mobile genetic element <strong>staphylococcal cassette chromosome mec (SCCmec)</strong> (11). <strong><em>MecA</em></strong> encodes <strong>penicillin-binding protein 2a (PBP2a)</strong>, which has very low affinity for 尾-lactam antibiotics. Even under antibiotic pressure, bacteria can continue peptidoglycan cross-linking and cell wall synthesis. This <strong>"target replacement"</strong> mechanism forms the molecular basis of MRSA resistance. Structural biology studies have clearly revealed how the unique conformation of the PBP2a active-site pocket prevents 尾-lactam binding, explaining the stability and persistence of MRSA resistance (12).</p>
 <h3>Horizontal Gene Transfer Dynamics</h3>
 <p>However, a single resistance gene does not exist in isolation but is in constant dynamic flow. Through <strong>horizontal gene transfer (HGT)</strong>, mecA can rapidly spread among different strains. <strong>Coagulase-negative staphylococci (CoNS)</strong> are considered the main gene reservoir and intermediate host of SCCmec, frequently detected in both clinical and environmental isolates (9). Epidemiological investigations show that MRSA strains often carry different SCCmec types, indicating that this element is constantly recombined and redistributed in populations, thereby enhancing the transmissibility of mecA (11).</p>
-<p><strong>Horizontal gene transfer (HGT)</strong> is the key mechanism driving the dissemination of mecA. Studies have shown that MRSA can acquire SCCmec fragments via phage-mediated transduction, and under antibiotic stress (especially at sub-inhibitory concentrations, sub-MIC), the bacterial SOS response is induced, integrase and recombinase activities are enhanced, and the frequency of HGT is significantly increased (13–16). High levels of mecA-bearing plasmids and transposons have even been detected in environmental waters and wastewater treatment systems, suggesting that resistance genes can spread across hosts and ecosystems (17).</p>
+<p><strong>Horizontal gene transfer (HGT)</strong> is the key mechanism driving the dissemination of mecA. Studies have shown that MRSA can acquire SCCmec fragments via phage-mediated transduction, and under antibiotic stress (especially at sub-inhibitory concentrations, sub-MIC), the bacterial SOS response is induced, integrase and recombinase activities are enhanced, and the frequency of HGT is significantly increased (13鈥?6). High levels of mecA-bearing plasmids and transposons have even been detected in environmental waters and wastewater treatment systems, suggesting that resistance genes can spread across hosts and ecosystems (17).</p>
 <p>In clinical settings, <strong>hospitals and communities become amplifiers of HGT</strong>. In hospitals, the high density of patients and healthcare contacts, frequent and high-dose antibiotic use, and the formation of <strong>biofilms</strong> on catheters and ventilators collectively create a hotbed for resistance gene exchange. Experiments have confirmed that gene transfer rates are much higher in the biofilm state than in planktonic cells, and biofilms are the typical survival form of MRSA in catheter-related bloodstream infections and prosthetic joint infections (18). In addition, crowded contacts and irrational antibiotic use in communities also provide supplementary channels for MRSA transmission (7,8).</p>
 <h2>Our Innovative Solution</h2>
-<p>In response to the coupled challenge of <strong>resistance + transmissibility</strong> represented by MRSA, our strategy is not to further escalate or replace antibiotics, but to <strong>eliminate the resistance gene itself</strong>. Specifically, we employ <strong>CRISPR-Cas9</strong> as a tool to precisely cut and inactivate the <strong><em>mecA</em> gene</strong>, restoring the susceptibility of resistant strains to β-lactams and thereby converting MRSA to MSSA. This <strong>"de-resistance"</strong> strategy is fundamentally different from traditional bactericidal or bacteriostatic approaches: it aims to weaken the ecological advantage of resistant bacteria and reduce their persistence in populations (19).</p>
+<p>In response to the coupled challenge of <strong>resistance + transmissibility</strong> represented by MRSA, our strategy is not to further escalate or replace antibiotics, but to <strong>eliminate the resistance gene itself</strong>. Specifically, we employ <strong>CRISPR-Cas9</strong> as a tool to precisely cut and inactivate the <strong><em>mecA</em> gene</strong>, restoring the susceptibility of resistant strains to 尾-lactams and thereby converting MRSA to MSSA. This <strong>"de-resistance"</strong> strategy is fundamentally different from traditional bactericidal or bacteriostatic approaches: it aims to weaken the ecological advantage of resistant bacteria and reduce their persistence in populations (19).</p>
 <h3>CRISPR-Cas9 Selection Rationale</h3>
 <p>In choosing gene-editing tools, we focused on <strong>CRISPR-Cas9</strong>. Compared with other systems:</p>
 <ul>
@@ -227,7 +237,7 @@
 <li><strong>Biocompatibility and biodegradability</strong>: as a material, DNA itself has low immunogenicity and a safer boundary than some polymers or viral vectors;</li>
 <li><strong>Multivalency and programmability</strong>: origami structures can be modified with <strong>aptamers</strong> on the surface to achieve MRSA-specific recognition, while densely loading Cas9/sgRNA complexes in the internal cavity;</li>
 <li><strong>Stimuli responsiveness and controlled release</strong>: through disulfide "locks," origami can be triggered to unfold in the reductive intracellular environment (such as high glutathione concentration), releasing Cas9 precisely;</li>
-<li><strong>Enhanced membrane permeability</strong>: modification with <strong>G-quadruplex-hemin (G4-hemin)</strong> at the ends allows local ROS generation in the presence of H₂O₂, mildly disrupting bacterial membranes to facilitate cytoplasmic entry without excessive damage (19).</li>
+<li><strong>Enhanced membrane permeability</strong>: modification with <strong>G-quadruplex-hemin (G4-hemin)</strong> at the ends allows local ROS generation in the presence of H鈧侽鈧? mildly disrupting bacterial membranes to facilitate cytoplasmic entry without excessive damage (19).</li>
 </ol>
 <h2>System Advantages</h2>
 <p>In summary, we designed an <strong>antimicrobial system using DNA origami as a delivery platform and CRISPR-Cas9 as the "de-resistance" tool</strong>. Its key advantages are:</p>
@@ -238,25 +248,25 @@
 </ul>
 <h2>References</h2>
 <ol>
-<li>Murray CJL, Ikuta KS, Sharara F, Swetschinski L, Aguilar GR, Gray A, et al. Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis. <em>Lancet</em>. 2022;399(10325):629–55.</li>
+<li>Murray CJL, Ikuta KS, Sharara F, Swetschinski L, Aguilar GR, Gray A, et al. Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis. <em>Lancet</em>. 2022;399(10325):629鈥?5.</li>
 <li>O'Neill J. <em>Tackling drug-resistant infections globally: final report and recommendations.</em> London: HM Government/Wellcome Trust; 2016.</li>
-<li>Holmes AH, Moore LSP, Sundsfjord A, Steinbakk M, Regmi S, Karkey A, et al. Understanding the mechanisms and drivers of antimicrobial resistance. <em>Lancet</em>. 2016;387(10014):176–87.</li>
+<li>Holmes AH, Moore LSP, Sundsfjord A, Steinbakk M, Regmi S, Karkey A, et al. Understanding the mechanisms and drivers of antimicrobial resistance. <em>Lancet</em>. 2016;387(10014):176鈥?7.</li>
 <li>Kouyos RD, Metcalf CJE, Birger R, Klein EY, Abel zur Wiesch P, Ankomah P, et al. The path of least resistance: aggressive or moderate treatment? <em>Proc Biol Sci</em>. 2014;281(1794):20140566.</li>
 <li>Keeling MJ, Rohani P. <em>Modeling Infectious Diseases in Humans and Animals.</em> Princeton (NJ): Princeton University Press; 2008.</li>
-<li>Uhlemann A-C, Otto M, Lowy FD, DeLeo FR. Evolution of community- and healthcare-associated methicillin-resistant <em>Staphylococcus aureus</em>. <em>Infect Genet Evol</em>. 2014;21:563–74.</li>
-<li>David MZ, Daum RS. Community-associated methicillin-resistant <em>Staphylococcus aureus</em>: epidemiology and clinical consequences of an emerging epidemic. <em>Clin Microbiol Rev</em>. 2010;23(3):616–87.</li>
-<li>Otter JA, French GL. Community-associated meticillin-resistant <em>Staphylococcus aureus</em>: the case for a genotypic definition. <em>J Hosp Infect</em>. 2012;81(3):143–8.</li>
-<li>Becker K, Heilmann C, Peters G. Coagulase-negative staphylococci. <em>Clin Microbiol Rev</em>. 2014;27(4):870–926.</li>
+<li>Uhlemann A-C, Otto M, Lowy FD, DeLeo FR. Evolution of community- and healthcare-associated methicillin-resistant <em>Staphylococcus aureus</em>. <em>Infect Genet Evol</em>. 2014;21:563鈥?4.</li>
+<li>David MZ, Daum RS. Community-associated methicillin-resistant <em>Staphylococcus aureus</em>: epidemiology and clinical consequences of an emerging epidemic. <em>Clin Microbiol Rev</em>. 2010;23(3):616鈥?7.</li>
+<li>Otter JA, French GL. Community-associated meticillin-resistant <em>Staphylococcus aureus</em>: the case for a genotypic definition. <em>J Hosp Infect</em>. 2012;81(3):143鈥?.</li>
+<li>Becker K, Heilmann C, Peters G. Coagulase-negative staphylococci. <em>Clin Microbiol Rev</em>. 2014;27(4):870鈥?26.</li>
 <li>World Health Organization. <em>Global priority list of antibiotic-resistant bacteria to guide research, discovery, and development of new antibiotics.</em> Geneva: WHO; 2017.</li>
-<li>Hanssen AM, Ericson Sollid JU. SCCmec in staphylococci: genes on the move. <em>FEMS Immunol Med Microbiol</em>. 2006;46(1):8–20.</li>
-<li>Lim D, Strynadka NCJ. Structural basis for the β-lactam resistance of PBP2a from methicillin-resistant <em>Staphylococcus aureus</em>. <em>Nat Struct Biol</em>. 2002;9(11):870–6.</li>
-<li>Beaber JW, Hochhut B, Waldor MK. SOS response promotes horizontal dissemination of antibiotic resistance genes. <em>Nature</em>. 2004;427(6969):72–4.</li>
-<li>Andersson DI, Hughes D. Microbiological effects of sublethal levels of antibiotics. <em>Nat Rev Microbiol</em>. 2014;12(7):465–78.</li>
-<li>Liu P, Xue H, Wu Z, Ma J, Zhao X. β-Lactam antibiotics trigger initiation of SCCmec transfer by inducing SOS responses. <em>Nucleic Acids Res</em>. 2017;45(7):3944–56.</li>
-<li>Maiques E, Ubeda C, Tormo MÁ, Ferrer MD, Lasa I, Novick RP, et al. β-Lactam antibiotics induce the SOS response and horizontal transfer of virulence factors in <em>Staphylococcus aureus</em>. <em>J Bacteriol</em>. 2006;188(7):2726–9.</li>
-<li>Rizzo L, Manaia C, Merlin C, Schwartz T, Dagot C, Ploy MC, et al. Urban wastewater treatment plants as hotspots for antibiotic resistant bacteria and genes spread into the environment: a review. <em>Sci Total Environ</em>. 2013;447:345–60.</li>
-<li>Hall CW, Mah T-F. Molecular mechanisms of biofilm-based antibiotic resistance and tolerance in pathogenic bacteria. <em>FEMS Microbiol Rev</em>. 2017;41(3):276–301.</li>
-<li>Hsu PD, Lander ES, Zhang F. Development and applications of CRISPR-Cas9 for genome engineering. <em>Cell</em>. 2014;157(6):1262–78.</li>
+<li>Hanssen AM, Ericson Sollid JU. SCCmec in staphylococci: genes on the move. <em>FEMS Immunol Med Microbiol</em>. 2006;46(1):8鈥?0.</li>
+<li>Lim D, Strynadka NCJ. Structural basis for the 尾-lactam resistance of PBP2a from methicillin-resistant <em>Staphylococcus aureus</em>. <em>Nat Struct Biol</em>. 2002;9(11):870鈥?.</li>
+<li>Beaber JW, Hochhut B, Waldor MK. SOS response promotes horizontal dissemination of antibiotic resistance genes. <em>Nature</em>. 2004;427(6969):72鈥?.</li>
+<li>Andersson DI, Hughes D. Microbiological effects of sublethal levels of antibiotics. <em>Nat Rev Microbiol</em>. 2014;12(7):465鈥?8.</li>
+<li>Liu P, Xue H, Wu Z, Ma J, Zhao X. 尾-Lactam antibiotics trigger initiation of SCCmec transfer by inducing SOS responses. <em>Nucleic Acids Res</em>. 2017;45(7):3944鈥?6.</li>
+<li>Maiques E, Ubeda C, Tormo M脕, Ferrer MD, Lasa I, Novick RP, et al. 尾-Lactam antibiotics induce the SOS response and horizontal transfer of virulence factors in <em>Staphylococcus aureus</em>. <em>J Bacteriol</em>. 2006;188(7):2726鈥?.</li>
+<li>Rizzo L, Manaia C, Merlin C, Schwartz T, Dagot C, Ploy MC, et al. Urban wastewater treatment plants as hotspots for antibiotic resistant bacteria and genes spread into the environment: a review. <em>Sci Total Environ</em>. 2013;447:345鈥?0.</li>
+<li>Hall CW, Mah T-F. Molecular mechanisms of biofilm-based antibiotic resistance and tolerance in pathogenic bacteria. <em>FEMS Microbiol Rev</em>. 2017;41(3):276鈥?01.</li>
+<li>Hsu PD, Lander ES, Zhang F. Development and applications of CRISPR-Cas9 for genome engineering. <em>Cell</em>. 2014;157(6):1262鈥?8.</li>
 </ol>
 </div>
 </div>
@@ -266,7 +276,8 @@
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
+

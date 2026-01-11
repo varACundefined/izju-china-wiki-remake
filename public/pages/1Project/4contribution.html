@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Contribution</title>
@@ -245,11 +255,11 @@
   </style>
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -292,7 +302,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -309,11 +319,11 @@
  
  <h3>FoCas can act as a universal platform for multiple infectious antimicrobial-resistant bacteria</h3>
  
- <p>Antimicrobial-resistant (AMR) bacteria pose a critical threat to public health, especially in nosocomial infections (1). In our project, we designed a universal platform based on CRISPR-Cas9 gene editing system and DNA origami delivery system to specifically eliminate the target resistance gene of the target resistant bacteria. The platform was named FoCas, whose feasibility and functionality have been demonstrated and showcased in our project, using <em>methicillin-resistant staphylococcus aureus</em> (MRSA) as the example target strain. For MRSA, resistance gene <em>mecA</em> was first identified as the target gene through analysis and screening, and sgRNA targeting <em>mecA</em> (sgRNA-Δ<em>mecA</em>) and aptamer targeting MRSA were designed. After initial design, the platform treating MRSA was assembled by incorporating each component: loading component (including designed sgRNA<sub>L</sub>-Δ<em>mecA</em>), membrane permeabilization component, targeting component (including designed aptamer), and protection and release component. Then, the complete drug was applied on the wound surface, targeting MRSA, entering the cell, and eliminating <em>mecA</em> gene, resulting in a regained methicillin sensitivity and significantly reduced risk of <em>staphylococcus aureus</em> (Figure 1).</p>
+ <p>Antimicrobial-resistant (AMR) bacteria pose a critical threat to public health, especially in nosocomial infections (1). In our project, we designed a universal platform based on CRISPR-Cas9 gene editing system and DNA origami delivery system to specifically eliminate the target resistance gene of the target resistant bacteria. The platform was named FoCas, whose feasibility and functionality have been demonstrated and showcased in our project, using <em>methicillin-resistant staphylococcus aureus</em> (MRSA) as the example target strain. For MRSA, resistance gene <em>mecA</em> was first identified as the target gene through analysis and screening, and sgRNA targeting <em>mecA</em> (sgRNA-螖<em>mecA</em>) and aptamer targeting MRSA were designed. After initial design, the platform treating MRSA was assembled by incorporating each component: loading component (including designed sgRNA<sub>L</sub>-螖<em>mecA</em>), membrane permeabilization component, targeting component (including designed aptamer), and protection and release component. Then, the complete drug was applied on the wound surface, targeting MRSA, entering the cell, and eliminating <em>mecA</em> gene, resulting in a regained methicillin sensitivity and significantly reduced risk of <em>staphylococcus aureus</em> (Figure 1).</p>
 
  <h3>Examples of the platform's strategies on some other candidate high-risk resistant and transmissible bacterial infectious</h3>
  
- <p>In many AMR cases, antibiotic resistance genes are evident, and traditional treatments are limited. Examples include methicillin-resistant <em>Staphylococcus aureus</em> (MRSA), vancomycin-resistant <em>Enterococci</em> (VRE), and extended-spectrum β-lactamase–producing <em>Enterobacterales</em> (ESBL-E). Our delivery system can be easily adapted to these diseases, according to the specific genes and membrane proteins involved.</p>
+ <p>In many AMR cases, antibiotic resistance genes are evident, and traditional treatments are limited. Examples include methicillin-resistant <em>Staphylococcus aureus</em> (MRSA), vancomycin-resistant <em>Enterococci</em> (VRE), and extended-spectrum 尾-lactamase鈥損roducing <em>Enterobacterales</em> (ESBL-E). Our delivery system can be easily adapted to these diseases, according to the specific genes and membrane proteins involved.</p>
 
  <p>Besides methicillin-resistant <em>Staphylococcus aureus</em> (MRSA), the focus of our current project, other potential targets include:</p>
 
@@ -321,12 +331,12 @@
  
  <details>
  <summary><strong>Description</strong></summary>
- <p>Vancomycin-resistant <em>Enterococci</em> (VRE) can lead to blood infections with high morbidity and mortality rates (2). Also, it is inducing increasing nosocomial infections (3). They form opportunistic infections, causing surgical infections through wounds and leading to severe and fatal situations. While treatments such as high-dose daptomycin (≥10 mg/kg) or linezolid often result in better patient outcomes, their long-term efficacy is uncertain.</p>
+ <p>Vancomycin-resistant <em>Enterococci</em> (VRE) can lead to blood infections with high morbidity and mortality rates (2). Also, it is inducing increasing nosocomial infections (3). They form opportunistic infections, causing surgical infections through wounds and leading to severe and fatal situations. While treatments such as high-dose daptomycin (鈮?0 mg/kg) or linezolid often result in better patient outcomes, their long-term efficacy is uncertain.</p>
  </details>
 
  <details>
  <summary><strong>Gene</strong></summary>
- <p>There are different types, associated with different "core" genes in different types of bacteria (4). Most common types are VanA and VanB, their regulatory mechanism is well understood. The core gene performs crucial part in the replacement of d‐Ala‐d‐Ala with d‐Ala‐d‐lac, decreasing the binding constant of vancomycin and peptidoglycan, which directly induces high levels of resistance. So, if their "core" genes are removed, this mechanism will cease, and they'll resume sensitivity to drugs.</p>
+ <p>There are different types, associated with different "core" genes in different types of bacteria (4). Most common types are VanA and VanB, their regulatory mechanism is well understood. The core gene performs crucial part in the replacement of d鈥怉la鈥恉鈥怉la with d鈥怉la鈥恉鈥恖ac, decreasing the binding constant of vancomycin and peptidoglycan, which directly induces high levels of resistance. So, if their "core" genes are removed, this mechanism will cease, and they'll resume sensitivity to drugs.</p>
  </details>
 
  <details>
@@ -334,11 +344,11 @@
  <p>The sgRNA and aptamer need modification according to the specific gene and membrane protein target respectively. Follow our instructions to complete this process.</p>
  </details>
 
- <h4>Extended-spectrum β-lactamase–producing Enterobacterales (ESBL-E)</h4>
+ <h4>Extended-spectrum 尾-lactamase鈥損roducing Enterobacterales (ESBL-E)</h4>
  
  <details>
  <summary><strong>Description</strong></summary>
- <p>The rise of antimicrobial resistance from extended-spectrum β-lactamase–producing <em>Enterobacteriaceae</em> (ESBL-E) also poses a significant challenge to global health (5). Extended-spectrum β-lactamase-producing <em>Enterobacteriaceae</em> (ESBL-E) is crucial antimicrobial-resistant organisms for human, and is common reason for urinary tract infections and bloodstream infections (6). Also, it has strong ability to transfer. The ESBL genes are commonly found on transposons or insertion sequences of plasmid that they could spread easily.</p>
+ <p>The rise of antimicrobial resistance from extended-spectrum 尾-lactamase鈥損roducing <em>Enterobacteriaceae</em> (ESBL-E) also poses a significant challenge to global health (5). Extended-spectrum 尾-lactamase-producing <em>Enterobacteriaceae</em> (ESBL-E) is crucial antimicrobial-resistant organisms for human, and is common reason for urinary tract infections and bloodstream infections (6). Also, it has strong ability to transfer. The ESBL genes are commonly found on transposons or insertion sequences of plasmid that they could spread easily.</p>
  </details>
 
  <details>
@@ -394,12 +404,12 @@
  <h2>References</h2>
  
  <ol>
- <li>van Duin D, Paterson DL. Multidrug Resistant Bacteria in the Community: An Update. <em>Infect Dis Clin North Am</em>. 2020 Dec;34(4):709–22.</li>
+ <li>van Duin D, Paterson DL. Multidrug Resistant Bacteria in the Community: An Update. <em>Infect Dis Clin North Am</em>. 2020 Dec;34(4):709鈥?2.</li>
  <li>Cairns KA, Udy AA, Peel TN, Abbott IJ, Dooley MJ, Peleg AY. Therapeutics for Vancomycin-Resistant Enterococcal Bloodstream Infections. <em>Clin Microbiol Rev</em>. 36(2):e00059-22.</li>
- <li>Mareković I, Markanović M, Lešin J, Ćorić M. Vancomycin-Resistant Enterococci: Current Understandings of Resistance in Relation to Transmission and Preventive Strategies. <em>Pathogens</em>. 2024 Nov 5;13(11):966.</li>
- <li>Stogios PJ, Savchenko A. Molecular mechanisms of vancomycin resistance. <em>Protein Sci</em>. 2020 Mar;29(3):654–69.</li>
- <li>Husna A, Rahman MM, Badruzzaman ATM, Sikder MH, Islam MR, Rahman MT, et al. Extended-Spectrum β-Lactamases (ESBL): Challenges and Opportunities. <em>Biomedicines</em>. 2023 Oct 30;11(11):2937.</li>
- <li>Peirano G, Pitout JDD. Extended-Spectrum β-Lactamase-Producing Enterobacteriaceae: Update on Molecular Epidemiology and Treatment Options. <em>Drugs</em>. 2019 Sept 1;79(14):1529–41.</li>
+ <li>Marekovi膰 I, Markanovi膰 M, Le拧in J, 膯ori膰 M. Vancomycin-Resistant Enterococci: Current Understandings of Resistance in Relation to Transmission and Preventive Strategies. <em>Pathogens</em>. 2024 Nov 5;13(11):966.</li>
+ <li>Stogios PJ, Savchenko A. Molecular mechanisms of vancomycin resistance. <em>Protein Sci</em>. 2020 Mar;29(3):654鈥?9.</li>
+ <li>Husna A, Rahman MM, Badruzzaman ATM, Sikder MH, Islam MR, Rahman MT, et al. Extended-Spectrum 尾-Lactamases (ESBL): Challenges and Opportunities. <em>Biomedicines</em>. 2023 Oct 30;11(11):2937.</li>
+ <li>Peirano G, Pitout JDD. Extended-Spectrum 尾-Lactamase-Producing Enterobacteriaceae: Update on Molecular Epidemiology and Treatment Options. <em>Drugs</em>. 2019 Sept 1;79(14):1529鈥?1.</li>
  </ol>
  </div>
 </div>
@@ -409,7 +419,7 @@
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>

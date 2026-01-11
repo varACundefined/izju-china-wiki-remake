@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Design</title>
@@ -9,11 +19,11 @@
   <link rel="stylesheet" href="/static/safety-typography.css">
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -56,7 +66,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -142,23 +152,23 @@ To enhance the stability of the sgRNA/Cas9 complex during application, we decide
 </p>
 
 <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">References</h2>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">1. Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297–302.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">2. Li Z, Wang L, Yan H, Liu Y. Effect of DNA Hairpin Loops on the Twist of Planar DNA Origami Tiles. Langmuir. 2012 Jan 31;28(4):1959–65.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">3. Yu L, Xu Y, Al-Amin M, Jiang S, Sample M, Prasad A, et al. CytoDirect: A Nucleic Acid Nanodevice for Specific and Efficient Delivery of Functional Payloads to the Cytoplasm. J Am Chem Soc. 2023 Dec 20;145(50):27336–47.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">4. Fu J, Li T. Spatial Organization of Enzyme Cascade on a DNA Origami Nanostructure. Methods Mol Biol. 2017;1500:153–64.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">5. Karvelis T, Gasiunas G, Siksnys V. Methods for decoding Cas9 protospacer adjacent motif (PAM) sequences: A brief overview. Methods. 2017 May 15;121–122:3–8.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">6. Hang T, Zhang X, Wu M, Wang C, Ling S, Xu L, et al. Structural insights into a novel functional dimer of Staphylococcus aureus RNase HII. Biochem Biophys Res Commun. 2018 Sept 10;503(3):1207–13.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">1. Rothemund PWK. Folding DNA to create nanoscale shapes and patterns. Nature. 2006 Mar;440(7082):297鈥?02.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">2. Li Z, Wang L, Yan H, Liu Y. Effect of DNA Hairpin Loops on the Twist of Planar DNA Origami Tiles. Langmuir. 2012 Jan 31;28(4):1959鈥?5.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">3. Yu L, Xu Y, Al-Amin M, Jiang S, Sample M, Prasad A, et al. CytoDirect: A Nucleic Acid Nanodevice for Specific and Efficient Delivery of Functional Payloads to the Cytoplasm. J Am Chem Soc. 2023 Dec 20;145(50):27336鈥?7.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">4. Fu J, Li T. Spatial Organization of Enzyme Cascade on a DNA Origami Nanostructure. Methods Mol Biol. 2017;1500:153鈥?4.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">5. Karvelis T, Gasiunas G, Siksnys V. Methods for decoding Cas9 protospacer adjacent motif (PAM) sequences: A brief overview. Methods. 2017 May 15;121鈥?22:3鈥?.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">6. Hang T, Zhang X, Wu M, Wang C, Ling S, Xu L, et al. Structural insights into a novel functional dimer of Staphylococcus aureus RNase HII. Biochem Biophys Res Commun. 2018 Sept 10;503(3):1207鈥?3.</p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">7. Hyjek M, Figiel M, Nowotny M. RNases H: Structure and mechanism. DNA Repair (Amst). 2019 Dec;84:102672.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">8. Xie W, Zhang S, Pan F, Chen S, Zhong L, Wang J, et al. Nanomaterial-based ROS-mediated strategies for combating bacteria and biofilms. Journal of Materials Research. 2021 Feb 1;36(4):822–45.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">9. Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chem Rev. 2023 Apr 12;123(7):3976–4050.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">10. Berengut JF, Berengut JC, Doye JPK, Prešern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic Acids Res [Internet]. 2019 Dec 16 [cited 2025 Sept 10];47(22):11963–75. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7145641/</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">8. Xie W, Zhang S, Pan F, Chen S, Zhong L, Wang J, et al. Nanomaterial-based ROS-mediated strategies for combating bacteria and biofilms. Journal of Materials Research. 2021 Feb 1;36(4):822鈥?5.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">9. Zhan P, Peil A, Jiang Q, Wang D, Mousavi S, Xiong Q, et al. Recent Advances in DNA Origami-Engineered Nanomaterials and Applications. Chem Rev. 2023 Apr 12;123(7):3976鈥?050.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">10. Berengut JF, Berengut JC, Doye JPK, Pre拧ern D, Kawamoto A, Ruan J, et al. Design and synthesis of pleated DNA origami nanotubes with adjustable diameters. Nucleic Acids Res [Internet]. 2019 Dec 16 [cited 2025 Sept 10];47(22):11963鈥?5. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7145641/</p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">11. Yang B, Wang R, Li W, Wang J, Liu H. On-Origami Molecular Crowding Control of G-Quadruplex DNAzymes. Small Methods [Internet]. 2025 [cited 2025 Sept 10];9(6):2401401. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1002/smtd.202401401</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">12. Anthony R. Monte Carlo III, Jinglin Fu. Inactivation Kinetics of G‐Quadruplex/Hemin Complex and Optimization for More Reliable Catalysis - Monte Carlo - 2022 - ChemPlusChem - Wiley Online Library [Internet]. [cited 2025 Oct 3]. Available from: https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cplu.202200090</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">13. Ghahremani Nasab M, Hassani L, Mohammadi Nejad S, Norouzi D. Interaction of hemin with quadruplex DNA. J Biol Phys [Internet]. 2017 Mar [cited 2025 Sept 10];43(1):5–14. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5323342/</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">14. Mela I, Vallejo‐Ramirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed. 2020 July 27;59(31):12698–702.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">15. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">16. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258–64.</p>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">17. Yin J, Wang S, Wang J, Zhang Y, Fan C, Chao J, et al. An intelligent DNA nanodevice for precision thrombolysis. Nat Mater. 2024 June;23(6):854–62.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">12. Anthony R. Monte Carlo III, Jinglin Fu. Inactivation Kinetics of G鈥怮uadruplex/Hemin Complex and Optimization for More Reliable Catalysis - Monte Carlo - 2022 - ChemPlusChem - Wiley Online Library [Internet]. [cited 2025 Oct 3]. Available from: https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cplu.202200090</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">13. Ghahremani Nasab M, Hassani L, Mohammadi Nejad S, Norouzi D. Interaction of hemin with quadruplex DNA. J Biol Phys [Internet]. 2017 Mar [cited 2025 Sept 10];43(1):5鈥?4. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5323342/</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">14. Mela I, Vallejo鈥怰amirez PP, Makarchuk S, Christie G, Bailey D, Henderson RM, et al. DNA Nanostructures for Targeted Antimicrobial Delivery. Angew Chem Int Ed. 2020 July 27;59(31):12698鈥?02.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">15. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258鈥?4.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">16. Li S, Jiang Q, Liu S, Zhang Y, Tian Y, Song C, et al. A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo. Nat Biotechnol. 2018 Mar;36(3):258鈥?4.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">17. Yin J, Wang S, Wang J, Zhang Y, Fan C, Chao J, et al. An intelligent DNA nanodevice for precision thrombolysis. Nat Mater. 2024 June;23(6):854鈥?2.</p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">18. Jue Yin, Siyu Wang, Jiahui Wang, Yewei Zhang, Chunhai Fan, Jie Chao, Yu Gao, Lianhui Wang et al. An intelligent DNA nanodevice for precision thrombolysis | Nature Materials [Internet]. [cited 2025 Oct 3]. Available from: https://www.nature.com/articles/s41563-024-01826-y#ref-CR22</p>
 
 
@@ -193,7 +203,7 @@ Both aptamers and proteins exist as long molecular chains, which cannot be direc
 <strong>Aptamers:</strong> First, thymine (T) in DNA is replaced with uracil (U) in RNA, and all aptamers are uniformly treated as RNA. The "k-mer algorithm" is adopted, which functions like "small scissors" of fixed length to cut the long chains. For instance, if a 3-nucleotide grouping is selected, a sequence such as "GGC GGA GAA" will be fragmented into short segments like "GGC", "GCG", and "CGG". This approach preserves the key local information of aptamers, as their binding to proteins often relies on local structures.
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<strong>Proteins:</strong> The "FCS (Frequent Subsequence) mining algorithm" is employed. First, the frequency of short segments composed of 1–3 amino acids in all protein sequences is counted; the infrequent "rare segments" are removed, and the high-frequency segments are retained to construct a "frequent subsequence vocabulary". This vocabulary is then used to fragment new protein sequences. For example, the sequence "MSRLDKSKVI" may be fragmented into "MSR", "LDK", "SK", etc., enabling accurate capture of the functional key segments in proteins.
+<strong>Proteins:</strong> The "FCS (Frequent Subsequence) mining algorithm" is employed. First, the frequency of short segments composed of 1鈥? amino acids in all protein sequences is counted; the infrequent "rare segments" are removed, and the high-frequency segments are retained to construct a "frequent subsequence vocabulary". This vocabulary is then used to fragment new protein sequences. For example, the sequence "MSRLDKSKVI" may be fragmented into "MSR", "LDK", "SK", etc., enabling accurate capture of the functional key segments in proteins.
 </p>
 
 <h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Step 2: Encoding of short segments</h5>
@@ -412,7 +422,7 @@ Based on the integration of the aforementioned technical modules, we propose two
 <h5 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Workflow</h5>
 <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Input the target protein sequence (e.g., MRSA receptor) into Aptatrans to generate an initial candidate aptamer library.</li>
-<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Perform preliminary filtering on the candidate library (e.g., API probability ≥ 0.8) to retain high-potential sequences.</li>
+<li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Perform preliminary filtering on the candidate library (e.g., API probability 鈮?0.8) to retain high-potential sequences.</li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Conduct cross-validation using multiple tools and screen out sequences that meet the standards of all three validations.</li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Integrate aptamer sequences from databases to finally determine experimental-grade candidate aptamers.</li>
 </ol>
@@ -453,7 +463,8 @@ It avoids discarding aptamers with potential value; instead, it improves their b
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
+

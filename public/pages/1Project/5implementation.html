@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Implementation</title>
@@ -9,11 +19,11 @@
   <link rel="stylesheet" href="/static/safety-typography.css">
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -56,7 +66,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -71,7 +81,7 @@
 
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Our team has developed an innovative antibacterial platform FoCas, combining DNA origami and CRISPR-Cas9 technology, to treat drug resistance and inhibit risk of transmission. This platform uses a DNA origami nanostructure as a delivery system, incorporating multiple functional components: aptamer-mediated targeting for specific recognition of MRSA, G4-heme incorporation to facilitate membrane disruption, loading of sgRNA/Cas9 ribonucleoprotein complexes to constitute a CRISPR-Cas9 gene editing system, and disulfide bond crosslinking into a tubular structure to effectively protect the biomolecular payload during delivery.</p>
   
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This therapeutic system can be topically applied to wounds, allowing it to enter the body and selectively target MRSA. It enables the precise intracellular delivery of the sgRNA/Cas9 complex, where the CRISPR-Cas9 system specifically cleaves the <em>mecA</em> resistance gene. This process resensitizes MRSA to β-lactam antibiotics, providing a novel gene editing-based strategy to overcome antibiotic resistance.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This therapeutic system can be topically applied to wounds, allowing it to enter the body and selectively target MRSA. It enables the precise intracellular delivery of the sgRNA/Cas9 complex, where the CRISPR-Cas9 system specifically cleaves the <em>mecA</em> resistance gene. This process resensitizes MRSA to 尾-lactam antibiotics, providing a novel gene editing-based strategy to overcome antibiotic resistance.</p>
 
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='description') }}">link to description</a></p>
 
@@ -91,7 +101,7 @@
  text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96 
 , 165, 250, 0.4);">The design of sgRNA and sgRNA<sub>L</sub></h3>
   
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The CRISPR-Cas9 system is loaded on DNA origami delivery system, with a linker site of sgRNA (sgRNA<sub>L</sub>). Aiming at achieving targeted removal of the target gene and loading of sgRNA<sub>L</sub>/Cas9 complex to DNA origami, sequences of sgRNA and sgRNA<sub>L</sub> targeting to selected target genes were designed by our team, including sgRNA-Δ<em>mecA</em> and sgRNA<sub>L</sub>-Δ<em>lacZ</em>.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The CRISPR-Cas9 system is loaded on DNA origami delivery system, with a linker site of sgRNA (sgRNA<sub>L</sub>). Aiming at achieving targeted removal of the target gene and loading of sgRNA<sub>L</sub>/Cas9 complex to DNA origami, sequences of sgRNA and sgRNA<sub>L</sub> targeting to selected target genes were designed by our team, including sgRNA-螖<em>mecA</em> and sgRNA<sub>L</sub>-螖<em>lacZ</em>.</p>
 
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='gene-cleavage') }}">link to gene-cleavage</a></p>
 
@@ -145,7 +155,7 @@
   
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The gene cleavage function of sgRNA/Cas9 complex</h2>
   
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To verify the gene cleavage function of sgRNA designed by our team and CRISPR-Cas9 system, extracellular incubation of sgRNA/Cas9 and target gene fragment and gel electrophoresis were conducted. The successful elimination of both sgRNA-Δ<em>mecA</em> and sgRNA<sub>L</sub>-Δ<em>lacZ</em> were examined.</p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To verify the gene cleavage function of sgRNA designed by our team and CRISPR-Cas9 system, extracellular incubation of sgRNA/Cas9 and target gene fragment and gel electrophoresis were conducted. The successful elimination of both sgRNA-螖<em>mecA</em> and sgRNA<sub>L</sub>-螖<em>lacZ</em> were examined.</p>
 
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For more details: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="{{ url_for('pages', page='gene-cleavage') }}">link to gene-cleavage</a></p>
 
@@ -227,7 +237,8 @@
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
+

@@ -4,6 +4,8 @@
 
 ## 快速开始
 
+### 本地开发
+
 1. 安装依赖：
 
 ```bash
@@ -18,7 +20,19 @@ npm start
 # 或者开发时： npm run dev
 ```
 
-3. 打开浏览器访问 http://localhost:3000
+3. 打开浏览器访问 http://localhost:7000
+
+### 部署到 GitHub Pages
+
+1. 确保你已经将代码推送到 GitHub 仓库
+2. 配置 GitHub Pages：
+   - 进入仓库设置
+   - 点击 "Pages" 选项
+   - 在 "Build and deployment" 部分，选择 "GitHub Actions" 作为源
+3. 推送代码到 `master` 分支，GitHub Actions 会自动部署网站
+4. 部署完成后，访问 `https://<username>.github.io/<repository-name>/`
+
+注意：网站使用绝对路径引用资源，所以在 GitHub Pages 上访问时需要确保仓库名称与 URL 路径匹配。
 
 ## 编辑网站内容
 

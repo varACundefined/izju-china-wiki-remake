@@ -1,6 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-<head>
+<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+  <script>
+    // 鑷姩妫€娴嬪熀纭€璺緞
+    const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
+      ? '/izju-china-wiki-remake/' 
+      : '/';
+    // 鍒涘缓骞舵坊鍔?base 鏍囩
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Wet Lab Overview</title>
@@ -9,11 +19,11 @@
   <link rel="stylesheet" href="/static/wetlab-typography.css">
 </head>
 <body>
-  <button class="sidebar-toggle" aria-label="切换导航" aria-expanded="false">☰</button>
+  <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="主页"></a>
+<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
-<!-- 本文件由 inject-sidebar.js 自动生成 -->
+<!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
     <li><a href="/" class="home-link">Home</a></li>
@@ -56,7 +66,7 @@
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="回到顶部"><img src="/assets/images/uptotop.webp" alt="回到顶部"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -69,7 +79,7 @@
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">To construct our DNA origami-based gene editing system, our experiments are divided into three modules, namely the gene cleavage module, assembly module, and functional validation module.</p>
 
 <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.1 Gene cleavage module</h2>
-<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For the gene cleavage module of our design, the CRISPR/Cas9 system functions as a programmable gene editing system to cleave specific antibiotic resistance genes. In vitro assay, we confirmed the feasibility of sgRNA-Δ<em>mecA</em>/Cas9 complex for extracellular targeted cleavage of <em>mecA</em> gene. To mitigate the potential biosafety concerns associated with <em>mecA</em> gene in intracellular conditions, we replaced <em>mecA</em> gene with <em>lacZ</em> gene in subsequent experiments. The successful extracellular cleavage of <em>lacZ</em> gene confirmed that the sgRNA<sub>L</sub>/Cas9 complex could retain its cleavage activity with the incorporation of a linker.</p>
+<p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For the gene cleavage module of our design, the CRISPR/Cas9 system functions as a programmable gene editing system to cleave specific antibiotic resistance genes. In vitro assay, we confirmed the feasibility of sgRNA-螖<em>mecA</em>/Cas9 complex for extracellular targeted cleavage of <em>mecA</em> gene. To mitigate the potential biosafety concerns associated with <em>mecA</em> gene in intracellular conditions, we replaced <em>mecA</em> gene with <em>lacZ</em> gene in subsequent experiments. The successful extracellular cleavage of <em>lacZ</em> gene confirmed that the sgRNA<sub>L</sub>/Cas9 complex could retain its cleavage activity with the incorporation of a linker.</p>
 
 <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.2 Assembly module</h2>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">For the assembly module of our design, atomic force microscopy (AFM) was used to characterize the basic plane of DNA origami, revealing the well-defined nanostructure with the expected dimensions. The sgRNA<sub>L</sub>/Cas9 complex was then loaded onto the basic plane of DNA origami, and fluorescent modification of both components facilitated the validation of successful loading.</p>
@@ -182,7 +192,8 @@
   <aside id="toc" class="toc"></aside>
   <script src="/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="页脚图片">
+    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
+
