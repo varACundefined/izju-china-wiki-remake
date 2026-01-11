@@ -1,0 +1,20 @@
+GitHub Pages Configuration Check Steps:
+
+1. Go to your GitHub repository: https://github.com/varACundefined/izju-china-wiki-remake
+2. Click on the 'Settings' tab at the top
+3. Click on 'Pages' in the left menu
+4. Check the 'Build and deployment' section:
+   - Source should be set to 'GitHub Actions'
+   - If not, select 'GitHub Actions'
+5. Check 'Custom domain' if you have one set
+6. Check the 'Deployments' section to confirm deployment status
+
+If GitHub Actions deployment fails, you can:
+1. View Actions logs: Click on the 'Actions' tab, select the latest deployment workflow
+2. Check error messages and fix accordingly
+3. Manually trigger deployment: Click the 'Run workflow' button
+
+Common issues and solutions:
+- Path issues: Ensure the public directory exists and contains an index.html file
+- Permission issues: Check the permissions configuration in the workflow file
+- Branch issues: Ensure you're pushing to the correct branch (master)

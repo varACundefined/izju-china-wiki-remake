@@ -1,6 +1,28 @@
 ﻿<!doctype html>
 <html lang="zh-CN">
-<head>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>  <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
+  <script>
+    // 自动检测基础路径 - 更健壮的实现
+    let basePath = '/';
+    
+    // 获取当前URL的路径部分
+    const currentPath = window.location.pathname;
+    
+    // 检查是否在GitHub Pages上，匹配用户名和仓库名
+    const githubPagesMatch = currentPath.match(/^/(\w+)/(\w+)//);
+    if (githubPagesMatch) {
+      // 如果是GitHub Pages，使用仓库路径作为基础路径
+      basePath = '/' + githubPagesMatch[1] + '/' + githubPagesMatch[2] + '/';
+    }
+    
+    // 创建并添加 base 标签
+    const base = document.createElement('base');
+    base.href = basePath;
+    document.head.insertBefore(base, document.head.firstChild);
+    
+    // 调试信息，可在浏览器控制台查看
+    console.log('Dynamic base path set to:', basePath);
+  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 

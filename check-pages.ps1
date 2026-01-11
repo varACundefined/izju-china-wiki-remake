@@ -1,0 +1,22 @@
+# 检查GitHub Pages配置的PowerShell脚本
+# 由于我们无法直接访问GitHub API，这里提供手动检查步骤
+
+Write-Host "GitHub Pages配置检查步骤："
+Write-Host "1. 访问你的GitHub仓库：https://github.com/varACundefined/izju-china-wiki-remake"
+Write-Host "2. 点击顶部的 'Settings' 标签"
+Write-Host "3. 在左侧菜单中点击 'Pages'"
+Write-Host "4. 检查 'Build and deployment' 部分："
+Write-Host "   - Source 应该设置为 'GitHub Actions'"
+Write-Host "   - 如果不是，请选择 'GitHub Actions'"
+Write-Host "5. 检查 'Custom domain'（如果有设置）"
+Write-Host "6. 查看 'Deployments' 部分，确认部署状态"
+Write-Host ""
+Write-Host "如果GitHub Actions部署失败，你可以："
+Write-Host "1. 查看Actions日志：点击 'Actions' 标签，选择最新的部署工作流"
+Write-Host "2. 检查错误信息，针对性修复"
+Write-Host "3. 手动触发部署：点击 'Run workflow' 按钮"
+Write-Host ""
+Write-Host "常见问题及解决方案："
+Write-Host "- 路径问题：确保public目录存在且包含index.html文件"
+Write-Host "- 权限问题：检查工作流文件中的permissions配置"
+Write-Host "- 分支问题：确保推送到了正确的分支（master）"
