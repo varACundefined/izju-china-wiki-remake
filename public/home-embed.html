@@ -1,32 +1,6 @@
 ﻿<!doctype html>
 <html lang="en">
-<head>      <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
-  <script>
-    // 自动检测基础路径 - 修复GitHub Pages路径问题
-    let basePath = '/';
-    
-    // 获取当前URL的路径部分和主机名
-    const currentPath = window.location.pathname;
-    const hostname = window.location.hostname;
-    
-    // 检查是否在GitHub Pages上（通过主机名判断）
-    if (hostname.endsWith('.github.io')) {
-      // GitHub Pages URL结构：https://username.github.io/repository-name/
-      // 所以路径中第一个非空部分是仓库名称
-      const pathParts = currentPath.split('/').filter(Boolean);
-      if (pathParts.length > 0) {
-        basePath = '/' + pathParts[0] + '/';
-      }
-    }
-    
-    // 调试信息，可在浏览器控制台查看
-    console.log('Dynamic base path set to:', basePath, 'Hostname:', hostname, 'Current path:', currentPath);
-    
-    // 创建并添加 base 标签
-    const base = document.createElement('base');
-    base.href = basePath;
-    document.head.insertBefore(base, document.head.firstChild);
-  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
@@ -40,16 +14,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home Embed</title>
-  <link href="/static/home.css" rel="stylesheet">
+  <link href="/izju-china-wiki-remake/static/home.css" rel="stylesheet">
 </head>
 <body class="all no-sidebar">
   <div id="title">
     <div class="hero-animation-container">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/picture/menu.webp" 
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/picture/menu.webp" 
            alt="Team Logo" 
            class="hero-team-logo" 
            id="teamLogo">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/home/0.webp" 
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/home/0.webp" 
            alt="Fox Mascot" 
            class="hero-fox-mascot" 
            id="foxMascot">
@@ -105,7 +79,7 @@
 
     <div style="position: absolute; top: 310vh; width: 100%; display: flex; justify-content: center; align-items: center; padding: 0 5vw;">
       <div class="appear transmission-chart" id="transmission-image" style="flex: 1; max-width: 45%; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-        <img src="/static/_downloaded/static.igem.wiki/teams/5913/home/r0.webp" 
+        <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/home/r0.webp" 
              alt="Transmission visualization" 
              style="width: 200%; max-width: none; transform: scale(1.3);">
       </div>
@@ -149,7 +123,7 @@
     </div>
 
     <div class="appear" id="eskape-image" style="position: absolute; top: 470vh; left: 0; right: 0; text-align: center; z-index: 9;">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/home/eskape.webp" alt="ESKAPE pathogens" style="width: 50vw; max-width: 80vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/home/eskape.webp" alt="ESKAPE pathogens" style="width: 50vw; max-width: 80vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
     </div>
 
     <div class="appear" id="eskape-stats" style="position: absolute; top: 520vh; left: 8vw; right: 8vw; z-index: 10;">
@@ -181,7 +155,7 @@
     <div class="appear" id="mrsa-content" style="position: absolute; top: 610vh; left: 8vw; right: 8vw; z-index: 10;">
       <div style="display: flex; gap: 4vw; align-items: flex-start;">
         <div style="flex: 1; text-align: center;">
-          <img src="/static/_downloaded/static.igem.wiki/teams/5913/home/1-2.webp" 
+          <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/home/1-2.webp" 
                alt="MRSA Molecular Mechanism" 
                style="width: 100%; max-width: 40vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
         </div>
@@ -227,13 +201,13 @@
 
       <div class="appear" id="focas-content" style="display: flex; gap: 4vw; justify-content: center; align-items: flex-start; padding: 0 8vw; margin-top: 5vh;">
         <div style="flex: 1; text-align: center;">
-          <img src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-2-dna-origami-delivery-system-of-focas.webp" 
+          <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/description/figure-2-dna-origami-delivery-system-of-focas.webp" 
                alt="DNA Origami Delivery System" 
                style="width: 100%; max-width: 35vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4)); margin-bottom: 3vh;">
           <h3 style="color: white; font-size: 28px; font-weight: 700; margin-bottom: 1vh;">[Fo] Delivery System: DNA Origami</h3>
         </div>
         <div style="flex: 1; text-align: center;">
-          <img src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-1-crispr-cas9-system-of-focas-2.webp" 
+          <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/description/figure-1-crispr-cas9-system-of-focas-2.webp" 
                alt="CRISPR-Cas9 System" 
                style="width: 100%; max-width: 35vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4)); margin-bottom: 3vh;">
           <h3 style="color: white; font-size: 28px; font-weight: 700; margin-bottom: 1vh;">[Cas] Gene Editing System: CRISPR-Cas9</h3>
@@ -256,7 +230,7 @@
     </div>
 
     <div class="appear" id="four-component-image" style="position: absolute; top: 840vh; left: 0; right: 0; text-align: center; z-index: 9;">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-6-illustration-of-four-structural-components-of-focas.webp" 
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/description/figure-6-illustration-of-four-structural-components-of-focas.webp" 
            alt="Four Functional Component" 
            style="width: 60vw; max-width: 90vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
     </div>
@@ -268,7 +242,7 @@
     </div>
 
     <div class="appear" id="five-module-image" style="position: absolute; top: 960vh; left: 0; right: 0; text-align: center; z-index: 9;">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-14-illustration-of-five-modules-indicating-the-acting-mechanism-of-focas.webp" 
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/description/figure-14-illustration-of-five-modules-indicating-the-acting-mechanism-of-focas.webp" 
            alt="Five Acting Module" 
            style="width: 60vw; max-width: 90vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
     </div>
@@ -280,7 +254,7 @@
     </div>
 
     <div class="appear" id="application-image" style="position: absolute; top: 1080vh; left: 0; right: 0; text-align: center; z-index: 9;">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/description/wound-application.webp" 
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/description/wound-application.webp" 
            alt="MRSA Wound Infection Application" 
            style="width: 50vw; max-width: 80vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
     </div>
@@ -303,7 +277,7 @@
     </div>
 
     <div class="appear" id="procedure-image" style="position: absolute; top: 1220vh; left: 0; right: 0; text-align: center; z-index: 9;">
-      <img src="/static/_downloaded/static.igem.wiki/teams/5913/description/figure-16-illustration-of-simple-procedures-for-focas-platform.webp" 
+      <img src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/description/figure-16-illustration-of-simple-procedures-for-focas-platform.webp" 
            alt="Simple Procedure" 
            style="width: 60vw; max-width: 90vw; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));">
     </div>
@@ -324,7 +298,7 @@
     </div>
 
     <div style="position: absolute;top: 1385vh;left: 15vw;right: 15vw;text-align: center;z-index: 10;" class="appear" id="video-container">
-      <iframe src="/static/_downloaded/video.igem.org/videos/embed/q8BWiXTythjiEpDBJ79dm8" 
+      <iframe src="/izju-china-wiki-remake/static/_downloaded/video.igem.org/videos/embed/q8BWiXTythjiEpDBJ79dm8" 
               style="width: 70vw; height: 39.375vw; max-width: 100%; border: none;" 
               allowfullscreen 
               sandbox="allow-same-origin allow-scripts allow-popups"
@@ -334,11 +308,11 @@
 
   </div>
 
-  <script src="/static/_downloaded/code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/static/scrollreveal.js"></script>
-  <script src="/static/theme.js?v=2"></script>
-  <script src="/static/loading.js?v=3"></script>
-  <script src="/static/home.js"></script>
+  <script src="/izju-china-wiki-remake/static/_downloaded/code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/izju-china-wiki-remake/static/scrollreveal.js"></script>
+  <script src="/izju-china-wiki-remake/static/theme.js?v=2"></script>
+  <script src="/izju-china-wiki-remake/static/loading.js?v=3"></script>
+  <script src="/izju-china-wiki-remake/static/home.js"></script>
 
   <script>
     // 灏嗛〉闈㈤珮搴﹀彂閫佺粰鐖堕〉闈㈢敤浜庤嚜閫傚簲 iframe 楂樺害

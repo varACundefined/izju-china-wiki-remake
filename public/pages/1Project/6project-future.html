@@ -1,32 +1,6 @@
 ﻿<!doctype html>
 <html lang="zh-CN">
-<head>      <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
-  <script>
-    // 自动检测基础路径 - 修复GitHub Pages路径问题
-    let basePath = '/';
-    
-    // 获取当前URL的路径部分和主机名
-    const currentPath = window.location.pathname;
-    const hostname = window.location.hostname;
-    
-    // 检查是否在GitHub Pages上（通过主机名判断）
-    if (hostname.endsWith('.github.io')) {
-      // GitHub Pages URL结构：https://username.github.io/repository-name/
-      // 所以路径中第一个非空部分是仓库名称
-      const pathParts = currentPath.split('/').filter(Boolean);
-      if (pathParts.length > 0) {
-        basePath = '/' + pathParts[0] + '/';
-      }
-    }
-    
-    // 调试信息，可在浏览器控制台查看
-    console.log('Dynamic base path set to:', basePath, 'Hostname:', hostname, 'Current path:', currentPath);
-    
-    // 创建并添加 base 标签
-    const base = document.createElement('base');
-    base.href = basePath;
-    document.head.insertBefore(base, document.head.firstChild);
-  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
@@ -40,59 +14,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Future Directions</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/assets/css/styles.css">
 
-  <link rel="stylesheet" href="/static/safety-typography.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/static/safety-typography.css">
 </head>
 <body>
   <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
+<a class="home" href="/izju-china-wiki-remake/"><img src="/izju-china-wiki-remake/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
 <!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
-    <li><a href="/" class="home-link">Home</a></li>
+    <li><a href="/izju-china-wiki-remake/" class="home-link">Home</a></li>
     <li><span>Project</span>
   <ul>
-<li><a href="/pages/1Project/1background.html">Background</a></li>
-<li><a href="/pages/1Project/2description.html">Description</a></li>
-<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
-<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
-<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
-<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/1Project/1background.html">Background</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/2description.html">Description</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
 </li>
 <li><span>Dry Lab</span>
   <ul>
-<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
-<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
 </li>
 <li><span>Wet Lab</span>
   <ul>
-<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
-<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
-<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
-<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
-<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
-<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
 </li>
 <li><span>Human Practice</span>
   <ul>
-<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
-<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
-<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
-<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
 </li>
 <li><span>Team</span>
   <ul>
-<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
-<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/izju-china-wiki-remake/pages/5Team/3awards.html">Awards</a></li>  </ul>
 </li>
 
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/izju-china-wiki-remake/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -108,7 +82,7 @@
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The engineered <em>E. coli</em> system consists of an artificial phagemid and a helper plasmid. The former contains the crucial regulatory sequences required to initiate rolling circle amplification鈥攁 specific amplification pattern derived from phages that produces long single-strand DNA鈥攂ut it lacks the genes for capsid proteins. The latter incorporates both the phage backbone and a regular plasmid backbone, enabling the continuous production of the main capsid protein but not the initiation of rolling circle amplification. This design prevents the phages from self-replicating, thereby eliminating the risk of engineered phage residues being released into the environment. Simultaneously, the separation and controllability of these components enhance production efficiency.</p>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-1.webp" alt="Phagemid and helper plasmid design" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-1.webp" alt="Phagemid and helper plasmid design" style="max-width: 100%; height: auto;">
     <figcaption>Figure 1. An example of phagemid and helper plasmid with crucial components, taken from reference (2)</figcaption>
   </figure>
 
@@ -119,17 +93,17 @@
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The plasmid's main component is an artificial pseudogene, into which all target staple sequences (including m13) are interleaved with self-cleaving catalytic DNAzymes. Each DNAzyme is approximately 70 base pairs long. Due to time constraints, we use one type of staples (F-cap-x) as an example and design its corresponding pseudogene sequence.</p>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-2.webp" alt="Design criteria illustration" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-2.webp" alt="Design criteria illustration" style="max-width: 100%; height: auto;">
     <figcaption>Figure 2. Illustration of the design criteria and effect of user-defined sequences, which will be cleaved into scaffold and staples of DNA origami. Figure taken from reference (1).</figcaption>
   </figure>
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">The sequences</h2>
-  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;"><a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/future/future-1.pdf" target="_blank">View sequence details (PDF)</a></p>
+  <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;"><a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-1.pdf" target="_blank">View sequence details (PDF)</a></p>
 
   <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Industrial Flow chart</h2>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-3.webp" alt="Industrial production flowchart" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-3.webp" alt="Industrial production flowchart" style="max-width: 100%; height: auto;">
     <figcaption>Figure 3. Illustration of the procedure for biologically producing DNA origami. Engineered <em>E. coli</em> is first cultured until bacterial accumulation reaches a critical density. If not, cultivation continues; if yes, a signaling substance is added to initiate rolling circle amplification so that phages unable to replicate themselves are produced. Then, phages are collected and subjected to DNA purification. After adding Zn虏鈦?to facilitate DNA self-excision to obtain scaffold and staple strands, a PCR program is run to construct the DNA origami, which is then stored before transported applying to the patients.</figcaption>
   </figure>
 
@@ -138,7 +112,7 @@
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">With biotechnological mass production, the cost is estimated to be approximately 鈧?.18 per milligram of folded DNA origami in an 800-liter volume at a contract biotech facility. This is at least three orders of magnitude cheaper than the estimated cost of producing the same amount via conventional solid-phase chemical oligonucleotide synthesis. Furthermore, costs decrease with an expansion of the production scale (1).</p>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-4.webp" alt="Cost breakdown" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-4.webp" alt="Cost breakdown" style="max-width: 100%; height: auto;">
     <figcaption>Figure 4. Cost breakdown for DNA origami nanorod production at lab scale and pilot scale, adapted from reference (1)</figcaption>
   </figure>
 
@@ -153,7 +127,7 @@
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">MRSA respiratory infections can cause life-threatening diseases, including pneumonia, empyema, and respiratory failure. Conventional oral and parenteral antibiotic treatments are often inefficient at targeting the lower respiratory tract and can cause systemic adverse effects (4). In contrast, nebulized inhalation is considered an optimal method for lung disease treatment due to the long drug retention time in the lungs, improved delivery of hydrophobic drugs, and reduced systemic toxicity. Specifically, nebulized samples are administered as 10鈥?0 渭m microdroplets via a nebulizer. Focas possesses the characteristics of nanomedicines that are likely to pass through the airways and cross the mucus barrier. Previous studies have shown that DNA origami-based drugs can successfully diffuse into deeper regions and remain stable. We plan to conduct experiments to validate our design. The potential crucial role of peptide modification in the treatment requires further evidence (5).</p>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-5.webp" alt="Nebulized drug delivery" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-5.webp" alt="Nebulized drug delivery" style="max-width: 100%; height: auto;">
     <figcaption>Figure 5. Schematic diagram of nebulized drug delivery of Focas in new implementation scenarios.</figcaption>
   </figure>
 
@@ -162,7 +136,7 @@
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Bacterial meningitis is a severe infection associated with a high mortality risk. A study in Ontario, Canada, showed that <em>Staphylococcus aureus</em> was the second most common pathogen in community-acquired meningitis and the most common pathogen in nosocomial meningitis (6). The ability of bacteria to cross the blood-brain barrier (BBB) and proliferate slowly in the subarachnoid space presents a significant treatment challenge (7). Our adjusted Focas platform functions as a composite delivery vesicle designed to transport CRISPR-Cas9 together with traditional antimicrobial small molecules across the blood-brain barrier. This system is designed to simultaneously kill bacteria and prevent the spread of antimicrobial resistance genes. The barrel structure of Focas has been shown to cross the BBB via transcytosis more efficiently than smaller, rigid structures. In the next phase, we will modify the scaffold into a soccer ball configuration, which offers greater flexibility and deformability, and test its transport efficiency (8).</p>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-6.webp" alt="DNA origami morphologies" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-6.webp" alt="DNA origami morphologies" style="max-width: 100%; height: auto;">
     <figcaption>Figure 6. Different origami morphologies and their transport efficiency through BBB, figure taken from reference (8).</figcaption>
   </figure>
 
@@ -179,7 +153,7 @@
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The membrane rupture component of Focas is G4-hemin, which generates reactive oxidative species (ROS) to disrupt the bacterial outer membrane and facilitate drug internalization. Although our wet lab shows Focas can withstand attack from ROS in experiment time, we still doubt it causing unnecessary injury on DNA origami structure in a longer time period. To replace this critical membrane transport component, we have identified potential in targeting cell surface thiols to enhance cellular uptake. Related strategies involving disulfide conjugation to nanoparticles, oligonucleotides, and even DNA origami have been proven as an efficient and rapid strategy with no associated toxicity (10-12). However, direct evidence in prokaryotes is lacking due to limited research. We plan to collaborate with laboratories specializing in prokaryotic transmembrane drug delivery to test the feasibility of this new method. If the results are positive, we will replace the G4-hemin component with staples modified with disulfide units on the 3' terminus and conduct subsequent confirmatory experiments.</p>
 
   <figure style="text-align: center; margin: 30px 0;">
-    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/future/future-7.webp" alt="Staples modified with disulfide units" style="max-width: 100%; height: auto;">
+    <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/future/future-7.webp" alt="Staples modified with disulfide units" style="max-width: 100%; height: auto;">
     <figcaption>Figure 7. Staples modified with disulfide units to enhance cellular uptake, taking SiRNA drug as an example, taken from reference (11).</figcaption>
   </figure>
 
@@ -235,9 +209,9 @@
   </main>
 
   <aside id="toc" class="toc"></aside>
-  <script src="/assets/js/main.js"></script>
+  <script src="/izju-china-wiki-remake/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
+    <img src="/izju-china-wiki-remake/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>

@@ -1,32 +1,6 @@
 ﻿<!doctype html>
 <html lang="zh-CN">
-<head>      <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
-  <script>
-    // 自动检测基础路径 - 修复GitHub Pages路径问题
-    let basePath = '/';
-    
-    // 获取当前URL的路径部分和主机名
-    const currentPath = window.location.pathname;
-    const hostname = window.location.hostname;
-    
-    // 检查是否在GitHub Pages上（通过主机名判断）
-    if (hostname.endsWith('.github.io')) {
-      // GitHub Pages URL结构：https://username.github.io/repository-name/
-      // 所以路径中第一个非空部分是仓库名称
-      const pathParts = currentPath.split('/').filter(Boolean);
-      if (pathParts.length > 0) {
-        basePath = '/' + pathParts[0] + '/';
-      }
-    }
-    
-    // 调试信息，可在浏览器控制台查看
-    console.log('Dynamic base path set to:', basePath, 'Hostname:', hostname, 'Current path:', currentPath);
-    
-    // 创建并添加 base 标签
-    const base = document.createElement('base');
-    base.href = basePath;
-    document.head.insertBefore(base, document.head.firstChild);
-  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
@@ -40,59 +14,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Future Directions</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/assets/css/styles.css">
 
-  <link rel="stylesheet" href="/static/wetlab-typography.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/static/wetlab-typography.css">
 </head>
 <body>
   <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
+<a class="home" href="/izju-china-wiki-remake/"><img src="/izju-china-wiki-remake/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
 <!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
-    <li><a href="/" class="home-link">Home</a></li>
+    <li><a href="/izju-china-wiki-remake/" class="home-link">Home</a></li>
     <li><span>Project</span>
   <ul>
-<li><a href="/pages/1Project/1background.html">Background</a></li>
-<li><a href="/pages/1Project/2description.html">Description</a></li>
-<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
-<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
-<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
-<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/1Project/1background.html">Background</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/2description.html">Description</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
 </li>
 <li><span>Dry Lab</span>
   <ul>
-<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
-<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
 </li>
 <li><span>Wet Lab</span>
   <ul>
-<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
-<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
-<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
-<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
-<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
-<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
 </li>
 <li><span>Human Practice</span>
   <ul>
-<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
-<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
-<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
-<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
 </li>
 <li><span>Team</span>
   <ul>
-<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
-<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/izju-china-wiki-remake/pages/5Team/3awards.html">Awards</a></li>  </ul>
 </li>
 
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/izju-china-wiki-remake/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -119,7 +93,7 @@
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Our platform delivers the CRISPR/Cas9 into bacterial cells via the membrane rupture effect of ROS. This exogenous source of ROS, however, may pose a threat to the survival and growth of normal cells. Therefore, to assess the therapeutic value of our platform, it is necessary to measure intracellular ROS levels following incubation with the DNA origami and the subsequent addition of hemin. Traditionally, intracellular ROS concentrations can be determined using dichlorodihydrofluorescein diacetate (DCFH-DA), which freely penetrates the cell membrane and can be oxidized by ROS to generate the fluorescent 2鈥?7鈥?dichlorofluorescein (DCF) (7) (Figure 1). Nevertheless, more fluorescent signals will be produced if samples are exposed to light irradiation during measurement (8), thereby leading to unreliable results, especially for samples with a small amount of ROS. A novel approach based on DCFH-DA has been developed, which amplifies the initial fluorescence signal via a self-amplification process of DCF. This strategy has been proven to be more stable and sensitive than conventional methods, while also minimizing the impact of light irradiation on the measurement process (9). Future study could focus on measuring intracellular ROS levels after the addition of hemin using the novel ROS detection method. The density of G4 arrays can be adjusted and optimized if excessive ROS is observed inside cells.</p>
 
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-1.webp" alt="Safety tests schematic" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-1.webp" alt="Safety tests schematic" style="max-width: 100%; height: auto;">
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;"><strong>Figure 1. Schematic illustration of safety tests that can be undertaken to evaluate the toxicity of our platform if used in vivo.</strong> ROS: reactive oxygen species. MTT: 3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide. DCFH-DA: dichlorodihydrofluorescein diacetate. DCF: 2鈥?7鈥?dichlorofluorescein.</p>
 
 <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Beyond: Specificity Upgrade</h2>
@@ -127,18 +101,18 @@
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">Creating efficient aptamer screening platforms opens a promising avenue to increase the specificity of our DNA origami to particular bacterial structures. Systematic evolution of ligands by exponential enrichment (SELEX) is a widely used process for aptamer screening, which involves a series of selection and amplification steps. To integrate SELEX into our project, the surface molecule exclusive to the target bacterial strain needs to be identified and should be easily obtained or synthesized. Alternatively, whole cells or spores can be used as the target, where prior knowledge or purification of a particular surface epitope is not required. However, cell-SELEX might be difficult to perform, as the negatively charged bacterial surface repulses DNA from the cell surface (13). Furthermore, the surface markers that the selected nucleic acid binds to remain unknown, which makes safety assessment hard to perform and limits its potential therapeutic usage. As such, screening aptamers that target one or several known surface targets may serve as a better approach. Conventional SELEX requires a large pool of nucleic acid molecules flanked by two constant sequences. Aptamer candidates are then allowed to bind to the desired target molecules under specific conditions. The molecules that successfully bind to the target are isolated using several rounds of washing and amplified to generate an enriched population. This cycle is repeated iteratively to narrow down the massive nucleic acid pool to a small population of molecules that exhibit optimal specificity to the target (14) (Figure 2). Generating a considerable amount of nucleic acids for screening is critical for the successful identification of high-affinity aptamers. Screening such a large number of aptamers, however, can be both time- and money-consuming. Therefore, using modified SELEX versions that can rapidly isolate bound molecules may significantly improve the screening efficiency. Capillary electrophoresis-SELEX (CE-SELEX), for instance, separates an aptamer-target complex from unbound nucleic acids based on their electrophoretic mobility. Free oligonucleotides have higher mobility and will pass through a capillary into the waste, while the less mobile aptamer-target complex will remain in the capillary and can be obtained by applying pressure (15). This method reduces the required screening rounds from 20 in conventional SELEX to 4 while retaining the high affinity of the selected aptamer (15). Magnetic bead-based SELEX serves as another efficacious way to screen aptamers. In this method, the target molecule, usually a protein, is fixed on magnetic beads. Aptamers bound to the target can then be isolated using a magnetic separator and amplified for sequencing (16).</p>
 
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-2.webp" alt="SELEX schematic" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-2.webp" alt="SELEX schematic" style="max-width: 100%; height: auto;">
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;"><strong>Figure 2. Schematic illustration of basic concepts of SELEX.</strong> An initial aptamer library is selected by target binding and subsequent washing. Bound aptamers are retained and eluted for amplification. Aptamers with high affinity are obtained after multiple rounds of screening.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">The development of next-generation sequencing and computational docking techniques paves the way for computational screening of aptamer libraries. In the last few decades, highly efficient in silico approaches have been developed to predict the interaction between the target structure and aptamer candidates. Software tools such as Autodock or HADDOCK facilitate the investigation of structural patterns responsible for aptamer-target interactions based on predicted affinity and Gibbs free energy (17,18). These in silico methods have successfully identified several aptamers with high affinity for certain bacterial surface proteins, such as a conserved pilus backbone protein in <em>Streptococcus agalactiae</em> or the protein A of <em>Staphylococcus aureus</em> (19鈥?1). The aptamers selected by SELEX can undergo further maturation, where their sequences are screened by a genetic algorithm and mutated in silico. The mutated aptamers can then be synthesized and enter another screen cycle, giving rise to aptamers with higher specificity (Figure 3). For example, aptamers generated after multiple rounds of crossover and shuffling exhibit 16-fold specificity against <em>Streptococcus mutans</em> to aptamers selected by cell-SELEX only (22).</p>
 
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-3.webp" alt="In silico SELEX techniques" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-3.webp" alt="In silico SELEX techniques" style="max-width: 100%; height: auto;">
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;"><strong>Figure 3. The use of in silico techniques in SELEX (adapted from Darmostuk et al).</strong> Prior selected aptamers are paired, mutated via certain genetic algorithms and sequenced to generate evolved sequences, which are further verified and screened in vitro. Aptamers with improved affinity are obtained after multiple rounds of screening.</p>
 
 <h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Bigger Picture: In Vivo Trials in Animal Models</h2>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">After being proven to be safe and highly specific, in vivo trials can be undertaken to further verify the efficacy of our origami-CRISPR-Cas9 platform. Wound infections have become a serious issue in recent years. Gram-positive bacteria such as <em>Staphylococcus aureus</em> and <em>Enterococcus</em> spp., and Gram-negative organisms such as <em>Pseudomonas aeruginosa</em> and <em>Acinetobacter</em> spp. are common pathogens responsible for acute wound infections (23). Rapidly increasing antibiotic resistance may complicate wound conditions and result in delays in healing. As our platform demonstrates decent specificity against antibiotic-resistant bacteria, the effectiveness of the platform in targeting the resistant bacteria and facilitating wound healing can be evaluated by using murine wound infection models. Numerous mouse wound models have been established (24鈥?8). Here, we adapted a standardized mouse model previously used for investigating wound infection with <em>Pseudomonas aeruginosa</em> (29) to test the efficacy of our platform in vivo. Kunming mice, with an 8 mm wound created on their backs using sterile scissors, are used as experimental subjects. To test the efficacy of our platform, acclimated mice are randomly assigned to one of three groups: control group, infected group injected with origami-hemin but without CRISPR/Cas9, and infected group injected with origami-CRISPR-Cas9-hemin. As a critical indicator of mouse health, the body weight of the mouse in each group should be measured every 2 days. After injection of the origami mix, 0.5 g of wound tissue will be randomly collected from three mice in each group every 2 days and mixed with 4.5 mL of sterile saline. The mixture will be homogenized using an electric grinder for 2 minutes to generate a 1:9 tissue slurry, which will be diluted to appropriate concentrations and plated onto CFC agar plates for colony counting (29). The wound tissue collected can also be subjected to antigen retrieval and subsequent immunoassays for measuring cytokine levels, such as IL-1尾, TNF-伪 and TGF-尾 (29). Hematoxylin鈥揈osin (HE) staining can be used for histological analysis of the wound tissue. The thickness of the granulation tissue can be observed and measured under a light microscope (29). A general pipeline of in vivo murine wound infection trials is summarized in Figure 4. Fewer colonies on the agar plate, less cytokine secretion, and thicker granulation tissue in the group injected with origami-CRISPR-Cas9-hemin than in the group injected with origami-hemin can indicate that our platform is effective against antibiotic-resistant bacteria responsible for wound infections.</p>
 
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-4.webp" alt="In vivo murine wound infection model pipeline" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/wet-future/wet-future-4.webp" alt="In vivo murine wound infection model pipeline" style="max-width: 100%; height: auto;">
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;"><strong>Figure 4. General pipeline for in vivo murine wound infection model trials of the origami-CRISPR-Cas9 platform (adapted from Hou et al (29)).</strong> Briefly, acclimated mice with wounds are infected by antibiotic-resistant bacteria, and treated with control, origami-CRISPR-Cas9-hemin, and origami-hemin. Parameters, including body weight, wound colony count, and assays such as ELISA and histopathology, are measured and performed periodically.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">In conclusion, the overall goal is to ensure that our origami-CRISPR-Cas9 platform is safe, specific, and effective against antibiotic-resistant strains. Following the aforementioned directions may facilitate successful in vivo trials and potential clinical applications of the platform.</p>
@@ -188,9 +162,9 @@
   </main>
 
   <aside id="toc" class="toc"></aside>
-  <script src="/assets/js/main.js"></script>
+  <script src="/izju-china-wiki-remake/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
+    <img src="/izju-china-wiki-remake/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>

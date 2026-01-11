@@ -1,32 +1,6 @@
 ﻿<!doctype html>
 <html lang="zh-CN">
-<head>      <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
-  <script>
-    // 自动检测基础路径 - 修复GitHub Pages路径问题
-    let basePath = '/';
-    
-    // 获取当前URL的路径部分和主机名
-    const currentPath = window.location.pathname;
-    const hostname = window.location.hostname;
-    
-    // 检查是否在GitHub Pages上（通过主机名判断）
-    if (hostname.endsWith('.github.io')) {
-      // GitHub Pages URL结构：https://username.github.io/repository-name/
-      // 所以路径中第一个非空部分是仓库名称
-      const pathParts = currentPath.split('/').filter(Boolean);
-      if (pathParts.length > 0) {
-        basePath = '/' + pathParts[0] + '/';
-      }
-    }
-    
-    // 调试信息，可在浏览器控制台查看
-    console.log('Dynamic base path set to:', basePath, 'Hostname:', hostname, 'Current path:', currentPath);
-    
-    // 创建并添加 base 标签
-    const base = document.createElement('base');
-    base.href = basePath;
-    document.head.insertBefore(base, document.head.firstChild);
-  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
@@ -40,59 +14,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Wet Lab Overview</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/assets/css/styles.css">
 
-  <link rel="stylesheet" href="/static/wetlab-typography.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/static/wetlab-typography.css">
 </head>
 <body>
   <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
+<a class="home" href="/izju-china-wiki-remake/"><img src="/izju-china-wiki-remake/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
 <!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
-    <li><a href="/" class="home-link">Home</a></li>
+    <li><a href="/izju-china-wiki-remake/" class="home-link">Home</a></li>
     <li><span>Project</span>
   <ul>
-<li><a href="/pages/1Project/1background.html">Background</a></li>
-<li><a href="/pages/1Project/2description.html">Description</a></li>
-<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
-<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
-<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
-<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/1Project/1background.html">Background</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/2description.html">Description</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
 </li>
 <li><span>Dry Lab</span>
   <ul>
-<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
-<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
 </li>
 <li><span>Wet Lab</span>
   <ul>
-<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
-<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
-<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
-<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
-<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
-<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
 </li>
 <li><span>Human Practice</span>
   <ul>
-<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
-<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
-<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
-<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
 </li>
 <li><span>Team</span>
   <ul>
-<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
-<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/izju-china-wiki-remake/pages/5Team/3awards.html">Awards</a></li>  </ul>
 </li>
 
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/izju-china-wiki-remake/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -201,7 +175,7 @@
 </table>
 
 <p style="text-align: center; margin-top: 2em;">
-  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/wet-overview/wet-o-1.webp" alt="Mind map of wet experiment" style="max-width: 100%; height: auto;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/wet-overview/wet-o-1.webp" alt="Mind map of wet experiment" style="max-width: 100%; height: auto;">
 </p>
 <p style="text-align: center; font-style: italic; color: #666;">The mind map of our wet experiment</p>
 
@@ -216,9 +190,9 @@
   </main>
 
   <aside id="toc" class="toc"></aside>
-  <script src="/assets/js/main.js"></script>
+  <script src="/izju-china-wiki-remake/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
+    <img src="/izju-china-wiki-remake/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>

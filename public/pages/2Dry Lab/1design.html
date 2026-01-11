@@ -1,32 +1,6 @@
 ﻿<!doctype html>
 <html lang="zh-CN">
-<head>      <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
-  <script>
-    // 自动检测基础路径 - 修复GitHub Pages路径问题
-    let basePath = '/';
-    
-    // 获取当前URL的路径部分和主机名
-    const currentPath = window.location.pathname;
-    const hostname = window.location.hostname;
-    
-    // 检查是否在GitHub Pages上（通过主机名判断）
-    if (hostname.endsWith('.github.io')) {
-      // GitHub Pages URL结构：https://username.github.io/repository-name/
-      // 所以路径中第一个非空部分是仓库名称
-      const pathParts = currentPath.split('/').filter(Boolean);
-      if (pathParts.length > 0) {
-        basePath = '/' + pathParts[0] + '/';
-      }
-    }
-    
-    // 调试信息，可在浏览器控制台查看
-    console.log('Dynamic base path set to:', basePath, 'Hostname:', hostname, 'Current path:', currentPath);
-    
-    // 创建并添加 base 标签
-    const base = document.createElement('base');
-    base.href = basePath;
-    document.head.insertBefore(base, document.head.firstChild);
-  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
@@ -40,59 +14,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Design</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/assets/css/styles.css">
 
-  <link rel="stylesheet" href="/static/safety-typography.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/static/safety-typography.css">
 </head>
 <body>
   <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
+<a class="home" href="/izju-china-wiki-remake/"><img src="/izju-china-wiki-remake/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
 <!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
-    <li><a href="/" class="home-link">Home</a></li>
+    <li><a href="/izju-china-wiki-remake/" class="home-link">Home</a></li>
     <li><span>Project</span>
   <ul>
-<li><a href="/pages/1Project/1background.html">Background</a></li>
-<li><a href="/pages/1Project/2description.html">Description</a></li>
-<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
-<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
-<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
-<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/1Project/1background.html">Background</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/2description.html">Description</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
 </li>
 <li><span>Dry Lab</span>
   <ul>
-<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
-<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
 </li>
 <li><span>Wet Lab</span>
   <ul>
-<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
-<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
-<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
-<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
-<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
-<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
 </li>
 <li><span>Human Practice</span>
   <ul>
-<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
-<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
-<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
-<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
 </li>
 <li><span>Team</span>
   <ul>
-<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
-<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/izju-china-wiki-remake/pages/5Team/3awards.html">Awards</a></li>  </ul>
 </li>
 
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/izju-china-wiki-remake/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -108,7 +82,7 @@
 Originally proposed by Rothemund in 2006, the rectangular structure of DNA origami has been utilized in numerous studies and proven to be stable (1-3). It's highly programmable (4), allowing for modifications such as adding functional elements as extensions of staples, attachments or cargos (Figure 1).
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-1.webp" alt="Figure 1. Illustration of basic structure of DNA origami" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/design-1.webp" alt="Figure 1. Illustration of basic structure of DNA origami" style="max-width: 100%; height: auto;">
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
 <strong>Figure 1.</strong> Illustration of basic structure of DNA origami (DO). The original structure is integrated by M13mp18 ssDNA scaffold strand and 192 short ssDNA staples. The arrows indicate 192 different staples.
@@ -125,7 +99,7 @@ For the design of S-PAM-cap sequences, literature searches and preparations were
 Meanwhile, except for the design of specific staple sequences, the location of those S-PAM-cap and PAM-rich DNA strands were considered. Based on preliminary estimates, the diameter of the Cas9 protein is about one fourth of the width of the rectangular DNA origami. To reserve space for protecting sgRNA/Cas9 from complex environment of the wound, we excluded choices of staples near the edges. Additionally, to balance the space and the loading efficiency, arranging 6 staples in the center of each DNA origami were finally considered 6 staples to be reasonable (Figure 2).
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-2.webp" alt="Figure 2. Illustration of loading structure of DNA origami" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/design-2.webp" alt="Figure 2. Illustration of loading structure of DNA origami" style="max-width: 100%; height: auto;">
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
 <strong>Figure 2.</strong> Illustration of loading structure of DNA origami (DO<sub>PAM</sub>). The arrows indicate 192 different staples. The red arrows indicate the S-PAM-cap strands, which are located in the middle of rectangular DNA origami plane.
@@ -139,7 +113,7 @@ Reactive oxygen species (ROS) could harm bacteria membrane (8) and create "pores
 To integrate G4 into the DNA origami, we selected specific staple strands and appended the G4 array sequence GGGTAGGGCGGGTTGGG to the 3' end of these staples, and these modified staples are called S-G4 (Figure 3). For G4/hemin, though the density, quantity, location of loading site and order of assembly lack normalized standards corresponding to different forms of DNA-origami, general principles guiding the locations for functional staple strands on DNA origami advise against locations that are near the edge of the origami structure to avoid structural errors (9). To affirm whether the G4 sequence is connected to the 3' end or the 5' end, so that the connector will extend in the desired direction, we referred to statistics provided in DNA-nanotube models (10). Crowding of G4/hemin is proved to result in a lowering of its catalytic efficiency (11), so compromise between the density and quantity of G4/hemin should be highly considered. Finally, to refine the synthesis protocol, we decided to first allow the assembly of G4 and the DNA-origami and then add hemin, instead of assembling G4/hemin beforehand. This is due to relative instability of G4/hemin DNAzyme compared to native enzymes, when exposed to the solvent (12). Also, the stability of the G4 structure was proved to be affected by the addition of hemin, while G4 itself could remain stable until the hemin was added (13). After analyzing the characteristics and interaction between G4/hemin and DNA origami, we comprehensively designed a new DNA-origami with 136 copies of G4 (Figure 3).
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-3.webp" alt="Figure 3. Illustration of loading and G4 sites on the DNA origami" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/design-3.webp" alt="Figure 3. Illustration of loading and G4 sites on the DNA origami" style="max-width: 100%; height: auto;">
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
 <strong>Figure 3.</strong> Illustration of loading and G4 sites on the DNA origami (DO<sub>PAM</sub>G). The arrows indicate 192 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The blue dots are G4 sequences added at 3' ends of staples (a total of 136 sites).
@@ -153,8 +127,8 @@ To enhance the membrane disruption efficiency of DNA origami while minimizing da
 After screening and optimization of the aptamer sequence targeting MRSA (<a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="#aptamer-screening-and-optimization">link to aptamer screening</a>), a suitable aptamer was found (sequence: CCATCCACACTCCGCAAGGGTGCCCCGGGGGGCTGTTCAGCGTGGTGGTGGGATGCCGTGTTGGTCCTTAGTCTCCGTCGTCGGCTGCCTCTAC AT). Given that the model used for experimental validation is <em>Escherichia coli</em> MG1655, which was utilized as an alternative organism due to biosafety concerns, we employed an aptamer sequence that has been validated in the literature to specifically target <em>Escherichia coli</em> (sequence: CATATCCGCGTCGCTGCGCTCAGACCCACCACCACGCACC) (14). To enable the aptamer and the DNA origami to be connected through base pairing, we added a linker to the 3' end of the aptamer (C-APT), designed to be complementary to the origami structure (linker sequence: TTTTTCGCTTATTATTATTATTATTA). Subsequently, we incorporated 12 staple strands on the DNA origami that contain complementary sequences to the aptamer linker sequence at its 5' end (Apt-cap), allowing it to pair with the aptamer (sequence: TAATAATAATAATAAGCGTTTTT) (Figure 4). This ensures that the aptamer can bind to the DNA origami through base pairing facilitated by the complementary sequences. Considering that aptamers have a more complex structure than linear DNAs, they are more likely to interfere with each other if placed in the middle of the DNA origami rectangle. Additionally, aptamers would bind to the target more effectively if they were not obstructed by other functional staples. Therefore, we positioned the aptamers along the short sides of the DNA origami. For the placement pattern, we referenced the work of Li et al. and added two additional adjacent aptamers in the middle of the short side to ensure efficient targeting (15).
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/design/design-4.webp" target="_blank">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-4.webp" alt="Figure 4. Illustration of loading and aptamer sites on the DNA origami" style="max-width: 100%; height: auto;">
+<a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/design-4.webp" target="_blank">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/design-4.webp" alt="Figure 4. Illustration of loading and aptamer sites on the DNA origami" style="max-width: 100%; height: auto;">
 </a>
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
@@ -166,13 +140,13 @@ After screening and optimization of the aptamer sequence targeting MRSA (<a styl
 To enhance the stability of the sgRNA/Cas9 complex during application, we decided to introduce a new staple to roll the rectangular DNA origami structure into a cylindrical shape, referred to as S-Lock. The evidence for the process of folding from a rectangle to a cylinder was given by previous study. Approaches like thrombin-loaded origami cylinder (16) and tissue plasminogen activator-loaded origami cylinder (17) were achieved. Our cargo, the Cas9 protein, is similar with the thrombin and tissue plasminogen activator, as they all contain regions of typical high-density positive charge. Also, Yin et al. mentioned that DNA backbones contain negative charge that repulse negatively charged molecules (19). So, we incorporated a DNA strand that is complementary to the frame at both ends of the origami, aiming to fold the rectangular structure into a cylindrical form (Figure 5). Additionally, we introduced thiol groups to each strand so that adjacent S-Lock structures could form disulfide bonds, further stabilizing the overall structure. To optimize the unutilized staples on the long sides, we placed disulfide bonds in the middle of 8 staples on each side. This arrangement strengthens the bond between the two sides, facilitating the transformation of the origami rectangle into a tubule. Yin et al. used a similar number of staples for side-to-side binding, which demonstrated an appropriate density of functional staples (18). Furthermore, the length of their staples that do not pair with the scaffold is similar to ours. Based on this, we assume that the adjacent staples will not interfere with each other, and the likelihood of incorrect pairing is minimal.
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/design/design-5.webp" alt="Figure 5. Illustration of loading, G4, aptamer and lock sites on the DNA origami" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/design-5.webp" alt="Figure 5. Illustration of loading, G4, aptamer and lock sites on the DNA origami" style="max-width: 100%; height: auto;">
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
 <strong>Figure 5.</strong> Illustration of loading, G4, aptamer and lock sites on the DNA origami (S-DO<sup>A</sup><sub>PAM</sub>G). The arrows indicate 204 different staples. The red arrows indicate the S-PAM-cap strands (a total of 6 sites). The purple arrows indicate the S-Apt-cap (a total of 12 sites), which cap C-APT. The green arrows with orange dots at the middle are staples with disulfide bonds (a total of 16 sites), the orange dots indicate the disulfide bond formation sites. They are complementary to the scaffold on the other side so that the two sides will meet and bind.
 </p>
 
-<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Supporting tables: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/design/sequence.pdf" target="_blank">Lists of DNA sequences for DNA origami</a>.</h2>
+<h2 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Supporting tables: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/design/sequence.pdf" target="_blank">Lists of DNA sequences for DNA origami</a>.</h2>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
 <em>Note: Supporting tables will be provided in PDF format.</em>
 </p>
@@ -253,7 +227,7 @@ Extract features using convolution blocks.
 The "core information vector" obtained in Step 3 is input into a "fully connected layer" (a simple computation module) to generate a "binding score". If the score exceeds a preset threshold (e.g., 0.5), the aptamer and protein are determined to be "capable of binding"; if the score is below the threshold, they are determined to be "incapable of binding".
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/1.webp" alt="Figure 1. Aptatrans Architecture" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/1.webp" alt="Figure 1. Aptatrans Architecture" style="max-width: 100%; height: auto;">
 </p>
 
 <h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">1.1.2 Advantages of the Model</h4>
@@ -285,7 +259,7 @@ Monte Carlo Tree Search (MCTS) is an algorithm applied in decision-making proces
 Although Aptatrans demonstrates innovation in the field of aptamer prediction, its direct prediction results cannot yet fully meet the accuracy requirements of this project, which is limited by the scale of the model training dataset. Therefore, we integrate the validated sequences from professional aptamer databases (e.g., the <strong>Aptamer Database (AptaDB)</strong> [2], accessible at <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="https://www.aptamer.org/" target="_blank">https://www.aptamer.org/</a>) to establish a dual-source data support system of "model prediction + database screening", thereby further improving the reliability of candidate aptamers.
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/3.webp" alt="Figure 2. The homepage of the database" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/3.webp" alt="Figure 2. The homepage of the database" style="max-width: 100%; height: auto;">
 </p>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
 <strong>Figure 2.</strong> The homepage of the database.
@@ -302,20 +276,20 @@ Although Aptatrans demonstrates innovation in the field of aptamer prediction, i
 </li>
 </ol>
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/4.webp" alt="The selected aptamer" style="max-width: 100%; height: auto;">
+<img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/4.webp" alt="The selected aptamer" style="max-width: 100%; height: auto;">
 </p>
 
 <h4 style="color: #ffffff !important; text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(96, 165, 250, 0.4);">Procedure for converting an aptamer sequence into a PDB file:</h4>
 <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Access the website <strong>RNAComposer</strong> [3] via the link: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="http://rnacomposer.ibch.poznan.pl/" target="_blank">http://rnacomposer.ibch.poznan.pl/</a>.
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/5.webp" alt="RNAComposer interface" style="max-width: 100%; height: auto;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/5.webp" alt="RNAComposer interface" style="max-width: 100%; height: auto;">
   </p>
 </li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Click "Load example" and select "3", then replace the original sequence in the text box with the target aptamer sequence, and click "Compose".</li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Wait until the prompt "Task completed" appears (as shown in the figure below); the PDB file can be downloaded via the button at the bottom left corner.
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/6.webp" alt="RNAComposer task completed" style="max-width: 100%; height: auto;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/6.webp" alt="RNAComposer task completed" style="max-width: 100%; height: auto;">
   </p>
 </li>
 </ol>
@@ -415,7 +389,7 @@ Each candidate aptamer must undergo validation using the three aforementioned me
 <ol style="max-width: 100%; box-sizing: border-box; padding-left: 20px; overflow: hidden;">
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Access the ZDOCK website via the link: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="https://zdock.wenglab.org/" target="_blank">ZDOCK</a>, and you will see the interface as shown below:
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/7.webp" alt="ZDOCK interface" style="max-width: 100%; height: auto;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/7.webp" alt="ZDOCK interface" style="max-width: 100%; height: auto;">
   </p>
 </li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Enter the PDB ID or upload the PDB file, input your email address, and click "Submit". After successful submission, simply wait and check your email.</li>
@@ -427,12 +401,12 @@ Each candidate aptamer must undergo validation using the three aforementioned me
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Access the HDOCK website via the link: <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="http://hdock.phys.hust.edu.cn/" target="_blank">HDOCK Server</a>.</li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">Select the relevant PDB files (Note: Correcting the typo "pdf" to "PDB" as per academic context) and click "Submit".
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/8.webp" alt="HDOCK interface" style="max-width: 100%; height: auto;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/8.webp" alt="HDOCK interface" style="max-width: 100%; height: auto;">
   </p>
 </li>
 <li style="word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; overflow: hidden;" style="word-wrap: break-word; overflow-wrap: break-word; padding: 0; margin: 0; box-sizing: border-box; width: 100%; display: block; overflow: hidden;">View the images of aptamer-protein binding and the binding probability online.
   <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/aptamer/9.webp" alt="HDOCK results" style="max-width: 100%; height: auto;">
+  <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/aptamer/9.webp" alt="HDOCK results" style="max-width: 100%; height: auto;">
   </p>
 </li>
 </ol>
@@ -487,9 +461,9 @@ It avoids discarding aptamers with potential value; instead, it improves their b
   </main>
 
   <aside id="toc" class="toc"></aside>
-  <script src="/assets/js/main.js"></script>
+  <script src="/izju-china-wiki-remake/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
+    <img src="/izju-china-wiki-remake/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>

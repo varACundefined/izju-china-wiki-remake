@@ -1,32 +1,6 @@
 ﻿<!doctype html>
 <html lang="zh-CN">
-<head>      <!-- 动态设置基础路径，适应 GitHub Pages 和本地开发 -->
-  <script>
-    // 自动检测基础路径 - 修复GitHub Pages路径问题
-    let basePath = '/';
-    
-    // 获取当前URL的路径部分和主机名
-    const currentPath = window.location.pathname;
-    const hostname = window.location.hostname;
-    
-    // 检查是否在GitHub Pages上（通过主机名判断）
-    if (hostname.endsWith('.github.io')) {
-      // GitHub Pages URL结构：https://username.github.io/repository-name/
-      // 所以路径中第一个非空部分是仓库名称
-      const pathParts = currentPath.split('/').filter(Boolean);
-      if (pathParts.length > 0) {
-        basePath = '/' + pathParts[0] + '/';
-      }
-    }
-    
-    // 调试信息，可在浏览器控制台查看
-    console.log('Dynamic base path set to:', basePath, 'Hostname:', hostname, 'Current path:', currentPath);
-    
-    // 创建并添加 base 标签
-    const base = document.createElement('base');
-    base.href = basePath;
-    document.head.insertBefore(base, document.head.firstChild);
-  </script>  <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
+<head>        <!-- 鍔ㄦ€佽缃熀纭€璺緞锛岄€傚簲 GitHub Pages 鍜屾湰鍦板紑鍙?-->
   <script>
     // 鑷姩妫€娴嬪熀纭€璺緞
     const basePath = window.location.pathname.startsWith('/izju-china-wiki-remake/') 
@@ -40,9 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Model</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/assets/css/styles.css">
 
-  <link rel="stylesheet" href="/static/safety-typography.css">
+  <link rel="stylesheet" href="/izju-china-wiki-remake/static/safety-typography.css">
 <!--INLINE-CSS-LyogUmVtb3Zl-->
   <style>
 /* Remove all pseudo-elements globally */
@@ -143,52 +117,52 @@
 <body>
   <button class="sidebar-toggle" aria-label="鍒囨崲瀵艰埅" aria-expanded="false">鈽?/button>
   <aside class="sidebar">
-<a class="home" href="/"><img src="/assets/images/menu.webp" alt="涓婚〉"></a>
+<a class="home" href="/izju-china-wiki-remake/"><img src="/izju-china-wiki-remake/assets/images/menu.webp" alt="涓婚〉"></a>
 <!--SIDEBAR-START-->
 <!-- 鏈枃浠剁敱 inject-sidebar.js 鑷姩鐢熸垚 -->
 <nav class="site-nav">
   <ul>
-    <li><a href="/" class="home-link">Home</a></li>
+    <li><a href="/izju-china-wiki-remake/" class="home-link">Home</a></li>
     <li><span>Project</span>
   <ul>
-<li><a href="/pages/1Project/1background.html">Background</a></li>
-<li><a href="/pages/1Project/2description.html">Description</a></li>
-<li><a href="/pages/1Project/3engineering.html">Engineering</a></li>
-<li><a href="/pages/1Project/4contribution.html">Contribution</a></li>
-<li><a href="/pages/1Project/5implementation.html">Implementation</a></li>
-<li><a href="/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/1Project/1background.html">Background</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/2description.html">Description</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/3engineering.html">Engineering</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/4contribution.html">Contribution</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/5implementation.html">Implementation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/1Project/6project-future.html">Future Directions</a></li>  </ul>
 </li>
 <li><span>Dry Lab</span>
   <ul>
-<li><a href="/pages/2Dry Lab/1design.html">Design</a></li>
-<li><a href="/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/1design.html">Design</a></li>
+<li><a href="/izju-china-wiki-remake/pages/2Dry Lab/2model.html">Model</a></li>  </ul>
 </li>
 <li><span>Wet Lab</span>
   <ul>
-<li><a href="/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
-<li><a href="/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
-<li><a href="/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
-<li><a href="/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
-<li><a href="/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
-<li><a href="/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/1wetlab-overview.html">Wet Lab Overview</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/2gene-cleavage.html">Gene Cleavage Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/3assembly.html">Assembly Module</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/4validation.html">Functional Validation</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/5wetlab-future.html">Future Directions</a></li>
+<li><a href="/izju-china-wiki-remake/pages/3Wet Lab/6parts.html">Parts</a></li>  </ul>
 </li>
 <li><span>Human Practice</span>
   <ul>
-<li><a href="/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
-<li><a href="/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
-<li><a href="/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
-<li><a href="/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/1human-practices.html">Human Practices</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/2entrepreneurship.html">Entrepreneurship</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/3collaborations.html">Collaboration</a></li>
+<li><a href="/izju-china-wiki-remake/pages/4Human Practice/4safety.html">Safety</a></li>  </ul>
 </li>
 <li><span>Team</span>
   <ul>
-<li><a href="/pages/5Team/1roster.html">Team Roster</a></li>
-<li><a href="/pages/5Team/3awards.html">Awards</a></li>  </ul>
+<li><a href="/izju-china-wiki-remake/pages/5Team/1roster.html">Team Roster</a></li>
+<li><a href="/izju-china-wiki-remake/pages/5Team/3awards.html">Awards</a></li>  </ul>
 </li>
 
   </ul>
 </nav>
 <!--SIDEBAR-END-->
-<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
+<a class="back-to-top" href="#" title="鍥炲埌椤堕儴"><img src="/izju-china-wiki-remake/assets/images/uptotop.webp" alt="鍥炲埌椤堕儴"></a>
 </aside>
 
   <main class="content">
@@ -202,8 +176,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/overview/1.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/overview/1.webp" alt="Model Overview"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/overview/1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/overview/1.webp" alt="Model Overview"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -270,8 +244,8 @@
     was exported for further three-dimensional visualization in oxView and stability analysis in oxDNA.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure1.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure1.webp" alt="Figure 1"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure1.webp" alt="Figure 1"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -280,8 +254,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure2.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure2.webp" alt="Figure 2"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure2.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure2.webp" alt="Figure 2"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -291,8 +265,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure3.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure3.webp" alt="Figure 3"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure3.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure3.webp" alt="Figure 3"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -301,8 +275,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure4.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure4.webp" alt="Figure 4"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure4.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure4.webp" alt="Figure 4"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -311,8 +285,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure5.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure5.webp" alt="Figure 5"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure5.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure5.webp" alt="Figure 5"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -321,8 +295,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure6.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure6.webp" alt="Figure 6"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure6.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure6.webp" alt="Figure 6"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -330,8 +304,8 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure7.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure7.webp" alt="Figure 7"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure7.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure7.webp" alt="Figure 7"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -368,12 +342,12 @@
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8a.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8a.webp" alt="Figure 8A"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8a.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8a.webp" alt="Figure 8A"
             style="max-width: 48%; display: inline-block; margin-right: 2%;">
     </a>
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8b.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8b.webp" alt="Figure 8B"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8b.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure8b.webp" alt="Figure 8B"
             style="max-width: 48%; display: inline-block;">
     </a>
     <br>
@@ -409,8 +383,8 @@
     structural stability under oxDNA simulation conditions.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure9.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure9.webp" alt="Figure 9"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure9.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure9.webp" alt="Figure 9"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -439,15 +413,15 @@
     with consistent separations between paired nucleotides and no indication of significant deformation.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10a.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10a.webp" alt="Figure 10A"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10a.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10a.webp" alt="Figure 10A"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10b.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10b.webp" alt="Figure 10B"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10b.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure10b.webp" alt="Figure 10B"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -475,15 +449,15 @@
     throughout the course of simulation.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11a.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11a.webp" alt="Figure 11A"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11a.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11a.webp" alt="Figure 11A"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11b.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11b.webp" alt="Figure 11B"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11b.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/dry-stability/figure11b.webp" alt="Figure 11B"
             style="max-width: 100%; height: auto;">
     </a>
     <br>
@@ -704,8 +678,8 @@ if r < self.bundle_radius + self.helix_radius:
     biological environments.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-1.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-1.webp" alt="Simulation Result 1"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-1.webp" alt="Simulation Result 1"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -719,8 +693,8 @@ if r < self.bundle_radius + self.helix_radius:
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">DNA damage probability: P<sub>damage</sub> = 0.05%</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-2.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-2.webp" alt="Simulation Result 2"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-2.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/3-1-1-2.webp" alt="Simulation Result 2"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -903,8 +877,8 @@ if r < self.bundle_radius + self.helix_radius:
 <h3 style="color: #ffffff !important; text-shadow: 0 0 20px rgba(96, 165, 250, 0.6), 0 0 10px rgba(96, 165, 250, 0.4), 0 0 3px rgba(96, 165, 250, 0.2);">Simulation Results and Analysis</h3>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/output.avif" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/output.avif" alt="Simulation Output"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/output.avif" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/output.avif" alt="Simulation Output"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -927,8 +901,8 @@ if r < self.bundle_radius + self.helix_radius:
     enzyme molecular size, consistent with experimental observations [2].</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/output1.avif" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/output1.avif" alt="Simulation Output 1"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/output1.avif" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/output1.avif" alt="Simulation Output 1"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -970,8 +944,8 @@ def simulate_dna_cylinder(n_dna, n_steps, damage_threshold, enzyme):
     be extended to study degradation kinetics in other biological nanopore systems.</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/model/3-2-2-1.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/model/3-2-2-1.webp" alt="Multi-enzyme Simulation Result"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/3-2-2-1.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/model/3-2-2-1.webp" alt="Multi-enzyme Simulation Result"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -1368,8 +1342,8 @@ def simulate_dna_cylinder(n_dna, n_steps, damage_threshold, enzyme):
 </code></pre>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-05-235904.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-05-235904.webp"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-05-235904.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-05-235904.webp"
             alt="Membrane Rupture Simulation" style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -1504,8 +1478,8 @@ def simulate_dna_cylinder(n_dna, n_steps, damage_threshold, enzyme):
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">This program can also provide a heatmap of the ROS distribution:</p>
 
 <p style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; box-sizing: border-box; overflow: hidden;">
-    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-06-000501.webp" target="_blank">
-        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-06-000501.webp" alt="ROS Heatmap"
+    <a style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block;" href="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-06-000501.webp" target="_blank">
+        <img style="max-width: 100%; height: auto; display: block; margin: 0 auto; overflow: hidden;" src="/izju-china-wiki-remake/static/_downloaded/static.igem.wiki/teams/5913/ruptureofmembrane/2025-10-06-000501.webp" alt="ROS Heatmap"
             style="max-width: 100%; height: auto;">
     </a>
 </p>
@@ -1663,9 +1637,9 @@ class AdvancedDNANanotubeSimulator(DNANanotubeSimulator):
   </main>
 
   <aside id="toc" class="toc"></aside>
-  <script src="/assets/js/main.js"></script>
+  <script src="/izju-china-wiki-remake/assets/js/main.js"></script>
   <footer class="site-footer">
-    <img src="/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
+    <img src="/izju-china-wiki-remake/assets/images/logo6.webp" alt="椤佃剼鍥剧墖">
   </footer>
 </body>
 </html>
